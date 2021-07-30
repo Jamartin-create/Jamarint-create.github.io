@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Jamartin</title>
   <subtitle>一个菜鸡全栈程序员博主。</subtitle>
-  <updated>2021-07-17T17:14:34+08:00</updated>
+  <updated>2021-07-24T22:09:28+08:00</updated>
   <author>
     <name>Martin_Du</name>
     <uri>/</uri>
@@ -17,6 +17,66 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Install Jekyll to have own blog</title>
+    <link href="/posts/jekyll-install&amp;use/" rel="alternate" type="text/html" title="Install Jekyll to have own blog" />
+    <published>2021-07-20T00:00:00+08:00</published>
+  
+    <updated>2021-07-20T00:00:00+08:00</updated>
+  
+    <id>/posts/jekyll-install&amp;use/</id>
+    <content src="/posts/jekyll-install&amp;use/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="jekyll" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      一、代码托管
+
+注册账号
+
+
+  不用多说吧
+
+
+创建仓库
+
+
+  点击右上角➕，再点击New repository
+
+
+
+
+
+  仓库名的格式为 “用户名”.github.io（因为GitHub对于同一个账户只允许生成一个直接访问的网站）
+
+
+
+
+
+  将仓库与本地连接（绑定）
+
+
+
+    </summary>
+  
+
+  </entry>
 
   
   <entry>

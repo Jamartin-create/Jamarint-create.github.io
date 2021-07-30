@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "Install Jekyll to have own blog",
+    "url": "/posts/jekyll-install&use/",
+    "categories": "jekyll",
+    "tags": "",
+    "date": "2021-07-20 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "一、代码托管注册账号  不用多说吧创建仓库  点击右上角➕，再点击New repository  仓库名的格式为 “用户名”.github.io（因为GitHub对于同一个账户只允许生成一个直接访问的网站）  将仓库与本地连接（绑定）"
+  },
+  
+  {
     "title": "About how to use HashMap",
     "url": "/posts/java-use-hashmap/",
     "categories": "java",
