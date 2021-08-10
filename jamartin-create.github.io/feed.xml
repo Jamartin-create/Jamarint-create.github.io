@@ -1,0 +1,239 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>/</id>
+  <title>Jamartin</title>
+  <subtitle>一个菜鸡全栈程序员博主。</subtitle>
+  <updated>2021-08-10T14:09:21+08:00</updated>
+  <author>
+    <name>Martin_Du</name>
+    <uri>/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en-US"
+    href="/"/>
+  <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator>
+  <rights> © 2021 Martin_Du </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>react 基础(一)概述及简单用法</title>
+    <link href="/posts/react-basic/" rel="alternate" type="text/html" title="react 基础(一)概述及简单用法" />
+    <published>2021-08-09T00:00:00+08:00</published>
+  
+    <updated>2021-08-09T00:00:00+08:00</updated>
+  
+    <id>/posts/react-basic/</id>
+    <content src="/posts/react-basic/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="react-Basic" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      1. React 概述
+
+1.1 什么是React
+
+​		React 是一个用于 构建用户界面 的 JavaScript库。
+
+​		用户界面：前端（html）
+
+​		React 主要用来写HTML界面，或 构建web应用
+
+## 	1.2 React的特点
+
+
+
+  
+    
+      声明式：只需要描述 UI 看起来是什么样，就像写HTML一样
+
+      const jsx = &amp;lt;div className="app"&amp;gt;
+      	&amp;lt;h1&amp;gt;Hello React! 动态数据:{count}&amp;lt;/h1&amp;gt;
+      &amp;lt;/div&amp;gt;
+      
+    
+    
+      基于组件
+
+      
+        组件式React中 &amp;lt;p style="color:red"&amp;gt;最重要&amp;lt;/p&amp;gt;的内容...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>gitpage+jekyll搭建博客(一)绑定仓库</title>
+    <link href="/posts/blog-gitpage/" rel="alternate" type="text/html" title="gitpage+jekyll搭建博客(一)绑定仓库" />
+    <published>2021-07-20T00:00:00+08:00</published>
+  
+    <updated>2021-07-20T00:00:00+08:00</updated>
+  
+    <id>/posts/blog-gitpage/</id>
+    <content src="/posts/blog-gitpage/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="buildBlog" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      代码托管
+
+注册账号
+
+
+  不用多说吧
+
+
+创建仓库
+
+
+  点击右上角➕，再点击New repository
+
+  
+
+
+
+  仓库名的格式为 “用户名”.github.io（因为GitHub对于同一个账户只允许生成一个直接访问的网站）
+
+  
+
+
+将仓库与本地连接（绑定）
+
+
+  下载并安装git
+
+
+
+  
+
+  ​	下载链接
+
+
+
+  打开git-bash
+
+  
+
+
+
+  将git与仓库绑定
+
+  git config --global user.name "github用户名"
+git config --global user.email "邮箱"
+
+
+
+
+SSH设置(github根据ssh接受你从本地对于git的管理)
+
+
+  配置SSH
+
+  ​	打开 git-bash ，输入ssh-keygen -t rsa
+
+  ​	敲三次回车，然后在C:\Users\计算机名...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>HashMap(一)用法</title>
+    <link href="/posts/java-use-hashmap/" rel="alternate" type="text/html" title="HashMap(一)用法" />
+    <published>2021-07-15T00:00:00+08:00</published>
+  
+    <updated>2021-07-15T00:00:00+08:00</updated>
+  
+    <id>/posts/java-use-hashmap/</id>
+    <content src="/posts/java-use-hashmap/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="java" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Java-HashMap
+
+HashMap（哈希表）的理解
+
+
+  
+    其增删改查 在不考虑“哈希冲突时的时间复杂度仅有O(1)
+  
+  
+    主干是 数组 ，也就是通过某个”下标”即索引从而实现一次定位
+  
+  
+    哈希冲突 是指：虽然两个元素的 key 不同，但是他们的实际地址 却相同，即冲突
+  
+
+
+HashMap的使用
+
+
+  
+    创建一个HashMap
+
+    Map&amp;lt;Key,Value&amp;gt; map = new HashMap&amp;lt;&amp;gt;();
+    
+
+    这里的接口类型为Map，可以使程序更加灵活。当决定更换实现的时候，只需要改变构造器中类型的名称
+
+    例如：如果这个时候想将哈希表换为”黑红树结构”
+
+    Map&amp;lt;Key,Value&amp;gt; map = new TreeMap&amp;lt;&amp;gt;();
+
+  ...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
