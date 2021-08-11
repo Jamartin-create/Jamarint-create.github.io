@@ -1,11 +1,26 @@
 [
   
   {
+    "title": "githubpage+jekyll搭建blog过程中遇到的问题(一)jekyll",
+    "url": "/posts/blog-gitpage/",
+    "categories": "buildBlog",
+    "tags": "",
+    "date": "2021-08-11 11:23:15 +0800",
+    
+
+
+
+
+
+    "snippet": "关于字符编码的问题  在我执行了 bundle exec jekyll serve 之后曝出以下错误  Liquid Execption: Liquid error (line 13):invalid byte sequence in UTF-8 in sitemap.xml   解决方法是找到 “md文件头” 中的 “tags” 中含有中文的md文件  将中文标签删除或改为英文标签  然后找到 _site 文件夹下的 setmap.xml 中的中文编码所在的标签  删除该标签以及其父标签  然后重新执行 bundle exec jekyll serve"
+  },
+  
+  {
     "title": "react 基础(一)概述及简单用法",
     "url": "/posts/react-basic/",
     "categories": "react-Basic",
     "tags": "React, JavaScript, JSX",
-    "date": "2021-08-09 00:00:00 +0800",
+    "date": "2021-08-09 23:04:16 +0800",
     
 
 
@@ -16,26 +31,41 @@
   },
   
   {
-    "title": "gitpage+jekyll搭建博客(一)绑定仓库",
+    "title": "gitpage+jekyll搭建博客(二)搭建jekyll环境",
     "url": "/posts/blog-gitpage/",
     "categories": "buildBlog",
     "tags": "",
-    "date": "2021-07-20 00:00:00 +0800",
+    "date": "2021-07-21 15:16:16 +0800",
     
 
 
 
 
 
-    "snippet": "代码托管注册账号  不用多说吧创建仓库  点击右上角➕，再点击New repository    仓库名的格式为 “用户名”.github.io（因为GitHub对于同一个账户只允许生成一个直接访问的网站）  将仓库与本地连接（绑定）  下载并安装git    ​	下载链接  打开git-bash    将git与仓库绑定  git config --global user.name &quot;github用户名&quot;git config --global user.email &quot;邮箱&quot;SSH设置(github根据ssh接受你从本地对于git的管理)  配置S..."
+    "snippet": "安装rubygems  在官网下载自带Devkit版本，链接    安装时勾上Add Ruby executables to your PATH  命令行输入ruby -v 检查ruby是否安装成功  输入gem -v 检查1是否安装成功用gem命令安装jekyll  命令行输入 gem install jekyll bundler //通过 RubyGems 安装 Jekyll 和 Bundler gems创建并启动一个 jekyll站点  命令行输入 jekyll new myBlog //在./myBlog创建一个 jekyll 站点  命令行输入 cd myBlog //进入到生..."
+  },
+  
+  {
+    "title": "gitpage+jekyll搭建博客(一)代码托管",
+    "url": "/posts/blog-gitpage/",
+    "categories": "buildBlog",
+    "tags": "",
+    "date": "2021-07-20 19:14:16 +0800",
+    
+
+
+
+
+
+    "snippet": "### 		注册账号  不用多说吧创建仓库  点击右上角➕，再点击New repository    仓库名的格式为 “用户名”.github.io（因为GitHub对于同一个账户只允许生成一个直接访问的网站）  将仓库与本地连接（绑定）  下载并安装git    ​	下载链接  打开git-bash    将git与仓库绑定  git config --global user.name &quot;github用户名&quot;git config --global user.email &quot;邮箱&quot;SSH设置(github根据ssh接受你从本地对于git的管理)  配..."
   },
   
   {
     "title": "HashMap(一)用法",
-    "url": "/posts/java-use-hashmap/",
+    "url": "/posts/java-hashmap/",
     "categories": "java",
     "tags": "java, hashmap",
-    "date": "2021-07-15 00:00:00 +0800",
+    "date": "2021-07-17 16:16:01 +0800",
     
 
 

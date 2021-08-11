@@ -481,6 +481,100 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/blog-gitpage/">githubpage+jekyll搭建blog过程中遇到的问题(一)jekyll</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        关于字符编码的问题
+
+
+  在我执行了 bundle exec jekyll serve 之后曝出以下错误
+
+  Liquid Execption: Liquid error (line 13):invalid byte sequence in UTF-8 in sitemap.xml 
+
+
+  解决方法是找到 “md文件头” 中的 “tags” 中含有中文的md文件
+
+  将中文标签删除或...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Wed, Aug 11, 2021, 11:23 AM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Aug 11
+  
+
+  <i class="unloaded">2021-08-11T11:23:15+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="119 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/react-basic/">react 基础(一)概述及简单用法</a>
     </h1>
 
@@ -532,7 +626,7 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, Aug  9, 2021, 12:00 AM +0800"
+    title="Mon, Aug  9, 2021, 11:04 PM +0800"
   
 
   
@@ -545,7 +639,7 @@
     Aug  9
   
 
-  <i class="unloaded">2021-08-09T00:00:00+08:00</i>
+  <i class="unloaded">2021-08-09T23:04:16+08:00</i>
 
 </span>
 
@@ -583,7 +677,7 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/blog-gitpage/">gitpage+jekyll搭建博客(一)绑定仓库</a>
+      <a href="/posts/blog-gitpage/">gitpage+jekyll搭建博客(二)搭建jekyll环境</a>
     </h1>
 
     <div class="post-content">
@@ -594,9 +688,108 @@
 
 
 
-        代码托管
+        安装rubygems
 
-注册账号
+
+  在官网下载自带Devkit版本，链接
+
+  
+
+  安装时勾上Add Ruby executables to your PATH
+
+  命令行输入ruby -v 检查ruby是否安装成功
+
+  输入gem -v 检查1是否安装成功
+
+
+用gem命令安装jekyll
+
+
+  命令行输入 gem install jekyll bundler //通过 RubyGem...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Wed, Jul 21, 2021,  3:16 PM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Jul 21
+  
+
+  <i class="unloaded">2021-07-21T15:16:16+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="189 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/blog-gitpage/">gitpage+jekyll搭建博客(一)代码托管</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        ### 		注册账号
 
 
   不用多说吧
@@ -657,7 +850,7 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Tue, Jul 20, 2021, 12:00 AM +0800"
+    title="Tue, Jul 20, 2021,  7:14 PM +0800"
   
 
   
@@ -670,7 +863,7 @@
     Jul 20
   
 
-  <i class="unloaded">2021-07-20T00:00:00+08:00</i>
+  <i class="unloaded">2021-07-20T19:14:16+08:00</i>
 
 </span>
 
@@ -691,7 +884,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="269 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="266 words">1 min</span>
 
 
         <!-- page views -->
@@ -708,7 +901,7 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/java-use-hashmap/">HashMap(一)用法</a>
+      <a href="/posts/java-hashmap/">HashMap(一)用法</a>
     </h1>
 
     <div class="post-content">
@@ -762,7 +955,7 @@ HashMap的使用
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Jul 15, 2021, 12:00 AM +0800"
+    title="Sat, Jul 17, 2021,  4:16 PM +0800"
   
 
   
@@ -772,10 +965,10 @@ HashMap的使用
   
 
   
-    Jul 15
+    Jul 17
   
 
-  <i class="unloaded">2021-07-15T00:00:00+08:00</i>
+  <i class="unloaded">2021-07-17T16:16:01+08:00</i>
 
 </span>
 
