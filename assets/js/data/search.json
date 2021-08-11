@@ -1,0 +1,49 @@
+[
+  
+  {
+    "title": "react 基础(一)概述及简单用法",
+    "url": "/posts/react-basic/",
+    "categories": "react-Basic",
+    "tags": "React, JavaScript, JSX",
+    "date": "2021-08-09 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "1. React 概述1.1 什么是React​		React 是一个用于 构建用户界面 的 JavaScript库。​		用户界面：前端（html）​		React 主要用来写HTML界面，或 构建web应用## 	1.2 React的特点            声明式：只需要描述 UI 看起来是什么样，就像写HTML一样      const jsx = &amp;lt;div className=&quot;app&quot;&amp;gt;      	&amp;lt;h1&amp;gt;Hello React! 动态数据:{count}&amp;lt;/h1&amp;gt;  ..."
+  },
+  
+  {
+    "title": "gitpage+jekyll搭建博客(一)绑定仓库",
+    "url": "/posts/blog-gitpage/",
+    "categories": "buildBlog",
+    "tags": "",
+    "date": "2021-07-20 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "代码托管注册账号  不用多说吧创建仓库  点击右上角➕，再点击New repository    仓库名的格式为 “用户名”.github.io（因为GitHub对于同一个账户只允许生成一个直接访问的网站）  将仓库与本地连接（绑定）  下载并安装git    ​	下载链接  打开git-bash    将git与仓库绑定  git config --global user.name &quot;github用户名&quot;git config --global user.email &quot;邮箱&quot;SSH设置(github根据ssh接受你从本地对于git的管理)  配置S..."
+  },
+  
+  {
+    "title": "HashMap(一)用法",
+    "url": "/posts/java-use-hashmap/",
+    "categories": "java",
+    "tags": "java, hashmap",
+    "date": "2021-07-15 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Java-HashMapHashMap（哈希表）的理解      其增删改查 在不考虑“哈希冲突时的时间复杂度仅有O(1)        主干是 数组 ，也就是通过某个”下标”即索引从而实现一次定位        哈希冲突 是指：虽然两个元素的 key 不同，但是他们的实际地址 却相同，即冲突  HashMap的使用      创建一个HashMap    Map&amp;lt;Key,Value&amp;gt; map = new HashMap&amp;lt;&amp;gt;();        这里的接口类型为Map，可以使程序更加灵活。当决定更换实现的时候，只需要改变构造器中类型..."
+  }
+  
+]
+
