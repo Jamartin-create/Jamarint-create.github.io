@@ -24,25 +24,25 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="githubpage+jekyll搭建blog过程中遇到的问题(一)jekyll" />
+<meta property="og:title" content="githubpage+jekyll搭建blog遇到的问题(二)git" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="关于字符编码的问题" />
-<meta property="og:description" content="关于字符编码的问题" />
-<link rel="canonical" href="/posts/blog-gitpage/" />
-<meta property="og:url" content="/posts/blog-gitpage/" />
+<meta name="description" content="ssh" />
+<meta property="og:description" content="ssh" />
+<link rel="canonical" href="/posts/blog-question-git/" />
+<meta property="og:url" content="/posts/blog-question-git/" />
 <meta property="og:site_name" content="Jamartin" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-08-11T11:23:15+08:00" />
+<meta property="article:published_time" content="2021-08-11T14:25:34+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="githubpage+jekyll搭建blog过程中遇到的问题(一)jekyll" />
+<meta property="twitter:title" content="githubpage+jekyll搭建blog遇到的问题(二)git" />
 <meta name="twitter:site" content="@" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","headline":"githubpage+jekyll搭建blog过程中遇到的问题(一)jekyll","dateModified":"2021-08-11T11:23:15+08:00","datePublished":"2021-08-11T11:23:15+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/blog-gitpage/"},"url":"/posts/blog-gitpage/","description":"关于字符编码的问题","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"githubpage+jekyll搭建blog遇到的问题(二)git","dateModified":"2021-08-11T14:25:34+08:00","datePublished":"2021-08-11T14:25:34+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/blog-question-git/"},"url":"/posts/blog-question-git/","description":"ssh","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>githubpage+jekyll搭建blog过程中遇到的问题(一)jekyll | Jamartin
+  <title>githubpage+jekyll搭建blog遇到的问题(二)git | Jamartin
   </title>
 
   <!--
@@ -117,7 +117,7 @@
     <div id="avatar">
       <a href="/" alt="avatar" class="mx-auto">
         
-        <img src="https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/commons/avatar.jpg" alt="avatar" onerror="this.style.display='none'">
+        <img src="https://Jamartin-create.github.io/assets/img/favicons/mstile-150x150.png" alt="avatar" onerror="this.style.display='none'">
       </a>
     </div>
 
@@ -414,7 +414,7 @@
       
 
         
-          <span>githubpage+jekyll搭建blog过程中遇到的问题(一)jekyll</span>
+          <span>githubpage+jekyll搭建blog遇到的问题(二)git</span>
 
         
 
@@ -489,7 +489,7 @@
 
     <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-      <h1 data-toc-skip>githubpage+jekyll搭建blog过程中遇到的问题(一)jekyll</h1>
+      <h1 data-toc-skip>githubpage+jekyll搭建blog遇到的问题(二)git</h1>
 
       <div class="post-meta text-muted d-flex flex-column">
         <!-- Published date and author -->
@@ -510,7 +510,7 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Wed, Aug 11, 2021, 11:23 AM +0800"
+    title="Wed, Aug 11, 2021,  2:25 PM +0800"
   
 
   
@@ -523,7 +523,7 @@
     Aug 11
   
 
-  <i class="unloaded">2021-08-11T11:23:15+08:00</i>
+  <i class="unloaded">2021-08-11T14:25:34+08:00</i>
 
 </span>
 
@@ -548,7 +548,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="119 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="63 words">1 min</span>
 
 
           <!-- page views -->
@@ -562,23 +562,14 @@
 
         
 
-        <h2 id="关于字符编码的问题">关于字符编码的问题</h2>
+        <h3 id="ssh">ssh</h3>
 
 <blockquote>
-  <p>在我执行了 <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code> 之后曝出以下错误</p>
+  <p>在配置了ssh之后，发现每次push还是需要输入账号密码</p>
 
-  <pre><code class="language-error">Liquid Execption: Liquid error (line 13):invalid byte sequence in UTF-8 in sitemap.xml 
-</code></pre>
+  <p>git-bash执行命令 <code class="language-plaintext highlighter-rouge">git config --global credential.helper store</code></p>
 
-  <p>解决方法是找到 “md文件头” 中的 “tags” 中含有中文的md文件</p>
-
-  <p>将中文标签删除或改为英文标签</p>
-
-  <p>然后找到 <kbd>_site</kbd> 文件夹下的 <b>setmap.xml</b> 中的中文编码所在的标签</p>
-
-  <p>删除该标签以及其父标签</p>
-
-  <p>然后重新执行 <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code></p>
+  <p>然后操作 <b>pull/push</b> ，第一次需要输入账号密码，下次再操作就不需要了。</p>
 </blockquote>
 
 
@@ -592,7 +583,8 @@
         <div class="post-meta mb-3">
           <i class="far fa-folder-open fa-fw mr-1"></i>
           
-            <a href='/categories/buildblog/'>buildBlog</a>
+            <a href='/categories/buildblog/'>buildBlog</a>,
+            <a href='/categories/build-question/'>build_question</a>
         </div>
         
 
@@ -621,19 +613,19 @@
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=githubpage+jekyll搭建blog过程中遇到的问题(一)jekyll - Jamartin&url=/posts/blog-gitpage/" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=githubpage+jekyll搭建blog遇到的问题(二)git - Jamartin&url=/posts/blog-question-git/" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=githubpage+jekyll搭建blog过程中遇到的问题(一)jekyll - Jamartin&u=/posts/blog-gitpage/" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=githubpage+jekyll搭建blog遇到的问题(二)git - Jamartin&u=/posts/blog-question-git/" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://telegram.me/share?text=githubpage+jekyll搭建blog过程中遇到的问题(一)jekyll - Jamartin&url=/posts/blog-gitpage/" data-toggle="tooltip" data-placement="top"
+        <a href="https://telegram.me/share?text=githubpage+jekyll搭建blog遇到的问题(二)git - Jamartin&url=/posts/blog-question-git/" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -902,11 +894,81 @@
   
 
   
-    
+
   
 
   
-    
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
   
 
   
@@ -931,39 +993,6 @@
 
 
 
-  
-    
-    
-  
-    
-    
-      
-      
-        
-        
-        
-      
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-      
-      
-        
-        
-        
-      
-    
-  
-
-
-
 
 
   <div id="related-posts" class="mt-5 mb-2 mb-sm-4">
@@ -974,7 +1003,7 @@
       
       
       <div class="card">
-        <a href="/posts/react-basic/">
+        <a href="/posts/blog-question-jekyll/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -995,14 +1024,14 @@
   
 
   
-    Aug  9
+    Aug 11
   
 
-  <i class="unloaded">2021-08-09T23:04:16+08:00</i>
+  <i class="unloaded">2021-08-11T11:23:15+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>react 基础(一)概述及简单用法</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>githubpage+jekyll搭建blog遇到的问题(一)jekyll</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1011,25 +1040,17 @@
 
 
 
-                1. React 概述
-
-1.1 什么是React
-
-​		React 是一个用于 构建用户界面 的 JavaScript库。
-
-​		用户界面：前端（html）
-
-​		React 主要用来写HTML界面，或 构建web应用
-
-## 	1.2 React的特点
+                关于字符编码的问题
 
 
+  在我执行了 bundle exec jekyll serve 之后曝出以下错误
 
-  
-    
-      声明式：只需要描述 UI 看起来是什么样，就像写HTML一样
+  Liquid Execption: Liquid error (line 13):invalid byte sequence in UTF-8 in sitemap.xml 
 
-      const jsx ...
+
+  解决方法是找到 “md文件头” 中的 “tags” 中含有中文的md文件
+
+  将中文标签删除或...
               </p>
             </div>
           </div>
@@ -1039,7 +1060,7 @@
       
       
       <div class="card">
-        <a href="/posts/java-hashmap/">
+        <a href="/posts/blog-git-bind/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1060,14 +1081,14 @@
   
 
   
-    Jul 17
+    Jul 20
   
 
-  <i class="unloaded">2021-07-17T16:16:01+08:00</i>
+  <i class="unloaded">2021-07-20T19:14:16+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>HashMap(一)用法</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>gitpage+jekyll搭建博客(一)代码托管</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1076,28 +1097,104 @@
 
 
 
-                Java-HashMap
-
-HashMap（哈希表）的理解
+                注册账号
 
 
+  不用多说吧
+
+
+创建仓库
+
+
+  点击右上角➕，再点击New repository
+
   
-    其增删改查 在不考虑“哈希冲突时的时间复杂度仅有O(1)
-  
-  
-    主干是 数组 ，也就是通过某个”下标”即索引从而实现一次定位
-  
-  
-    哈希冲突 是指：虽然两个元素的 key 不同，但是他们的实际地址 却相同，即冲突
+
+  仓库名的格式为 “用户名”.github.io（因为GitHub对于同一个账户只允许生成一个直接访问的网站）
+
   
 
 
-HashMap的使用
+将仓库与本地连接（绑定）
 
+
+  下载并安装git
 
   
-    创建一个HashMap
-...
+
+  ​	下载链接
+
+  打开git-bash
+
+  
+
+  将git与仓库绑定
+
+  git ...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/blog-conv-jekyll/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Jul 21
+  
+
+  <i class="unloaded">2021-07-21T15:16:16+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>gitpage+jekyll搭建博客(二)搭建jekyll环境</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                安装rubygems
+
+
+  在官网下载自带Devkit版本，链接
+
+  
+
+  安装时勾上Add Ruby executables to your PATH
+
+  命令行输入ruby -v 检查ruby是否安装成功
+
+  输入gem -v 检查1是否安装成功
+
+
+用gem命令安装jekyll
+
+
+  命令行输入 gem install jekyll bundler //通过 RubyGem...
               </p>
             </div>
           </div>
@@ -1115,9 +1212,9 @@ HashMap的使用
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <a href="/posts/react-basic/" class="btn btn-outline-primary"
+  <a href="/posts/blog-question-jekyll/" class="btn btn-outline-primary"
     prompt="Older">
-    <p>react 基础(一)概述及简单用法</p>
+    <p>githubpage+jekyll搭建blog遇到的问题(一)jekyll</p>
   </a>
   
 

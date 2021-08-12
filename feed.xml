@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Jamartin</title>
   <subtitle>一个菜鸡全栈程序员博主。</subtitle>
-  <updated>2021-08-11T18:48:54+08:00</updated>
+  <updated>2021-08-12T14:47:37+08:00</updated>
   <author>
     <name>Martin_Du</name>
     <uri>/</uri>
@@ -20,14 +20,14 @@
 
   
   <entry>
-    <title>githubpage+jekyll搭建blog过程中遇到的问题(一)jekyll</title>
-    <link href="/posts/blog-gitpage/" rel="alternate" type="text/html" title="githubpage+jekyll搭建blog过程中遇到的问题(一)jekyll" />
-    <published>2021-08-11T11:23:15+08:00</published>
+    <title>githubpage+jekyll搭建blog遇到的问题(二)git</title>
+    <link href="/posts/blog-question-git/" rel="alternate" type="text/html" title="githubpage+jekyll搭建blog遇到的问题(二)git" />
+    <published>2021-08-11T14:25:34+08:00</published>
   
-    <updated>2021-08-11T11:23:15+08:00</updated>
+    <updated>2021-08-11T14:25:34+08:00</updated>
   
-    <id>/posts/blog-gitpage/</id>
-    <content src="/posts/blog-gitpage/" />
+    <id>/posts/blog-question-git/</id>
+    <content src="/posts/blog-question-git/" />
     <author>
       <name>Martin_Du</name>
     </author>
@@ -35,6 +35,54 @@
   
     
     <category term="buildBlog" />
+    
+    <category term="build_question" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      ssh
+
+
+  在配置了ssh之后，发现每次push还是需要输入账号密码
+
+  git-bash执行命令 git config --global credential.helper store
+
+  然后操作 pull/push ，第一次需要输入账号密码，下次再操作就不需要了。
+
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>githubpage+jekyll搭建blog遇到的问题(一)jekyll</title>
+    <link href="/posts/blog-question-jekyll/" rel="alternate" type="text/html" title="githubpage+jekyll搭建blog遇到的问题(一)jekyll" />
+    <published>2021-08-11T11:23:15+08:00</published>
+  
+    <updated>2021-08-11T11:23:15+08:00</updated>
+  
+    <id>/posts/blog-question-jekyll/</id>
+    <content src="/posts/blog-question-jekyll/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="buildBlog" />
+    
+    <category term="build_question" />
     
   
 
@@ -134,14 +182,14 @@
 
   
   <entry>
-    <title>gitpage+jekyll搭建博客(二)搭建jekyll环境</title>
-    <link href="/posts/blog-gitpage/" rel="alternate" type="text/html" title="gitpage+jekyll搭建博客(二)搭建jekyll环境" />
-    <published>2021-07-21T15:16:16+08:00</published>
+    <title>gitpage+jekyll搭建博客(五)发布文章</title>
+    <link href="/posts/blog-publish-blog/" rel="alternate" type="text/html" title="gitpage+jekyll搭建博客(五)发布文章" />
+    <published>2021-07-22T20:05:55+08:00</published>
   
-    <updated>2021-07-21T15:16:16+08:00</updated>
+    <updated>2021-07-22T20:05:55+08:00</updated>
   
-    <id>/posts/blog-gitpage/</id>
-    <content src="/posts/blog-gitpage/" />
+    <id>/posts/blog-publish-blog/</id>
+    <content src="/posts/blog-publish-blog/" />
     <author>
       <name>Martin_Du</name>
     </author>
@@ -150,6 +198,8 @@
     
     <category term="buildBlog" />
     
+    <category term="build_step" />
+    
   
 
   
@@ -160,36 +210,42 @@
 
 
 
-      安装rubygems
+      关于markdown
 
 
-  在官网下载自带Devkit版本，链接
-
-  
-
-  安装时勾上Add Ruby executables to your PATH
-
-  命令行输入ruby -v 检查ruby是否安装成功
-
-  输入gem -v 检查1是否安装成功
+  编译软件，我使用的是 Typora
 
 
-用gem命令安装jekyll
+文章存放位置
 
 
-  命令行输入 gem install jekyll bundler //通过 RubyGems 安装 Jekyll 和 Bundler gems
+  _drafts：该文件夹下放未完成的文章（文件名没有格式要求）
+
+  _posts：该文件夹下放要发布的文章
 
 
-创建并启动一个 jekyll站点
+撰写文章
 
 
-  命令行输入 jekyll new myBlog //在./myBlog创建一个 jekyll 站点
+  Front Matter
 
-  命令行输入 cd myBlog //进入到生成的文件夹中
+  ​	这里 只介绍一点点，详细介绍请看大佬
 
-  命令行输入 bundle exec jekyll serve //在本地预览服务中编译站点
+  ​	Front Matter 是Jekyll开始变得非常酷的地方
 
-  浏览器打开 http://loc...
+  ​	Front Matter 必须是文件中的第一个事物
+
+  ​	任何包含 YAML Front Matter 的文件都将由 Jekyll 作为特殊文件进行处理
+
+  ​	格式为：
+
+  ---
+layout: post
+title: "Hello YAML"
+date: 2021-07-22 12:05:55 0800
+category: Child Class
+categories: Dad Class
+tag...
     </summary>
   
 
@@ -197,14 +253,14 @@
 
   
   <entry>
-    <title>gitpage+jekyll搭建博客(一)代码托管</title>
-    <link href="/posts/blog-gitpage/" rel="alternate" type="text/html" title="gitpage+jekyll搭建博客(一)代码托管" />
-    <published>2021-07-20T19:14:16+08:00</published>
+    <title>gitpage+jekyll搭建博客(四)主题目录结构介绍</title>
+    <link href="/posts/blog-intro-jekyll/" rel="alternate" type="text/html" title="gitpage+jekyll搭建博客(四)主题目录结构介绍" />
+    <published>2021-07-21T20:17:20+08:00</published>
   
-    <updated>2021-07-20T19:14:16+08:00</updated>
+    <updated>2021-07-21T20:17:20+08:00</updated>
   
-    <id>/posts/blog-gitpage/</id>
-    <content src="/posts/blog-gitpage/" />
+    <id>/posts/blog-intro-jekyll/</id>
+    <content src="/posts/blog-intro-jekyll/" />
     <author>
       <name>Martin_Du</name>
     </author>
@@ -213,93 +269,7 @@
     
     <category term="buildBlog" />
     
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      ### 		注册账号
-
-
-  不用多说吧
-
-
-创建仓库
-
-
-  点击右上角➕，再点击New repository
-
-  
-
-
-
-  仓库名的格式为 “用户名”.github.io（因为GitHub对于同一个账户只允许生成一个直接访问的网站）
-
-  
-
-
-将仓库与本地连接（绑定）
-
-
-  下载并安装git
-
-
-
-  
-
-  ​	下载链接
-
-
-
-  打开git-bash
-
-  
-
-
-
-  将git与仓库绑定
-
-  git config --global user.name "github用户名"
-git config --global user.email "邮箱"
-
-
-
-
-SSH设置(github根据ssh接受你从本地对于git的管理)
-
-
-  配置SSH
-
-  ​	打开 git-bash ，输入ssh-keygen -t rsa
-
-  ​	敲三次回车，然后在C:\Users\计算机名...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>HashMap(一)用法</title>
-    <link href="/posts/java-hashmap/" rel="alternate" type="text/html" title="HashMap(一)用法" />
-    <published>2021-07-17T16:16:01+08:00</published>
-  
-    <updated>2021-07-17T16:16:01+08:00</updated>
-  
-    <id>/posts/java-hashmap/</id>
-    <content src="/posts/java-hashmap/" />
-    <author>
-      <name>Martin_Du</name>
-    </author>
-
-  
-    
-    <category term="java" />
+    <category term="build_step" />
     
   
 
@@ -311,37 +281,41 @@ SSH设置(github根据ssh接受你从本地对于git的管理)
 
 
 
-      Java-HashMap
-
-HashMap（哈希表）的理解
+      Jekyll模板结构树介绍
 
 
-  
-    其增删改查 在不考虑“哈希冲突时的时间复杂度仅有O(1)
-  
-  
-    主干是 数组 ，也就是通过某个”下标”即索引从而实现一次定位
-  
-  
-    哈希冲突 是指：虽然两个元素的 key 不同，但是他们的实际地址 却相同，即冲突
-  
-
-
-HashMap的使用
+  .
+├── _config.yml
+├── _data
+├── _drafts
+├── _includes
+├── _layouts
+├── _posts
+├── _sass
+├── _site
+├── .jekyll-metadata
+└── index.html
 
 
   
-    创建一个HashMap
-
-    Map&amp;lt;Key,Value&amp;gt; map = new HashMap&amp;lt;&amp;gt;();
     
-
-    这里的接口类型为Map，可以使程序更加灵活。当决定更换实现的时候，只需要改变构造器中类型的名称
-
-    例如：如果这个时候想将哈希表换为”黑红树结构”
-
-    Map&amp;lt;Key,Value&amp;gt; map = new TreeMap&amp;lt;&amp;gt;();
-
+      
+        文件夹/文件
+        说明
+      
+    
+    
+      
+        _config.yml
+        存储配置数据，个人信息以及网站的组件信息在这里可以修改。
+      
+      
+        _drafts
+        该文件夹下的文件为草稿。
+      
+      
+        _includes
+        你可以加载这些包含部分到你的布局或者文章中以方便重用。
   ...
     </summary>
   
