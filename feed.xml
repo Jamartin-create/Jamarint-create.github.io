@@ -2,9 +2,9 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>/</id>
-  <title>Jamartin</title>
+  <title>Lil Martin</title>
   <subtitle>一个菜鸡全栈程序员博主。</subtitle>
-  <updated>2021-08-12T14:47:37+08:00</updated>
+  <updated>2021-08-15T02:27:39+08:00</updated>
   <author>
     <name>Martin_Du</name>
     <uri>/</uri>
@@ -17,6 +17,70 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>通过flask在后端部署时遇到的问题</title>
+    <link href="/posts/flask-getPost/" rel="alternate" type="text/html" title="通过flask在后端部署时遇到的问题" />
+    <published>2021-08-15T02:08:46+08:00</published>
+  
+    <updated>2021-08-15T02:08:46+08:00</updated>
+  
+    <id>/posts/flask-getPost/</id>
+    <content src="/posts/flask-getPost/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="python-flask" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      虚拟环境
+
+​	Utunbu配置虚拟环境，virtualenv 安装时如果pip不是最新版，下载的时候会丢包
+
+外网访问服务器时无法得到响应
+
+
+  服务器端放行端口
+
+  
+    
+      在服务器面板找到安全组，添加一个安全组，选择端口号，协议为TCP协议。
+    
+    
+      连通ssh修改防火墙配置：
+
+      systemctl start firewalld.service 
+firewall-cmd --zone=public --add-port=5000/tcp --permanent
+systemctl restart firewalld.service
+firewall-cmd --reload
+
+    
+  
+
+  一定要保证面板放通的端口号与ssh打开的端口号一致，我开通的是5000
+
+
+
+  通过wsgi来启动flask
+
+  ​	...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -246,77 +310,6 @@ date: 2021-07-22 12:05:55 0800
 category: Child Class
 categories: Dad Class
 tag...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>gitpage+jekyll搭建博客(四)主题目录结构介绍</title>
-    <link href="/posts/blog-intro-jekyll/" rel="alternate" type="text/html" title="gitpage+jekyll搭建博客(四)主题目录结构介绍" />
-    <published>2021-07-21T20:17:20+08:00</published>
-  
-    <updated>2021-07-21T20:17:20+08:00</updated>
-  
-    <id>/posts/blog-intro-jekyll/</id>
-    <content src="/posts/blog-intro-jekyll/" />
-    <author>
-      <name>Martin_Du</name>
-    </author>
-
-  
-    
-    <category term="buildBlog" />
-    
-    <category term="build_step" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Jekyll模板结构树介绍
-
-
-  .
-├── _config.yml
-├── _data
-├── _drafts
-├── _includes
-├── _layouts
-├── _posts
-├── _sass
-├── _site
-├── .jekyll-metadata
-└── index.html
-
-
-  
-    
-      
-        文件夹/文件
-        说明
-      
-    
-    
-      
-        _config.yml
-        存储配置数据，个人信息以及网站的组件信息在这里可以修改。
-      
-      
-        _drafts
-        该文件夹下的文件为草稿。
-      
-      
-        _includes
-        你可以加载这些包含部分到你的布局或者文章中以方便重用。
-  ...
     </summary>
   
 
