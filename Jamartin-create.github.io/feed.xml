@@ -1,0 +1,320 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>/</id>
+  <title>Lil Martin</title>
+  <subtitle>一个菜鸡全栈程序员博主。</subtitle>
+  <updated>2021-08-15T02:27:39+08:00</updated>
+  <author>
+    <name>Martin_Du</name>
+    <uri>/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en-US"
+    href="/"/>
+  <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator>
+  <rights> © 2021 Martin_Du </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>通过flask在后端部署时遇到的问题</title>
+    <link href="/posts/flask-getPost/" rel="alternate" type="text/html" title="通过flask在后端部署时遇到的问题" />
+    <published>2021-08-15T02:08:46+08:00</published>
+  
+    <updated>2021-08-15T02:08:46+08:00</updated>
+  
+    <id>/posts/flask-getPost/</id>
+    <content src="/posts/flask-getPost/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="python-flask" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      虚拟环境
+
+​	Utunbu配置虚拟环境，virtualenv 安装时如果pip不是最新版，下载的时候会丢包
+
+外网访问服务器时无法得到响应
+
+
+  服务器端放行端口
+
+  
+    
+      在服务器面板找到安全组，添加一个安全组，选择端口号，协议为TCP协议。
+    
+    
+      连通ssh修改防火墙配置：
+
+      systemctl start firewalld.service 
+firewall-cmd --zone=public --add-port=5000/tcp --permanent
+systemctl restart firewalld.service
+firewall-cmd --reload
+
+    
+  
+
+  一定要保证面板放通的端口号与ssh打开的端口号一致，我开通的是5000
+
+
+
+  通过wsgi来启动flask
+
+  ​	...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>githubpage+jekyll搭建blog遇到的问题(二)git</title>
+    <link href="/posts/blog-question-git/" rel="alternate" type="text/html" title="githubpage+jekyll搭建blog遇到的问题(二)git" />
+    <published>2021-08-11T14:25:34+08:00</published>
+  
+    <updated>2021-08-11T14:25:34+08:00</updated>
+  
+    <id>/posts/blog-question-git/</id>
+    <content src="/posts/blog-question-git/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="buildBlog" />
+    
+    <category term="build_question" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      ssh
+
+
+  在配置了ssh之后，发现每次push还是需要输入账号密码
+
+  git-bash执行命令 git config --global credential.helper store
+
+  然后操作 pull/push ，第一次需要输入账号密码，下次再操作就不需要了。
+
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>githubpage+jekyll搭建blog遇到的问题(一)jekyll</title>
+    <link href="/posts/blog-question-jekyll/" rel="alternate" type="text/html" title="githubpage+jekyll搭建blog遇到的问题(一)jekyll" />
+    <published>2021-08-11T11:23:15+08:00</published>
+  
+    <updated>2021-08-11T11:23:15+08:00</updated>
+  
+    <id>/posts/blog-question-jekyll/</id>
+    <content src="/posts/blog-question-jekyll/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="buildBlog" />
+    
+    <category term="build_question" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      关于字符编码的问题
+
+
+  在我执行了 bundle exec jekyll serve 之后曝出以下错误
+
+  Liquid Execption: Liquid error (line 13):invalid byte sequence in UTF-8 in sitemap.xml 
+
+
+  解决方法是找到 “md文件头” 中的 “tags” 中含有中文的md文件
+
+  将中文标签删除或改为英文标签
+
+  然后找到 _site 文件夹下的 setmap.xml 中的中文编码所在的标签
+
+  删除该标签以及其父标签
+
+  然后重新执行 bundle exec jekyll serve
+
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>react 基础(一)概述及简单用法</title>
+    <link href="/posts/react-basic/" rel="alternate" type="text/html" title="react 基础(一)概述及简单用法" />
+    <published>2021-08-09T23:04:16+08:00</published>
+  
+    <updated>2021-08-09T23:04:16+08:00</updated>
+  
+    <id>/posts/react-basic/</id>
+    <content src="/posts/react-basic/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="react-Basic" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      1. React 概述
+
+1.1 什么是React
+
+​		React 是一个用于 构建用户界面 的 JavaScript库。
+
+​		用户界面：前端（html）
+
+​		React 主要用来写HTML界面，或 构建web应用
+
+## 	1.2 React的特点
+
+
+
+  
+    
+      声明式：只需要描述 UI 看起来是什么样，就像写HTML一样
+
+      const jsx = &amp;lt;div className="app"&amp;gt;
+      	&amp;lt;h1&amp;gt;Hello React! 动态数据:{count}&amp;lt;/h1&amp;gt;
+      &amp;lt;/div&amp;gt;
+      
+    
+    
+      基于组件
+
+      
+        组件式React中 &amp;lt;p style="color:red"&amp;gt;最重要&amp;lt;/p&amp;gt;的内容...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>gitpage+jekyll搭建博客(五)发布文章</title>
+    <link href="/posts/blog-publish-blog/" rel="alternate" type="text/html" title="gitpage+jekyll搭建博客(五)发布文章" />
+    <published>2021-07-22T20:05:55+08:00</published>
+  
+    <updated>2021-07-22T20:05:55+08:00</updated>
+  
+    <id>/posts/blog-publish-blog/</id>
+    <content src="/posts/blog-publish-blog/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="buildBlog" />
+    
+    <category term="build_step" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      关于markdown
+
+
+  编译软件，我使用的是 Typora
+
+
+文章存放位置
+
+
+  _drafts：该文件夹下放未完成的文章（文件名没有格式要求）
+
+  _posts：该文件夹下放要发布的文章
+
+
+撰写文章
+
+
+  Front Matter
+
+  ​	这里 只介绍一点点，详细介绍请看大佬
+
+  ​	Front Matter 是Jekyll开始变得非常酷的地方
+
+  ​	Front Matter 必须是文件中的第一个事物
+
+  ​	任何包含 YAML Front Matter 的文件都将由 Jekyll 作为特殊文件进行处理
+
+  ​	格式为：
+
+  ---
+layout: post
+title: "Hello YAML"
+date: 2021-07-22 12:05:55 0800
+category: Child Class
+categories: Dad Class
+tag...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+

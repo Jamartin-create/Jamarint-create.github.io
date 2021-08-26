@@ -31,6 +31,7 @@
 <link rel="canonical" href="/" />
 <meta property="og:url" content="/" />
 <meta property="og:site_name" content="Lil Martin" />
+<link rel="next" href="/page2" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Lil Martin" />
 <meta name="twitter:site" content="@" />
@@ -476,6 +477,397 @@
 
 
 <div id="post-list">
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/flask-python-deployment/">github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        编写代码
+
+创建虚拟环境
+
+
+  mkvirtualenv -p python3 my_env
+
+  进入工作空间 workon my_env
+
+
+放置代码
+
+
+  创建一个工作空间放置代码 mkdir pythonWorkSpace(可要可不要，看个人习惯)
+
+  进入刚刚创建的工作空间 cd pythonWorkSpace
+
+  创建一个python文件 vim robort.py
+
+ ...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Tue, Aug 17, 2021,  8:16 AM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Aug 17
+  
+
+  <i class="unloaded">2021-08-17T08:16:18+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="178 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/flask-python-code/">github-webhook与企业WeChat-webhook中间件开发(三)编写代码</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        导入需要的包
+
+import json #用于处理后期传入的json数据
+import time #获取当前时间等等
+import requests #发送get/post请求 
+from flask import Flask, request, jsonify #flask是主要的包
+from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
+
+
+...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, Aug 16, 2021, 11:16 PM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Aug 16
+  
+
+  <i class="unloaded">2021-08-16T23:16:08+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="468 words">2 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/flask-python-server/">github-webhook与企业WeChat-webhook中间件开发(二)服务器配置</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        端口配置
+
+面板配置端口
+
+
+  打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)
+
+
+服务器内部打开该端口防火墙
+
+
+  systemctl start firewalld.service 
+firewall-cmd --zone=public --add-port=5000/tcp --permanent
+systemctl restart fir...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, Aug 16, 2021,  8:25 PM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Aug 16
+  
+
+  <i class="unloaded">2021-08-16T20:25:17+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="165 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/flask-python-webhock/">github-webhook与企业WeChat-webhook中间件开发(一)webhook</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        WebHook
+
+什么是WebHook
+
+
+  最典型的例子：当你发送一条朋友圈，微信的服务器会把你的这条朋友圈同步到你所有好友的客户端（要是你屏蔽人了就是给服务器列出了特别名单）
+
+  这还是 客户端 - 服务器 模式的逆转模式
+
+  
+    传统方法中，一般是客户端向服务器发出 请求 ，服务器给予客户端 响应 （这叫客户机拉取请求）
+  
+
+  
+    在 WebHook 范式下，服...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, Aug 16, 2021, 11:20 AM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Aug 16
+  
+
+  <i class="unloaded">2021-08-16T11:20:23+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="795 words">4 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
 
 
 
@@ -927,7 +1319,7 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Jul 22, 2021,  8:05 PM +0800"
+    title="Thu, Jul 22, 2021, 12:05 PM +0800"
   
 
   
@@ -940,7 +1332,7 @@
     Jul 22
   
 
-  <i class="unloaded">2021-07-22T20:05:55+08:00</i>
+  <i class="unloaded">2021-07-22T12:05:55+08:00</i>
 
 </span>
 
@@ -1081,436 +1473,6 @@
 
 
 
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/blog-git-push/">gitpage+jekyll搭建博客(三)将jekyll模板上传至github</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        挑选主题
-
-
-  jekyll官网 /我用的主题是chirpy
-
-  挑选好后点击 Download
-
-  解压缩到任一文件夹
-
-
-搭建本地网站浏览模板
-
-
-  命令行执行 cd {你的文件夹位置} 
-
-  命令行执行 bundle exec jekyll serve bundler安装教程
-
-  浏览 http://localhost:4000 即可查看这个模板
-
-
-克隆git仓库
-
-
- ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Wed, Jul 21, 2021,  4:20 PM +0800"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Jul 21
-  
-
-  <i class="unloaded">2021-07-21T16:20:16+08:00</i>
-
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="363 words">2 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/blog-conv-jekyll/">gitpage+jekyll搭建博客(二)搭建jekyll环境</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        安装rubygems
-
-
-  在官网下载自带Devkit版本，链接
-
-  
-
-  安装时勾上Add Ruby executables to your PATH
-
-  命令行输入ruby -v 检查ruby是否安装成功
-
-  输入gem -v 检查1是否安装成功
-
-
-用gem命令安装jekyll
-
-
-  命令行输入 gem install jekyll bundler //通过 RubyGem...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Wed, Jul 21, 2021,  3:16 PM +0800"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Jul 21
-  
-
-  <i class="unloaded">2021-07-21T15:16:16+08:00</i>
-
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="189 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/blog-git-bind/">gitpage+jekyll搭建博客(一)代码托管</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        注册账号
-
-
-  不用多说吧
-
-
-创建仓库
-
-
-  点击右上角➕，再点击New repository
-
-  
-
-  仓库名的格式为 “用户名”.github.io（因为GitHub对于同一个账户只允许生成一个直接访问的网站）
-
-  
-
-
-将仓库与本地连接（绑定）
-
-
-  下载并安装git
-
-  
-
-  ​	下载链接
-
-  打开git-bash
-
-  
-
-  将git与仓库绑定
-
-  git ...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Tue, Jul 20, 2021,  7:14 PM +0800"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Jul 20
-  
-
-  <i class="unloaded">2021-07-20T19:14:16+08:00</i>
-
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="265 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/java-hashmap/">HashMap(一)用法</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        Java-HashMap
-
-HashMap（哈希表）的理解
-
-
-  
-    其增删改查 在不考虑“哈希冲突时的时间复杂度仅有O(1)
-  
-  
-    主干是 数组 ，也就是通过某个”下标”即索引从而实现一次定位
-  
-  
-    哈希冲突 是指：虽然两个元素的 key 不同，但是他们的实际地址 却相同，即冲突
-  
-
-
-HashMap的使用
-
-
-  
-    创建一个HashMap
-...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sat, Jul 17, 2021,  4:16 PM +0800"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Jul 17
-  
-
-  <i class="unloaded">2021-07-17T16:16:01+08:00</i>
-
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="353 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
 </div> <!-- #post-list -->
 
 
@@ -1551,17 +1513,34 @@ HashMap的使用
 
   
 
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- show number -->
+      <li class="page-item ">
+        <a class="page-link btn-box-shadow" href="/page2/">2</a>
+      </li>
+    
+
+  
+
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>1</span>
-    <span class="text-muted">/ 1</span>
+    <span class="text-muted">/ 2</span>
   </li>
 
   <!-- right arrow -->
   
 
-  <li class="page-item disabled">
-    <a class="page-link btn-box-shadow" href="#" aria-label="next-page">
+  <li class="page-item ">
+    <a class="page-link btn-box-shadow" href="/page2" aria-label="next-page">
       <i class="fas fa-angle-right"></i>
     </a>
   </li>
@@ -1636,53 +1615,25 @@ HashMap的使用
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-      
     
   
     
     
     
     
-      
-    
   
     
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1698,7 +1649,25 @@ HashMap的使用
     
     
     
-      
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1706,6 +1675,13 @@ HashMap的使用
     
     
       
+        
+        
+
+  
+    
+    
+    
     
   
     
@@ -1713,6 +1689,13 @@ HashMap的使用
     
     
       
+        
+        
+
+  
+    
+    
+    
     
   
     
@@ -1734,22 +1717,6 @@ HashMap的使用
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1778,22 +1745,6 @@ HashMap的使用
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1830,8 +1781,6 @@ HashMap的使用
     
     
     
-      
-    
   
     
     
@@ -1865,14 +1814,10 @@ HashMap的使用
     
     
     
-      
-    
   
     
     
     
-    
-      
     
   
     
@@ -1895,6 +1840,12 @@ HashMap的使用
         <a class="post-tag" href="/tags/flask/">flask</a>
       
         
+        <a class="post-tag" href="/tags/python/">python</a>
+      
+        
+        <a class="post-tag" href="/tags/linux/">linux</a>
+      
+        
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>
       
         
@@ -1905,12 +1856,6 @@ HashMap的使用
       
         
         <a class="post-tag" href="/tags/jsx/">JSX</a>
-      
-        
-        <a class="post-tag" href="/tags/linux/">linux</a>
-      
-        
-        <a class="post-tag" href="/tags/python/">python</a>
       
         
         <a class="post-tag" href="/tags/react/">React</a>
@@ -2011,53 +1956,25 @@ HashMap的使用
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-      
     
   
     
     
     
     
-      
-    
   
     
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2073,7 +1990,25 @@ HashMap的使用
     
     
     
-      
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2081,6 +2016,13 @@ HashMap的使用
     
     
       
+        
+        
+
+  
+    
+    
+    
     
   
     
@@ -2088,6 +2030,13 @@ HashMap的使用
     
     
       
+        
+        
+
+  
+    
+    
+    
     
   
     
@@ -2109,22 +2058,6 @@ HashMap的使用
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2153,22 +2086,6 @@ HashMap的使用
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2205,8 +2122,6 @@ HashMap的使用
     
     
     
-      
-    
   
     
     
@@ -2240,14 +2155,10 @@ HashMap的使用
     
     
     
-      
-    
   
     
     
     
-    
-      
     
   
     
@@ -2265,6 +2176,12 @@ HashMap的使用
         <a class="post-tag" href="/tags/flask/">flask</a>
       
         
+        <a class="post-tag" href="/tags/python/">python</a>
+      
+        
+        <a class="post-tag" href="/tags/linux/">linux</a>
+      
+        
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>
       
         
@@ -2275,12 +2192,6 @@ HashMap的使用
       
         
         <a class="post-tag" href="/tags/jsx/">JSX</a>
-      
-        
-        <a class="post-tag" href="/tags/linux/">linux</a>
-      
-        
-        <a class="post-tag" href="/tags/python/">python</a>
       
         
         <a class="post-tag" href="/tags/react/">React</a>

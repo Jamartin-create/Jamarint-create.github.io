@@ -1,6 +1,66 @@
 [
   
   {
+    "title": "github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器",
+    "url": "/posts/flask-python-deployment/",
+    "categories": "python-flask",
+    "tags": "python, flask, linux",
+    "date": "2021-08-17 08:16:18 +0800",
+    
+
+
+
+
+
+    "snippet": "编写代码创建虚拟环境  mkvirtualenv -p python3 my_env  进入工作空间 workon my_env放置代码  创建一个工作空间放置代码 mkdir pythonWorkSpace(可要可不要，看个人习惯)  进入刚刚创建的工作空间 cd pythonWorkSpace  创建一个python文件 vim robort.py  将代码粘贴到编辑器中运行代码  保存并退出编辑模式  挂载python程序 python robort.py &amp;amp;  查看进程是否正常 ps -ef|grep python  如果有之前占用此端口的程序为结束可能会报错  ..."
+  },
+  
+  {
+    "title": "github-webhook与企业WeChat-webhook中间件开发(三)编写代码",
+    "url": "/posts/flask-python-code/",
+    "categories": "python-flask",
+    "tags": "python, flask",
+    "date": "2021-08-16 23:16:08 +0800",
+    
+
+
+
+
+
+    "snippet": "导入需要的包import json #用于处理后期传入的json数据import time #获取当前时间等等import requests #发送get/post请求 from flask import Flask, request, jsonify #flask是主要的包from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问编写webAppapp = Flask(__name__)#外网访问时&#39;ip地址/&#39;可以得到 &#39;hello world&#39; 的响应@app.route(&#39;/&#39;)def he..."
+  },
+  
+  {
+    "title": "github-webhook与企业WeChat-webhook中间件开发(二)服务器配置",
+    "url": "/posts/flask-python-server/",
+    "categories": "python-flask",
+    "tags": "python, flask, linux",
+    "date": "2021-08-16 20:25:17 +0800",
+    
+
+
+
+
+
+    "snippet": "端口配置面板配置端口  打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)服务器内部打开该端口防火墙  systemctl start firewalld.service firewall-cmd --zone=public --add-port=5000/tcp --permanentsystemctl restart firewalld.servicefirewall-cmd --reload  这里不打开也有可能无法访问该端口python环境配置虚拟环境            用pip安装virtualenvwrapper           ..."
+  },
+  
+  {
+    "title": "github-webhook与企业WeChat-webhook中间件开发(一)webhook",
+    "url": "/posts/flask-python-webhock/",
+    "categories": "python-flask",
+    "tags": "python, flask, linux",
+    "date": "2021-08-16 11:20:23 +0800",
+    
+
+
+
+
+
+    "snippet": "WebHook什么是WebHook  最典型的例子：当你发送一条朋友圈，微信的服务器会把你的这条朋友圈同步到你所有好友的客户端（要是你屏蔽人了就是给服务器列出了特别名单）  这还是 客户端 - 服务器 模式的逆转模式      传统方法中，一般是客户端向服务器发出 请求 ，服务器给予客户端 响应 （这叫客户机拉取请求）        在 WebHook 范式下，服务器更新所需提供的资源，然后自动将其作为更新发送到客户端（服务器是在推数据），客户端不是请求者，而是被动接收方  应用场景  对于第三方平台验权、登陆等 没有前端界面做中转的场景，或者强安全要求的支付场景等，适合用 Webhoo..."
+  },
+  
+  {
     "title": "通过flask在后端部署时遇到的问题",
     "url": "/posts/flask-getPost/",
     "categories": "python-flask",
@@ -65,7 +125,7 @@
     "url": "/posts/blog-publish-blog/",
     "categories": "buildBlog, build_step",
     "tags": "",
-    "date": "2021-07-22 20:05:55 +0800",
+    "date": "2021-07-22 12:05:55 +0800",
     
 
 

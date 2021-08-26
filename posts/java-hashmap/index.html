@@ -816,53 +816,25 @@ System.out.println(dis);
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-      
     
   
     
     
     
     
-      
-    
   
     
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -878,7 +850,25 @@ System.out.println(dis);
     
     
     
-      
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -886,6 +876,13 @@ System.out.println(dis);
     
     
       
+        
+        
+
+  
+    
+    
+    
     
   
     
@@ -893,6 +890,13 @@ System.out.println(dis);
     
     
       
+        
+        
+
+  
+    
+    
+    
     
   
     
@@ -914,22 +918,6 @@ System.out.println(dis);
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -958,22 +946,6 @@ System.out.println(dis);
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1010,8 +982,6 @@ System.out.println(dis);
     
     
     
-      
-    
   
     
     
@@ -1045,14 +1015,10 @@ System.out.println(dis);
     
     
     
-      
-    
   
     
     
     
-    
-      
     
   
     
@@ -1075,6 +1041,12 @@ System.out.println(dis);
         <a class="post-tag" href="/tags/flask/">flask</a>
       
         
+        <a class="post-tag" href="/tags/python/">python</a>
+      
+        
+        <a class="post-tag" href="/tags/linux/">linux</a>
+      
+        
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>
       
         
@@ -1085,12 +1057,6 @@ System.out.println(dis);
       
         
         <a class="post-tag" href="/tags/jsx/">JSX</a>
-      
-        
-        <a class="post-tag" href="/tags/linux/">linux</a>
-      
-        
-        <a class="post-tag" href="/tags/python/">python</a>
       
         
         <a class="post-tag" href="/tags/react/">React</a>
@@ -1137,6 +1103,58 @@ System.out.println(dis);
 
 
 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
   
@@ -1313,7 +1331,7 @@ System.out.println(dis);
       
       
       <div class="card">
-        <a href="/posts/flask-getPost/">
+        <a href="/posts/flask-python-deployment/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1334,14 +1352,14 @@ System.out.println(dis);
   
 
   
-    Aug 15
+    Aug 17
   
 
-  <i class="unloaded">2021-08-15T02:08:46+08:00</i>
+  <i class="unloaded">2021-08-17T08:16:18+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>通过flask在后端部署时遇到的问题</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1350,23 +1368,26 @@ System.out.println(dis);
 
 
 
-                虚拟环境
+                编写代码
 
-​	Utunbu配置虚拟环境，virtualenv 安装时如果pip不是最新版，下载的时候会丢包
-
-外网访问服务器时无法得到响应
+创建虚拟环境
 
 
-  服务器端放行端口
+  mkvirtualenv -p python3 my_env
 
-  
-    
-      在服务器面板找到安全组，添加一个安全组，选择端口号，协议为TCP协议。
-    
-    
-      连通ssh修改防火墙配置：
+  进入工作空间 workon my_env
 
-      systemctl start firewalld...
+
+放置代码
+
+
+  创建一个工作空间放置代码 mkdir pythonWorkSpace(可要可不要，看个人习惯)
+
+  进入刚刚创建的工作空间 cd pythonWorkSpace
+
+  创建一个python文件 vim robort.py
+
+ ...
               </p>
             </div>
           </div>
@@ -1376,7 +1397,7 @@ System.out.println(dis);
       
       
       <div class="card">
-        <a href="/posts/blog-question-git/">
+        <a href="/posts/flask-python-code/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1397,14 +1418,14 @@ System.out.println(dis);
   
 
   
-    Aug 11
+    Aug 16
   
 
-  <i class="unloaded">2021-08-11T14:25:34+08:00</i>
+  <i class="unloaded">2021-08-16T23:16:08+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>githubpage+jekyll搭建blog遇到的问题(二)git</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(三)编写代码</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1413,17 +1434,18 @@ System.out.println(dis);
 
 
 
-                ssh
+                导入需要的包
 
-
-  在配置了ssh之后，发现每次push还是需要输入账号密码
-
-  git-bash执行命令 git config --global credential.helper store
-
-  然后操作 pull/push ，第一次需要输入账号密码，下次再操作就不需要了。
-
-
-
+1
+2
+3
+4
+5
+import json #用于处理后期传入的json数据
+import time #获取当前时间等等
+import requests #发送get/post请求 
+from flask import Flask, request, jsonify #flask是主要的包
+from gevent import pywsgi #必须通过wsgi启动webapp...
               </p>
             </div>
           </div>
@@ -1433,7 +1455,7 @@ System.out.println(dis);
       
       
       <div class="card">
-        <a href="/posts/blog-question-jekyll/">
+        <a href="/posts/flask-python-server/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1454,14 +1476,14 @@ System.out.println(dis);
   
 
   
-    Aug 11
+    Aug 16
   
 
-  <i class="unloaded">2021-08-11T11:23:15+08:00</i>
+  <i class="unloaded">2021-08-16T20:25:17+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>githubpage+jekyll搭建blog遇到的问题(一)jekyll</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(二)服务器配置</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1470,17 +1492,20 @@ System.out.println(dis);
 
 
 
-                关于字符编码的问题
+                端口配置
+
+面板配置端口
 
 
-  在我执行了 bundle exec jekyll serve 之后曝出以下错误
-
-  Liquid Execption: Liquid error (line 13):invalid byte sequence in UTF-8 in sitemap.xml 
+  打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)
 
 
-  解决方法是找到 “md文件头” 中的 “tags” 中含有中文的md文件
+服务器内部打开该端口防火墙
 
-  将中文标签删除或...
+
+  systemctl start firewalld.service 
+firewall-cmd --zone=public --add-port=5000/tcp --permanent
+systemctl restart fir...
               </p>
             </div>
           </div>
@@ -1603,53 +1628,25 @@ System.out.println(dis);
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-      
     
   
     
     
     
     
-      
-    
   
     
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1665,7 +1662,25 @@ System.out.println(dis);
     
     
     
-      
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1673,6 +1688,13 @@ System.out.println(dis);
     
     
       
+        
+        
+
+  
+    
+    
+    
     
   
     
@@ -1680,6 +1702,13 @@ System.out.println(dis);
     
     
       
+        
+        
+
+  
+    
+    
+    
     
   
     
@@ -1701,22 +1730,6 @@ System.out.println(dis);
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1745,22 +1758,6 @@ System.out.println(dis);
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1797,8 +1794,6 @@ System.out.println(dis);
     
     
     
-      
-    
   
     
     
@@ -1832,14 +1827,10 @@ System.out.println(dis);
     
     
     
-      
-    
   
     
     
     
-    
-      
     
   
     
@@ -1857,6 +1848,12 @@ System.out.println(dis);
         <a class="post-tag" href="/tags/flask/">flask</a>
       
         
+        <a class="post-tag" href="/tags/python/">python</a>
+      
+        
+        <a class="post-tag" href="/tags/linux/">linux</a>
+      
+        
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>
       
         
@@ -1867,12 +1864,6 @@ System.out.println(dis);
       
         
         <a class="post-tag" href="/tags/jsx/">JSX</a>
-      
-        
-        <a class="post-tag" href="/tags/linux/">linux</a>
-      
-        
-        <a class="post-tag" href="/tags/python/">python</a>
       
         
         <a class="post-tag" href="/tags/react/">React</a>
