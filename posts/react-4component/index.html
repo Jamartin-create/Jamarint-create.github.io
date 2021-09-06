@@ -24,25 +24,25 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="gitpage+jekyll搭建博客(五)发布文章" />
+<meta property="og:title" content="react 基础(四)组件" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="关于markdown" />
-<meta property="og:description" content="关于markdown" />
-<link rel="canonical" href="/posts/blog-publish-blog/" />
-<meta property="og:url" content="/posts/blog-publish-blog/" />
+<meta name="description" content="props : 一个只读的参数" />
+<meta property="og:description" content="props : 一个只读的参数" />
+<link rel="canonical" href="/posts/react-4component/" />
+<meta property="og:url" content="/posts/react-4component/" />
 <meta property="og:site_name" content="Lil Martin" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-07-22T12:05:55+08:00" />
+<meta property="article:published_time" content="2021-08-10T18:23:58+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="gitpage+jekyll搭建博客(五)发布文章" />
+<meta property="twitter:title" content="react 基础(四)组件" />
 <meta name="twitter:site" content="@" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","headline":"gitpage+jekyll搭建博客(五)发布文章","dateModified":"2021-07-22T12:05:55+08:00","datePublished":"2021-07-22T12:05:55+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/blog-publish-blog/"},"url":"/posts/blog-publish-blog/","description":"关于markdown","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"react 基础(四)组件","dateModified":"2021-08-10T18:23:58+08:00","datePublished":"2021-08-10T18:23:58+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/react-4component/"},"url":"/posts/react-4component/","description":"props : 一个只读的参数","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>gitpage+jekyll搭建博客(五)发布文章 | Lil Martin
+  <title>react 基础(四)组件 | Lil Martin
   </title>
 
   <!--
@@ -414,7 +414,7 @@
       
 
         
-          <span>gitpage+jekyll搭建博客(五)发布文章</span>
+          <span>react 基础(四)组件</span>
 
         
 
@@ -489,7 +489,7 @@
 
     <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-      <h1 data-toc-skip>gitpage+jekyll搭建博客(五)发布文章</h1>
+      <h1 data-toc-skip>react 基础(四)组件</h1>
 
       <div class="post-meta text-muted d-flex flex-column">
         <!-- Published date and author -->
@@ -510,7 +510,7 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Jul 22, 2021, 12:05 PM +0800"
+    title="Tue, Aug 10, 2021,  6:23 PM +0800"
   
 
   
@@ -520,10 +520,10 @@
   
 
   
-    Jul 22
+    Aug 10
   
 
-  <i class="unloaded">2021-07-22T12:05:55+08:00</i>
+  <i class="unloaded">2021-08-10T18:23:58+08:00</i>
 
 </span>
 
@@ -548,7 +548,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="193 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="864 words">4 min</span>
 
 
           <!-- page views -->
@@ -562,36 +562,72 @@
 
         
 
-        <h3 id="关于markdown">关于markdown</h3>
+        <p>props : 一个只读的参数</p>
+
+<h3 id="组件分类">组件分类</h3>
+
+<h4 id="函数组件">函数组件：</h4>
+
+<p>​		编写Js函数是定义组件最简单的方式</p>
+
+<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">Myintro</span><span class="p">(</span><span class="nx">props</span><span class="p">){</span>
+	<span class="k">return</span> <span class="p">(</span>
+    	<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, <span class="si">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;;</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>​		有效的 <strong>React函数组件</strong> ：（本质上还是JavaScript函数）</p>
 
 <blockquote>
-  <p>编译软件，我使用的是 <a href="https://www.typora.io/">Typora</a></p>
+  <ol>
+    <li>接收唯一带有数据的 “props”</li>
+    <li>返回一个React元素</li>
+  </ol>
 </blockquote>
 
-<h3 id="文章存放位置">文章存放位置</h3>
+<h4 id="class组件">class组件</h4>
+
+<p>​		ps基于ES6</p>
+
+<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="kd">class</span> <span class="nx">Myintro</span> <span class="kd">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="p">{</span>
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span>
+        	<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, <span class="si">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;;</span>
+        <span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div></div>
 
 <blockquote>
-  <p>_drafts：该文件夹下放未完成的文章（文件名没有格式要求）</p>
+  <p>ps:</p>
 
-  <p>_posts：该文件夹下放要发布的文章</p>
+  <p>无论是函数组件还是class组件，组件名的首字母必须大写</p>
+
+  <p>React会将以小写字母开头的组件视为原生DOM标签</p>
 </blockquote>
 
-<h3 id="撰写文章">撰写文章</h3>
+<h3 id="渲染组件">渲染组件</h3>
 
-<blockquote>
-  <h4 id="front-matter">Front Matter</h4>
+<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">&lt;</span><span class="nc">Myintro</span> <span class="na">name</span><span class="p">=</span><span class="s">"LilMartin"</span> <span class="p">/&gt;;</span>
+</pre></td></tr></tbody></table></code></div></div>
 
-  <p>​	这里 只介绍一点点，详细介绍请看<a href="https://juejin.cn/post/6844903629682376711">大佬</a></p>
+<p>​	用户自定义的组件中，JSX所接收的属性(name=”LilMartin”)以及子组件转换为一个对象传递给组件，这个对象就称之为”props”</p>
 
-  <p>​	<b>Front Matter</b> 是Jekyll开始变得非常酷的地方</p>
-
-  <p>​	<b>Front Matter</b> 必须是文件中的第一个事物</p>
-
-  <p>​	任何包含 <a href="http://yaml.org/">YAML</a> Front Matter 的文件都将由 <b>Jekyll</b> 作为特殊文件进行处理</p>
-
-  <p>​	格式为：</p>
-
-  <div lang="yaml" class="language-yaml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -599,23 +635,238 @@
 6
 7
 8
-</pre></td><td class="rouge-code"><pre><span class="nn">---</span>
-<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
-<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Hello</span><span class="nv"> </span><span class="s">YAML"</span>
-<span class="na">date</span><span class="pi">:</span> <span class="s">2021-07-22 12:05:55 </span><span class="m">0800</span>
-<span class="na">category</span><span class="pi">:</span> <span class="s">Child Class</span>
-<span class="na">categories</span><span class="pi">:</span> <span class="s">Dad Class</span>
-<span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">example</span><span class="pi">,</span><span class="nv">blog</span><span class="pi">]</span>
-<span class="nn">---</span>
-</pre></td></tr></tbody></table></code></div>  </div>
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="c1">//上面的代码渲染出来的结果为："Hello, LilMartin"</span>
+<span class="kd">function</span> <span class="nx">Myintro</span><span class="p">(</span><span class="nx">props</span><span class="p">){</span>
+    <span class="k">return</span> <span class="p">(</span>
+    	<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, <span class="si">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;;</span>
+    <span class="p">)</span>
+<span class="p">}</span>
 
-  <h4 id="正文部分">正文部分</h4>
+<span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">&lt;</span><span class="nc">Myintro</span> <span class="na">name</span> <span class="p">=</span> <span class="s">"LilMartin"</span> <span class="p">/&gt;;</span>
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+	<span class="nx">element</span><span class="p">,</span>
+	<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></td></tr></tbody></table></code></div></div>
 
-  <p>​	markdown编写文章请参考<a href="https://www.runoob.com/markdown/md-table.html">菜鸟教程markdown部分</a></p>
+<p>​	以上代码的执行过程为：</p>
+
+<blockquote>
+  <ol>
+    <li>调用渲染器 <strong>ReactDOM.render()</strong> ，传入<Myintro name="LilMartin"></Myintro>作为参数</li>
+    <li>React 调用 Myintro 组件，并将 {name: ‘LilMartin’} 作为 props传入</li>
+    <li>Welcome 组件将 <kbd>&lt;h1&gt;Hello, LilMartin&lt;/h1&gt;</kbd> 元素作为返回值。</li>
+    <li>ReactDOM 将 DOM 高效地更新为 <kbd>&lt;h1&gt;Hello, Lilmartin&lt;/h1&gt;</kbd> 。</li>
+  </ol>
 </blockquote>
 
-<p>参考文章：<a href="https://juejin.cn/post/6844903629682376711">GarLin</a></p>
+<h3 id="组合组件">组合组件</h3>
 
+<p>​	一个组件可以在其中加入其他组件，在输出时引用</p>
+
+<p>​	例如：在List组件中展示多个Myintro组件</p>
+
+<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">List</span><span class="p">(){</span>
+    <span class="k">return</span> <span class="p">(</span>
+    	<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+        	<span class="p">&lt;</span><span class="nc">Myintro</span> <span class="na">name</span> <span class="p">=</span> <span class="s">"LilMartin"</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nc">Myintro</span> <span class="na">name</span> <span class="p">=</span> <span class="s">"LilGhost"</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nc">Myintro</span> <span class="na">name</span> <span class="p">=</span> <span class="s">"DwayneJhonson"</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+	<span class="p">&lt;</span><span class="nc">List</span> <span class="p">/&gt;,</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<blockquote>
+  <p>ps:通常来说，一个React应用程序的顶层组件都是APP组件</p>
+</blockquote>
+
+<h3 id="提取组件">提取组件</h3>
+
+<p>​	将组建拆分为更小的组件</p>
+
+<p>​	假如有一个含有一个人全部信息的组件</p>
+
+<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">Comment</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">"Comment"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">"UserInfo"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">className</span><span class="p">=</span><span class="s">"Avatar"</span>
+          <span class="na">src</span><span class="p">=</span><span class="si">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">author</span><span class="p">.</span><span class="nx">avatarUrl</span><span class="si">}</span>
+          <span class="na">alt</span><span class="p">=</span><span class="si">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">author</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span>
+        <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">"UserInfo-name"</span><span class="p">&gt;</span>
+          <span class="si">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">author</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">"Comment-text"</span><span class="p">&gt;</span>
+        <span class="si">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">text</span><span class="si">}</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">"Comment-date"</span><span class="p">&gt;</span>
+        <span class="si">{</span><span class="nx">formatDate</span><span class="p">(</span><span class="nx">props</span><span class="p">.</span><span class="nx">date</span><span class="p">)</span><span class="si">}</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>​	该组件用于描述某社交媒体网站上的评论功能，接收 <strong>author</strong> （访客对象），<strong>text</strong> （字符串）以及 <strong>date</strong> （日期）作为props。</p>
+
+<p>​	该组件因为嵌套关系，难以维护，且很难服用它的各个部分，将其中嵌套的组件抽取出来会更加方便且间接。</p>
+
+<ul>
+  <li>提取用户头像</li>
+</ul>
+
+<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">Avatar</span><span class="p">(</span><span class="nx">props</span><span class="p">){</span>
+    <span class="k">return</span> <span class="p">(</span>
+    	<span class="p">&lt;</span><span class="nt">img</span> <span class="na">className</span> <span class="p">=</span> <span class="s">"Avatar"</span>
+            <span class="na">src</span> <span class="p">=</span> <span class="si">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">avatarUrl</span><span class="si">}</span>
+            <span class="na">alt</span> <span class="p">=</span> <span class="si">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span>
+         <span class="p">/&gt;</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<ul>
+  <li>提取用户信息，并在用户名旁边渲染头像</li>
+</ul>
+
+<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">UserInfo</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">"UserInfo"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nc">Avatar</span> <span class="na">user</span><span class="p">=</span><span class="si">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">user</span><span class="si">}</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">"UserInfo-name"</span><span class="p">&gt;</span>
+        <span class="si">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>​	单独的组件不需要知道Comment组件内部是怎样渲染的</p>
+
+<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">Comment</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">"Comment"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nc">UserInfo</span> <span class="na">user</span><span class="p">=</span><span class="si">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">author</span><span class="si">}</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">"Comment-text"</span><span class="p">&gt;</span>
+        <span class="si">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">text</span><span class="si">}</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">"Comment-date"</span><span class="p">&gt;</span>
+        <span class="si">{</span><span class="nx">formatDate</span><span class="p">(</span><span class="nx">props</span><span class="p">.</span><span class="nx">date</span><span class="p">)</span><span class="si">}</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="props-的只读性">Props 的只读性</h3>
+
+<p>​	无论是函数组件还是类组件，都不能改变自身的props</p>
+
+<h4 id="纯函数">纯函数</h4>
+
+<div lang="javascript" class="language-javascript highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">sum</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>​	该函数没有改变人何一个入参的值，被称为 <strong>纯函数</strong></p>
+
+<h4 id="非纯函数">非纯函数</h4>
+
+<div lang="javascript" class="language-javascript highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">withdra</span> <span class="p">(</span><span class="nx">account</span><span class="p">,</span> <span class="nx">amount</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">account</span><span class="p">.</span><span class="nx">total</span> <span class="o">-=</span> <span class="nx">amount</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>​	即更改了自己的入参</p>
+
+<blockquote>
+  <p>ps:所有 React 组件都必须要像纯函数一样保护 props 不被修改</p>
+</blockquote>
 
 
       </div>
@@ -627,12 +878,26 @@
         <div class="post-meta mb-3">
           <i class="far fa-folder-open fa-fw mr-1"></i>
           
-            <a href='/categories/buildblog/'>buildBlog</a>,
-            <a href='/categories/build-step/'>build_step</a>
+            <a href='/categories/react-basic/'>react-Basic</a>,
+            <a href='/categories/react-es6/'>react-es6</a>
         </div>
         
 
         <!-- tags -->
+        
+        <div class="post-tags">
+          <i class="fa fa-tags fa-fw mr-1"></i>
+          
+          <a href="/tags/react/"
+            class="post-tag no-text-decoration" >React</a>
+          
+          <a href="/tags/javascript/"
+            class="post-tag no-text-decoration" >JavaScript</a>
+          
+          <a href="/tags/jsx/"
+            class="post-tag no-text-decoration" >JSX</a>
+          
+          </div>
         
 
         <div class="post-tail-bottom
@@ -657,19 +922,19 @@
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=gitpage+jekyll搭建博客(五)发布文章 - Lil Martin&url=/posts/blog-publish-blog/" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=react 基础(四)组件 - Lil Martin&url=/posts/react-4component/" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=gitpage+jekyll搭建博客(五)发布文章 - Lil Martin&u=/posts/blog-publish-blog/" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=react 基础(四)组件 - Lil Martin&u=/posts/react-4component/" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://telegram.me/share?text=gitpage+jekyll搭建博客(五)发布文章 - Lil Martin&url=/posts/blog-publish-blog/" data-toggle="tooltip" data-placement="top"
+        <a href="https://telegram.me/share?text=react 基础(四)组件 - Lil Martin&url=/posts/react-4component/" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -1134,59 +1399,59 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
   
 
   
@@ -1273,7 +1538,7 @@
       
       
       <div class="card">
-        <a href="/posts/blog-git-bind/">
+        <a href="/posts/react-2jsx/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1294,14 +1559,14 @@
   
 
   
-    Jul 20
+    Aug 10
   
 
-  <i class="unloaded">2021-07-20T19:14:16+08:00</i>
+  <i class="unloaded">2021-08-10T00:05:16+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>gitpage+jekyll搭建博客(一)代码托管</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>react 基础(二)JSX</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1310,40 +1575,19 @@
 
 
 
-                注册账号
+                JSX简介
+
+​	因为考虑到如下变量申明：
+
+const element = &lt;h1&gt;Hello, world!&lt;/h1&gt;
 
 
-  不用多说吧
+​	这种标签语法即为JSX，既不是字符串也不是HTML，是JavaScript的语法扩展，具有JavaScript的全部功能。
+
+为什么使用jsx
 
 
-创建仓库
-
-
-  点击右上角➕，再点击New repository
-
-  
-
-  仓库名的格式为 “用户名”.github.io（因为GitHub对于同一个账户只允许生成一个直接访问的网站）
-
-  
-
-
-将仓库与本地连接（绑定）
-
-
-  下载并安装git
-
-  
-
-  ​	下载链接
-
-  打开git-bash
-
-  
-
-  将git与仓库绑定
-
-  git ...
+  React 认为渲染逻辑本质上与其他UI逻辑内在耦合，比如：在 UI 中需要绑定处理事...
               </p>
             </div>
           </div>
@@ -1353,7 +1597,7 @@
       
       
       <div class="card">
-        <a href="/posts/blog-conv-jekyll/">
+        <a href="/posts/react-3rendering/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1374,14 +1618,14 @@
   
 
   
-    Jul 21
+    Aug 10
   
 
-  <i class="unloaded">2021-07-21T15:16:16+08:00</i>
+  <i class="unloaded">2021-08-10T06:18:16+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>gitpage+jekyll搭建博客(二)搭建jekyll环境</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>react 基础(三)render</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1390,24 +1634,20 @@
 
 
 
-                安装rubygems
+                将一个元素渲染为DOM
+
+​	页面中有一个 &lt;div&gt; :
+
+&lt;div id = 'root'&gt;&lt;/div&gt;
 
 
-  在官网下载自带Devkit版本，链接
+​	该结点可称为“根”DOM节点，因为该节点内的所有内容都将由React DOM管理。
 
-  
+​	将一个React元素渲染到根DOM节点中，只需把它们一起传入ReactDOM.render():
 
-  安装时勾上Add Ruby executables to your PATH
-
-  命令行输入ruby -v 检查ruby是否安装成功
-
-  输入gem -v 检查1是否安装成功
-
-
-用gem命令安装jekyll
-
-
-  命令行输入 gem install jekyll bundler //通过 RubyGem...
+/*
+* para1:表示要展示的元素
+* par...
               </p>
             </div>
           </div>
@@ -1417,7 +1657,7 @@
       
       
       <div class="card">
-        <a href="/posts/blog-git-push/">
+        <a href="/posts/react-1basic/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1438,14 +1678,14 @@
   
 
   
-    Jul 21
+    Aug  9
   
 
-  <i class="unloaded">2021-07-21T16:20:16+08:00</i>
+  <i class="unloaded">2021-08-09T23:04:16+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>gitpage+jekyll搭建博客(三)将jekyll模板上传至github</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>react 基础(一)概述及简单用法</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1454,30 +1694,24 @@
 
 
 
-                挑选主题
+                React 概述
+
+什么是React
+
+​		React 是一个用于 构建用户界面 的 JavaScript库。
+
+​		用户界面：前端（html）
+
+​		React 主要用来写HTML界面，或 构建web应用
+
+React的特点
 
 
-  jekyll官网 /我用的主题是chirpy
+  
+    
+      声明式：只需要描述 UI 看起来是什么样，就像写HTML一样
 
-  挑选好后点击 Download
-
-  解压缩到任一文件夹
-
-
-搭建本地网站浏览模板
-
-
-  命令行执行 cd {你的文件夹位置} 
-
-  命令行执行 bundle exec jekyll serve bundler安装教程
-
-  浏览 http://localhost:4000 即可查看这个模板
-
-
-克隆git仓库
-
-
- ...
+      const jsx = &lt;div classN...
               </p>
             </div>
           </div>
@@ -1495,16 +1729,16 @@
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <a href="/posts/blog-intro-jekyll/" class="btn btn-outline-primary"
+  <a href="/posts/react-3rendering/" class="btn btn-outline-primary"
     prompt="Older">
-    <p>gitpage+jekyll搭建博客(四)主题目录结构介绍</p>
+    <p>react 基础(三)render</p>
   </a>
   
 
   
-  <a href="/posts/react-1basic/" class="btn btn-outline-primary"
+  <a href="/posts/blog-question-jekyll/" class="btn btn-outline-primary"
     prompt="Newer">
-    <p>react 基础(一)概述及简单用法</p>
+    <p>githubpage+jekyll搭建blog遇到的问题(一)jekyll</p>
   </a>
   
 

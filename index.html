@@ -118,7 +118,7 @@
       <a href="/">Lil Martin</a>
     </div>
 
-    <div class="site-subtitle font-italic">:Lil Martin's Blog</div>
+    <div class="site-subtitle font-italic">Lil Martin's Blog</div>
 
   </div><!-- .profile-wrapper -->
 
@@ -1161,7 +1161,7 @@ systemctl restart fir...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/react-basic/">react 基础(一)概述及简单用法</a>
+      <a href="/posts/react-4component/">react 基础(四)组件</a>
     </h1>
 
     <div class="post-content">
@@ -1172,25 +1172,26 @@ systemctl restart fir...
 
 
 
-        1. React 概述
+        props : 一个只读的参数
 
-1.1 什么是React
+组件分类
 
-​		React 是一个用于 构建用户界面 的 JavaScript库。
+函数组件：
 
-​		用户界面：前端（html）
+​		编写Js函数是定义组件最简单的方式
 
-​		React 主要用来写HTML界面，或 构建web应用
+function Myintro(props){
+	return (
+    	&lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;
+    )
+}
 
-## 	1.2 React的特点
 
+​		有效的 React函数组件 ：（本质上还是JavaScript函数）
 
 
   
-    
-      声明式：只需要描述 UI 看起来是什么样，就像写HTML一样
-
-      const jsx ...
+    接收唯一带有...
       </p>
     </div>
 
@@ -1212,7 +1213,7 @@ systemctl restart fir...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, Aug  9, 2021, 11:04 PM +0800"
+    title="Tue, Aug 10, 2021,  6:23 PM +0800"
   
 
   
@@ -1222,10 +1223,10 @@ systemctl restart fir...
   
 
   
-    Aug  9
+    Aug 10
   
 
-  <i class="unloaded">2021-08-09T23:04:16+08:00</i>
+  <i class="unloaded">2021-08-10T18:23:58+08:00</i>
 
 </span>
 
@@ -1246,7 +1247,7 @@ systemctl restart fir...
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="340 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="864 words">4 min</span>
 
 
         <!-- page views -->
@@ -1263,7 +1264,7 @@ systemctl restart fir...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/blog-publish-blog/">gitpage+jekyll搭建博客(五)发布文章</a>
+      <a href="/posts/react-3rendering/">react 基础(三)render</a>
     </h1>
 
     <div class="post-content">
@@ -1274,30 +1275,20 @@ systemctl restart fir...
 
 
 
-        关于markdown
+        将一个元素渲染为DOM
+
+​	页面中有一个 &lt;div&gt; :
+
+&lt;div id = 'root'&gt;&lt;/div&gt;
 
 
-  编译软件，我使用的是 Typora
+​	该结点可称为“根”DOM节点，因为该节点内的所有内容都将由React DOM管理。
 
+​	将一个React元素渲染到根DOM节点中，只需把它们一起传入ReactDOM.render():
 
-文章存放位置
-
-
-  _drafts：该文件夹下放未完成的文章（文件名没有格式要求）
-
-  _posts：该文件夹下放要发布的文章
-
-
-撰写文章
-
-
-  Front Matter
-
-  ​	这里 只介绍一点点，详细介绍请看大佬
-
-  ​	Front Matter 是Jekyll开始变得非常酷的地方
-
-  ​	Front M...
+/*
+* para1:表示要展示的元素
+* par...
       </p>
     </div>
 
@@ -1319,7 +1310,7 @@ systemctl restart fir...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Jul 22, 2021, 12:05 PM +0800"
+    title="Tue, Aug 10, 2021,  6:18 AM +0800"
   
 
   
@@ -1329,10 +1320,10 @@ systemctl restart fir...
   
 
   
-    Jul 22
+    Aug 10
   
 
-  <i class="unloaded">2021-07-22T12:05:55+08:00</i>
+  <i class="unloaded">2021-08-10T06:18:16+08:00</i>
 
 </span>
 
@@ -1353,7 +1344,7 @@ systemctl restart fir...
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="193 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="269 words">1 min</span>
 
 
         <!-- page views -->
@@ -1370,7 +1361,7 @@ systemctl restart fir...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/blog-intro-jekyll/">gitpage+jekyll搭建博客(四)主题目录结构介绍</a>
+      <a href="/posts/react-2jsx/">react 基础(二)JSX</a>
     </h1>
 
     <div class="post-content">
@@ -1381,28 +1372,19 @@ systemctl restart fir...
 
 
 
-        Jekyll模板结构树介绍
+        JSX简介
+
+​	因为考虑到如下变量申明：
+
+const element = &lt;h1&gt;Hello, world!&lt;/h1&gt;
 
 
-  .
-├── _config.yml
-├── _data
-├── _drafts
-├── _includes
-├── _layouts
-├── _posts
-├── _sass
-├── _site
-├── .jekyll-metadata
-└── index.html
+​	这种标签语法即为JSX，既不是字符串也不是HTML，是JavaScript的语法扩展，具有JavaScript的全部功能。
+
+为什么使用jsx
 
 
-  
-    
-      
-        文件夹/文件
-        说明
-  ...
+  React 认为渲染逻辑本质上与其他UI逻辑内在耦合，比如：在 UI 中需要绑定处理事...
       </p>
     </div>
 
@@ -1424,7 +1406,7 @@ systemctl restart fir...
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Wed, Jul 21, 2021,  8:17 PM +0800"
+    title="Tue, Aug 10, 2021, 12:05 AM +0800"
   
 
   
@@ -1434,10 +1416,10 @@ systemctl restart fir...
   
 
   
-    Jul 21
+    Aug 10
   
 
-  <i class="unloaded">2021-07-21T20:17:20+08:00</i>
+  <i class="unloaded">2021-08-10T00:05:16+08:00</i>
 
 </span>
 
@@ -1458,7 +1440,7 @@ systemctl restart fir...
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="208 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="992 words">5 min</span>
 
 
         <!-- page views -->
@@ -1664,6 +1646,115 @@ systemctl restart fir...
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -1703,121 +1794,6 @@ systemctl restart fir...
     
     
       
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1843,22 +1819,22 @@ systemctl restart fir...
         <a class="post-tag" href="/tags/python/">python</a>
       
         
-        <a class="post-tag" href="/tags/linux/">linux</a>
-      
-        
-        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
-      
-        
-        <a class="post-tag" href="/tags/java/">java</a>
-      
-        
         <a class="post-tag" href="/tags/javascript/">JavaScript</a>
       
         
         <a class="post-tag" href="/tags/jsx/">JSX</a>
       
         
+        <a class="post-tag" href="/tags/linux/">linux</a>
+      
+        
         <a class="post-tag" href="/tags/react/">React</a>
+      
+        
+        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
+      
+        
+        <a class="post-tag" href="/tags/java/">java</a>
       
 
       </div>
@@ -2005,6 +1981,115 @@ systemctl restart fir...
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -2044,121 +2129,6 @@ systemctl restart fir...
     
     
       
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2179,22 +2149,22 @@ systemctl restart fir...
         <a class="post-tag" href="/tags/python/">python</a>
       
         
-        <a class="post-tag" href="/tags/linux/">linux</a>
-      
-        
-        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
-      
-        
-        <a class="post-tag" href="/tags/java/">java</a>
-      
-        
         <a class="post-tag" href="/tags/javascript/">JavaScript</a>
       
         
         <a class="post-tag" href="/tags/jsx/">JSX</a>
       
         
+        <a class="post-tag" href="/tags/linux/">linux</a>
+      
+        
         <a class="post-tag" href="/tags/react/">React</a>
+      
+        
+        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
+      
+        
+        <a class="post-tag" href="/tags/java/">java</a>
       
 
     </div>

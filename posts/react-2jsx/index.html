@@ -24,25 +24,25 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="react 基础(一)概述及简单用法" />
+<meta property="og:title" content="react 基础(二)JSX" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="1. React 概述" />
-<meta property="og:description" content="1. React 概述" />
-<link rel="canonical" href="/posts/react-basic/" />
-<meta property="og:url" content="/posts/react-basic/" />
+<meta name="description" content="JSX简介" />
+<meta property="og:description" content="JSX简介" />
+<link rel="canonical" href="/posts/react-2jsx/" />
+<meta property="og:url" content="/posts/react-2jsx/" />
 <meta property="og:site_name" content="Lil Martin" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-08-09T23:04:16+08:00" />
+<meta property="article:published_time" content="2021-08-10T00:05:16+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="react 基础(一)概述及简单用法" />
+<meta property="twitter:title" content="react 基础(二)JSX" />
 <meta name="twitter:site" content="@" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","headline":"react 基础(一)概述及简单用法","dateModified":"2021-08-09T23:04:16+08:00","datePublished":"2021-08-09T23:04:16+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/react-basic/"},"url":"/posts/react-basic/","description":"1. React 概述","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"react 基础(二)JSX","dateModified":"2021-08-10T00:05:16+08:00","datePublished":"2021-08-10T00:05:16+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/react-2jsx/"},"url":"/posts/react-2jsx/","description":"JSX简介","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>react 基础(一)概述及简单用法 | Lil Martin
+  <title>react 基础(二)JSX | Lil Martin
   </title>
 
   <!--
@@ -125,7 +125,7 @@
       <a href="/">Lil Martin</a>
     </div>
 
-    <div class="site-subtitle font-italic">:Lil Martin's Blog</div>
+    <div class="site-subtitle font-italic">Lil Martin's Blog</div>
 
   </div><!-- .profile-wrapper -->
 
@@ -414,7 +414,7 @@
       
 
         
-          <span>react 基础(一)概述及简单用法</span>
+          <span>react 基础(二)JSX</span>
 
         
 
@@ -476,6 +476,74 @@
 
 
 
+  <!-- add CDN prefix if it exists -->
+
+  
+
+  
+
+  <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+  
+
+  <!-- add image placehoder to prevent layout reflow -->
+
+  
+
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+
+      
+
+    
+      
+      
+
+      
+
+      
+
+    
+      
+      
+
+      
+
+      
+
+    
+      
+      
+
+      
+
+      
+
+    
+
+    
+
+  
+
+  
+
+
+
 <!-- Add lang-badge for code snippets -->
 
 
@@ -489,7 +557,7 @@
 
     <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-      <h1 data-toc-skip>react 基础(一)概述及简单用法</h1>
+      <h1 data-toc-skip>react 基础(二)JSX</h1>
 
       <div class="post-meta text-muted d-flex flex-column">
         <!-- Published date and author -->
@@ -510,7 +578,7 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, Aug  9, 2021, 11:04 PM +0800"
+    title="Tue, Aug 10, 2021, 12:05 AM +0800"
   
 
   
@@ -520,10 +588,10 @@
   
 
   
-    Aug  9
+    Aug 10
   
 
-  <i class="unloaded">2021-08-09T23:04:16+08:00</i>
+  <i class="unloaded">2021-08-10T00:05:16+08:00</i>
 
 </span>
 
@@ -548,7 +616,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="340 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="992 words">5 min</span>
 
 
           <!-- page views -->
@@ -562,85 +630,45 @@
 
         
 
-        <h1 id="1-react-概述">1. React 概述</h1>
+        <h3 id="jsx简介">JSX简介</h3>
 
-<h2 id="11-什么是react">1.1 什么是React</h2>
+<p>​	因为考虑到如下变量申明：</p>
 
-<p>​		<b>React</b> 是一个用于 <b>构建用户界面</b> 的 <code class="language-plaintext highlighter-rouge">JavaScript</code>库。</p>
-
-<p>​		用户界面：前端（html）</p>
-
-<p>​		<b>React</b> 主要用来写HTML界面，或 <b>构建web应用</b></p>
-
-<div lang="plaintext" class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>## 	1.2 React的特点
+<div lang="jsx" class="language-jsx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, world!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<blockquote>
-  <ol>
-    <li>
-      <p>声明式：只需要描述 <b>UI</b> 看起来是什么样，就像写HTML一样</p>
+<p>​	这种标签语法即为JSX，既不是字符串也不是HTML，是JavaScript的语法扩展，具有JavaScript的全部功能。</p>
 
-      <div lang="jsx" class="language-jsx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<h3 id="为什么使用jsx">为什么使用jsx</h3>
+
+<ol>
+  <li>React 认为渲染逻辑本质上与其他UI逻辑内在耦合，比如：在 UI 中需要绑定处理事件、在某些时刻状态发生变化时需要通知到 UI ，以及需要在 UI 中展示准备好的数据。</li>
+  <li>React 并没有采用将<i>标记与逻辑进行分离到不同文件</i> 这种认为地分离方式，而是通过将二者共同放在称之为“组件”地松散耦合单元中，来实现 <kbd>关注点分离</kbd> 。</li>
+  <li>React 没有强制要求使用JSX，但是在JavaScript代码中将JSX和UI放在一起时，会在视觉上有辅助作用，还可以是React显示更多有用的错误和警告信息。</li>
+</ol>
+
+<h3 id="jsx中嵌入表达式">JSX中嵌入表达式</h3>
+
+<div lang="jsx" class="language-jsx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">jsx</span> <span class="o">=</span> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">"app"</span><span class="p">&gt;</span>
-      	<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello React! 动态数据:<span class="si">{</span><span class="nx">count</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</pre></td></tr></tbody></table></code></div>      </div>
-    </li>
-    <li>
-      <p>基于组件</p>
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Lil Martin</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, <span class="si">{</span><span class="nx">name</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;;</span>
 
-      <ul>
-        <li>组件式React中 &lt;p style="color:red"&gt;<b>最重要</b>&lt;/p&gt;的内容</li>
-        <li>组件表示页面中的部分内容（所有的组件组合在一起便是一个页面）</li>
-      </ul>
-    </li>
-    <li>
-      <p>用法广泛</p>
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+    <span class="nx">element</span><span class="p">,</span> 
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></td></tr></tbody></table></code></div></div>
 
-      <ul>
-        <li>可以开发Web应用</li>
-        <li>可以开发移动端原生应用(react-native)</li>
-        <li>可以开发VR(虚拟现实)应用(react 360)</li>
-        <li>…</li>
-      </ul>
-    </li>
-  </ol>
-</blockquote>
+<p>​	ps:name所在的 <strong>大括号</strong> 内可以放任何 <strong>JavaScript表达式</strong> 或 <strong>已定义的变量</strong> 。例如：<kbd>2+2</kbd> 、<kbd>user.name</kbd> 、<kbd>fun1(user)</kbd> 。</p>
 
-<h1 id="2react-的基本使用">2.React 的基本使用</h1>
-
-<h2 id="21-react的安装">2.1 React的安装</h2>
-
-<blockquote>
-  <p>安装命令:<code class="language-plaintext highlighter-rouge">npm i react react-dom</code></p>
-
-  <ul>
-    <li>react 包提供创建元素、组件等功能</li>
-    <li>react-dom 包提供DOM相关功能</li>
-  </ul>
-</blockquote>
-
-<h2 id="22-react的使用">2.2 React的使用</h2>
-
-<blockquote>
-  <ol>
-    <li>引入 <code class="language-plaintext highlighter-rouge">react</code> 和 <code class="language-plaintext highlighter-rouge">react-dom</code> 两个 js 文件</li>
-  </ol>
-
-  <div lang="html" class="language-html highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"./node_modules/react/umd/react.deelopment.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"./node_modules/react/umd/react-dom.development.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</pre></td></tr></tbody></table></code></div>  </div>
-
-  <ol>
-    <li>创建 ‘React’ 元素</li>
-  </ol>
-
-  <div lang="javascript" class="language-javascript highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div lang="jsx" class="language-jsx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -653,23 +681,167 @@
 11
 12
 13
-</pre></td><td class="rouge-code"><pre>    <span class="cm">/**
-    * 创建一个react元素
-    * para1：元素名称	String
-    * para2：元素属性	object
-    * para3：元素的子节点	String
-    */</span>
-	<span class="kd">const</span> <span class="nx">title</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">h1</span><span class="dl">'</span><span class="p">,</span><span class="kc">null</span><span class="p">,</span><span class="dl">'</span><span class="s1">hello React</span><span class="dl">'</span><span class="p">);</span>
-    <span class="cm">/**
-    * 渲染react元素
-    * para1：要渲染的react元素 String
-    * para2：挂载点(html文件中创建的标签)
-    */</span>
-    <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">title</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">));</span>
-</pre></td></tr></tbody></table></code></div>  </div>
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">controduct</span><span class="p">(</span><span class="nx">user</span><span class="p">){</span>
+	<span class="k">return</span> <span class="nx">user</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">user</span><span class="p">.</span><span class="nx">age</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> </span><span class="dl">'</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kd">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Lil Martin</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">age</span><span class="p">:</span> <span class="mi">20</span>
+<span class="p">};</span>
+
+<span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">(</span>
+	<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>
+    	<span class="si">{</span><span class="nx">controduct</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span><span class="si">}</span>
+    <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">);</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+	<span class="nx">element</span><span class="p">,</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>结果显示<img data-proofer-ignore data-src="http://Jamartin-create.github.io/assets/img/post-pic/react/P1.png" alt="photo" /></p>
+
+<p>为了便于阅读，会将JSX拆分为多行。同时，我们建议将内容包裹在括号早中，虽然不是强制要求，但是这样可以避免遇到 <kbd>自动插入分号</kbd> 的陷阱。</p>
+
+<h3 id="jsx也是一个表达式">JSX也是一个表达式</h3>
+
+<p>​	在编译之后，JSX表达式会被转为普通Javascript函数调用，并且对其取值后得到 <b>JavaScript</b> 对象。</p>
+
+<p>​	也就是说，可以在 <kbd>if</kbd> 和 <kbd>for</kbd> 的代码块中使用JSX，将JSX赋值给变量，把JSX当作参数传入，以及从函数中返回JSX:</p>
+
+<div lang="jsx" class="language-jsx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">getUserInfo</span><span class="p">(</span><span class="nx">user</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">user</span><span class="p">){</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, <span class="si">{</span><span class="nx">controduct</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span><span class="si">}</span>!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+            <span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, Stranger.<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">)</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="jsx特定属性">JSX特定属性</h3>
+
+<p>​	你可以通过使用引号，来将属性值置顶为字符串字面量。</p>
+
+<div lang="jsx" class="language-jsx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">(</span>
+	<span class="p">&lt;</span><span class="nt">div</span> <span class="na">tabIndex</span> <span class="p">=</span> <span class="s">"0"</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>​	也可以使用大括号，来在属性之中插入一个JavaScript表达式:</p>
+
+<div lang="jsx" class="language-jsx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">(</span>
+	<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span> <span class="p">=</span> <span class="si">{</span><span class="nx">user</span><span class="p">.</span><span class="nx">avatarUrl</span><span class="si">}</span><span class="p">&gt;&lt;/</span><span class="nt">img</span><span class="p">&gt;</span>
+<span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+ 	二者不可兼用。
+
+<blockquote>
+  <p>警告：</p>
+
+  <p>因为 <strong>JSX</strong> 语法上更接近JavaScript 而不是HTML，所以ReactDOM使用camelCase(小驼峰命名)来定义属性的名称：</p>
+
+  <p>例如：JSX里的 <kbd>class</kbd> 变成了 <kbd>className</kbd> ，而 <kbd>tabindex</kbd> 则变为 <kbd>tabIndex</kbd> 。</p>
 </blockquote>
 
-<p>​</p>
+<h3 id="使用jsx指定子元素">使用JSX指定子元素</h3>
+
+<p>​	加入一个标签里面没有内容，你可以使用 <kbd>/&gt;</kbd> 闭合标签，类似于XML语法。</p>
+
+<div lang="jsx" class="language-jsx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span> <span class="p">=</span> <span class="si">{</span><span class="nx">user</span><span class="p">.</span><span class="nx">avatarUrl</span><span class="si">}</span> <span class="p">/&gt;</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>​	JSX标签里能播u包含很多子元素</p>
+
+<div lang="jsx" class="language-jsx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">(</span>
+	<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    	<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Good to see you here.<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>	
+<span class="p">);</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="jsx防止注入攻击">JSX防止注入攻击</h3>
+
+<p>​	可以安全地在JSX中插入用户输入内容：</p>
+
+<div lang="jsx" class="language-jsx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">title</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">potentiallyMaliciousInput</span><span class="p">;</span>
+<span class="c1">//直接使用是最安全的</span>
+<span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">title</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>​	ReactDOM 在渲染所有输入内容之前，默认会进行 <strong>转义</strong> 。可以确保应用中不会注入那些并非自己明确写的内容。所有的内容在渲染之前都被转换成了字符串。有效防止 <strong>XSS</strong> 攻击。</p>
+
+<h3 id="jsx表示对象">JSX表示对象</h3>
+
+<p>​	Babel 会把JSX转译层一个名为 <strong>React.createElement()</strong> 函数调用。</p>
+
+<p>​	以下两种示例代码完全等效：</p>
+
+<div lang="jsx" class="language-jsx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="p">(</span>
+	<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">className</span> <span class="p">=</span> <span class="s">"greeting"</span><span class="p">&gt;</span>
+    	Hello, world!
+    <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<div lang="jsx" class="language-jsx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span>
+	<span class="dl">'</span><span class="s1">h1</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">{</span><span class="na">className</span><span class="p">:</span> <span class="dl">'</span><span class="s1">greeting</span><span class="dl">'</span><span class="p">},</span>
+    <span class="dl">'</span><span class="s1">Hello, world!</span><span class="dl">'</span>
+<span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>​	<strong>React.createElement()</strong> 会预先执行一些检查，确保编写无错代码。</p>
+
 
 
       </div>
@@ -681,7 +853,8 @@
         <div class="post-meta mb-3">
           <i class="far fa-folder-open fa-fw mr-1"></i>
           
-            <a href='/categories/react-basic/'>react-Basic</a>
+            <a href='/categories/react-basic/'>react-Basic</a>,
+            <a href='/categories/react-es6/'>react-es6</a>
         </div>
         
 
@@ -724,19 +897,19 @@
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=react 基础(一)概述及简单用法 - Lil Martin&url=/posts/react-basic/" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=react 基础(二)JSX - Lil Martin&url=/posts/react-2jsx/" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=react 基础(一)概述及简单用法 - Lil Martin&u=/posts/react-basic/" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=react 基础(二)JSX - Lil Martin&u=/posts/react-2jsx/" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://telegram.me/share?text=react 基础(一)概述及简单用法 - Lil Martin&url=/posts/react-basic/" data-toggle="tooltip" data-placement="top"
+        <a href="https://telegram.me/share?text=react 基础(二)JSX - Lil Martin&url=/posts/react-2jsx/" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -873,6 +1046,115 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -912,121 +1194,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1052,22 +1219,22 @@
         <a class="post-tag" href="/tags/python/">python</a>
       
         
-        <a class="post-tag" href="/tags/linux/">linux</a>
-      
-        
-        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
-      
-        
-        <a class="post-tag" href="/tags/java/">java</a>
-      
-        
         <a class="post-tag" href="/tags/javascript/">JavaScript</a>
       
         
         <a class="post-tag" href="/tags/jsx/">JSX</a>
       
         
+        <a class="post-tag" href="/tags/linux/">linux</a>
+      
+        
         <a class="post-tag" href="/tags/react/">React</a>
+      
+        
+        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
+      
+        
+        <a class="post-tag" href="/tags/java/">java</a>
       
 
       </div>
@@ -1207,7 +1374,46 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
   
 
   
@@ -1297,38 +1503,6 @@
 
 
 
-  
-    
-    
-      
-      
-        
-        
-        
-      
-    
-  
-    
-    
-      
-      
-        
-        
-        
-      
-    
-  
-    
-    
-      
-      
-        
-        
-        
-          
-
-
-
 
 
   <div id="related-posts" class="mt-5 mb-2 mb-sm-4">
@@ -1339,7 +1513,7 @@
       
       
       <div class="card">
-        <a href="/posts/flask-python-deployment/">
+        <a href="/posts/react-3rendering/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1360,14 +1534,14 @@
   
 
   
-    Aug 17
+    Aug 10
   
 
-  <i class="unloaded">2021-08-17T08:16:18+08:00</i>
+  <i class="unloaded">2021-08-10T06:18:16+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>react 基础(三)render</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1376,84 +1550,28 @@
 
 
 
-                编写代码
+                将一个元素渲染为DOM
 
-创建虚拟环境
+​	页面中有一个 &lt;div&gt; :
 
-
-  mkvirtualenv -p python3 my_env
-
-  进入工作空间 workon my_env
+1
+&lt;div id = 'root'&gt;&lt;/div&gt;
 
 
-放置代码
+​	该结点可称为“根”DOM节点，因为该节点内的所有内容都将由React DOM管理。
 
-
-  创建一个工作空间放置代码 mkdir pythonWorkSpace(可要可不要，看个人习惯)
-
-  进入刚刚创建的工作空间 cd pythonWorkSpace
-
-  创建一个python文件 vim robort.py
-
- ...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
-        <a href="/posts/flask-python-code/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Aug 16
-  
-
-  <i class="unloaded">2021-08-16T23:16:08+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(三)编写代码</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                导入需要的包
+​	将一个React元素渲染到根DOM节点中，只需把它们一起传入ReactDOM.render():
 
 1
 2
 3
 4
 5
-import json #用于处理后期传入的json数据
-import time #获取当前时间等等
-import requests #发送get/post请求 
-from flask import Flask, request, jsonify #flask是主要的包
-from gevent import pywsgi #必须通过wsgi启动webapp...
+6
+7
+8
+/*
+* pa...
               </p>
             </div>
           </div>
@@ -1463,7 +1581,7 @@ from gevent import pywsgi #必须通过wsgi启动webapp...
       
       
       <div class="card">
-        <a href="/posts/flask-python-server/">
+        <a href="/posts/react-4component/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1484,14 +1602,14 @@ from gevent import pywsgi #必须通过wsgi启动webapp...
   
 
   
-    Aug 16
+    Aug 10
   
 
-  <i class="unloaded">2021-08-16T20:25:17+08:00</i>
+  <i class="unloaded">2021-08-10T18:23:58+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(二)服务器配置</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>react 基础(四)组件</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1500,20 +1618,95 @@ from gevent import pywsgi #必须通过wsgi启动webapp...
 
 
 
-                端口配置
+                props : 一个只读的参数
 
-面板配置端口
+组件分类
+
+函数组件：
+
+​		编写Js函数是定义组件最简单的方式
+
+1
+2
+3
+4
+5
+function Myintro(props){
+	return (
+    	&lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;
+    )
+}
 
 
-  打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)
+​		有效的 React函数组件 ：（本质上还是JavaScript函数）
 
 
-服务器内部打开该端口防火墙
+  
+...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/react-1basic/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
 
 
-  systemctl start firewalld.service 
-firewall-cmd --zone=public --add-port=5000/tcp --permanent
-systemctl restart fir...
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Aug  9
+  
+
+  <i class="unloaded">2021-08-09T23:04:16+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>react 基础(一)概述及简单用法</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                React 概述
+
+什么是React
+
+​		React 是一个用于 构建用户界面 的 JavaScript库。
+
+​		用户界面：前端（html）
+
+​		React 主要用来写HTML界面，或 构建web应用
+
+React的特点
+
+
+  
+    
+      声明式：只需要描述 UI 看起来是什么样，就像写HTML一样
+
+      const jsx = &lt;div classN...
               </p>
             </div>
           </div>
@@ -1531,16 +1724,16 @@ systemctl restart fir...
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <a href="/posts/blog-publish-blog/" class="btn btn-outline-primary"
+  <a href="/posts/react-1basic/" class="btn btn-outline-primary"
     prompt="Older">
-    <p>gitpage+jekyll搭建博客(五)发布文章</p>
+    <p>react 基础(一)概述及简单用法</p>
   </a>
   
 
   
-  <a href="/posts/blog-question-jekyll/" class="btn btn-outline-primary"
+  <a href="/posts/react-3rendering/" class="btn btn-outline-primary"
     prompt="Newer">
-    <p>githubpage+jekyll搭建blog遇到的问题(一)jekyll</p>
+    <p>react 基础(三)render</p>
   </a>
   
 
@@ -1685,6 +1878,115 @@ systemctl restart fir...
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -1724,121 +2026,6 @@ systemctl restart fir...
     
     
       
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1859,22 +2046,22 @@ systemctl restart fir...
         <a class="post-tag" href="/tags/python/">python</a>
       
         
-        <a class="post-tag" href="/tags/linux/">linux</a>
-      
-        
-        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
-      
-        
-        <a class="post-tag" href="/tags/java/">java</a>
-      
-        
         <a class="post-tag" href="/tags/javascript/">JavaScript</a>
       
         
         <a class="post-tag" href="/tags/jsx/">JSX</a>
       
         
+        <a class="post-tag" href="/tags/linux/">linux</a>
+      
+        
         <a class="post-tag" href="/tags/react/">React</a>
+      
+        
+        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
+      
+        
+        <a class="post-tag" href="/tags/java/">java</a>
       
 
     </div>
