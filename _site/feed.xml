@@ -1,0 +1,333 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>/</id>
+  <title>Lil Martin</title>
+  <subtitle>一个菜鸡全栈程序员博主。</subtitle>
+  <updated>2021-09-06T13:54:22+08:00</updated>
+  <author>
+    <name>Martin_Du</name>
+    <uri>/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en-US"
+    href="/"/>
+  <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator>
+  <rights> © 2021 Martin_Du </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器</title>
+    <link href="/posts/flask-python-deployment/" rel="alternate" type="text/html" title="github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器" />
+    <published>2021-08-17T08:16:18+08:00</published>
+  
+    <updated>2021-08-17T08:16:18+08:00</updated>
+  
+    <id>/posts/flask-python-deployment/</id>
+    <content src="/posts/flask-python-deployment/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="python-flask" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      编写代码
+
+创建虚拟环境
+
+
+  mkvirtualenv -p python3 my_env
+
+  进入工作空间 workon my_env
+
+
+放置代码
+
+
+  创建一个工作空间放置代码 mkdir pythonWorkSpace(可要可不要，看个人习惯)
+
+  进入刚刚创建的工作空间 cd pythonWorkSpace
+
+  创建一个python文件 vim robort.py
+
+  将代码粘贴到编辑器中
+
+
+运行代码
+
+
+  保存并退出编辑模式
+
+  挂载python程序 python robort.py &amp;amp;
+
+  查看进程是否正常 ps -ef|grep python
+
+  如果有之前占用此端口的程序为结束可能会报错
+
+  此时可以找到占用端口进程的pid通过 kill pid 杀死进程
+
+  测试无问题后可将程序在后台挂载 nuhup python robort...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>github-webhook与企业WeChat-webhook中间件开发(三)编写代码</title>
+    <link href="/posts/flask-python-code/" rel="alternate" type="text/html" title="github-webhook与企业WeChat-webhook中间件开发(三)编写代码" />
+    <published>2021-08-16T23:16:08+08:00</published>
+  
+    <updated>2021-08-16T23:16:08+08:00</updated>
+  
+    <id>/posts/flask-python-code/</id>
+    <content src="/posts/flask-python-code/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="python-flask" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      导入需要的包
+
+import json #用于处理后期传入的json数据
+import time #获取当前时间等等
+import requests #发送get/post请求 
+from flask import Flask, request, jsonify #flask是主要的包
+from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
+
+
+编写webApp
+
+
+app = Flask(__name__)
+
+#外网访问时'ip地址/'可以得到 'hello world' 的响应
+@app.route('/')
+def hello_world():
+    return 'Hello World!'
+
+#外网访问'ip地址/martin'时，触发下面的get_post()方法
+@app.route('/martin', methods=...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>github-webhook与企业WeChat-webhook中间件开发(二)服务器配置</title>
+    <link href="/posts/flask-python-server/" rel="alternate" type="text/html" title="github-webhook与企业WeChat-webhook中间件开发(二)服务器配置" />
+    <published>2021-08-16T20:25:17+08:00</published>
+  
+    <updated>2021-08-16T20:25:17+08:00</updated>
+  
+    <id>/posts/flask-python-server/</id>
+    <content src="/posts/flask-python-server/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="python-flask" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      端口配置
+
+面板配置端口
+
+
+  打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)
+
+
+服务器内部打开该端口防火墙
+
+
+  systemctl start firewalld.service 
+firewall-cmd --zone=public --add-port=5000/tcp --permanent
+systemctl restart firewalld.service
+firewall-cmd --reload
+
+
+  这里不打开也有可能无法访问该端口
+
+
+python环境配置
+
+虚拟环境
+
+
+  
+    
+      用pip安装virtualenvwrapper
+    
+    
+      vim ~/ .bashrc
+
+      在最后加上
+
+      export WORKON_HOME=$HOME/.virtua...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>github-webhook与企业WeChat-webhook中间件开发(一)webhook</title>
+    <link href="/posts/flask-python-webhock/" rel="alternate" type="text/html" title="github-webhook与企业WeChat-webhook中间件开发(一)webhook" />
+    <published>2021-08-16T11:20:23+08:00</published>
+  
+    <updated>2021-08-16T11:20:23+08:00</updated>
+  
+    <id>/posts/flask-python-webhock/</id>
+    <content src="/posts/flask-python-webhock/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="python-flask" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      WebHook
+
+什么是WebHook
+
+
+  最典型的例子：当你发送一条朋友圈，微信的服务器会把你的这条朋友圈同步到你所有好友的客户端（要是你屏蔽人了就是给服务器列出了特别名单）
+
+  这还是 客户端 - 服务器 模式的逆转模式
+
+  
+    传统方法中，一般是客户端向服务器发出 请求 ，服务器给予客户端 响应 （这叫客户机拉取请求）
+  
+
+  
+    在 WebHook 范式下，服务器更新所需提供的资源，然后自动将其作为更新发送到客户端（服务器是在推数据），客户端不是请求者，而是被动接收方
+  
+
+
+应用场景
+
+
+  对于第三方平台验权、登陆等 没有前端界面做中转的场景，或者强安全要求的支付场景等，适合用 Webhook 做数据主动推送，说白了就是在前端无从参与，或者因为前端安全问题不适合参与时，就是 Webhook 的场景；很显然 Webhook 也不是 Http 的替代...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>通过flask在后端部署时遇到的问题</title>
+    <link href="/posts/flask-getPost/" rel="alternate" type="text/html" title="通过flask在后端部署时遇到的问题" />
+    <published>2021-08-15T02:08:46+08:00</published>
+  
+    <updated>2021-08-15T02:08:46+08:00</updated>
+  
+    <id>/posts/flask-getPost/</id>
+    <content src="/posts/flask-getPost/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="python-flask" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      虚拟环境
+
+​	Utunbu配置虚拟环境，virtualenv 安装时如果pip不是最新版，下载的时候会丢包
+
+外网访问服务器时无法得到响应
+
+
+  服务器端放行端口
+
+  
+    
+      在服务器面板找到安全组，添加一个安全组，选择端口号，协议为TCP协议。
+    
+    
+      连通ssh修改防火墙配置：
+
+      systemctl start firewalld.service 
+firewall-cmd --zone=public --add-port=5000/tcp --permanent
+systemctl restart firewalld.service
+firewall-cmd --reload
+
+    
+  
+
+  一定要保证面板放通的端口号与ssh打开的端口号一致，我开通的是5000
+
+
+
+  通过wsgi来启动flask
+
+  ​	...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
