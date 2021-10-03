@@ -24,25 +24,25 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="HashMap(一)用法" />
+<meta property="og:title" content="Oracle(一)介绍" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Java-HashMap" />
-<meta property="og:description" content="Java-HashMap" />
-<link rel="canonical" href="/posts/java-hashmap/" />
-<meta property="og:url" content="/posts/java-hashmap/" />
+<meta name="description" content="介绍" />
+<meta property="og:description" content="介绍" />
+<link rel="canonical" href="/posts/Oracle-intro/" />
+<meta property="og:url" content="/posts/Oracle-intro/" />
 <meta property="og:site_name" content="Lil Martin" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-07-17T16:16:01+08:00" />
+<meta property="article:published_time" content="2021-09-13T15:47:01+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="HashMap(一)用法" />
+<meta property="twitter:title" content="Oracle(一)介绍" />
 <meta name="twitter:site" content="@" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"/posts/java-hashmap/","headline":"HashMap(一)用法","dateModified":"2021-07-17T16:16:01+08:00","datePublished":"2021-07-17T16:16:01+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/java-hashmap/"},"description":"Java-HashMap","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"/posts/Oracle-intro/","headline":"Oracle(一)介绍","dateModified":"2021-09-13T15:47:01+08:00","datePublished":"2021-09-13T15:47:01+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Oracle-intro/"},"description":"介绍","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>HashMap(一)用法 | Lil Martin
+  <title>Oracle(一)介绍 | Lil Martin
   </title>
 
   <!--
@@ -414,7 +414,7 @@
       
 
         
-          <span>HashMap(一)用法</span>
+          <span>Oracle(一)介绍</span>
 
         
 
@@ -489,7 +489,7 @@
 
     <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-      <h1 data-toc-skip>HashMap(一)用法</h1>
+      <h1 data-toc-skip>Oracle(一)介绍</h1>
 
       <div class="post-meta text-muted d-flex flex-column">
         <!-- Published date and author -->
@@ -510,7 +510,7 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sat, Jul 17, 2021,  4:16 PM +0800"
+    title="Mon, Sep 13, 2021,  3:47 PM +0800"
   
 
   
@@ -520,10 +520,10 @@
   
 
   
-    Jul 17
+    Sep 13
   
 
-  <i class="unloaded">2021-07-17T16:16:01+08:00</i>
+  <i class="unloaded">2021-09-13T15:47:01+08:00</i>
 
 </span>
 
@@ -548,7 +548,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="353 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="57 words">1 min</span>
 
 
           <!-- page views -->
@@ -562,109 +562,26 @@
 
         
 
-        <h1 id="java-hashmap">Java-HashMap</h1>
+        <h2 id="介绍">介绍</h2>
 
-<h2 id="hashmap哈希表的理解">HashMap（哈希表）的理解</h2>
+<blockquote>
+  <p>Oracle数据库：DB/DBMS</p>
 
-<ul>
-  <li>
-    <p>其<strong><em>增删改查</em></strong> 在不考虑“哈希冲突时的时间复杂度仅有O(1)</p>
-  </li>
-  <li>
-    <p>主干是 <b>数组</b> ，也就是通过某个”下标”即索引从而实现一次定位</p>
-  </li>
-  <li>
-    <p><strong>哈希冲突</strong> 是指：虽然两个元素的 <kbd>key</kbd> 不同，但是他们的<strong><em>实际地址</em></strong> 却相同，即冲突</p>
-  </li>
-</ul>
+  <p>数据库使用者：DBA（DataBase Administrator）/开发人员</p>
 
-<h2 id="hashmap的使用">HashMap的使用</h2>
+  <p>数据库的种类：oracle / sybase /db2(IBM)</p>
 
-<ol>
-  <li>
-    <p>创建一个HashMap</p>
+  <p>access,postgreSQL</p>
 
-    <div lang="java" class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nc">Map</span><span class="o">&lt;</span><span class="nc">Key</span><span class="o">,</span><span class="nc">Value</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
-</pre></td></tr></tbody></table></code></div>    </div>
+  <p>数据表：行和列组成</p>
 
-    <p>这里的接口类型为Map，可以使程序更加灵活。当决定更换实现的时候，只需要改变构造器中类型的名称</p>
+  <p>行：row / record 记录</p>
 
-    <p>例如：如果这个时候想将哈希表换为”黑红树结构”</p>
+  <p>列：column / field 字段</p>
 
-    <pre><code class="language-Java">Map&lt;Key,Value&gt; map = new TreeMap&lt;&gt;();
-</code></pre>
-  </li>
-  <li>
-    <p>存入一个 <strong>键值对</strong> ，<code class="language-plaintext highlighter-rouge">put(key,value)</code></p>
+  <p>SQL分类：Structured Query Language</p>
+</blockquote>
 
-    <pre><code class="language-Java">map.put("Martin","CoolBoy");
-map.put("James","好人");
-map.put("大学物理","son of bitch");
-</code></pre>
-
-    <p>此时这个哈希表中的数据有：</p>
-
-    <div class="table-wrapper"><table>
-      <thead>
-        <tr>
-          <th>key</th>
-          <th>value</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Martin</td>
-          <td>CoolBoy</td>
-        </tr>
-        <tr>
-          <td>James</td>
-          <td>好人</td>
-        </tr>
-      </tbody>
-    </table></div>
-  </li>
-  <li>
-    <p>此时调用get方法， <code class="language-plaintext highlighter-rouge">get(key)</code></p>
-
-    <pre><code class="language-Java">String dis = map.get("Martin");
-System.out.println(dis);
-</code></pre>
-
-    <p>此时的控制台会输出 <b>map</b> 中 <kbd>Martin</kbd> 所对应的 <b>value</b> —-&gt;<kbd>CoolBoy</kbd></p>
-  </li>
-  <li>
-    <p>通过containsKey 和 containsValue 可判断是否存在某个key、value值 <code class="language-plaintext highlighter-rouge">containsKey(key),containsValue(value)</code></p>
-
-    <div lang="java" class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre><span class="n">map</span><span class="o">.</span><span class="na">containsKey</span><span class="o">(</span><span class="s">"Martin"</span><span class="o">);</span><span class="c1">//如果存在则返回true</span>
-<span class="n">map</span><span class="o">.</span><span class="na">containsValue</span><span class="o">(</span><span class="s">"好人"</span><span class="o">);</span><span class="c1">//如果不存在则返回false</span>
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-  <li>
-    <p>遍历这个哈希表时，<code class="language-plaintext highlighter-rouge">keySet()</code></p>
-
-    <div lang="java" class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="k">for</span><span class="o">(</span><span class="nc">Object</span> <span class="n">key</span> <span class="o">:</span> <span class="n">map</span><span class="o">.</span><span class="na">keySet</span><span class="o">()){</span>
-    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">key</span> <span class="o">+</span> <span class="s">"---&gt;"</span> <span class="o">+</span> <span class="n">map</span><span class="o">.</span><span class="na">get</span> <span class="o">(</span><span class="n">key</span><span class="o">));</span>
-<span class="o">}</span>
-</pre></td></tr></tbody></table></code></div>    </div>
-
-    <p>map.keySet()即表示此哈希表中所有键值对集合</p>
-  </li>
-  <li>
-    <p>删除某个数据，<code class="language-plaintext highlighter-rouge">remove(key)</code></p>
-
-    <div lang="java" class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre><span class="n">map</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="s">"大学物理"</span><span class="o">);</span>
-<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"never see you"</span><span class="o">);</span>
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-</ol>
 
 
       </div>
@@ -676,7 +593,8 @@ System.out.println(dis);
         <div class="post-meta mb-3">
           <i class="far fa-folder-open fa-fw mr-1"></i>
           
-            <a href='/categories/java/'>java</a>
+            <a href='/categories/sql/'>sql</a>,
+            <a href='/categories/oracle/'>oracle</a>
         </div>
         
 
@@ -685,11 +603,11 @@ System.out.println(dis);
         <div class="post-tags">
           <i class="fa fa-tags fa-fw mr-1"></i>
           
-          <a href="/tags/java/"
-            class="post-tag no-text-decoration" >java</a>
+          <a href="/tags/oracle/"
+            class="post-tag no-text-decoration" >oracle</a>
           
-          <a href="/tags/hashmap/"
-            class="post-tag no-text-decoration" >hashmap</a>
+          <a href="/tags/sql/"
+            class="post-tag no-text-decoration" >sql</a>
           
           </div>
         
@@ -716,19 +634,19 @@ System.out.println(dis);
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=HashMap(一)用法 - Lil Martin&url=/posts/java-hashmap/" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=Oracle(一)介绍 - Lil Martin&url=/posts/Oracle-intro/" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=HashMap(一)用法 - Lil Martin&u=/posts/java-hashmap/" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=Oracle(一)介绍 - Lil Martin&u=/posts/Oracle-intro/" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://telegram.me/share?text=HashMap(一)用法 - Lil Martin&url=/posts/java-hashmap/" data-toggle="tooltip" data-placement="top"
+        <a href="https://telegram.me/share?text=Oracle(一)介绍 - Lil Martin&url=/posts/Oracle-intro/" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -1221,228 +1139,228 @@ System.out.println(dis);
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
 
 
 
@@ -1454,6 +1372,9 @@ System.out.println(dis);
 
 
 
+  
+    
+    
   
     
     
@@ -1492,70 +1413,6 @@ System.out.println(dis);
     <h3 class="pt-2 mt-1 mb-4 ml-1"
       data-toc-skip>Further Reading</h3>
     <div class="card-deck mb-4">
-    
-      
-      
-      <div class="card">
-        <a href="/posts/Oracle-intro/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Sep 13
-  
-
-  <i class="unloaded">2021-09-13T15:47:01+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Oracle(一)介绍</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                介绍
-
-
-  Oracle数据库：DB/DBMS
-
-  数据库使用者：DBA（DataBase Administrator）/开发人员
-
-  数据库的种类：oracle / sybase /db2(IBM)
-
-  access,postgreSQL
-
-  数据表：行和列组成
-
-  行：row / record 记录
-
-  列：column / field 字段
-
-  SQL分类：Struct...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
     
       
       
@@ -1665,16 +1522,74 @@ System.out.println(dis);
 
                 导入需要的包
 
-1
-2
-3
-4
-5
 import json #用于处理后期传入的json数据
 import time #获取当前时间等等
 import requests #发送get/post请求 
 from flask import Flask, request, jsonify #flask是主要的包
-from gevent import pywsgi #必须通过wsgi启动webapp...
+from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
+
+
+...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/flask-python-server/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Aug 16
+  
+
+  <i class="unloaded">2021-08-16T20:25:17+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(二)服务器配置</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                端口配置
+
+面板配置端口
+
+
+  打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)
+
+
+服务器内部打开该端口防火墙
+
+
+  systemctl start firewalld.service 
+firewall-cmd --zone=public --add-port=5000/tcp --permanent
+systemctl restart fir...
               </p>
             </div>
           </div>
@@ -1692,17 +1607,17 @@ from gevent import pywsgi #必须通过wsgi启动webapp...
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <span class="btn btn-outline-primary disabled"
+  <a href="/posts/flask-python-deployment/" class="btn btn-outline-primary"
     prompt="Older">
-    <p>-</p>
-  </span>
+    <p>github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器</p>
+  </a>
   
 
   
-  <a href="/posts/blog-git-bind/" class="btn btn-outline-primary"
+  <span class="btn btn-outline-primary disabled"
     prompt="Newer">
-    <p>gitpage+jekyll搭建博客(一)代码托管</p>
-  </a>
+    <p>-</p>
+  </span>
   
 
 </div>
