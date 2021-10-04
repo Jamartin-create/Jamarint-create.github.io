@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "Oracle(二)单表查询",
+    "url": "/posts/Oracle-SingleTableQuery/",
+    "categories": "sql, oracle",
+    "tags": "oracle, sql",
+    "date": "2021-09-13 18:30:20 +0800",
+    
+
+
+
+
+
+    "snippet": "单表查询列的选取-投影select empno, ename, deptno from emp;  ps:      开发中一般不使用 *    数据库中：列名大小写不敏感，内容大小写敏感  列别名      方法1：列名+” “+别名        方法2：列名 as 别名    select empno 员工编号, ename 员工姓名 from emp;select empno as 员工编号, ename as 员工姓名 from emp;      列的算数表达式(+,-,*,/)-- 显示年收入select empno, ename, sal*12 年收入 from emp;..."
+  },
+  
+  {
     "title": "Oracle(一)介绍",
     "url": "/posts/Oracle-intro/",
     "categories": "sql, oracle",

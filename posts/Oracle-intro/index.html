@@ -38,7 +38,7 @@
 <meta name="twitter:site" content="@" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"/posts/Oracle-intro/","headline":"Oracle(一)介绍","dateModified":"2021-09-13T15:47:01+08:00","datePublished":"2021-09-13T15:47:01+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Oracle-intro/"},"description":"介绍","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Oracle(一)介绍","dateModified":"2021-09-13T15:47:01+08:00","datePublished":"2021-09-13T15:47:01+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Oracle-intro/"},"url":"/posts/Oracle-intro/","description":"介绍","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -926,49 +926,10 @@
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1004,7 +965,25 @@
     
     
     
-      
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1028,13 +1007,24 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
   
     
     
     
     
       
-    
+        
+        
+
   
     
     
@@ -1044,6 +1034,8 @@
     
     
     
+    
+      
     
   
     
@@ -1081,16 +1073,16 @@
         <a class="post-tag" href="/tags/react/">React</a>
       
         
-        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
-      
-        
-        <a class="post-tag" href="/tags/java/">java</a>
-      
-        
         <a class="post-tag" href="/tags/oracle/">oracle</a>
       
         
         <a class="post-tag" href="/tags/sql/">sql</a>
+      
+        
+        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
+      
+        
+        <a class="post-tag" href="/tags/java/">java</a>
       
 
       </div>
@@ -1134,6 +1126,19 @@
 
 
 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
   
@@ -1375,15 +1380,11 @@
   
     
     
+      
+      
+    
   
     
-    
-      
-      
-        
-        
-        
-      
     
   
     
@@ -1413,6 +1414,81 @@
     <h3 class="pt-2 mt-1 mb-4 ml-1"
       data-toc-skip>Further Reading</h3>
     <div class="card-deck mb-4">
+    
+      
+      
+      <div class="card">
+        <a href="/posts/Oracle-SingleTableQuery/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Sep 13
+  
+
+  <i class="unloaded">2021-09-13T18:30:20+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Oracle(二)单表查询</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                单表查询
+
+列的选取-投影
+
+1
+select empno, ename, deptno from emp;
+
+
+
+  ps:
+
+  
+    开发中一般不使用 *
+    数据库中：列名大小写不敏感，内容大小写敏感
+  
+
+
+列别名
+
+
+  
+    方法1：列名+” “+别名
+  
+  
+    方法2：列名 as 别名
+
+    1
+2
+select empno 员工编号, ename...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
     
       
       
@@ -1536,66 +1612,6 @@ from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
         </a>
       </div>
     
-      
-      
-      <div class="card">
-        <a href="/posts/flask-python-server/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Aug 16
-  
-
-  <i class="unloaded">2021-08-16T20:25:17+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(二)服务器配置</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                端口配置
-
-面板配置端口
-
-
-  打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)
-
-
-服务器内部打开该端口防火墙
-
-
-  systemctl start firewalld.service 
-firewall-cmd --zone=public --add-port=5000/tcp --permanent
-systemctl restart fir...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
     </div> <!-- .card-deck -->
   </div> <!-- #related-posts -->
 
@@ -1614,10 +1630,10 @@ systemctl restart fir...
   
 
   
-  <span class="btn btn-outline-primary disabled"
+  <a href="/posts/Oracle-SingleTableQuery/" class="btn btn-outline-primary"
     prompt="Newer">
-    <p>-</p>
-  </span>
+    <p>Oracle(二)单表查询</p>
+  </a>
   
 
 </div>
@@ -1904,49 +1920,10 @@ systemctl restart fir...
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1982,7 +1959,25 @@ systemctl restart fir...
     
     
     
-      
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2006,13 +2001,24 @@ systemctl restart fir...
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
   
     
     
     
     
       
-    
+        
+        
+
   
     
     
@@ -2022,6 +2028,8 @@ systemctl restart fir...
     
     
     
+    
+      
     
   
     
@@ -2054,16 +2062,16 @@ systemctl restart fir...
         <a class="post-tag" href="/tags/react/">React</a>
       
         
-        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
-      
-        
-        <a class="post-tag" href="/tags/java/">java</a>
-      
-        
         <a class="post-tag" href="/tags/oracle/">oracle</a>
       
         
         <a class="post-tag" href="/tags/sql/">sql</a>
+      
+        
+        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
+      
+        
+        <a class="post-tag" href="/tags/java/">java</a>
       
 
     </div>

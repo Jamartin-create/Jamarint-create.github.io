@@ -38,7 +38,7 @@
 <meta name="twitter:site" content="@" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"/posts/java-hashmap/","headline":"HashMap(一)用法","dateModified":"2021-07-17T16:16:01+08:00","datePublished":"2021-07-17T16:16:01+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/java-hashmap/"},"description":"Java-HashMap","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"HashMap(一)用法","dateModified":"2021-07-17T16:16:01+08:00","datePublished":"2021-07-17T16:16:01+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/java-hashmap/"},"url":"/posts/java-hashmap/","description":"Java-HashMap","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1008,49 +1008,10 @@ System.out.println(dis);
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1086,7 +1047,25 @@ System.out.println(dis);
     
     
     
-      
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1110,13 +1089,24 @@ System.out.println(dis);
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
   
     
     
     
     
       
-    
+        
+        
+
   
     
     
@@ -1126,6 +1116,8 @@ System.out.println(dis);
     
     
     
+    
+      
     
   
     
@@ -1163,16 +1155,16 @@ System.out.println(dis);
         <a class="post-tag" href="/tags/react/">React</a>
       
         
-        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
-      
-        
-        <a class="post-tag" href="/tags/java/">java</a>
-      
-        
         <a class="post-tag" href="/tags/oracle/">oracle</a>
       
         
         <a class="post-tag" href="/tags/sql/">sql</a>
+      
+        
+        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
+      
+        
+        <a class="post-tag" href="/tags/java/">java</a>
       
 
       </div>
@@ -1216,6 +1208,19 @@ System.out.println(dis);
 
 
 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
   
@@ -1496,6 +1501,81 @@ System.out.println(dis);
       
       
       <div class="card">
+        <a href="/posts/Oracle-SingleTableQuery/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Sep 13
+  
+
+  <i class="unloaded">2021-09-13T18:30:20+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Oracle(二)单表查询</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                单表查询
+
+列的选取-投影
+
+1
+select empno, ename, deptno from emp;
+
+
+
+  ps:
+
+  
+    开发中一般不使用 *
+    数据库中：列名大小写不敏感，内容大小写敏感
+  
+
+
+列别名
+
+
+  
+    方法1：列名+” “+别名
+  
+  
+    方法2：列名 as 别名
+
+    1
+2
+select empno 员工编号, ename...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
         <a href="/posts/Oracle-intro/">
           <div class="card-body">
             <!--
@@ -1617,64 +1697,6 @@ System.out.println(dis);
   创建一个python文件 vim robort.py
 
  ...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
-        <a href="/posts/flask-python-code/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Aug 16
-  
-
-  <i class="unloaded">2021-08-16T23:16:08+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(三)编写代码</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                导入需要的包
-
-1
-2
-3
-4
-5
-import json #用于处理后期传入的json数据
-import time #获取当前时间等等
-import requests #发送get/post请求 
-from flask import Flask, request, jsonify #flask是主要的包
-from gevent import pywsgi #必须通过wsgi启动webapp...
               </p>
             </div>
           </div>
@@ -1989,49 +2011,10 @@ from gevent import pywsgi #必须通过wsgi启动webapp...
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2067,7 +2050,25 @@ from gevent import pywsgi #必须通过wsgi启动webapp...
     
     
     
-      
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2091,13 +2092,24 @@ from gevent import pywsgi #必须通过wsgi启动webapp...
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
   
     
     
     
     
       
-    
+        
+        
+
   
     
     
@@ -2107,6 +2119,8 @@ from gevent import pywsgi #必须通过wsgi启动webapp...
     
     
     
+    
+      
     
   
     
@@ -2139,16 +2153,16 @@ from gevent import pywsgi #必须通过wsgi启动webapp...
         <a class="post-tag" href="/tags/react/">React</a>
       
         
-        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
-      
-        
-        <a class="post-tag" href="/tags/java/">java</a>
-      
-        
         <a class="post-tag" href="/tags/oracle/">oracle</a>
       
         
         <a class="post-tag" href="/tags/sql/">sql</a>
+      
+        
+        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
+      
+        
+        <a class="post-tag" href="/tags/java/">java</a>
       
 
     </div>

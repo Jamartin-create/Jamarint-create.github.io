@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Lil Martin</title>
   <subtitle>一个菜鸡全栈程序员博主。</subtitle>
-  <updated>2021-10-03T16:11:39+08:00</updated>
+  <updated>2021-10-04T17:54:23+08:00</updated>
   <author>
     <name>Martin_Du</name>
     <uri>/</uri>
@@ -17,6 +17,85 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Oracle(二)单表查询</title>
+    <link href="/posts/Oracle-SingleTableQuery/" rel="alternate" type="text/html" title="Oracle(二)单表查询" />
+    <published>2021-09-13T18:30:20+08:00</published>
+  
+    <updated>2021-09-13T18:30:20+08:00</updated>
+  
+    <id>/posts/Oracle-SingleTableQuery/</id>
+    <content src="/posts/Oracle-SingleTableQuery/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="sql" />
+    
+    <category term="oracle" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      单表查询
+
+列的选取-投影
+
+select empno, ename, deptno from emp;
+
+
+
+  ps:
+
+  
+    开发中一般不使用 *
+    数据库中：列名大小写不敏感，内容大小写敏感
+  
+
+
+列别名
+
+
+  
+    方法1：列名+” “+别名
+  
+  
+    方法2：列名 as 别名
+
+    select empno 员工编号, ename 员工姓名 from emp;
+select empno as 员工编号, ename as 员工姓名 from emp;
+    
+  
+
+
+列的算数表达式(+,-,*,/)
+
+-- 显示年收入
+select empno, ename, sal*12 年收入 from emp;
+
+
+
+  
+    处理空值得函数 nvl() ： null value
+
+    nvl(para1, para2):
+
+   ...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -260,61 +339,6 @@ python环境配置
       在最后加上
 
       export WORKON_HOME=$HOME/.virtua...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>github-webhook与企业WeChat-webhook中间件开发(一)webhook</title>
-    <link href="/posts/flask-python-webhock/" rel="alternate" type="text/html" title="github-webhook与企业WeChat-webhook中间件开发(一)webhook" />
-    <published>2021-08-16T11:20:23+08:00</published>
-  
-    <updated>2021-08-16T11:20:23+08:00</updated>
-  
-    <id>/posts/flask-python-webhock/</id>
-    <content src="/posts/flask-python-webhock/" />
-    <author>
-      <name>Martin_Du</name>
-    </author>
-
-  
-    
-    <category term="python-flask" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      WebHook
-
-什么是WebHook
-
-
-  最典型的例子：当你发送一条朋友圈，微信的服务器会把你的这条朋友圈同步到你所有好友的客户端（要是你屏蔽人了就是给服务器列出了特别名单）
-
-  这还是 客户端 - 服务器 模式的逆转模式
-
-  
-    传统方法中，一般是客户端向服务器发出 请求 ，服务器给予客户端 响应 （这叫客户机拉取请求）
-  
-
-  
-    在 WebHook 范式下，服务器更新所需提供的资源，然后自动将其作为更新发送到客户端（服务器是在推数据），客户端不是请求者，而是被动接收方
-  
-
-
-应用场景
-
-
-  对于第三方平台验权、登陆等 没有前端界面做中转的场景，或者强安全要求的支付场景等，适合用 Webhook 做数据主动推送，说白了就是在前端无从参与，或者因为前端安全问题不适合参与时，就是 Webhook 的场景；很显然 Webhook 也不是 Http 的替代...
     </summary>
   
 

@@ -37,7 +37,7 @@
 <meta name="twitter:site" content="@" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"WebSite","url":"/","headline":"Lil Martin","sameAs":["https://github.com/Jamartin-create"],"name":"Martin_Du","description":"一个菜鸡全栈程序员博主。","@context":"https://schema.org"}</script>
+{"@type":"WebSite","headline":"Lil Martin","sameAs":["https://github.com/Jamartin-create"],"url":"/","name":"Martin_Du","description":"一个菜鸡全栈程序员博主。","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -477,6 +477,115 @@
 
 
 <div id="post-list">
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/Oracle-SingleTableQuery/">Oracle(二)单表查询</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        单表查询
+
+列的选取-投影
+
+select empno, ename, deptno from emp;
+
+
+
+  ps:
+
+  
+    开发中一般不使用 *
+    数据库中：列名大小写不敏感，内容大小写敏感
+  
+
+
+列别名
+
+
+  
+    方法1：列名+” “+别名
+  
+  
+    方法2：列名 as 别名
+
+    select empno 员工编号, ename 员工姓名 ...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, Sep 13, 2021,  6:30 PM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Sep 13
+  
+
+  <i class="unloaded">2021-09-13T18:30:20+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1495 words">8 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
 
 
 
@@ -1363,103 +1472,6 @@ function Myintro(props){
 
 
 
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/react-3rendering/">react 基础(三)render</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        将一个元素渲染为DOM
-
-​	页面中有一个 &lt;div&gt; :
-
-&lt;div id = 'root'&gt;&lt;/div&gt;
-
-
-​	该结点可称为“根”DOM节点，因为该节点内的所有内容都将由React DOM管理。
-
-​	将一个React元素渲染到根DOM节点中，只需把它们一起传入ReactDOM.render():
-
-/*
-* para1:表示要展示的元素
-* par...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Tue, Aug 10, 2021,  6:18 AM +0800"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Aug 10
-  
-
-  <i class="unloaded">2021-08-10T06:18:16+08:00</i>
-
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="269 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
 </div> <!-- #post-list -->
 
 
@@ -1794,49 +1806,10 @@ function Myintro(props){
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1872,7 +1845,25 @@ function Myintro(props){
     
     
     
-      
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1896,13 +1887,24 @@ function Myintro(props){
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
   
     
     
     
     
       
-    
+        
+        
+
   
     
     
@@ -1912,6 +1914,8 @@ function Myintro(props){
     
     
     
+    
+      
     
   
     
@@ -1949,16 +1953,16 @@ function Myintro(props){
         <a class="post-tag" href="/tags/react/">React</a>
       
         
-        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
-      
-        
-        <a class="post-tag" href="/tags/java/">java</a>
-      
-        
         <a class="post-tag" href="/tags/oracle/">oracle</a>
       
         
         <a class="post-tag" href="/tags/sql/">sql</a>
+      
+        
+        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
+      
+        
+        <a class="post-tag" href="/tags/java/">java</a>
       
 
       </div>
@@ -2248,49 +2252,10 @@ function Myintro(props){
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2326,7 +2291,25 @@ function Myintro(props){
     
     
     
-      
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2350,13 +2333,24 @@ function Myintro(props){
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
   
     
     
     
     
       
-    
+        
+        
+
   
     
     
@@ -2366,6 +2360,8 @@ function Myintro(props){
     
     
     
+    
+      
     
   
     
@@ -2398,16 +2394,16 @@ function Myintro(props){
         <a class="post-tag" href="/tags/react/">React</a>
       
         
-        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
-      
-        
-        <a class="post-tag" href="/tags/java/">java</a>
-      
-        
         <a class="post-tag" href="/tags/oracle/">oracle</a>
       
         
         <a class="post-tag" href="/tags/sql/">sql</a>
+      
+        
+        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
+      
+        
+        <a class="post-tag" href="/tags/java/">java</a>
       
 
     </div>
