@@ -1144,6 +1144,19 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
   
 
@@ -1386,15 +1399,11 @@
   
     
     
+      
+      
+    
   
     
-    
-      
-      
-        
-        
-        
-      
     
   
     
@@ -1493,6 +1502,70 @@ select empno 员工编号, ename...
       
       
       <div class="card">
+        <a href="/posts/Oracle-UnSingleTableQuery/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Sep 13
+  
+
+  <i class="unloaded">2021-09-13T21:43:00+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Oracle(三)多表查询</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                多表查
+
+交叉连接  cross join
+
+
+  ps: 一般不用（因为无用信息太多）
+
+
+1
+select * from emp cross join dept -- 依次从m行的emp中取一行emp，和n行dept中的每一行进行组合，也就是会产生一个nxm行的表格
+
+
+1
+2
+3
+4
+-- 根据以上结合的结果，如何查找到Smith的人所在的部门名称
+select emp.ename, ...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
         <a href="/posts/flask-python-deployment/">
           <div class="card-body">
             <!--
@@ -1550,62 +1623,6 @@ select empno 员工编号, ename...
   创建一个python文件 vim robort.py
 
  ...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
-        <a href="/posts/flask-python-code/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Aug 16
-  
-
-  <i class="unloaded">2021-08-16T23:16:08+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(三)编写代码</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                导入需要的包
-
-import json #用于处理后期传入的json数据
-import time #获取当前时间等等
-import requests #发送get/post请求 
-from flask import Flask, request, jsonify #flask是主要的包
-from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
-
-
-...
               </p>
             </div>
           </div>

@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "Oracle(三)多表查询",
+    "url": "/posts/Oracle-UnSingleTableQuery/",
+    "categories": "sql, oracle",
+    "tags": "oracle, sql",
+    "date": "2021-09-13 21:43:00 +0800",
+    
+
+
+
+
+
+    "snippet": "多表查交叉连接  cross join  ps: 一般不用（因为无用信息太多）select * from emp cross join dept -- 依次从m行的emp中取一行emp，和n行dept中的每一行进行组合，也就是会产生一个nxm行的表格-- 根据以上结合的结果，如何查找到Smith的人所在的部门名称select emp.ename, dept.deptno, dept.dname from emp 	cross join dept where emp.deptno = dept.deptno and emp.ename = &#39;SMITH&#39;;  缺点：    ..."
+  },
+  
+  {
     "title": "Oracle(二)单表查询",
     "url": "/posts/Oracle-SingleTableQuery/",
     "categories": "sql, oracle",

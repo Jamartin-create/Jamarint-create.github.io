@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Lil Martin</title>
   <subtitle>一个菜鸡全栈程序员博主。</subtitle>
-  <updated>2021-10-04T17:54:23+08:00</updated>
+  <updated>2021-10-07T18:06:44+08:00</updated>
   <author>
     <name>Martin_Du</name>
     <uri>/</uri>
@@ -17,6 +17,73 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Oracle(三)多表查询</title>
+    <link href="/posts/Oracle-UnSingleTableQuery/" rel="alternate" type="text/html" title="Oracle(三)多表查询" />
+    <published>2021-09-13T21:43:00+08:00</published>
+  
+    <updated>2021-09-13T21:43:00+08:00</updated>
+  
+    <id>/posts/Oracle-UnSingleTableQuery/</id>
+    <content src="/posts/Oracle-UnSingleTableQuery/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="sql" />
+    
+    <category term="oracle" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      多表查
+
+交叉连接  cross join
+
+
+  ps: 一般不用（因为无用信息太多）
+
+
+select * from emp cross join dept -- 依次从m行的emp中取一行emp，和n行dept中的每一行进行组合，也就是会产生一个nxm行的表格
+
+
+-- 根据以上结合的结果，如何查找到Smith的人所在的部门名称
+select emp.ename, dept.deptno, dept.dname from emp 
+	cross join dept
+ where emp.deptno = dept.deptno and emp.ename = 'SMITH';
+
+
+
+  缺点：
+
+  
+    直接叉乘，得到的是全部集合（数据量太大）
+    然后才能where进行条件运算（性能太差）
+  
+
+
+内连接 inner join
+
+
+  ps: 可简写为join
+
+...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -271,74 +338,6 @@ def hello_world():
 
 #外网访问'ip地址/martin'时，触发下面的get_post()方法
 @app.route('/martin', methods=...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>github-webhook与企业WeChat-webhook中间件开发(二)服务器配置</title>
-    <link href="/posts/flask-python-server/" rel="alternate" type="text/html" title="github-webhook与企业WeChat-webhook中间件开发(二)服务器配置" />
-    <published>2021-08-16T20:25:17+08:00</published>
-  
-    <updated>2021-08-16T20:25:17+08:00</updated>
-  
-    <id>/posts/flask-python-server/</id>
-    <content src="/posts/flask-python-server/" />
-    <author>
-      <name>Martin_Du</name>
-    </author>
-
-  
-    
-    <category term="python-flask" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      端口配置
-
-面板配置端口
-
-
-  打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)
-
-
-服务器内部打开该端口防火墙
-
-
-  systemctl start firewalld.service 
-firewall-cmd --zone=public --add-port=5000/tcp --permanent
-systemctl restart firewalld.service
-firewall-cmd --reload
-
-
-  这里不打开也有可能无法访问该端口
-
-
-python环境配置
-
-虚拟环境
-
-
-  
-    
-      用pip安装virtualenvwrapper
-    
-    
-      vim ~/ .bashrc
-
-      在最后加上
-
-      export WORKON_HOME=$HOME/.virtua...
     </summary>
   
 

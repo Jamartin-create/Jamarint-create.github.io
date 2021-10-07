@@ -1447,6 +1447,19 @@ System.out.println(dis);
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
 
 
@@ -1497,6 +1510,70 @@ System.out.println(dis);
     <h3 class="pt-2 mt-1 mb-4 ml-1"
       data-toc-skip>Further Reading</h3>
     <div class="card-deck mb-4">
+    
+      
+      
+      <div class="card">
+        <a href="/posts/Oracle-UnSingleTableQuery/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Sep 13
+  
+
+  <i class="unloaded">2021-09-13T21:43:00+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Oracle(三)多表查询</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                多表查
+
+交叉连接  cross join
+
+
+  ps: 一般不用（因为无用信息太多）
+
+
+1
+select * from emp cross join dept -- 依次从m行的emp中取一行emp，和n行dept中的每一行进行组合，也就是会产生一个nxm行的表格
+
+
+1
+2
+3
+4
+-- 根据以上结合的结果，如何查找到Smith的人所在的部门名称
+select emp.ename, ...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
     
       
       
@@ -1631,72 +1708,6 @@ select empno 员工编号, ename...
   列：column / field 字段
 
   SQL分类：Struct...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
-        <a href="/posts/flask-python-deployment/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Aug 17
-  
-
-  <i class="unloaded">2021-08-17T08:16:18+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                编写代码
-
-创建虚拟环境
-
-
-  mkvirtualenv -p python3 my_env
-
-  进入工作空间 workon my_env
-
-
-放置代码
-
-
-  创建一个工作空间放置代码 mkdir pythonWorkSpace(可要可不要，看个人习惯)
-
-  进入刚刚创建的工作空间 cd pythonWorkSpace
-
-  创建一个python文件 vim robort.py
-
- ...
               </p>
             </div>
           </div>
