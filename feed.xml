@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Lil Martin</title>
   <subtitle>一个菜鸡全栈程序员博主。</subtitle>
-  <updated>2021-10-07T18:06:44+08:00</updated>
+  <updated>2021-10-07T23:48:41+08:00</updated>
   <author>
     <name>Martin_Du</name>
     <uri>/</uri>
@@ -17,6 +17,76 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Orcale基础(四)约束</title>
+    <link href="/posts/Oracle-key/" rel="alternate" type="text/html" title="Orcale基础(四)约束" />
+    <published>2021-09-20T16:30:42+08:00</published>
+  
+    <updated>2021-09-20T16:30:42+08:00</updated>
+  
+    <id>/posts/Oracle-key/</id>
+    <content src="/posts/Oracle-key/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="sql" />
+    
+    <category term="oracle" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      约束条件
+
+
+  主键：primary key（PK）—— unique + not null
+  外键：foreign key （FK）
+  唯一：unique
+  非空：not null
+  检查
+
+
+一些术语
+
+DDL操作
+
+create
+
+create table student(
+    id number primary key,
+    name varchar2(20),
+    email char(40),
+    registtime date default sysdate
+);
+
+
+DML操作
+
+insert:
+
+
+  
+    普通插入
+
+    insert into student(id, name, email)
+	values(3, 'lilmartin', 'lilmartin@qq.com')
+insert into studetn(id, n...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -284,60 +354,6 @@ select empno, ename, sal*12 年收入 from emp;
   此时可以找到占用端口进程的pid通过 kill pid 杀死进程
 
   测试无问题后可将程序在后台挂载 nuhup python robort...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>github-webhook与企业WeChat-webhook中间件开发(三)编写代码</title>
-    <link href="/posts/flask-python-code/" rel="alternate" type="text/html" title="github-webhook与企业WeChat-webhook中间件开发(三)编写代码" />
-    <published>2021-08-16T23:16:08+08:00</published>
-  
-    <updated>2021-08-16T23:16:08+08:00</updated>
-  
-    <id>/posts/flask-python-code/</id>
-    <content src="/posts/flask-python-code/" />
-    <author>
-      <name>Martin_Du</name>
-    </author>
-
-  
-    
-    <category term="python-flask" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      导入需要的包
-
-import json #用于处理后期传入的json数据
-import time #获取当前时间等等
-import requests #发送get/post请求 
-from flask import Flask, request, jsonify #flask是主要的包
-from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
-
-
-编写webApp
-
-
-app = Flask(__name__)
-
-#外网访问时'ip地址/'可以得到 'hello world' 的响应
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
-
-#外网访问'ip地址/martin'时，触发下面的get_post()方法
-@app.route('/martin', methods=...
     </summary>
   
 

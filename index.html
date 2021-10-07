@@ -118,7 +118,7 @@
       <a href="/">Lil Martin</a>
     </div>
 
-    <div class="site-subtitle font-italic">Lil Martin's Blog</div>
+    <div class="site-subtitle font-italic">:Lil Martin's Blog</div>
 
   </div><!-- .profile-wrapper -->
 
@@ -477,6 +477,109 @@
 
 
 <div id="post-list">
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/Oracle-key/">Orcale基础(四)约束</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        约束条件
+
+
+  主键：primary key（PK）—— unique + not null
+  外键：foreign key （FK）
+  唯一：unique
+  非空：not null
+  检查
+
+
+一些术语
+
+DDL操作
+
+create
+
+create table student(
+    id number primary key,
+    name varchar2(20),
+ ...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, Sep 20, 2021,  4:30 PM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Sep 20
+  
+
+  <i class="unloaded">2021-09-20T16:30:42+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="592 words">3 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
 
 
 
@@ -1371,100 +1474,6 @@ systemctl restart fir...
 
 
 
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/blog-question-jekyll/">githubpage+jekyll搭建blog遇到的问题(一)jekyll</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        关于字符编码的问题
-
-
-  在我执行了 bundle exec jekyll serve 之后曝出以下错误
-
-  Liquid Execption: Liquid error (line 13):invalid byte sequence in UTF-8 in sitemap.xml 
-
-
-  解决方法是找到 “md文件头” 中的 “tags” 中含有中文的md文件
-
-  将中文标签删除或...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Wed, Aug 11, 2021, 11:23 AM +0800"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Aug 11
-  
-
-  <i class="unloaded">2021-08-11T11:23:15+08:00</i>
-
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="119 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
 </div> <!-- #post-list -->
 
 
@@ -1522,10 +1531,27 @@ systemctl restart fir...
 
   
 
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- show number -->
+      <li class="page-item ">
+        <a class="page-link btn-box-shadow" href="/page3/">3</a>
+      </li>
+    
+
+  
+
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>1</span>
-    <span class="text-muted">/ 2</span>
+    <span class="text-muted">/ 3</span>
   </li>
 
   <!-- right arrow -->
@@ -1570,6 +1596,22 @@ systemctl restart fir...
 
   
 
+    <div id="access-lastmod" class="post">
+      <span>Recent Update</span>
+      <ul class="post-content pl-0 pb-1 ml-1 mt-2">
+
+      
+        
+        
+        
+        <li><a href="/posts/java-hashmap/">HashMap(一)用法</a></li>
+      
+
+      </ul>
+    </div> <!-- #access-lastmod -->
+
+  
+
   
 
 
@@ -1775,6 +1817,53 @@ systemctl restart fir...
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -1809,15 +1898,7 @@ systemctl restart fir...
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -1825,38 +1906,13 @@ systemctl restart fir...
     
     
       
-        
-        
-
-  
-    
-    
-    
     
   
     
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -1874,6 +1930,8 @@ systemctl restart fir...
     
     
     
+    
+      
     
   
     
@@ -1943,10 +2001,10 @@ systemctl restart fir...
         <a class="post-tag" href="/tags/linux/">linux</a>
       
         
-        <a class="post-tag" href="/tags/react/">React</a>
+        <a class="post-tag" href="/tags/oracle/">oracle</a>
       
         
-        <a class="post-tag" href="/tags/oracle/">oracle</a>
+        <a class="post-tag" href="/tags/react/">React</a>
       
         
         <a class="post-tag" href="/tags/sql/">sql</a>
@@ -2221,6 +2279,53 @@ systemctl restart fir...
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -2255,15 +2360,7 @@ systemctl restart fir...
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -2271,38 +2368,13 @@ systemctl restart fir...
     
     
       
-        
-        
-
-  
-    
-    
-    
     
   
     
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -2320,6 +2392,8 @@ systemctl restart fir...
     
     
     
+    
+      
     
   
     
@@ -2384,10 +2458,10 @@ systemctl restart fir...
         <a class="post-tag" href="/tags/linux/">linux</a>
       
         
-        <a class="post-tag" href="/tags/react/">React</a>
+        <a class="post-tag" href="/tags/oracle/">oracle</a>
       
         
-        <a class="post-tag" href="/tags/oracle/">oracle</a>
+        <a class="post-tag" href="/tags/react/">React</a>
       
         
         <a class="post-tag" href="/tags/sql/">sql</a>

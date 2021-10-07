@@ -24,25 +24,25 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器" />
+<meta property="og:title" content="Orcale基础(四)约束" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="编写代码" />
-<meta property="og:description" content="编写代码" />
-<link rel="canonical" href="/posts/flask-python-deployment/" />
-<meta property="og:url" content="/posts/flask-python-deployment/" />
+<meta name="description" content="约束条件" />
+<meta property="og:description" content="约束条件" />
+<link rel="canonical" href="/posts/Oracle-key/" />
+<meta property="og:url" content="/posts/Oracle-key/" />
 <meta property="og:site_name" content="Lil Martin" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-08-17T08:16:18+08:00" />
+<meta property="article:published_time" content="2021-09-20T16:30:42+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器" />
+<meta property="twitter:title" content="Orcale基础(四)约束" />
 <meta name="twitter:site" content="@" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","headline":"github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器","dateModified":"2021-08-17T08:16:18+08:00","datePublished":"2021-08-17T08:16:18+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/flask-python-deployment/"},"url":"/posts/flask-python-deployment/","description":"编写代码","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Orcale基础(四)约束","dateModified":"2021-09-20T16:30:42+08:00","datePublished":"2021-09-20T16:30:42+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Oracle-key/"},"url":"/posts/Oracle-key/","description":"约束条件","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器 | Lil Martin
+  <title>Orcale基础(四)约束 | Lil Martin
   </title>
 
   <!--
@@ -414,7 +414,7 @@
       
 
         
-          <span>github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器</span>
+          <span>Orcale基础(四)约束</span>
 
         
 
@@ -489,7 +489,7 @@
 
     <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-      <h1 data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器</h1>
+      <h1 data-toc-skip>Orcale基础(四)约束</h1>
 
       <div class="post-meta text-muted d-flex flex-column">
         <!-- Published date and author -->
@@ -510,7 +510,7 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Tue, Aug 17, 2021,  8:16 AM +0800"
+    title="Mon, Sep 20, 2021,  4:30 PM +0800"
   
 
   
@@ -520,10 +520,10 @@
   
 
   
-    Aug 17
+    Sep 20
   
 
-  <i class="unloaded">2021-08-17T08:16:18+08:00</i>
+  <i class="unloaded">2021-09-20T16:30:42+08:00</i>
 
 </span>
 
@@ -548,7 +548,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="178 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="592 words">3 min</span>
 
 
           <!-- page views -->
@@ -562,43 +562,244 @@
 
         
 
-        <h2 id="编写代码">编写代码</h2>
+        <h2 id="约束条件">约束条件</h2>
 
-<h3 id="创建虚拟环境">创建虚拟环境</h3>
+<ul>
+  <li>主键：primary key（PK）—— <strong>unique</strong> + <strong>not</strong> <strong>null</strong></li>
+  <li>外键：foreign key （FK）</li>
+  <li>唯一：unique</li>
+  <li>非空：not null</li>
+  <li>检查</li>
+</ul>
+
+<h2 id="一些术语">一些术语</h2>
+
+<h3 id="ddl操作">DDL操作</h3>
+
+<h4 id="create">create</h4>
+
+<div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="k">create</span> <span class="k">table</span> <span class="n">student</span><span class="p">(</span>
+    <span class="n">id</span> <span class="n">number</span> <span class="k">primary</span> <span class="k">key</span><span class="p">,</span>
+    <span class="n">name</span> <span class="n">varchar2</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+    <span class="n">email</span> <span class="nb">char</span><span class="p">(</span><span class="mi">40</span><span class="p">),</span>
+    <span class="n">registtime</span> <span class="nb">date</span> <span class="k">default</span> <span class="n">sysdate</span>
+<span class="p">);</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="dml操作">DML操作</h3>
+
+<h4 id="insert">insert:</h4>
+
+<ul>
+  <li>
+    <p>普通插入</p>
+
+    <div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="k">insert</span> <span class="k">into</span> <span class="n">student</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span>
+	<span class="k">values</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">'lilmartin'</span><span class="p">,</span> <span class="s1">'lilmartin@qq.com'</span><span class="p">)</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">studetn</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">registtime</span><span class="p">)</span>
+	<span class="k">values</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'jacky'</span><span class="p">,</span> <span class="s1">'jacky@qq.com'</span><span class="p">,</span> <span class="n">sysdate</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+
+    <blockquote>
+      <p>ps:如果新增全部字段，可以省略字段名称(但不推荐)</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>同时建议写出完整字段，时间字符串可由 <kbd>to_date()</kbd> 函数进行格式化</p>
+
+    <div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">insert</span> <span class="k">into</span> <span class="n">student</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">registtime</span><span class="p">)</span>
+	<span class="k">values</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">'jamartin'</span><span class="p">,</span> <span class="s1">'jamartin@qq.com'</span><span class="p">,</span> <span class="n">to_date</span><span class="p">(</span><span class="s1">'2021-09-27'</span><span class="p">,</span><span class="s1">'yyyy-mm-dd'</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <p>一次增加多条记录（将另一个表中的数据填入此表）</p>
+
+    <div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="c1">-- 用子查询代替values</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">student</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+	<span class="k">select</span> <span class="n">empno</span><span class="p">,</span> <span class="n">ename</span> <span class="k">from</span> <span class="n">emp</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ul>
+
+<h4 id="delete">delete:</h4>
+
+<div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="k">delete</span> <span class="n">student</span> <span class="k">where</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1234</span>
+</pre></td></tr></tbody></table></code></div></div>
 
 <blockquote>
-  <p><code class="language-plaintext highlighter-rouge">mkvirtualenv -p python3 my_env</code></p>
-
-  <p>进入工作空间 <code class="language-plaintext highlighter-rouge">workon my_env</code></p>
+  <p>ps:删除时一定要带where，否则会删掉所有数据</p>
 </blockquote>
 
-<h3 id="放置代码">放置代码</h3>
+<h4 id="update">update:</h4>
+
+<ul>
+  <li>
+    <p>修改一个同学的信息</p>
+
+    <div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="k">update</span> <span class="n">student</span> <span class="k">set</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">'jacky1'</span> <span class="k">where</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <p>批量修改同学信息</p>
+
+    <div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="c1">-- 修改 id 不为1的同学的信息</span>
+<span class="k">update</span> <span class="n">student</span> <span class="k">set</span> <span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">||</span><span class="n">id</span> <span class="k">where</span> <span class="n">id</span> <span class="o">&lt;&gt;</span> <span class="mi">1</span>
+<span class="c1">-- 修改所有同学的 email 为 name+'@qq.com'</span>
+<span class="k">update</span> <span class="n">student</span> <span class="k">set</span> <span class="n">email</span> <span class="o">=</span> <span class="n">name</span><span class="o">||</span><span class="s1">'@qq.com'</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ul>
+
+<h2 id="约束总结">约束总结</h2>
+
+<h3 id="创建主键约束">创建主键约束</h3>
+
+<h4 id="直接创建在列级由系统命名">直接创建在列级，由系统命名</h4>
+
+<div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="k">create</span> <span class="k">table</span> <span class="n">student1</span><span class="p">(</span>
+    <span class="n">id</span> <span class="n">number</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">name</span> <span class="n">varchar2</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h4 id="创建在表级自己命名">创建在表级，自己命名</h4>
+
+<div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="k">create</span> <span class="k">table</span> <span class="n">student1</span><span class="p">(</span>
+    <span class="n">id</span> <span class="n">number</span> <span class="p">,</span>
+    <span class="n">name</span> <span class="n">varchar2</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="p">,</span>
+    <span class="k">CONSTRAINT</span> <span class="n">stuning1_id_pk</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h4 id="建表后创建主键约束">建表后创建主键约束</h4>
+
+<div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="k">create</span> <span class="k">table</span> <span class="n">student1</span><span class="p">(</span>
+    <span class="n">id</span> <span class="n">number</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">name</span> <span class="n">varchar2</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="p">);</span>
+<span class="c1">-- 约束名称：自定义（最好有意义）</span>
+<span class="k">alter</span> <span class="k">table</span> <span class="n">student2</span>
+	<span class="k">add</span> <span class="k">constraint</span> <span class="n">stuning2_id_pk</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></div></div>
 
 <blockquote>
-  <p>创建一个工作空间放置代码 <code class="language-plaintext highlighter-rouge">mkdir pythonWorkSpace</code>(可要可不要，看个人习惯)</p>
+  <p>ps: 查看主键约束条件：</p>
 
-  <p>进入刚刚创建的工作空间 <code class="language-plaintext highlighter-rouge">cd pythonWorkSpace</code></p>
-
-  <p>创建一个python文件 <code class="language-plaintext highlighter-rouge">vim robort.py</code></p>
-
-  <p>将代码粘贴到编辑器中</p>
+  <div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">select</span> <span class="k">constraint_name</span><span class="p">,</span> <span class="n">constraint_type</span>
+	<span class="k">from</span> <span class="n">user_constraints</span>
+	<span class="k">where</span> <span class="k">table_name</span><span class="o">=</span><span class="s1">'tableName'</span>
+</pre></td></tr></tbody></table></code></div>  </div>
 </blockquote>
 
-<h3 id="运行代码">运行代码</h3>
+<h4 id="主键的属性">主键的属性</h4>
+
+<ul>
+  <li>唯一性</li>
+  <li>不为空</li>
+</ul>
+
+<h3 id="非空约束和唯一约束">非空约束和唯一约束</h3>
+
+<p>两个约束都只能建立在列级！</p>
+
+<h3 id="外键约束-fk">外键约束 （FK）</h3>
+
+<ul>
+  <li>
+    <p>父表：</p>
+
+    <div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="k">create</span> <span class="k">table</span> <span class="n">major</span> <span class="p">(</span>
+    <span class="n">mid</span> <span class="n">number</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="k">primary</span> <span class="k">key</span><span class="p">,</span>
+    <span class="n">mname</span> <span class="n">varchar2</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">major</span> <span class="k">values</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'computer'</span><span class="p">)</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">major</span> <span class="k">values</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">'music'</span><span class="p">)</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">major</span> <span class="k">values</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">'movie'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <p>从表（子表）</p>
+
+    <div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="k">create</span> <span class="k">table</span> <span class="n">student</span><span class="p">(</span>
+	<span class="n">id</span> <span class="n">number</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="k">primary</span> <span class="k">key</span>
+	<span class="n">name</span> <span class="n">varchar2</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+	<span class="n">mid</span> <span class="n">number</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+	<span class="k">constraint</span> <span class="n">stuning_mid_fk</span> 
+    	<span class="k">foreign</span> <span class="k">key</span><span class="p">(</span><span class="n">mid</span><span class="p">)</span> <span class="k">references</span> <span class="n">major</span><span class="p">(</span><span class="n">mid</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">student</span> <span class="k">values</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="s1">'peter'</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">student</span> <span class="k">values</span><span class="p">(</span><span class="mi">102</span><span class="p">,</span> <span class="s1">'chris'</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">student</span> <span class="k">values</span><span class="p">(</span><span class="mi">103</span><span class="p">,</span> <span class="s1">'king'</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ul>
 
 <blockquote>
-  <p>保存并退出编辑模式</p>
+  <p>ps:</p>
 
-  <p>挂载python程序 <code class="language-plaintext highlighter-rouge">python robort.py &amp;</code></p>
-
-  <p>查看进程是否正常 <code class="language-plaintext highlighter-rouge">ps -ef|grep python</code></p>
-
-  <p>如果有之前占用此端口的程序为结束可能会报错</p>
-
-  <p>此时可以找到占用端口进程的pid通过 <code class="language-plaintext highlighter-rouge">kill pid</code> 杀死进程</p>
-
-  <p>测试无问题后可将程序在后台挂载 <code class="language-plaintext highlighter-rouge">nuhup python robort.py &amp;</code></p>
+  <ul>
+    <li>在没有约束的情况下为表增加一条数据，会变成垃圾数据</li>
+    <li>在进行了DML操作后，需要将事务提交（ctrl+s)</li>
+  </ul>
 </blockquote>
+
 
 
       </div>
@@ -610,7 +811,8 @@
         <div class="post-meta mb-3">
           <i class="far fa-folder-open fa-fw mr-1"></i>
           
-            <a href='/categories/python-flask/'>python-flask</a>
+            <a href='/categories/sql/'>sql</a>,
+            <a href='/categories/oracle/'>oracle</a>
         </div>
         
 
@@ -619,14 +821,11 @@
         <div class="post-tags">
           <i class="fa fa-tags fa-fw mr-1"></i>
           
-          <a href="/tags/python/"
-            class="post-tag no-text-decoration" >python</a>
+          <a href="/tags/oracle/"
+            class="post-tag no-text-decoration" >oracle</a>
           
-          <a href="/tags/flask/"
-            class="post-tag no-text-decoration" >flask</a>
-          
-          <a href="/tags/linux/"
-            class="post-tag no-text-decoration" >linux</a>
+          <a href="/tags/sql/"
+            class="post-tag no-text-decoration" >sql</a>
           
           </div>
         
@@ -653,19 +852,19 @@
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器 - Lil Martin&url=/posts/flask-python-deployment/" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=Orcale基础(四)约束 - Lil Martin&url=/posts/Oracle-key/" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器 - Lil Martin&u=/posts/flask-python-deployment/" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=Orcale基础(四)约束 - Lil Martin&u=/posts/Oracle-key/" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://telegram.me/share?text=github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器 - Lil Martin&url=/posts/flask-python-deployment/" data-toggle="tooltip" data-placement="top"
+        <a href="https://telegram.me/share?text=Orcale基础(四)约束 - Lil Martin&url=/posts/Oracle-key/" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -1182,59 +1381,59 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
   
 
   
@@ -1464,7 +1663,7 @@
       
       
       <div class="card">
-        <a href="/posts/flask-getPost/">
+        <a href="/posts/Oracle-intro/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1485,14 +1684,14 @@
   
 
   
-    Aug 15
+    Sep 13
   
 
-  <i class="unloaded">2021-08-15T02:08:46+08:00</i>
+  <i class="unloaded">2021-09-13T15:47:01+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>通过flask在后端部署时遇到的问题</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Oracle(一)介绍</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1501,23 +1700,24 @@
 
 
 
-                虚拟环境
-
-​	Utunbu配置虚拟环境，virtualenv 安装时如果pip不是最新版，下载的时候会丢包
-
-外网访问服务器时无法得到响应
+                介绍
 
 
-  服务器端放行端口
+  Oracle数据库：DB/DBMS
 
-  
-    
-      在服务器面板找到安全组，添加一个安全组，选择端口号，协议为TCP协议。
-    
-    
-      连通ssh修改防火墙配置：
+  数据库使用者：DBA（DataBase Administrator）/开发人员
 
-      systemctl start firewalld...
+  数据库的种类：oracle / sybase /db2(IBM)
+
+  access,postgreSQL
+
+  数据表：行和列组成
+
+  行：row / record 记录
+
+  列：column / field 字段
+
+  SQL分类：Struct...
               </p>
             </div>
           </div>
@@ -1527,7 +1727,7 @@
       
       
       <div class="card">
-        <a href="/posts/flask-python-webhock/">
+        <a href="/posts/Oracle-SingleTableQuery/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1548,14 +1748,14 @@
   
 
   
-    Aug 16
+    Sep 13
   
 
-  <i class="unloaded">2021-08-16T11:20:23+08:00</i>
+  <i class="unloaded">2021-09-13T18:30:20+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(一)webhook</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Oracle(二)单表查询</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1564,21 +1764,32 @@
 
 
 
-                WebHook
+                单表查询
 
-什么是WebHook
+列的选取-投影
+
+select empno, ename, deptno from emp;
 
 
-  最典型的例子：当你发送一条朋友圈，微信的服务器会把你的这条朋友圈同步到你所有好友的客户端（要是你屏蔽人了就是给服务器列出了特别名单）
 
-  这还是 客户端 - 服务器 模式的逆转模式
-
-  
-    传统方法中，一般是客户端向服务器发出 请求 ，服务器给予客户端 响应 （这叫客户机拉取请求）
-  
+  ps:
 
   
-    在 WebHook 范式下，服...
+    开发中一般不使用 *
+    数据库中：列名大小写不敏感，内容大小写敏感
+  
+
+
+列别名
+
+
+  
+    方法1：列名+” “+别名
+  
+  
+    方法2：列名 as 别名
+
+    select empno 员工编号, ename 员工姓名 ...
               </p>
             </div>
           </div>
@@ -1588,7 +1799,7 @@
       
       
       <div class="card">
-        <a href="/posts/flask-python-server/">
+        <a href="/posts/Oracle-UnSingleTableQuery/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1609,14 +1820,14 @@
   
 
   
-    Aug 16
+    Sep 13
   
 
-  <i class="unloaded">2021-08-16T20:25:17+08:00</i>
+  <i class="unloaded">2021-09-13T21:43:00+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(二)服务器配置</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Oracle(三)多表查询</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1625,20 +1836,19 @@
 
 
 
-                端口配置
+                多表查
 
-面板配置端口
-
-
-  打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)
+交叉连接  cross join
 
 
-服务器内部打开该端口防火墙
+  ps: 一般不用（因为无用信息太多）
 
 
-  systemctl start firewalld.service 
-firewall-cmd --zone=public --add-port=5000/tcp --permanent
-systemctl restart fir...
+select * from emp cross join dept -- 依次从m行的emp中取一行emp，和n行dept中的每一行进行组合，也就是会产生一个nxm行的表格
+
+
+-- 根据以上结合的结果，如何查找到Smith的人所在的部门名称
+select emp.ename, dept.deptn...
               </p>
             </div>
           </div>
@@ -1656,17 +1866,17 @@ systemctl restart fir...
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <a href="/posts/flask-python-code/" class="btn btn-outline-primary"
+  <a href="/posts/Oracle-UnSingleTableQuery/" class="btn btn-outline-primary"
     prompt="Older">
-    <p>github-webhook与企业WeChat-webhook中间件开发(三)编写代码</p>
+    <p>Oracle(三)多表查询</p>
   </a>
   
 
   
-  <a href="/posts/Oracle-intro/" class="btn btn-outline-primary"
+  <span class="btn btn-outline-primary disabled"
     prompt="Newer">
-    <p>Oracle(一)介绍</p>
-  </a>
+    <p>-</p>
+  </span>
   
 
 </div>

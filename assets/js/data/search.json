@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "Orcale基础(四)约束",
+    "url": "/posts/Oracle-key/",
+    "categories": "sql, oracle",
+    "tags": "oracle, sql",
+    "date": "2021-09-20 16:30:42 +0800",
+    
+
+
+
+
+
+    "snippet": "约束条件  主键：primary key（PK）—— unique + not null  外键：foreign key （FK）  唯一：unique  非空：not null  检查一些术语DDL操作createcreate table student(    id number primary key,    name varchar2(20),    email char(40),    registtime date default sysdate);DML操作insert:      普通插入    insert into student(id, name, email)	v..."
+  },
+  
+  {
     "title": "Oracle(三)多表查询",
     "url": "/posts/Oracle-UnSingleTableQuery/",
     "categories": "sql, oracle",
