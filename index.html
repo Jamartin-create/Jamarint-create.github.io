@@ -482,6 +482,201 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/Oracle-rownum-pk/">Orcale基础(六)rownum与主键设计</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        主键设计
+
+ROWNUM 和 ROWID
+
+ROWID
+
+特点：唯一，且固定，是在行数据生成时产生的id；
+
+select rowid, empno from emp;
+-- 此时的查询结果中，所有行的rowid字段是唯一的
+select rowid, empno from emp where empno = 7369;
+-- 该结果中
+-- empno=7369的rowid 和 
+-- 上...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, Oct 11, 2021, 11:28 AM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Oct 11
+  
+
+  <i class="unloaded">2021-10-11T11:28:00+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="968 words">5 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/Oracle-ChildQuery/">Orcale基础(五)子查询</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        子查询
+
+分为 关联子查询 和 非关联子查询
+
+特点：子查询可以单独执行，其结果作为外部查询的条件。
+
+不相关子查询
+
+概念：子查询不需要与父查询的结果进行比对
+
+-- 查询各个部门薪水最高的员工信息
+select * from emp
+	where (deptno, sal) in
+	(
+    	select deptno, max(sal) from emp group by dept...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Sat, Oct  9, 2021, 11:00 PM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Oct  9
+  
+
+  <i class="unloaded">2021-10-09T23:00:00+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="945 words">5 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/Oracle-key/">Orcale基础(四)约束</a>
     </h1>
 
@@ -1280,200 +1475,6 @@ systemctl restart fir...
 
 
 
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/flask-getPost/">通过flask在后端部署时遇到的问题</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        虚拟环境
-
-​	Utunbu配置虚拟环境，virtualenv 安装时如果pip不是最新版，下载的时候会丢包
-
-外网访问服务器时无法得到响应
-
-
-  服务器端放行端口
-
-  
-    
-      在服务器面板找到安全组，添加一个安全组，选择端口号，协议为TCP协议。
-    
-    
-      连通ssh修改防火墙配置：
-
-      systemctl start firewalld...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sun, Aug 15, 2021,  2:08 AM +0800"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Aug 15
-  
-
-  <i class="unloaded">2021-08-15T02:08:46+08:00</i>
-
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="298 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/blog-question-git/">githubpage+jekyll搭建blog遇到的问题(二)git</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        ssh
-
-
-  在配置了ssh之后，发现每次push还是需要输入账号密码
-
-  git-bash执行命令 git config --global credential.helper store
-
-  然后操作 pull/push ，第一次需要输入账号密码，下次再操作就不需要了。
-
-
-
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Wed, Aug 11, 2021,  2:25 PM +0800"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Aug 11
-  
-
-  <i class="unloaded">2021-08-11T14:25:34+08:00</i>
-
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="63 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
 </div> <!-- #post-list -->
 
 
@@ -1633,6 +1634,101 @@ systemctl restart fir...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
       
         
         
@@ -1817,121 +1913,10 @@ systemctl restart fir...
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1986,6 +1971,12 @@ systemctl restart fir...
 
       
         
+        <a class="post-tag" href="/tags/oracle/">oracle</a>
+      
+        
+        <a class="post-tag" href="/tags/sql/">sql</a>
+      
+        
         <a class="post-tag" href="/tags/flask/">flask</a>
       
         
@@ -2001,13 +1992,7 @@ systemctl restart fir...
         <a class="post-tag" href="/tags/linux/">linux</a>
       
         
-        <a class="post-tag" href="/tags/oracle/">oracle</a>
-      
-        
         <a class="post-tag" href="/tags/react/">React</a>
-      
-        
-        <a class="post-tag" href="/tags/sql/">sql</a>
       
         
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>
@@ -2095,6 +2080,101 @@ systemctl restart fir...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
       
         
         
@@ -2279,121 +2359,10 @@ systemctl restart fir...
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2441,6 +2410,12 @@ systemctl restart fir...
 
 
 
+      
+        
+        <a class="post-tag" href="/tags/oracle/">oracle</a>
+      
+        
+        <a class="post-tag" href="/tags/sql/">sql</a>
       
         
         <a class="post-tag" href="/tags/flask/">flask</a>
@@ -2458,13 +2433,7 @@ systemctl restart fir...
         <a class="post-tag" href="/tags/linux/">linux</a>
       
         
-        <a class="post-tag" href="/tags/oracle/">oracle</a>
-      
-        
         <a class="post-tag" href="/tags/react/">React</a>
-      
-        
-        <a class="post-tag" href="/tags/sql/">sql</a>
       
         
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>

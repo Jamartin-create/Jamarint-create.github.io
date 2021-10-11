@@ -1,6 +1,36 @@
 [
   
   {
+    "title": "Orcale基础(六)rownum与主键设计",
+    "url": "/posts/Oracle-rownum-pk/",
+    "categories": "sql, oracle",
+    "tags": "oracle, sql",
+    "date": "2021-10-11 11:28:00 +0800",
+    
+
+
+
+
+
+    "snippet": "主键设计ROWNUM 和 ROWIDROWID特点：唯一，且固定，是在行数据生成时产生的id；select rowid, empno from emp;-- 此时的查询结果中，所有行的rowid字段是唯一的select rowid, empno from emp where empno = 7369;-- 该结果中-- empno=7369的rowid 和 -- 上一条 select 语句结果中empno=7369的rowid 相同  ROWID是永远不变的， 永远跟行记录走，不因查询条件而变化ROWNUM特点：一个伪列，对查询结果返回的行编号即行号，由1开始 依次递增-- 返回该表全部..."
+  },
+  
+  {
+    "title": "Orcale基础(五)子查询",
+    "url": "/posts/Oracle-ChildQuery/",
+    "categories": "sql, oracle",
+    "tags": "oracle, sql",
+    "date": "2021-10-09 23:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "子查询分为 关联子查询 和 非关联子查询特点：子查询可以单独执行，其结果作为外部查询的条件。不相关子查询概念：子查询不需要与父查询的结果进行比对-- 查询各个部门薪水最高的员工信息select * from emp	where (deptno, sal) in	(    	select deptno, max(sal) from emp group by deptno    )-- 哪些部门没有员工select * from dept	where deptno not in	(    	select deptno from emp group by deptno    )  整个过程中，..."
+  },
+  
+  {
     "title": "Orcale基础(四)约束",
     "url": "/posts/Oracle-key/",
     "categories": "sql, oracle",

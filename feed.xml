@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Lil Martin</title>
   <subtitle>一个菜鸡全栈程序员博主。</subtitle>
-  <updated>2021-10-07T23:48:41+08:00</updated>
+  <updated>2021-10-11T12:34:17+08:00</updated>
   <author>
     <name>Martin_Du</name>
     <uri>/</uri>
@@ -17,6 +17,136 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Orcale基础(六)rownum与主键设计</title>
+    <link href="/posts/Oracle-rownum-pk/" rel="alternate" type="text/html" title="Orcale基础(六)rownum与主键设计" />
+    <published>2021-10-11T11:28:00+08:00</published>
+  
+    <updated>2021-10-11T11:28:00+08:00</updated>
+  
+    <id>/posts/Oracle-rownum-pk/</id>
+    <content src="/posts/Oracle-rownum-pk/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="sql" />
+    
+    <category term="oracle" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      主键设计
+
+ROWNUM 和 ROWID
+
+ROWID
+
+特点：唯一，且固定，是在行数据生成时产生的id；
+
+select rowid, empno from emp;
+-- 此时的查询结果中，所有行的rowid字段是唯一的
+select rowid, empno from emp where empno = 7369;
+-- 该结果中
+-- empno=7369的rowid 和 
+-- 上一条 select 语句结果中empno=7369的rowid 相同
+
+
+
+  ROWID是永远不变的， 永远跟行记录走，不因查询条件而变化
+
+
+ROWNUM
+
+特点：一个伪列，对查询结果返回的行编号即行号，由1开始 依次递增
+
+-- 返回该表全部14条数据
+select rownum, emp.* from emp; -- 结果的rownum为1-14
+-- 返回部门号为30的6条数据
+sele...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Orcale基础(五)子查询</title>
+    <link href="/posts/Oracle-ChildQuery/" rel="alternate" type="text/html" title="Orcale基础(五)子查询" />
+    <published>2021-10-09T23:00:00+08:00</published>
+  
+    <updated>2021-10-09T23:00:00+08:00</updated>
+  
+    <id>/posts/Oracle-ChildQuery/</id>
+    <content src="/posts/Oracle-ChildQuery/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="sql" />
+    
+    <category term="oracle" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      子查询
+
+分为 关联子查询 和 非关联子查询
+
+特点：子查询可以单独执行，其结果作为外部查询的条件。
+
+不相关子查询
+
+概念：子查询不需要与父查询的结果进行比对
+
+-- 查询各个部门薪水最高的员工信息
+select * from emp
+	where (deptno, sal) in
+	(
+    	select deptno, max(sal) from emp group by deptno
+    )
+-- 哪些部门没有员工
+select * from dept
+	where deptno not in
+	(
+    	select deptno from emp group by deptno
+    )
+
+
+
+  整个过程中，父查询的值没有进入子查询
+
+
+普通 where 条件 子查询
+
+-- 查询所有工资高于FORD的员工信息
+select empno,ename,job...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -229,131 +359,6 @@ select empno, ename, sal*12 年收入 from emp;
     nvl(para1, para2):
 
    ...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Oracle(一)介绍</title>
-    <link href="/posts/Oracle-intro/" rel="alternate" type="text/html" title="Oracle(一)介绍" />
-    <published>2021-09-13T15:47:01+08:00</published>
-  
-    <updated>2021-09-13T15:47:01+08:00</updated>
-  
-    <id>/posts/Oracle-intro/</id>
-    <content src="/posts/Oracle-intro/" />
-    <author>
-      <name>Martin_Du</name>
-    </author>
-
-  
-    
-    <category term="sql" />
-    
-    <category term="oracle" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      介绍
-
-
-  Oracle数据库：DB/DBMS
-
-  数据库使用者：DBA（DataBase Administrator）/开发人员
-
-  数据库的种类：oracle / sybase /db2(IBM)
-
-  access,postgreSQL
-
-  数据表：行和列组成
-
-  行：row / record 记录
-
-  列：column / field 字段
-
-  SQL分类：Structured Query Language
-
-
-
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器</title>
-    <link href="/posts/flask-python-deployment/" rel="alternate" type="text/html" title="github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器" />
-    <published>2021-08-17T08:16:18+08:00</published>
-  
-    <updated>2021-08-17T08:16:18+08:00</updated>
-  
-    <id>/posts/flask-python-deployment/</id>
-    <content src="/posts/flask-python-deployment/" />
-    <author>
-      <name>Martin_Du</name>
-    </author>
-
-  
-    
-    <category term="python-flask" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      编写代码
-
-创建虚拟环境
-
-
-  mkvirtualenv -p python3 my_env
-
-  进入工作空间 workon my_env
-
-
-放置代码
-
-
-  创建一个工作空间放置代码 mkdir pythonWorkSpace(可要可不要，看个人习惯)
-
-  进入刚刚创建的工作空间 cd pythonWorkSpace
-
-  创建一个python文件 vim robort.py
-
-  将代码粘贴到编辑器中
-
-
-运行代码
-
-
-  保存并退出编辑模式
-
-  挂载python程序 python robort.py &amp;amp;
-
-  查看进程是否正常 ps -ef|grep python
-
-  如果有之前占用此端口的程序为结束可能会报错
-
-  此时可以找到占用端口进程的pid通过 kill pid 杀死进程
-
-  测试无问题后可将程序在后台挂载 nuhup python robort...
     </summary>
   
 

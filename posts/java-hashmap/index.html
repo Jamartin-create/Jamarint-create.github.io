@@ -849,6 +849,101 @@ System.out.println(dis);
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
       
         
         
@@ -1033,121 +1128,10 @@ System.out.println(dis);
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1202,6 +1186,12 @@ System.out.println(dis);
 
       
         
+        <a class="post-tag" href="/tags/oracle/">oracle</a>
+      
+        
+        <a class="post-tag" href="/tags/sql/">sql</a>
+      
+        
         <a class="post-tag" href="/tags/flask/">flask</a>
       
         
@@ -1217,13 +1207,7 @@ System.out.println(dis);
         <a class="post-tag" href="/tags/linux/">linux</a>
       
         
-        <a class="post-tag" href="/tags/oracle/">oracle</a>
-      
-        
         <a class="post-tag" href="/tags/react/">React</a>
-      
-        
-        <a class="post-tag" href="/tags/sql/">sql</a>
       
         
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>
@@ -1273,6 +1257,32 @@ System.out.println(dis);
 
 
 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
   
@@ -1592,6 +1602,144 @@ System.out.println(dis);
       
       
       <div class="card">
+        <a href="/posts/Oracle-rownum-pk/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Oct 11
+  
+
+  <i class="unloaded">2021-10-11T11:28:00+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Orcale基础(六)rownum与主键设计</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                主键设计
+
+ROWNUM 和 ROWID
+
+ROWID
+
+特点：唯一，且固定，是在行数据生成时产生的id；
+
+1
+2
+3
+4
+5
+6
+select rowid, empno from emp;
+-- 此时的查询结果中，所有行的rowid字段是唯一的
+select rowid, empno from emp where empno = 7369;
+-- 该结果中
+-- empno=7369的r...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/Oracle-ChildQuery/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Oct  9
+  
+
+  <i class="unloaded">2021-10-09T23:00:00+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Orcale基础(五)子查询</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                子查询
+
+分为 关联子查询 和 非关联子查询
+
+特点：子查询可以单独执行，其结果作为外部查询的条件。
+
+不相关子查询
+
+概念：子查询不需要与父查询的结果进行比对
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+-- 查询各个部门薪水最高的员工信息
+select * from emp
+	where (deptno, sal) in
+	(
+    	select deptno, max(...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
         <a href="/posts/Oracle-key/">
           <div class="card-body">
             <!--
@@ -1654,145 +1802,6 @@ create
 create table student(
     id number primary key,
     name var...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
-        <a href="/posts/Oracle-UnSingleTableQuery/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Sep 13
-  
-
-  <i class="unloaded">2021-09-13T21:43:00+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Oracle(三)多表查询</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                多表查
-
-交叉连接  cross join
-
-
-  ps: 一般不用（因为无用信息太多）
-
-
-1
-select * from emp cross join dept -- 依次从m行的emp中取一行emp，和n行dept中的每一行进行组合，也就是会产生一个nxm行的表格
-
-
-1
-2
-3
-4
--- 根据以上结合的结果，如何查找到Smith的人所在的部门名称
-select emp.ename, ...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
-        <a href="/posts/Oracle-SingleTableQuery/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Sep 13
-  
-
-  <i class="unloaded">2021-09-13T18:30:20+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Oracle(二)单表查询</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                单表查询
-
-列的选取-投影
-
-1
-select empno, ename, deptno from emp;
-
-
-
-  ps:
-
-  
-    开发中一般不使用 *
-    数据库中：列名大小写不敏感，内容大小写敏感
-  
-
-
-列别名
-
-
-  
-    方法1：列名+” “+别名
-  
-  
-    方法2：列名 as 别名
-
-    1
-2
-select empno 员工编号, ename...
               </p>
             </div>
           </div>
@@ -1899,6 +1908,101 @@ select empno 员工编号, ename...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
       
         
         
@@ -2083,121 +2187,10 @@ select empno 员工编号, ename...
     
     
     
-      
-        
-        
-
   
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2245,6 +2238,12 @@ select empno 员工编号, ename...
 
 
 
+      
+        
+        <a class="post-tag" href="/tags/oracle/">oracle</a>
+      
+        
+        <a class="post-tag" href="/tags/sql/">sql</a>
       
         
         <a class="post-tag" href="/tags/flask/">flask</a>
@@ -2262,13 +2261,7 @@ select empno 员工编号, ename...
         <a class="post-tag" href="/tags/linux/">linux</a>
       
         
-        <a class="post-tag" href="/tags/oracle/">oracle</a>
-      
-        
         <a class="post-tag" href="/tags/react/">React</a>
-      
-        
-        <a class="post-tag" href="/tags/sql/">sql</a>
       
         
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>
