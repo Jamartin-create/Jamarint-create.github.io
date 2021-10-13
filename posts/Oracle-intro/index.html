@@ -548,7 +548,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="57 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="100 words">1 min</span>
 
 
           <!-- page views -->
@@ -582,6 +582,17 @@
   <p>SQL分类：Structured Query Language</p>
 </blockquote>
 
+<h2 id="主要对象">主要对象</h2>
+
+<ul>
+  <li>表：table</li>
+  <li>视图：view</li>
+  <li>索引：index – 运维期间起作用</li>
+  <li>序列：sequence – 常用于主键</li>
+  <li>约束条件：pk/fk/unique/check/default</li>
+  <li>自定义函数</li>
+  <li>存储过程</li>
+</ul>
 
 
       </div>
@@ -820,10 +831,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -839,46 +846,31 @@
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
     
     
       
-        
-        
-
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -924,13 +916,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-      
         
         
 
@@ -948,13 +933,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1007,6 +985,49 @@
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -1142,6 +1163,32 @@
 
 
 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
   
@@ -1690,6 +1737,33 @@ create table student(
 
 
     
+      <!--
+  The Disqus lazy loading.
+  Powered by: <https://github.com/osvaldasvalutis/disqusLoader.js>
+-->
+
+<div id="disqus" class="pt-2 pb-2">
+  <p class="text-center text-muted small pb-5">
+    Comments powered by <a href="https://disqus.com/">Disqus</a>.
+  </p>
+</div>
+
+<script src="/assets/js/lib/jquery.disqusloader.min.js"></script>
+<script>
+  const options = {
+    scriptUrl: '//.disqus.com/embed.js',
+
+    disqusConfig: function() {
+      this.page.title = 'Oracle(一)介绍';
+      this.page.url = '/posts/Oracle-intro/';
+      this.page.identifier = '/posts/Oracle-intro/';
+    }
+  };
+
+  $.disqusLoader('#disqus', options);
+</script>
+
+    
 
     </div> <!-- #post-extend-wrapper -->
 
@@ -1848,10 +1922,6 @@ create table student(
     
     
     
-      
-        
-        
-
   
     
     
@@ -1867,46 +1937,31 @@ create table student(
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
     
     
       
-        
-        
-
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1952,13 +2007,6 @@ create table student(
     
     
       
-    
-  
-    
-    
-    
-    
-      
         
         
 
@@ -1976,13 +2024,6 @@ create table student(
     
     
     
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2035,6 +2076,49 @@ create table student(
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     

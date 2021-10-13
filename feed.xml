@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Lil Martin</title>
   <subtitle>一个菜鸡全栈程序员博主。</subtitle>
-  <updated>2021-10-11T12:34:17+08:00</updated>
+  <updated>2021-10-13T16:54:19+08:00</updated>
   <author>
     <name>Martin_Du</name>
     <uri>/</uri>
@@ -17,6 +17,155 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>React Router(路由)</title>
+    <link href="/posts/React-Router/" rel="alternate" type="text/html" title="React Router(路由)" />
+    <published>2021-10-12T23:28:00+08:00</published>
+  
+    <updated>2021-10-12T23:28:00+08:00</updated>
+  
+    <id>/posts/React-Router/</id>
+    <content src="/posts/React-Router/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="react" />
+    
+    <category term="react-Advanced-Component" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      简介
+
+
+
+官方简介
+
+React Router 是一个基于 React 之上的强大路由库，它可以让你向应用中快速地添加视图和数据流，同时保持页面与 URL 间的同步。
+
+个人理解
+
+也就是将这个”网页”/”网站”，变得更加组件化，使元素树结构更加直观。
+
+安装
+
+以下二选一
+
+$ npm install --save react-router-dom
+$ yarn add react-router-dom
+
+
+内置包
+
+
+
+import { Link, NavLink, Switch, Route, BrowserRouter } from 'react-router-dom'
+
+
+Link | NavLink
+
+作用与 a 标签类似：
+
+将网页地址渲染为 “目标地址”(最终会被渲染为a元素)
+
+
+  可以理解为一个索引，仅仅是一个索引，如果 route 中没有对应的path，该标...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Orcale基础(七)视图、索引、事务</title>
+    <link href="/posts/Oracle-view/" rel="alternate" type="text/html" title="Orcale基础(七)视图、索引、事务" />
+    <published>2021-10-11T16:33:00+08:00</published>
+  
+    <updated>2021-10-11T16:33:00+08:00</updated>
+  
+    <id>/posts/Oracle-view/</id>
+    <content src="/posts/Oracle-view/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="sql" />
+    
+    <category term="oracle" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      视图(view)
+
+
+
+作用
+
+
+  控制数据访问
+  简化查询
+  数据独立性
+  避免重复访问相同的数据
+
+
+视图的创建
+
+注意
+
+在运维数据库，对一些数据进行操作时，最好先将要操作的数据备份，然后再操作数据或者直接操作备份后的数据。
+
+-- 快速复制表结构，如果复制的表有数据，则顺势复制表中的所有数据。
+create table emp_bank
+	as 
+	select * from emp
+
+
+创建方法
+
+-- `create or replace` 表示如果创建的视图已存在则替换
+create or replace view v_emp_bank
+	as select ename, sal 
+		from emp_bank
+
+
+创建之后可以直接通过 select 查询该视图的结果
+
+
+  该结果与 as 后的 select 结果相同。
+
+
+view 的好处
+
+例1
+
+查询...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -213,152 +362,6 @@ insert:
     insert into student(id, name, email)
 	values(3, 'lilmartin', 'lilmartin@qq.com')
 insert into studetn(id, n...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Oracle(三)多表查询</title>
-    <link href="/posts/Oracle-UnSingleTableQuery/" rel="alternate" type="text/html" title="Oracle(三)多表查询" />
-    <published>2021-09-13T21:43:00+08:00</published>
-  
-    <updated>2021-09-13T21:43:00+08:00</updated>
-  
-    <id>/posts/Oracle-UnSingleTableQuery/</id>
-    <content src="/posts/Oracle-UnSingleTableQuery/" />
-    <author>
-      <name>Martin_Du</name>
-    </author>
-
-  
-    
-    <category term="sql" />
-    
-    <category term="oracle" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      多表查
-
-交叉连接  cross join
-
-
-  ps: 一般不用（因为无用信息太多）
-
-
-select * from emp cross join dept -- 依次从m行的emp中取一行emp，和n行dept中的每一行进行组合，也就是会产生一个nxm行的表格
-
-
--- 根据以上结合的结果，如何查找到Smith的人所在的部门名称
-select emp.ename, dept.deptno, dept.dname from emp 
-	cross join dept
- where emp.deptno = dept.deptno and emp.ename = 'SMITH';
-
-
-
-  缺点：
-
-  
-    直接叉乘，得到的是全部集合（数据量太大）
-    然后才能where进行条件运算（性能太差）
-  
-
-
-内连接 inner join
-
-
-  ps: 可简写为join
-
-...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Oracle(二)单表查询</title>
-    <link href="/posts/Oracle-SingleTableQuery/" rel="alternate" type="text/html" title="Oracle(二)单表查询" />
-    <published>2021-09-13T18:30:20+08:00</published>
-  
-    <updated>2021-09-13T18:30:20+08:00</updated>
-  
-    <id>/posts/Oracle-SingleTableQuery/</id>
-    <content src="/posts/Oracle-SingleTableQuery/" />
-    <author>
-      <name>Martin_Du</name>
-    </author>
-
-  
-    
-    <category term="sql" />
-    
-    <category term="oracle" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      单表查询
-
-列的选取-投影
-
-select empno, ename, deptno from emp;
-
-
-
-  ps:
-
-  
-    开发中一般不使用 *
-    数据库中：列名大小写不敏感，内容大小写敏感
-  
-
-
-列别名
-
-
-  
-    方法1：列名+” “+别名
-  
-  
-    方法2：列名 as 别名
-
-    select empno 员工编号, ename 员工姓名 from emp;
-select empno as 员工编号, ename as 员工姓名 from emp;
-    
-  
-
-
-列的算数表达式(+,-,*,/)
-
--- 显示年收入
-select empno, ename, sal*12 年收入 from emp;
-
-
-
-  
-    处理空值得函数 nvl() ： null value
-
-    nvl(para1, para2):
-
-   ...
     </summary>
   
 

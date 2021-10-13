@@ -616,7 +616,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="298 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="300 words">1 min</span>
 
 
           <!-- page views -->
@@ -696,9 +696,13 @@ firewall-cmd --reload
 
   <p>​	此错误表示端口被占用，未释放或者程序没有正常结束</p>
 
-  <p>​	通过<code class="language-plaintext highlighter-rouge">ps -ef|grep python</code>找到端口号占用的对应的python进程的pid</p>
+  <p>​	通过<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>ps -ef|grep python
+</pre></td></tr></tbody></table></code>找到端口号占用的对应的python进程的pid</p>
 
-  <p>​	再通过 <code class="language-plaintext highlighter-rouge">kill pid</code> 杀死进程</p>
+  <p>​	再通过 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>kill pid
+</pre></td></tr></tbody></table></code> 杀死进程</p>
 
   <p>​	<img data-proofer-ignore data-src="http://Jamartin-create.github.io/assets/img/post-pic/flask-getPost/P4-1.png" alt="photo" /></p>
 </blockquote>
@@ -943,10 +947,6 @@ firewall-cmd --reload
     
     
     
-      
-        
-        
-
   
     
     
@@ -962,46 +962,31 @@ firewall-cmd --reload
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
     
     
       
-        
-        
-
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1047,13 +1032,6 @@ firewall-cmd --reload
     
     
       
-    
-  
-    
-    
-    
-    
-      
         
         
 
@@ -1071,13 +1049,6 @@ firewall-cmd --reload
     
     
     
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1130,6 +1101,49 @@ firewall-cmd --reload
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -1265,6 +1279,32 @@ firewall-cmd --reload
 
 
 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
   
@@ -1578,6 +1618,79 @@ firewall-cmd --reload
       
       
       <div class="card">
+        <a href="/posts/flask-python-deployment/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Aug 17
+  
+
+  <i class="unloaded">2021-08-17T08:16:18+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                编写代码
+
+创建虚拟环境
+
+
+  1
+mkvirtualenv -p python3 my_env
+
+
+  进入工作空间 1
+workon my_env
+
+
+
+放置代码
+
+
+  创建一个工作空间放置代码 1
+mkdir pythonWorkSpace
+(可要可不要，看个人习惯)
+
+  进入刚刚创建的工作空间 1
+cd pythonWorkSpace
+
+
+  创建一个python文件 1
+vi...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
         <a href="/posts/flask-python-webhock/">
           <div class="card-body">
             <!--
@@ -1696,72 +1809,6 @@ systemctl restart fir...
         </a>
       </div>
     
-      
-      
-      <div class="card">
-        <a href="/posts/flask-python-deployment/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Aug 17
-  
-
-  <i class="unloaded">2021-08-17T08:16:18+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                编写代码
-
-创建虚拟环境
-
-
-  mkvirtualenv -p python3 my_env
-
-  进入工作空间 workon my_env
-
-
-放置代码
-
-
-  创建一个工作空间放置代码 mkdir pythonWorkSpace(可要可不要，看个人习惯)
-
-  进入刚刚创建的工作空间 cd pythonWorkSpace
-
-  创建一个python文件 vim robort.py
-
- ...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
     </div> <!-- .card-deck -->
   </div> <!-- #related-posts -->
 
@@ -1788,6 +1835,33 @@ systemctl restart fir...
 
 </div>
 
+
+    
+      <!--
+  The Disqus lazy loading.
+  Powered by: <https://github.com/osvaldasvalutis/disqusLoader.js>
+-->
+
+<div id="disqus" class="pt-2 pb-2">
+  <p class="text-center text-muted small pb-5">
+    Comments powered by <a href="https://disqus.com/">Disqus</a>.
+  </p>
+</div>
+
+<script src="/assets/js/lib/jquery.disqusloader.min.js"></script>
+<script>
+  const options = {
+    scriptUrl: '//.disqus.com/embed.js',
+
+    disqusConfig: function() {
+      this.page.title = '通过flask在后端部署时遇到的问题';
+      this.page.url = '/posts/flask-getPost/';
+      this.page.identifier = '/posts/flask-getPost/';
+    }
+  };
+
+  $.disqusLoader('#disqus', options);
+</script>
 
     
 
@@ -1948,10 +2022,6 @@ systemctl restart fir...
     
     
     
-      
-        
-        
-
   
     
     
@@ -1967,46 +2037,31 @@ systemctl restart fir...
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
     
     
       
-        
-        
-
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2052,13 +2107,6 @@ systemctl restart fir...
     
     
       
-    
-  
-    
-    
-    
-    
-      
         
         
 
@@ -2076,13 +2124,6 @@ systemctl restart fir...
     
     
     
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2135,6 +2176,49 @@ systemctl restart fir...
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     

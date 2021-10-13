@@ -961,10 +961,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -980,46 +976,31 @@
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
     
     
       
-        
-        
-
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1065,13 +1046,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-      
         
         
 
@@ -1089,13 +1063,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1148,6 +1115,49 @@
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -1283,6 +1293,32 @@
 
 
 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
   
@@ -1596,66 +1632,6 @@
       
       
       <div class="card">
-        <a href="/posts/flask-python-server/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Aug 16
-  
-
-  <i class="unloaded">2021-08-16T20:25:17+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(二)服务器配置</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                端口配置
-
-面板配置端口
-
-
-  打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)
-
-
-服务器内部打开该端口防火墙
-
-
-  systemctl start firewalld.service 
-firewall-cmd --zone=public --add-port=5000/tcp --permanent
-systemctl restart fir...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
         <a href="/posts/flask-python-deployment/">
           <div class="card-body">
             <!--
@@ -1698,21 +1674,28 @@ systemctl restart fir...
 创建虚拟环境
 
 
-  mkvirtualenv -p python3 my_env
+  1
+mkvirtualenv -p python3 my_env
 
-  进入工作空间 workon my_env
+
+  进入工作空间 1
+workon my_env
+
 
 
 放置代码
 
 
-  创建一个工作空间放置代码 mkdir pythonWorkSpace(可要可不要，看个人习惯)
+  创建一个工作空间放置代码 1
+mkdir pythonWorkSpace
+(可要可不要，看个人习惯)
 
-  进入刚刚创建的工作空间 cd pythonWorkSpace
+  进入刚刚创建的工作空间 1
+cd pythonWorkSpace
 
-  创建一个python文件 vim robort.py
 
- ...
+  创建一个python文件 1
+vi...
               </p>
             </div>
           </div>
@@ -1782,6 +1765,66 @@ systemctl restart fir...
         </a>
       </div>
     
+      
+      
+      <div class="card">
+        <a href="/posts/flask-python-server/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Aug 16
+  
+
+  <i class="unloaded">2021-08-16T20:25:17+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(二)服务器配置</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                端口配置
+
+面板配置端口
+
+
+  打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)
+
+
+服务器内部打开该端口防火墙
+
+
+  systemctl start firewalld.service 
+firewall-cmd --zone=public --add-port=5000/tcp --permanent
+systemctl restart fir...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
     </div> <!-- .card-deck -->
   </div> <!-- #related-posts -->
 
@@ -1808,6 +1851,33 @@ systemctl restart fir...
 
 </div>
 
+
+    
+      <!--
+  The Disqus lazy loading.
+  Powered by: <https://github.com/osvaldasvalutis/disqusLoader.js>
+-->
+
+<div id="disqus" class="pt-2 pb-2">
+  <p class="text-center text-muted small pb-5">
+    Comments powered by <a href="https://disqus.com/">Disqus</a>.
+  </p>
+</div>
+
+<script src="/assets/js/lib/jquery.disqusloader.min.js"></script>
+<script>
+  const options = {
+    scriptUrl: '//.disqus.com/embed.js',
+
+    disqusConfig: function() {
+      this.page.title = 'github-webhook与企业WeChat-webhook中间件开发(一)webhook';
+      this.page.url = '/posts/flask-python-webhock/';
+      this.page.identifier = '/posts/flask-python-webhock/';
+    }
+  };
+
+  $.disqusLoader('#disqus', options);
+</script>
 
     
 
@@ -1968,10 +2038,6 @@ systemctl restart fir...
     
     
     
-      
-        
-        
-
   
     
     
@@ -1987,46 +2053,31 @@ systemctl restart fir...
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
     
     
       
-        
-        
-
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2072,13 +2123,6 @@ systemctl restart fir...
     
     
       
-    
-  
-    
-    
-    
-    
-      
         
         
 
@@ -2096,13 +2140,6 @@ systemctl restart fir...
     
     
     
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2155,6 +2192,49 @@ systemctl restart fir...
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     

@@ -1,6 +1,36 @@
 [
   
   {
+    "title": "React Router(路由)",
+    "url": "/posts/React-Router/",
+    "categories": "react, react-Advanced-Component",
+    "tags": "react-router",
+    "date": "2021-10-12 23:28:00 +0800",
+    
+
+
+
+
+
+    "snippet": "简介官方简介React Router 是一个基于 React 之上的强大路由库，它可以让你向应用中快速地添加视图和数据流，同时保持页面与 URL 间的同步。个人理解也就是将这个”网页”/”网站”，变得更加组件化，使元素树结构更加直观。安装以下二选一$ npm install --save react-router-dom$ yarn add react-router-dom内置包import { Link, NavLink, Switch, Route, BrowserRouter } from &#39;react-router-dom&#39;Link | NavLink作用与 a ..."
+  },
+  
+  {
+    "title": "Orcale基础(七)视图、索引、事务",
+    "url": "/posts/Oracle-view/",
+    "categories": "sql, oracle",
+    "tags": "oracle, sql",
+    "date": "2021-10-11 16:33:00 +0800",
+    
+
+
+
+
+
+    "snippet": "视图(view)作用  控制数据访问  简化查询  数据独立性  避免重复访问相同的数据视图的创建注意在运维数据库，对一些数据进行操作时，最好先将要操作的数据备份，然后再操作数据或者直接操作备份后的数据。-- 快速复制表结构，如果复制的表有数据，则顺势复制表中的所有数据。create table emp_bank	as 	select * from emp创建方法-- `create or replace` 表示如果创建的视图已存在则替换create or replace view v_emp_bank	as select ename, sal 		from emp_bank创建之后可以..."
+  },
+  
+  {
     "title": "Orcale基础(六)rownum与主键设计",
     "url": "/posts/Oracle-rownum-pk/",
     "categories": "sql, oracle",
@@ -87,7 +117,7 @@
 
 
 
-    "snippet": "介绍  Oracle数据库：DB/DBMS  数据库使用者：DBA（DataBase Administrator）/开发人员  数据库的种类：oracle / sybase /db2(IBM)  access,postgreSQL  数据表：行和列组成  行：row / record 记录  列：column / field 字段  SQL分类：Structured Query Language"
+    "snippet": "介绍  Oracle数据库：DB/DBMS  数据库使用者：DBA（DataBase Administrator）/开发人员  数据库的种类：oracle / sybase /db2(IBM)  access,postgreSQL  数据表：行和列组成  行：row / record 记录  列：column / field 字段  SQL分类：Structured Query Language主要对象  表：table  视图：view  索引：index – 运维期间起作用  序列：sequence – 常用于主键  约束条件：pk/fk/unique/check/default  ..."
   },
   
   {

@@ -745,7 +745,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="265 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="270 words">1 min</span>
 
 
           <!-- page views -->
@@ -803,19 +803,29 @@ git config --global user.email "邮箱"
 <blockquote>
   <h4 id="配置ssh">配置SSH</h4>
 
-  <p>​	打开 <b>git-bash</b> ，输入<code class="language-plaintext highlighter-rouge">ssh-keygen -t rsa</code></p>
+  <p>​	打开 <b>git-bash</b> ，输入<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>ssh-keygen -t rsa
+</pre></td></tr></tbody></table></code></p>
 
-  <p>​	敲三次回车，然后在<code class="language-plaintext highlighter-rouge">C:\Users\计算机名\</code>中会生成一个.ssh的文件夹</p>
+  <p>​	敲三次回车，然后在<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>C:\Users\计算机名\
+</pre></td></tr></tbody></table></code>中会生成一个.ssh的文件夹</p>
 
   <p>​	该文件夹下有 <b>id_rsa</b>(私钥) 和 <b>id_rsa.pub</b>(公钥) 两个文件</p>
 
   <p>​	打开 <kbd>github</kbd>-&gt; <kbd>setting</kbd> -&gt; <kbd>SSH and GPG keys</kbd>-&gt; <kbd>New SSH key</kbd></p>
 
-  <p>​	<code class="language-plaintext highlighter-rouge">title</code>可写可不写，将<b>id_rsa.pub</b> 中的内容复制到<code class="language-plaintext highlighter-rouge">key</code>中</p>
+  <p>​	<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>title
+</pre></td></tr></tbody></table></code>可写可不写，将<b>id_rsa.pub</b> 中的内容复制到<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>key
+</pre></td></tr></tbody></table></code>中</p>
 
   <h4 id="检验ssh是否配置成功">检验ssh是否配置成功</h4>
 
-  <p>​	在git bash中输入<code class="language-plaintext highlighter-rouge">ssh -T git@github.com</code></p>
+  <p>​	在git bash中输入<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>ssh -T git@github.com
+</pre></td></tr></tbody></table></code></p>
 
   <p>​	控制台输出 “You’ve successfully authenticated, but GitHub does not provide 	shell access” 即为配置成功。</p>
 </blockquote>
@@ -1047,10 +1057,6 @@ git config --global user.email "邮箱"
     
     
     
-      
-        
-        
-
   
     
     
@@ -1066,46 +1072,31 @@ git config --global user.email "邮箱"
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
     
     
       
-        
-        
-
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1151,13 +1142,6 @@ git config --global user.email "邮箱"
     
     
       
-    
-  
-    
-    
-    
-    
-      
         
         
 
@@ -1175,13 +1159,6 @@ git config --global user.email "邮箱"
     
     
     
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1234,6 +1211,49 @@ git config --global user.email "邮箱"
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -1647,6 +1667,32 @@ git config --global user.email "邮箱"
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
   
 
@@ -1726,17 +1772,25 @@ git config --global user.email "邮箱"
 
   
 
-  安装时勾上Add Ruby executables to your PATH
+  安装时勾上1
+Add Ruby executables to your PATH
 
-  命令行输入ruby -v 检查ruby是否安装成功
 
-  输入gem -v 检查1是否安装成功
+  命令行输入1
+ruby -v
+ 检查ruby是否安装成功
+
+  输入1
+gem -v
+ 检查1是否安装成功
 
 
 用gem命令安装jekyll
 
 
-  命令行输入 gem install jekyll bundler //通过 RubyGem...
+  命令行输入 1
+gem install jekyll bundler
+ ...
               </p>
             </div>
           </div>
@@ -1796,17 +1850,20 @@ git config --global user.email "邮箱"
 搭建本地网站浏览模板
 
 
-  命令行执行 cd {你的文件夹位置} 
-
-  命令行执行 bundle exec jekyll serve bundler安装教程
-
-  浏览 http://localhost:4000 即可查看这个模板
+  命令行执行 1
+cd {你的文件夹位置} 
 
 
-克隆git仓库
+  命令行执行 1
+bundle exec jekyll serve
+ bundler安装教程
+
+  浏览 1
+http://localhost:4000
+ 即可查看这个模板
 
 
- ...
+克隆...
               </p>
             </div>
           </div>
@@ -1907,6 +1964,33 @@ git config --global user.email "邮箱"
 
 </div>
 
+
+    
+      <!--
+  The Disqus lazy loading.
+  Powered by: <https://github.com/osvaldasvalutis/disqusLoader.js>
+-->
+
+<div id="disqus" class="pt-2 pb-2">
+  <p class="text-center text-muted small pb-5">
+    Comments powered by <a href="https://disqus.com/">Disqus</a>.
+  </p>
+</div>
+
+<script src="/assets/js/lib/jquery.disqusloader.min.js"></script>
+<script>
+  const options = {
+    scriptUrl: '//.disqus.com/embed.js',
+
+    disqusConfig: function() {
+      this.page.title = 'gitpage+jekyll搭建博客(一)代码托管';
+      this.page.url = '/posts/blog-git-bind/';
+      this.page.identifier = '/posts/blog-git-bind/';
+    }
+  };
+
+  $.disqusLoader('#disqus', options);
+</script>
 
     
 
@@ -2067,10 +2151,6 @@ git config --global user.email "邮箱"
     
     
     
-      
-        
-        
-
   
     
     
@@ -2086,46 +2166,31 @@ git config --global user.email "邮箱"
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
     
     
       
-        
-        
-
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2171,13 +2236,6 @@ git config --global user.email "邮箱"
     
     
       
-    
-  
-    
-    
-    
-    
-      
         
         
 
@@ -2195,13 +2253,6 @@ git config --global user.email "邮箱"
     
     
     
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2254,6 +2305,49 @@ git config --global user.email "邮箱"
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     

@@ -548,7 +548,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="63 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="64 words">1 min</span>
 
 
           <!-- page views -->
@@ -567,7 +567,9 @@
 <blockquote>
   <p>在配置了ssh之后，发现每次push还是需要输入账号密码</p>
 
-  <p>git-bash执行命令 <code class="language-plaintext highlighter-rouge">git config --global credential.helper store</code></p>
+  <p>git-bash执行命令 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git config --global credential.helper store
+</pre></td></tr></tbody></table></code></p>
 
   <p>然后操作 <b>pull/push</b> ，第一次需要输入账号密码，下次再操作就不需要了。</p>
 </blockquote>
@@ -799,10 +801,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -818,46 +816,31 @@
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
     
     
       
-        
-        
-
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -903,13 +886,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-      
         
         
 
@@ -927,13 +903,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -986,6 +955,49 @@
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -1121,6 +1133,32 @@
 
 
 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
   
@@ -1474,14 +1512,15 @@
                 关于字符编码的问题
 
 
-  在我执行了 bundle exec jekyll serve 之后曝出以下错误
+  在我执行了 bundle exec jekyll serve
+ 之后曝出以下错误
 
   Liquid Execption: Liquid error (line 13):invalid byte sequence in UTF-8 in sitemap.xml 
 
 
   解决方法是找到 “md文件头” 中的 “tags” 中含有中文的md文件
 
-  将中文标签删除或...
+  将中文标签删除...
               </p>
             </div>
           </div>
@@ -1617,15 +1656,19 @@
 
   安装时勾上Add Ruby executables to your PATH
 
-  命令行输入ruby -v 检查ruby是否安装成功
 
-  输入gem -v 检查1是否安装成功
+  命令行输入ruby -v
+ 检查ruby是否安装成功
+
+  输入gem -v
+ 检查1是否安装成功
 
 
 用gem命令安装jekyll
 
 
-  命令行输入 gem install jekyll bundler //通过 RubyGem...
+  命令行输入 gem install jekyll bundler
+ //通过 Rub...
               </p>
             </div>
           </div>
@@ -1658,6 +1701,33 @@
 
 </div>
 
+
+    
+      <!--
+  The Disqus lazy loading.
+  Powered by: <https://github.com/osvaldasvalutis/disqusLoader.js>
+-->
+
+<div id="disqus" class="pt-2 pb-2">
+  <p class="text-center text-muted small pb-5">
+    Comments powered by <a href="https://disqus.com/">Disqus</a>.
+  </p>
+</div>
+
+<script src="/assets/js/lib/jquery.disqusloader.min.js"></script>
+<script>
+  const options = {
+    scriptUrl: '//.disqus.com/embed.js',
+
+    disqusConfig: function() {
+      this.page.title = 'githubpage+jekyll搭建blog遇到的问题(二)git';
+      this.page.url = '/posts/blog-question-git/';
+      this.page.identifier = '/posts/blog-question-git/';
+    }
+  };
+
+  $.disqusLoader('#disqus', options);
+</script>
 
     
 
@@ -1818,10 +1888,6 @@
     
     
     
-      
-        
-        
-
   
     
     
@@ -1837,46 +1903,31 @@
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
     
     
       
-        
-        
-
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1922,13 +1973,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-      
         
         
 
@@ -1946,13 +1990,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2005,6 +2042,49 @@
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
