@@ -138,7 +138,7 @@
   {
     "title": "github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器",
     "url": "/posts/flask-python-deployment/",
-    "categories": "python-flask",
+    "categories": "python, flask",
     "tags": "python, flask, linux",
     "date": "2021-08-17 08:16:18 +0800",
     
@@ -153,7 +153,7 @@
   {
     "title": "github-webhook与企业WeChat-webhook中间件开发(三)编写代码",
     "url": "/posts/flask-python-code/",
-    "categories": "python-flask",
+    "categories": "python, flask",
     "tags": "python, flask",
     "date": "2021-08-16 23:16:08 +0800",
     
@@ -168,7 +168,7 @@
   {
     "title": "github-webhook与企业WeChat-webhook中间件开发(二)服务器配置",
     "url": "/posts/flask-python-server/",
-    "categories": "python-flask",
+    "categories": "python, flask",
     "tags": "python, flask, linux",
     "date": "2021-08-16 20:25:17 +0800",
     
@@ -183,7 +183,7 @@
   {
     "title": "github-webhook与企业WeChat-webhook中间件开发(一)webhook",
     "url": "/posts/flask-python-webhock/",
-    "categories": "python-flask",
+    "categories": "python, flask",
     "tags": "python, flask, linux",
     "date": "2021-08-16 11:20:23 +0800",
     
@@ -198,7 +198,7 @@
   {
     "title": "通过flask在后端部署时遇到的问题",
     "url": "/posts/flask-getPost/",
-    "categories": "python-flask",
+    "categories": "python, flask",
     "tags": "python, flask, linux",
     "date": "2021-08-15 02:08:46 +0800",
     
@@ -243,7 +243,7 @@
   {
     "title": "react 基础(四)组件",
     "url": "/posts/react-4component/",
-    "categories": "react-Basic, react-es6",
+    "categories": "react, react-basic-es6",
     "tags": "react, javascript, JSX",
     "date": "2021-08-10 18:23:58 +0800",
     
@@ -258,7 +258,7 @@
   {
     "title": "react 基础(三)render",
     "url": "/posts/react-3rendering/",
-    "categories": "react-Basic, react-es6",
+    "categories": "react, react-basic-es6",
     "tags": "react, javascript, JSX",
     "date": "2021-08-10 06:18:16 +0800",
     
@@ -273,7 +273,7 @@
   {
     "title": "react 基础(二)JSX",
     "url": "/posts/react-2jsx/",
-    "categories": "react-Basic, react-es6",
+    "categories": "react, react-basic-es6",
     "tags": "react, javascript, JSX",
     "date": "2021-08-10 00:05:16 +0800",
     
@@ -288,7 +288,7 @@
   {
     "title": "react 基础(一)概述及简单用法",
     "url": "/posts/react-1basic/",
-    "categories": "react-Basic, react-es6",
+    "categories": "react, react-basic-es6",
     "tags": "react, javascript, JSX",
     "date": "2021-08-09 23:04:16 +0800",
     
@@ -378,7 +378,7 @@
   {
     "title": "HashMap(一)用法",
     "url": "/posts/java-hashmap/",
-    "categories": "java",
+    "categories": "java, Algorithm",
     "tags": "java, hashmap",
     "date": "2021-07-17 16:16:01 +0800",
     
