@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Lil Martin</title>
   <subtitle>一个菜鸡全栈程序员博主。</subtitle>
-  <updated>2021-10-13T16:54:19+08:00</updated>
+  <updated>2021-11-07T22:34:41+08:00</updated>
   <author>
     <name>Martin_Du</name>
     <uri>/</uri>
@@ -17,6 +17,78 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>React Axios(请求)</title>
+    <link href="/posts/React-Axios/" rel="alternate" type="text/html" title="React Axios(请求)" />
+    <published>2021-10-15T10:22:00+08:00</published>
+  
+    <updated>2021-10-15T10:22:00+08:00</updated>
+  
+    <id>/posts/React-Axios/</id>
+    <content src="/posts/React-Axios/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="react" />
+    
+    <category term="react-Advanced-Component" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      React-Axios基本使用
+
+
+
+Axios 安装
+
+  
+    进入之前创建的脚手架app中执行以下两个命令中的其中一个
+
+    $ npm install react-axios
+$ yarn add axios
+    
+  
+
+
+Axios Get请求
+
+//为给定 ID 的 User 创建请求
+axios.get(
+	'url',
+    paras:{
+    	para1: value1,
+    	...
+    }
+).then((res) =&amp;gt; {
+    //成功后执行此处代码块
+  	console.log(res);
+}).catch((err) =&amp;gt; {
+    //失败则执行此处代码块
+    console.log(err);
+});
+//也可以直接用?para1=value将其接在url后面
+
+
+Axios Post请求
+
+axi...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -54,18 +126,24 @@
 
 官方简介
 
-React Router 是一个基于 React 之上的强大路由库，它可以让你向应用中快速地添加视图和数据流，同时保持页面与 URL 间的同步。
+
+  React Router 是一个基于 React 之上的强大路由库，它可以让你向应用中快速地添加视图和数据流，同时保持页面与 URL 间的同步。
+
 
 个人理解
 
-也就是将这个”网页”/”网站”，变得更加组件化，使元素树结构更加直观。
+  也就是将这个”网页”/”网站”，变得更加组件化，使元素树结构更加直观。
+
 
 安装
 
-以下二选一
+  
+    以下二选一
 
-$ npm install --save react-router-dom
+    $ npm install --save react-router-dom
 $ yarn add react-router-dom
+    
+  
 
 
 内置包
@@ -77,12 +155,13 @@ import { Link, NavLink, Switch, Route, BrowserRouter } from 'react-router-dom'
 
 Link | NavLink
 
-作用与 a 标签类似：
+  
+    作用与 a 标签类似:
 
-将网页地址渲染为 “目标地址”(最终会被渲染为a元素)
+    将网页地址渲染为 “目标地址”(最终会被渲染为a元素)
 
-
-  可以理解为一个索引，仅仅是一个索引，如果 route 中没有对应的path，该标...
+    
+ ...
     </summary>
   
 
@@ -292,76 +371,6 @@ select * from dept
 
 -- 查询所有工资高于FORD的员工信息
 select empno,ename,job...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Orcale基础(四)约束</title>
-    <link href="/posts/Oracle-key/" rel="alternate" type="text/html" title="Orcale基础(四)约束" />
-    <published>2021-09-20T16:30:42+08:00</published>
-  
-    <updated>2021-09-20T16:30:42+08:00</updated>
-  
-    <id>/posts/Oracle-key/</id>
-    <content src="/posts/Oracle-key/" />
-    <author>
-      <name>Martin_Du</name>
-    </author>
-
-  
-    
-    <category term="sql" />
-    
-    <category term="oracle" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      约束条件
-
-
-  主键：primary key（PK）—— unique + not null
-  外键：foreign key （FK）
-  唯一：unique
-  非空：not null
-  检查
-
-
-一些术语
-
-DDL操作
-
-create
-
-create table student(
-    id number primary key,
-    name varchar2(20),
-    email char(40),
-    registtime date default sysdate
-);
-
-
-DML操作
-
-insert:
-
-
-  
-    普通插入
-
-    insert into student(id, name, email)
-	values(3, 'lilmartin', 'lilmartin@qq.com')
-insert into studetn(id, n...
     </summary>
   
 

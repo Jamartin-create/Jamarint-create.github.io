@@ -950,6 +950,70 @@ System.out.println(dis);
     
     
     
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -1092,66 +1156,6 @@ System.out.println(dis);
     
     
       
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1212,22 +1216,22 @@ System.out.println(dis);
         <a class="post-tag" href="/tags/sql/">sql</a>
       
         
+        <a class="post-tag" href="/tags/react/">react</a>
+      
+        
         <a class="post-tag" href="/tags/flask/">flask</a>
       
         
         <a class="post-tag" href="/tags/python/">python</a>
       
         
-        <a class="post-tag" href="/tags/javascript/">JavaScript</a>
+        <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
         <a class="post-tag" href="/tags/jsx/">JSX</a>
       
         
         <a class="post-tag" href="/tags/linux/">linux</a>
-      
-        
-        <a class="post-tag" href="/tags/react/">React</a>
       
         
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>
@@ -1277,6 +1281,19 @@ System.out.println(dis);
 
 
 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
   
@@ -1648,6 +1665,88 @@ System.out.println(dis);
       
       
       <div class="card">
+        <a href="/posts/React-Axios/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Oct 15
+  
+
+  <i class="unloaded">2021-10-15T10:22:00+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>React Axios(请求)</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                React-Axios基本使用
+
+
+
+Axios 安装
+
+  
+    进入之前创建的脚手架app中执行以下两个命令中的其中一个
+
+    1
+2
+$ npm install react-axios
+$ yarn add axios
+    
+  
+
+
+Axios Get请求
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+//为给定 ID 的 User 创建请求
+...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
         <a href="/posts/React-Router/">
           <div class="card-body">
             <!--
@@ -1691,20 +1790,23 @@ System.out.println(dis);
 
 官方简介
 
-React Router 是一个基于 React 之上的强大路由库，它可以让你向应用中快速地添加视图和数据流，同时保持页面与 URL 间的同步。
+
+  React Router 是一个基于 React 之上的强大路由库，它可以让你向应用中快速地添加视图和数据流，同时保持页面与 URL 间的同步。
+
 
 个人理解
 
-也就是将这个”网页”/”网站”，变得更加组件化，使元素树结构更加直观。
+  也就是将这个”网页”/”网站”，变得更加组件化，使元素树结构更加直观。
+
 
 安装
 
-以下二选一
+  
+    以下二选一
 
-1
+    1
 2
-$ npm install --save react-router-dom
-$ yarn add reac...
+$ npm install --save react-router-d...
               </p>
             </div>
           </div>
@@ -1778,71 +1880,6 @@ $ yarn add reac...
 create table emp_bank
 	as 
 	selec...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
-        <a href="/posts/Oracle-rownum-pk/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Oct 11
-  
-
-  <i class="unloaded">2021-10-11T11:28:00+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Orcale基础(六)rownum与主键设计</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                主键设计
-
-ROWNUM 和 ROWID
-
-ROWID
-
-特点：唯一，且固定，是在行数据生成时产生的id；
-
-1
-2
-3
-4
-5
-6
-select rowid, empno from emp;
--- 此时的查询结果中，所有行的rowid字段是唯一的
-select rowid, empno from emp where empno = 7369;
--- 该结果中
--- empno=7369的r...
               </p>
             </div>
           </div>
@@ -2067,6 +2104,70 @@ select rowid, empno from emp where empno = 7369;
     
     
     
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2209,66 +2310,6 @@ select rowid, empno from emp where empno = 7369;
     
     
       
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2324,22 +2365,22 @@ select rowid, empno from emp where empno = 7369;
         <a class="post-tag" href="/tags/sql/">sql</a>
       
         
+        <a class="post-tag" href="/tags/react/">react</a>
+      
+        
         <a class="post-tag" href="/tags/flask/">flask</a>
       
         
         <a class="post-tag" href="/tags/python/">python</a>
       
         
-        <a class="post-tag" href="/tags/javascript/">JavaScript</a>
+        <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
         <a class="post-tag" href="/tags/jsx/">JSX</a>
       
         
         <a class="post-tag" href="/tags/linux/">linux</a>
-      
-        
-        <a class="post-tag" href="/tags/react/">React</a>
       
         
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>

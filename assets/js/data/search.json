@@ -1,10 +1,25 @@
 [
   
   {
+    "title": "React Axios(请求)",
+    "url": "/posts/React-Axios/",
+    "categories": "react, react-Advanced-Component",
+    "tags": "react, react-axios",
+    "date": "2021-10-15 10:22:00 +0800",
+    
+
+
+
+
+
+    "snippet": "React-Axios基本使用Axios 安装      进入之前创建的脚手架app中执行以下两个命令中的其中一个    $ npm install react-axios$ yarn add axios      Axios Get请求//为给定 ID 的 User 创建请求axios.get(	&#39;url&#39;,    paras:{    	para1: value1,    	...    }).then((res) =&amp;gt; {    //成功后执行此处代码块  	console.log(res);}).catch((err) =&amp;gt; {    ..."
+  },
+  
+  {
     "title": "React Router(路由)",
     "url": "/posts/React-Router/",
     "categories": "react, react-Advanced-Component",
-    "tags": "react-router",
+    "tags": "react, react-router",
     "date": "2021-10-12 23:28:00 +0800",
     
 
@@ -12,7 +27,7 @@
 
 
 
-    "snippet": "简介官方简介React Router 是一个基于 React 之上的强大路由库，它可以让你向应用中快速地添加视图和数据流，同时保持页面与 URL 间的同步。个人理解也就是将这个”网页”/”网站”，变得更加组件化，使元素树结构更加直观。安装以下二选一$ npm install --save react-router-dom$ yarn add react-router-dom内置包import { Link, NavLink, Switch, Route, BrowserRouter } from &#39;react-router-dom&#39;Link | NavLink作用与 a ..."
+    "snippet": "简介官方简介  React Router 是一个基于 React 之上的强大路由库，它可以让你向应用中快速地添加视图和数据流，同时保持页面与 URL 间的同步。个人理解  也就是将这个”网页”/”网站”，变得更加组件化，使元素树结构更加直观。安装      以下二选一    $ npm install --save react-router-dom$ yarn add react-router-dom      内置包import { Link, NavLink, Switch, Route, BrowserRouter } from &#39;react-router-dom&#39;..."
   },
   
   {
@@ -198,7 +213,7 @@
   {
     "title": "githubpage+jekyll搭建blog遇到的问题(二)git",
     "url": "/posts/blog-question-git/",
-    "categories": "buildBlog, build_question",
+    "categories": "buildblog, build_question",
     "tags": "",
     "date": "2021-08-11 14:25:34 +0800",
     
@@ -213,7 +228,7 @@
   {
     "title": "githubpage+jekyll搭建blog遇到的问题(一)jekyll",
     "url": "/posts/blog-question-jekyll/",
-    "categories": "buildBlog, build_question",
+    "categories": "buildblog, build_question",
     "tags": "",
     "date": "2021-08-11 11:23:15 +0800",
     
@@ -229,7 +244,7 @@
     "title": "react 基础(四)组件",
     "url": "/posts/react-4component/",
     "categories": "react-Basic, react-es6",
-    "tags": "React, JavaScript, JSX",
+    "tags": "react, javascript, JSX",
     "date": "2021-08-10 18:23:58 +0800",
     
 
@@ -244,7 +259,7 @@
     "title": "react 基础(三)render",
     "url": "/posts/react-3rendering/",
     "categories": "react-Basic, react-es6",
-    "tags": "React, JavaScript, JSX",
+    "tags": "react, javascript, JSX",
     "date": "2021-08-10 06:18:16 +0800",
     
 
@@ -259,7 +274,7 @@
     "title": "react 基础(二)JSX",
     "url": "/posts/react-2jsx/",
     "categories": "react-Basic, react-es6",
-    "tags": "React, JavaScript, JSX",
+    "tags": "react, javascript, JSX",
     "date": "2021-08-10 00:05:16 +0800",
     
 
@@ -274,7 +289,7 @@
     "title": "react 基础(一)概述及简单用法",
     "url": "/posts/react-1basic/",
     "categories": "react-Basic, react-es6",
-    "tags": "React, JavaScript, JSX",
+    "tags": "react, javascript, JSX",
     "date": "2021-08-09 23:04:16 +0800",
     
 
@@ -288,7 +303,7 @@
   {
     "title": "gitpage+jekyll搭建博客(五)发布文章",
     "url": "/posts/blog-publish-blog/",
-    "categories": "buildBlog, build_step",
+    "categories": "buildblog, build_step",
     "tags": "",
     "date": "2021-07-22 12:05:55 +0800",
     
@@ -303,7 +318,7 @@
   {
     "title": "gitpage+jekyll搭建博客(四)主题目录结构介绍",
     "url": "/posts/blog-intro-jekyll/",
-    "categories": "buildBlog, build_step",
+    "categories": "buildblog, build_step",
     "tags": "",
     "date": "2021-07-21 20:17:20 +0800",
     
@@ -318,7 +333,7 @@
   {
     "title": "gitpage+jekyll搭建博客(三)将jekyll模板上传至github",
     "url": "/posts/blog-git-push/",
-    "categories": "buildBlog, build_step",
+    "categories": "buildblog, build_step",
     "tags": "",
     "date": "2021-07-21 16:20:16 +0800",
     
@@ -333,7 +348,7 @@
   {
     "title": "gitpage+jekyll搭建博客(二)搭建jekyll环境",
     "url": "/posts/blog-conv-jekyll/",
-    "categories": "buildBlog, build_step",
+    "categories": "buildblog, build_step",
     "tags": "",
     "date": "2021-07-21 15:16:16 +0800",
     
@@ -348,7 +363,7 @@
   {
     "title": "gitpage+jekyll搭建博客(一)代码托管",
     "url": "/posts/blog-git-bind/",
-    "categories": "buildBlog, build_step",
+    "categories": "buildblog, build_step",
     "tags": "",
     "date": "2021-07-20 19:14:16 +0800",
     

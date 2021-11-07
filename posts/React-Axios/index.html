@@ -24,25 +24,25 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="React Router(路由)" />
+<meta property="og:title" content="React Axios(请求)" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="简介" />
-<meta property="og:description" content="简介" />
-<link rel="canonical" href="/posts/React-Router/" />
-<meta property="og:url" content="/posts/React-Router/" />
+<meta name="description" content="React-Axios基本使用" />
+<meta property="og:description" content="React-Axios基本使用" />
+<link rel="canonical" href="/posts/React-Axios/" />
+<meta property="og:url" content="/posts/React-Axios/" />
 <meta property="og:site_name" content="Lil Martin" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-10-12T23:28:00+08:00" />
+<meta property="article:published_time" content="2021-10-15T10:22:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="React Router(路由)" />
+<meta property="twitter:title" content="React Axios(请求)" />
 <meta name="twitter:site" content="@" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","headline":"React Router(路由)","dateModified":"2021-10-12T23:28:00+08:00","datePublished":"2021-10-12T23:28:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/React-Router/"},"url":"/posts/React-Router/","description":"简介","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"React Axios(请求)","dateModified":"2021-10-15T10:22:00+08:00","datePublished":"2021-10-15T10:22:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/React-Axios/"},"url":"/posts/React-Axios/","description":"React-Axios基本使用","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>React Router(路由) | Lil Martin
+  <title>React Axios(请求) | Lil Martin
   </title>
 
   <!--
@@ -414,7 +414,7 @@
       
 
         
-          <span>React Router(路由)</span>
+          <span>React Axios(请求)</span>
 
         
 
@@ -489,7 +489,7 @@
 
     <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-      <h1 data-toc-skip>React Router(路由)</h1>
+      <h1 data-toc-skip>React Axios(请求)</h1>
 
       <div class="post-meta text-muted d-flex flex-column">
         <!-- Published date and author -->
@@ -510,7 +510,7 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Tue, Oct 12, 2021, 11:28 PM +0800"
+    title="Fri, Oct 15, 2021, 10:22 AM +0800"
   
 
   
@@ -520,10 +520,10 @@
   
 
   
-    Oct 12
+    Oct 15
   
 
-  <i class="unloaded">2021-10-12T23:28:00+08:00</i>
+  <i class="unloaded">2021-10-15T10:22:00+08:00</i>
 
 </span>
 
@@ -548,7 +548,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="986 words">5 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1097 words">6 min</span>
 
 
           <!-- page views -->
@@ -562,54 +562,125 @@
 
         
 
-        <h2 id="简介">简介</h2>
+        <h2 id="react-axios基本使用">React-Axios基本使用</h2>
 
 <hr />
 
-<h3 id="官方简介">官方简介</h3>
-
-<ul>
-  <li>React Router 是一个基于 <a href="http://facebook.github.io/react/">React</a> 之上的强大路由库，它可以让你向应用中快速地添加视图和数据流，同时保持页面与 URL 间的同步。</li>
-</ul>
-
-<h3 id="个人理解">个人理解</h3>
-<ul>
-  <li>也就是将这个”网页”/”网站”，变得更加组件化，使元素树结构更加直观。</li>
-</ul>
-
-<h3 id="安装">安装</h3>
+<h3 id="axios-安装">Axios 安装</h3>
 <ul>
   <li>
-    <p>以下二选一</p>
+    <p>进入之前创建的脚手架app中执行以下两个命令中的其中一个</p>
 
     <div lang="shell" class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-</pre></td><td class="rouge-code"><pre><span class="nv">$ </span>npm <span class="nb">install</span> <span class="nt">--save</span> react-router-dom
-<span class="nv">$ </span>yarn add react-router-dom
+</pre></td><td class="rouge-code"><pre><span class="nv">$ </span>npm <span class="nb">install </span>react-axios
+<span class="nv">$ </span>yarn add axios
 </pre></td></tr></tbody></table></code></div>    </div>
   </li>
 </ul>
 
-<h2 id="内置包">内置包</h2>
+<h3 id="axios-get请求">Axios Get请求</h3>
+
+<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre><span class="c1">//为给定 ID 的 User 创建请求</span>
+<span class="nx">axios</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span>
+	<span class="dl">'</span><span class="s1">url</span><span class="dl">'</span><span class="p">,</span>
+    <span class="nx">paras</span><span class="p">:{</span>
+    	<span class="nl">para1</span><span class="p">:</span> <span class="nx">value1</span><span class="p">,</span>
+    	<span class="p">...</span>
+    <span class="p">}</span>
+<span class="p">).</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">//成功后执行此处代码块</span>
+  	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<span class="p">}).</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">//失败则执行此处代码块</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="c1">//也可以直接用?para1=value将其接在url后面</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="axios-post请求">Axios Post请求</h3>
+
+<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span>
+	<span class="dl">'</span><span class="s1">url</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">{</span>
+        <span class="na">params1</span><span class="p">:</span> <span class="nx">value1</span><span class="p">,</span>
+        <span class="na">params2</span><span class="p">:</span> <span class="nx">value2</span>
+    <span class="p">}).</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+	<span class="p">}).</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+    <span class="p">});</span>
+
+<span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="axios-执行多个并发请求">Axios 执行多个并发请求</h3>
+
+<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="nx">getData1</span> <span class="o">=</span> <span class="p">()</span><span class="o">=&gt;</span> <span class="nx">axios</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">url/file1</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">getData2</span> <span class="o">=</span> <span class="p">()</span><span class="o">=&gt;</span> <span class="nx">axios</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">url/file2</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span>
+    <span class="nx">getData1</span><span class="p">(),</span>
+    <span class="nx">getData2</span><span class="p">()</span>
+<span class="p">]).</span><span class="nx">then</span><span class="p">(</span><span class="nx">axios</span><span class="p">.</span><span class="nx">spread</span><span class="p">((</span><span class="nx">data1</span><span class="p">,</span> <span class="nx">data2</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">//可以同时取到两个数据</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data1</span><span class="p">,</span> <span class="nx">data2</span><span class="p">);</span>
+<span class="p">}))</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h2 id="跨域问题">跨域问题</h2>
 
 <hr />
 
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="p">{</span> <span class="nx">Link</span><span class="p">,</span> <span class="nx">NavLink</span><span class="p">,</span> <span class="nx">Switch</span><span class="p">,</span> <span class="nx">Route</span><span class="p">,</span> <span class="nx">BrowserRouter</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span>
-</pre></td></tr></tbody></table></code></div></div>
+<blockquote>
+  <p>域名、端口有一个不一致就会导致跨域</p>
+</blockquote>
 
-<h3 id="link--navlink">Link | NavLink</h3>
 <ul>
   <li>
-    <p>作用与 <strong>a</strong> 标签类似:</p>
+    <h3 id="方法一在packagejson中追加数据">方法一：在package.json中追加数据</h3>
 
-    <p>将网页地址渲染为 “目标地址”(最终会被渲染为a元素)</p>
-
-    <blockquote>
-      <p>可以理解为一个索引，仅仅是一个索引，如果 <strong>route</strong> 中没有对应的path，该标签无效。</p>
-
-      <p>NavLink是在Link的基础上增加了一些样式属性。</p>
-    </blockquote>
+    <div lang="json" class="language-json highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="err">poxy:</span><span class="s2">"代理点的地址及端口"</span><span class="w">
+</span></pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <h3 id="方法二新建一个setproxyjs文件">方法二：新建一个setProxy.js文件</h3>
 
     <div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -618,239 +689,298 @@
 5
 6
 7
-</pre></td><td class="rouge-code"><pre><span class="cm">/*
-* to属性：在根目录的基础上将 value 添加到尾部并渲染地址栏。
-* activeClassName属性：动态的 class ，NavLink 特有，根据点击的位置将该属性放在对应的标签上。
-*/</span>
-<span class="p">&lt;</span><span class="nc">NavLink</span> <span class="na">to</span><span class="p">=</span><span class="s">"/home"</span> <span class="na">activeClassName</span><span class="p">=</span><span class="s">"active"</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nc">NavLink</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nc">NavLink</span> <span class="na">to</span><span class="p">=</span><span class="s">"/article"</span><span class="p">&gt;</span>Article<span class="p">&lt;/</span><span class="nc">NavLink</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nc">NavLink</span> <span class="na">to</span><span class="p">=</span><span class="s">"/about"</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="nc">NavLink</span><span class="p">&gt;</span>
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">proxy</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">http-proxy-middleware</span><span class="dl">'</span><span class="p">)</span>
+<span class="c1">//假如要请求的地址是: 192.168.1.100</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">app</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span>
+    	<span class="nx">proxy</span><span class="p">(</span><span class="dl">'</span><span class="s1">/api</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="c1">//也就是你在React中本地请求时，使用了"/api前缀"，自动将代理设置为target中的地址</span>
+            <span class="na">target</span><span class="p">:</span> <span class="dl">'</span><span class="s1">http:192.168.1.100:5000</span><span class="dl">'</span><span class="err">，</span><span class="c1">//转发的地址，也就是找的代理地址</span>
+            <span class="na">changeOrigin</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">//如果设置为true：发送请求头中host会设置成target</span>
+            <span class="na">pathRewrite</span><span class="p">:</span> <span class="p">{</span>
+            	<span class="dl">'</span><span class="s1">^/api1</span><span class="dl">'</span><span class="p">:</span> <span class="dl">''</span>
+        	<span class="p">}</span><span class="c1">//重写请求路径，不写的话，在代理处发送的请求就是:192.168.1.100:5000/api1/...,写了之后就是:192.168.1.100:5000/...</span>
+        <span class="p">})</span>
+    <span class="p">)</span>
+<span class="p">}</span>
 </pre></td></tr></tbody></table></code></div>    </div>
   </li>
-</ul>
-
-<h3 id="route">Route</h3>
-<ul>
-  <li>
-    <p>根据路由中地址的变化，将与当前路由地址对应的组件渲染到APP中。</p>
-
-    <div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="rouge-code"><pre><span class="cm">/*
-* path: 与 link/NavLink 的地址相对应。
-* compoent: 写好的页面组件，放在这个位置，在路由地址变为path中的地址后即可直接渲染出对应组件的页面。
-*/</span>
-<span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path</span><span class="p">=</span><span class="s">"/home"</span> <span class="na">component</span><span class="p">=</span><span class="si">{</span><span class="nx">Home</span><span class="si">}</span> <span class="p">/&gt;</span>
-<span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path</span><span class="p">=</span><span class="s">"/article"</span> <span class="na">component</span><span class="p">=</span><span class="si">{</span><span class="nx">Article</span><span class="si">}</span> <span class="p">/&gt;</span>
-<span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path</span><span class="p">=</span><span class="s">"/about"</span> <span class="na">component</span><span class="p">=</span><span class="si">{</span><span class="nx">About</span><span class="si">}</span> <span class="p">/&gt;</span>
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-</ul>
-
-<h3 id="redirect">Redirect</h3>
-<ul>
-  <li>
-    <p>重定向，跳向这个标签中的 to 属性中的地址。</p>
-
-    <div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre><span class="cm">/*当用户，账户密码输入正确后，重定向到登陆成功界面*/</span>
-<span class="p">&lt;</span><span class="nc">Redirect</span> <span class="na">to</span><span class="p">=</span><span class="s">"/login"</span> <span class="p">/&gt;</span>
-<span class="cm">/*当用户输入了不属于路由中定义过的地址时，重定向到404或者默认地址*/</span>
-<span class="p">&lt;</span><span class="nc">Redirect</span> <span class="na">to</span><span class="p">=</span><span class="s">"/home"</span> <span class="p">/&gt;</span>
-<span class="p">&lt;</span><span class="nc">Redirect</span> <span class="na">to</span><span class="p">=</span><span class="s">"/notfound"</span> <span class="p">/&gt;</span>
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-</ul>
-
-<h3 id="switch">Switch</h3>
-<ul>
-  <li>
-    <p>根据这个组件的名字的意思可以知道，就是选择。</p>
-  </li>
-  <li>
-    <p>“地址相同的链接该如何判断”，Switch 会进行判断。</p>
-  </li>
-  <li>
-    <p>Switch 渲染第一个被 location 匹配到的并且作为子元素的 <kbd><Route>&lt;/kbd&gt; 或者 <kbd><Redirect>&lt;/kbd&gt;</Redirect></kbd></Route></kbd></p>
-
-    <blockquote>
-      <p>一般动态路由经常会出现这种问题。</p>
-    </blockquote>
-
-    <div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-</pre></td><td class="rouge-code"><pre><span class="p">&lt;</span><span class="nc">Switch</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path</span><span class="p">=</span><span class="s">'/home'</span> <span class="na">component</span><span class="p">=</span><span class="si">{</span><span class="nx">Home</span><span class="si">}</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path</span><span class="p">=</span><span class="s">'/about'</span> <span class="na">component</span><span class="p">=</span><span class="si">{</span><span class="nx">About</span><span class="si">}</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path</span><span class="p">=</span><span class="s">'/article'</span> <span class="na">component</span><span class="p">=</span><span class="si">{</span><span class="nx">Article</span><span class="si">}</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nc">Redirect</span> <span class="na">to</span><span class="p">=</span><span class="s">'/home'</span> <span class="p">/&gt;</span>
-<span class="p">&lt;/</span><span class="nc">Switch</span><span class="p">&gt;</span>
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-</ul>
-
-<h3 id="router">Router</h3>
-<ul>
-  <li>React-Router时在history基础上实现了URL的UI同步，其URL对应的是location，UI对应的是React component。</li>
 </ul>
 
 <blockquote>
-  <p>通俗的说也就是，当页面地址栏中的地址在 <strong>经过不同的API转换后</strong> 与路由中的地址相同时，渲染出路由中所传入的组件。</p>
-
-  <p>并且：router一般要将所有router其他组件包起来。</p>
+  <p><strong>ps:更改配置文件后要重启服务</strong></p>
 </blockquote>
 
-<h4 id="browserrouter">BrowserRouter</h4>
-
-<ul>
-  <li>
-    <p>通过 <strong>通过HTML5的history API</strong>，让页面的 UI 与 URL 同步，最终地址呈现结果与路由中的地址是一样的。</p>
-
-    <div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="p">&lt;</span><span class="nc">BrowserRouter</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nc">App</span> <span class="p">/&gt;</span>
-<span class="p">&lt;/</span><span class="nc">BrowserRouter</span><span class="p">&gt;</span>
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-</ul>
-
-<h4 id="hashrouter一般不用">HashRouter(一般不用)</h4>
-
-<ul>
-  <li>
-    <p>HashRouter使用的是URL的hash部分（即window.location.hash），来保持页面的UI与URL的同步。</p>
-
-    <div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td><td class="rouge-code"><pre><span class="p">&lt;</span><span class="nc">HashRouter</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nc">APP</span> <span class="p">/&gt;</span>
-<span class="p">&lt;/</span><span class="nc">HashRouter</span><span class="p">&gt;</span>
-<span class="c1">// 最终地址栏会有一个# localhost:3000/#/</span>
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-</ul>
-
-<h2 id="传值方法">传值方法</h2>
+<h2 id="axios-拦截器封装axios">Axios 拦截器（封装axios）</h2>
 
 <hr />
 
-<h3 id="params传值">params传值</h3>
+<h3 id="简单封装">简单封装</h3>
 
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre><span class="p">&lt;</span><span class="nc">Link</span> <span class="na">to</span><span class="p">=</span><span class="si">{</span><span class="s2">`/api1/</span><span class="p">${</span><span class="nx">data</span><span class="p">}</span><span class="s2">`</span><span class="si">}</span> <span class="na">className</span><span class="p">=</span><span class="s">""</span> <span class="p">&gt;&lt;/</span><span class="nc">Link</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path</span><span class="p">=</span><span class="s">'/api/:data'</span> <span class="na">component</span><span class="p">=</span><span class="si">{}</span> <span class="p">&gt;&lt;/</span><span class="nc">Route</span><span class="p">&gt;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h4 id="取值">取值</h4>
-
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span><span class="nx">data</span><span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">match</span><span class="p">.</span><span class="nx">params</span><span class="p">;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="search传值">search传值</h3>
-
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre><span class="p">&lt;</span><span class="nc">Link</span> <span class="na">to</span><span class="p">=</span><span class="si">{</span><span class="s2">`/api1/?data=</span><span class="p">${</span><span class="nx">data</span><span class="p">}</span><span class="s2">`</span><span class="si">}</span> <span class="na">className</span><span class="p">=</span><span class="s">""</span> <span class="p">&gt;&lt;/</span><span class="nc">Link</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path</span><span class="p">=</span><span class="s">'/api'</span> <span class="na">component</span><span class="p">=</span><span class="si">{}</span> <span class="p">&gt;&lt;/</span><span class="nc">Route</span><span class="p">&gt;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h4 id="取值-1">取值</h4>
-
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="c1">//.search的值中带有"?"，需要去掉并转换为字符串(querystring)</span>
-<span class="k">import</span> <span class="nx">qs</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">querystring</span><span class="dl">'</span>
-<span class="kd">const</span> <span class="p">{</span><span class="nx">data</span><span class="p">}</span> <span class="o">=</span> <span class="nx">qs</span><span class="p">.</span><span class="nx">parse</span><span class="p">((</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">search</span><span class="p">).</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="state传值">state传值</h3>
+<h4 id="创建axios实例">创建axios实例</h4>
 
 <div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
-</pre></td><td class="rouge-code"><pre><span class="p">&lt;</span><span class="nc">Link</span> <span class="na">to</span><span class="p">=</span><span class="si">{</span> <span class="p">{</span> <span class="na">pathname</span><span class="p">:</span> <span class="dl">'</span><span class="s1">api后缀</span><span class="dl">'</span><span class="p">,</span> <span class="na">state</span><span class="p">:</span> <span class="p">{</span> <span class="na">data</span><span class="p">:</span> <span class="nx">data</span> <span class="p">}</span> <span class="p">}</span> <span class="si">}</span> <span class="na">className</span><span class="p">=</span><span class="s">""</span><span class="p">&gt;</span>
-	链接名
-<span class="p">&lt;/</span><span class="nc">Link</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path</span><span class="p">=</span><span class="s">'/api1'</span> <span class="na">component</span><span class="p">=</span><span class="si">{}</span> <span class="p">/&gt;</span>
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="nx">axios</span> <span class="nx">form</span> <span class="dl">'</span><span class="s1">axios</span><span class="dl">'</span>
+
+<span class="c1">//取消请求token</span>
+<span class="kd">let</span> <span class="nx">source</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">CancelToken</span><span class="p">.</span><span class="nx">source</span><span class="p">();</span>
+
+<span class="kd">const</span> <span class="nx">interceptor</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span>
+	<span class="nx">baseURL</span><span class="p">:</span> <span class="dl">'</span><span class="s1">请求的地址</span><span class="dl">'</span><span class="p">,</span>
+    <span class="nx">timeout</span><span class="p">:</span> <span class="mi">15000</span> <span class="c1">//超时时间</span>
+<span class="p">)</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h4 id="取值-2">取值</h4>
-
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span><span class="nx">data</span><span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">state</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="路由跳转">路由跳转</h3>
-
-<p>通过按钮的点击事件来举例</p>
-
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre><span class="c1">//button</span>
-<span class="p">&lt;</span><span class="nt">button</span> <span class="na">onClick</span><span class="p">=</span><span class="si">{</span><span class="p">()</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">seeMore</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="si">}</span><span class="p">&gt;</span>more<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h4 id="historypush">history.push</h4>
-
-<h5 id="传入matchparams">传入match.params</h5>
+<h4 id="请求拦截器">请求拦截器</h4>
 
 <div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre></td><td class="rouge-code"><pre><span class="nx">seeMore</span> <span class="o">=</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">history</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">`/api1/</span><span class="p">${</span><span class="nx">data</span><span class="p">}</span><span class="s2">`</span><span class="p">)</span>
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="rouge-code"><pre><span class="c1">//处理get请求的链接拼接</span>
+<span class="kd">const</span> <span class="nx">processGetParams</span> <span class="o">=</span> <span class="p">(</span><span class="nx">config</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// console.log('config', config)</span>
+  <span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">url</span>
+  <span class="c1">// get参数编码</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">method</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">get</span><span class="dl">'</span> <span class="o">&amp;&amp;</span> <span class="nx">config</span><span class="p">.</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">url</span> <span class="o">+=</span> <span class="dl">'</span><span class="s1">?</span><span class="dl">'</span>
+    <span class="kd">let</span> <span class="nx">keys</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">params</span><span class="p">)</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">key</span> <span class="k">of</span> <span class="nx">keys</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">url</span> <span class="o">+=</span> <span class="s2">`</span><span class="p">${</span><span class="nx">key</span><span class="p">}</span><span class="s2">=</span><span class="p">${</span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">params</span><span class="p">[</span><span class="nx">key</span><span class="p">])}</span><span class="s2">&amp;`</span>
+    <span class="p">}</span>
+    <span class="nx">url</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">url</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="nx">config</span><span class="p">.</span><span class="nx">params</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="p">}</span>
+  <span class="nx">config</span><span class="p">.</span><span class="nx">url</span> <span class="o">=</span> <span class="nx">url</span>
+  <span class="k">return</span> <span class="nx">config</span><span class="p">;</span>
 <span class="p">}</span>
+
+<span class="c1">//拦截请求</span>
+<span class="kd">const</span> <span class="nx">handleRequest</span> <span class="o">=</span> <span class="p">(</span><span class="nx">config</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">//...一些处理</span>
+    <span class="k">return</span> <span class="nx">processGetParams</span><span class="p">(</span><span class="nx">config</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">//拦截错误请求</span>
+<span class="kd">const</span> <span class="nx">handleRequestError</span> <span class="o">=</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">interceptor</span><span class="p">.</span><span class="nx">interceptors</span><span class="p">.</span><span class="nx">request</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">handleRequest</span><span class="p">,</span> <span class="nx">handleRequestError</span><span class="p">);</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h5 id="传入locationsearch">传入location.search</h5>
+<h4 id="响应拦截器">响应拦截器</h4>
 
 <div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre></td><td class="rouge-code"><pre><span class="nx">seeMore</span> <span class="o">=</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">history</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">`/api1/?data=</span><span class="p">${</span><span class="nx">data</span><span class="p">}</span><span class="s2">`</span><span class="p">)</span>
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+</pre></td><td class="rouge-code"><pre><span class="c1">//处理异常响应时的数据</span>
+<span class="kd">const</span> <span class="nx">handleReponse</span> <span class="o">=</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">error</span> <span class="k">instanceof</span> <span class="nb">Error</span><span class="p">)</span> <span class="p">{</span>
+    	<span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">toLowerCase</span><span class="p">().</span><span class="nx">includes</span><span class="p">(</span><span class="dl">"</span><span class="s2">network</span><span class="dl">"</span><span class="p">))</span> <span class="p">{</span>
+        	<span class="c1">//  alert(" 网络连接失败！");</span>
+      		<span class="nx">message</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="dl">'</span><span class="s1">网络连接失败！</span><span class="dl">'</span><span class="p">);</span>
+      		<span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+    	<span class="p">}</span>
+  	<span class="p">}</span>
+
+  	<span class="c1">//当是取消请求是，会直接调用错误回调</span>
+  	<span class="k">if</span> <span class="p">(</span><span class="nx">error</span> <span class="o">&amp;&amp;</span> <span class="nx">error</span><span class="p">.</span><span class="nx">__proto__</span><span class="p">.</span><span class="nx">__CANCEL__</span><span class="p">)</span> <span class="p">{</span>
+    	<span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  	<span class="p">}</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">服务器出错，请稍后再试！！！</span><span class="dl">'</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
 <span class="p">}</span>
+
+<span class="c1">//处理正常响应时返回的数据</span>
+<span class="kd">const</span> <span class="nx">handleReponse</span> <span class="o">=</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="p">{</span> <span class="nx">data</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">response</span><span class="p">;</span>
+   	<span class="c1">//token过期会响应200，且msgCode===-2</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">msgCode</span> <span class="o">===</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+       	<span class="c1">//没有登陆，为了防止多个弹框，取消当前全部的请求</span>
+    	<span class="nx">source</span><span class="p">.</span><span class="nx">cancel</span><span class="p">();</span>
+    	<span class="nx">source</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">CancelToken</span><span class="p">.</span><span class="nx">source</span><span class="p">();</span>
+   		<span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">登录过期，请重新登录</span><span class="dl">'</span><span class="p">);</span>
+  	<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">msgCode</span> <span class="o">!==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    	<span class="c1">//全局错误提示错误</span>
+       	<span class="c1">//根据不同错误处理不同的情况</span>
+   		<span class="nx">alert</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">msg</span><span class="p">);</span>
+  	<span class="p">}</span>
+  	<span class="c1">//正常请求及data.msgCode===0</span>
+  	<span class="k">return</span> <span class="nx">data</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">interceptor</span><span class="p">.</span><span class="nx">interceptors</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">handleReponse</span><span class="p">,</span> <span class="nx">handleReponseError</span><span class="p">);</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h5 id="传入locationstate">传入location.state</h5>
+<h4 id="发送请求">发送请求</h4>
 
 <div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre></td><td class="rouge-code"><pre><span class="nx">seeMore</span> <span class="o">=</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">history</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="dl">'</span><span class="s1">/api1</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="nx">data</span> <span class="p">}</span> <span class="p">)</span>
-<span class="p">}</span>
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+</pre></td><td class="rouge-code"><pre><span class="c1">//post请求</span>
+<span class="kd">const</span> <span class="nx">post</span> <span class="o">=</span> <span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">qs</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">),</span> <span class="p">{</span>
+    <span class="p">...</span><span class="nx">config</span><span class="p">,</span>
+    <span class="na">cancelToken</span><span class="p">:</span> <span class="nx">source</span><span class="p">.</span><span class="nx">token</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="c1">//json主体post请求</span>
+<span class="kd">const</span> <span class="nx">postJSON</span> <span class="o">=</span> <span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="p">{</span>
+    <span class="p">...</span><span class="nx">config</span><span class="p">,</span>
+    <span class="na">cancelToken</span><span class="p">:</span> <span class="nx">source</span><span class="p">.</span><span class="nx">token</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="c1">//put请求</span>
+<span class="kd">const</span> <span class="nx">put</span> <span class="o">=</span> <span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="p">{</span>
+    <span class="p">...</span><span class="nx">config</span><span class="p">,</span>
+    <span class="na">cancelToken</span><span class="p">:</span> <span class="nx">source</span><span class="p">.</span><span class="nx">token</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="c1">//get请求</span>
+<span class="kd">const</span> <span class="kd">get</span> <span class="o">=</span> <span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">params</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">instance</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span>
+    <span class="p">...</span><span class="nx">config</span><span class="p">,</span>
+    <span class="na">cancelToken</span><span class="p">:</span> <span class="nx">source</span><span class="p">.</span><span class="nx">token</span><span class="p">,</span>
+    <span class="nx">params</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="c1">//删除请求</span>
+<span class="kd">const</span> <span class="nx">del</span> <span class="o">=</span> <span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">params</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">instance</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span>
+    <span class="p">...</span><span class="nx">config</span><span class="p">,</span>
+    <span class="na">cancelToken</span><span class="p">:</span> <span class="nx">source</span><span class="p">.</span><span class="nx">token</span><span class="p">,</span>
+    <span class="nx">params</span>
+  <span class="p">});</span>
+<span class="p">};</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h2 id="参考文章">参考文章</h2>
+<h4 id="抛出请求方法">抛出请求方法</h4>
 
-<ul>
-  <li><a href="http://react-guide.github.io/react-router-cn/">React-Router官方文档</a></li>
-  <li><a href="https://www.jianshu.com/p/11c750ee3880">简书-肾仔博</a></li>
-  <li><a href="https://www.jianshu.com/p/f6962b30f5e4">简书-BlueSkyBlue</a></li>
-  <li><a href="https://www.cnblogs.com/lyt0207/p/12732421.html">博客园-leahtao</a></li>
-</ul>
+<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="k">export</span> <span class="p">{</span> <span class="nx">post</span><span class="p">,</span> <span class="nx">postJSON</span><span class="p">,</span> <span class="nx">put</span><span class="p">,</span> <span class="kd">get</span><span class="p">,</span> <span class="nx">del</span> <span class="p">};</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="二次封装">二次封装</h3>
+
+<p>一般情况下，会根据项目需求，将某一个方法再次封装成更加贴近项目需求的格式，或者说更加方便开发的接口。</p>
 
 
 
@@ -876,8 +1006,8 @@
           <a href="/tags/react/"
             class="post-tag no-text-decoration" >react</a>
           
-          <a href="/tags/react-router/"
-            class="post-tag no-text-decoration" >react-router</a>
+          <a href="/tags/react-axios/"
+            class="post-tag no-text-decoration" >react-axios</a>
           
           </div>
         
@@ -904,19 +1034,19 @@
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=React Router(路由) - Lil Martin&url=/posts/React-Router/" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=React Axios(请求) - Lil Martin&url=/posts/React-Axios/" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=React Router(路由) - Lil Martin&u=/posts/React-Router/" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=React Axios(请求) - Lil Martin&u=/posts/React-Axios/" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://telegram.me/share?text=React Router(路由) - Lil Martin&url=/posts/React-Router/" data-toggle="tooltip" data-placement="top"
+        <a href="https://telegram.me/share?text=React Axios(请求) - Lil Martin&url=/posts/React-Axios/" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -1431,20 +1561,20 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
   
 
   
@@ -1778,7 +1908,7 @@
       
       
       <div class="card">
-        <a href="/posts/React-Axios/">
+        <a href="/posts/React-Router/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1799,14 +1929,14 @@
   
 
   
-    Oct 15
+    Oct 12
   
 
-  <i class="unloaded">2021-10-15T10:22:00+08:00</i>
+  <i class="unloaded">2021-10-12T23:28:00+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>React Axios(请求)</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>React Router(路由)</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1815,42 +1945,28 @@
 
 
 
-                React-Axios基本使用
+                简介
 
 
 
-Axios 安装
+官方简介
+
+
+  React Router 是一个基于 React 之上的强大路由库，它可以让你向应用中快速地添加视图和数据流，同时保持页面与 URL 间的同步。
+
+
+个人理解
+
+  也就是将这个”网页”/”网站”，变得更加组件化，使元素树结构更加直观。
+
+
+安装
 
   
-    进入之前创建的脚手架app中执行以下两个命令中的其中一个
+    以下二选一
 
-    1
-2
-$ npm install react-axios
-$ yarn add axios
-    
-  
-
-
-Axios Get请求
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-//为给定 ID 的 User 创建请求
-...
+    $ npm install --save react-router-dom
+$...
               </p>
             </div>
           </div>
@@ -1992,17 +2108,17 @@ const element = &lt;h1&gt;Hello, world!&lt;/h1&gt;
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <a href="/posts/Oracle-view/" class="btn btn-outline-primary"
+  <a href="/posts/React-Router/" class="btn btn-outline-primary"
     prompt="Older">
-    <p>Orcale基础(七)视图、索引、事务</p>
+    <p>React Router(路由)</p>
   </a>
   
 
   
-  <a href="/posts/React-Axios/" class="btn btn-outline-primary"
+  <span class="btn btn-outline-primary disabled"
     prompt="Newer">
-    <p>React Axios(请求)</p>
-  </a>
+    <p>-</p>
+  </span>
   
 
 </div>
@@ -2026,9 +2142,9 @@ const element = &lt;h1&gt;Hello, world!&lt;/h1&gt;
     scriptUrl: '//.disqus.com/embed.js',
 
     disqusConfig: function() {
-      this.page.title = 'React Router(路由)';
-      this.page.url = '/posts/React-Router/';
-      this.page.identifier = '/posts/React-Router/';
+      this.page.title = 'React Axios(请求)';
+      this.page.url = '/posts/React-Axios/';
+      this.page.identifier = '/posts/React-Axios/';
     }
   };
 
