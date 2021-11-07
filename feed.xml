@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Lil Martin</title>
   <subtitle>一个菜鸡全栈程序员博主。</subtitle>
-  <updated>2021-11-07T22:47:32+08:00</updated>
+  <updated>2021-11-07T23:34:27+08:00</updated>
   <author>
     <name>Martin_Du</name>
     <uri>/</uri>
@@ -17,6 +17,75 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>react基本概念</title>
+    <link href="/posts/React-Basic/" rel="alternate" type="text/html" title="react基本概念" />
+    <published>2021-11-07T22:54:16+08:00</published>
+  
+    <updated>2021-11-07T22:54:16+08:00</updated>
+  
+    <id>/posts/React-Basic/</id>
+    <content src="/posts/React-Basic/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="react" />
+    
+    <category term="react-basic-es6" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      React 概述
+
+什么是React
+
+React 是一个用于 构建用户界面 的 JavaScript
+库。
+
+React的特点
+
+
+  组件化编程：某一个页面的任何一个部分都可以是一个组件。
+  用法很广泛：web、VR。。。
+
+
+React基本使用
+
+安装
+
+安装命令：npm i react react-dom
+
+
+
+  react包提供创建元素、组件等功能。
+  react-dom包提供DOM相关操作。
+
+
+使用
+
+
+  
+    引入cdn
+
+    &amp;lt;script src="./node_modules/react/umd/react.deelopment.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src="./node_modules/react/umd/react-dom.development.js"&amp;gt;&amp;lt;/script&amp;gt...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -304,73 +373,6 @@ ROWNUM
 select rownum, emp.* from emp; -- 结果的rownum为1-14
 -- 返回部门号为30的6条数据
 sele...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Orcale基础(五)子查询</title>
-    <link href="/posts/Oracle-ChildQuery/" rel="alternate" type="text/html" title="Orcale基础(五)子查询" />
-    <published>2021-10-09T23:00:00+08:00</published>
-  
-    <updated>2021-10-09T23:00:00+08:00</updated>
-  
-    <id>/posts/Oracle-ChildQuery/</id>
-    <content src="/posts/Oracle-ChildQuery/" />
-    <author>
-      <name>Martin_Du</name>
-    </author>
-
-  
-    
-    <category term="sql" />
-    
-    <category term="oracle" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      子查询
-
-分为 关联子查询 和 非关联子查询
-
-特点：子查询可以单独执行，其结果作为外部查询的条件。
-
-不相关子查询
-
-概念：子查询不需要与父查询的结果进行比对
-
--- 查询各个部门薪水最高的员工信息
-select * from emp
-	where (deptno, sal) in
-	(
-    	select deptno, max(sal) from emp group by deptno
-    )
--- 哪些部门没有员工
-select * from dept
-	where deptno not in
-	(
-    	select deptno from emp group by deptno
-    )
-
-
-
-  整个过程中，父查询的值没有进入子查询
-
-
-普通 where 条件 子查询
-
--- 查询所有工资高于FORD的员工信息
-select empno,ename,job...
     </summary>
   
 

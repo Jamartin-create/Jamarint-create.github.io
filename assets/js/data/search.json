@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "react基本概念",
+    "url": "/posts/React-Basic/",
+    "categories": "react, react-basic-es6",
+    "tags": "react, javascript, JSX",
+    "date": "2021-11-07 22:54:16 +0800",
+    
+
+
+
+
+
+    "snippet": "React 概述什么是ReactReact 是一个用于 构建用户界面 的 JavaScript库。React的特点  组件化编程：某一个页面的任何一个部分都可以是一个组件。  用法很广泛：web、VR。。。React基本使用安装安装命令：npm i react react-dom  react包提供创建元素、组件等功能。  react-dom包提供DOM相关操作。使用      引入cdn    &amp;lt;script src=&quot;./node_modules/react/umd/react.deelopment.js&quot;&amp;gt;&amp;lt;/scrip..."
+  },
+  
+  {
     "title": "React Axios(请求)",
     "url": "/posts/React-Axios/",
     "categories": "react, react-Advanced-Component",
@@ -238,66 +253,6 @@
 
 
     "snippet": "关于字符编码的问题  在我执行了 bundle exec jekyll serve 之后曝出以下错误  Liquid Execption: Liquid error (line 13):invalid byte sequence in UTF-8 in sitemap.xml   解决方法是找到 “md文件头” 中的 “tags” 中含有中文的md文件  将中文标签删除或改为英文标签  然后找到 _site 文件夹下的 setmap.xml 中的中文编码所在的标签  删除该标签以及其父标签  然后重新执行 bundle exec jekyll serve"
-  },
-  
-  {
-    "title": "react 基础(四)组件",
-    "url": "/posts/react-4component/",
-    "categories": "react, react-basic-es6",
-    "tags": "react, javascript, JSX",
-    "date": "2021-08-10 18:23:58 +0800",
-    
-
-
-
-
-
-    "snippet": "props : 一个只读的参数组件分类函数组件：​		编写Js函数是定义组件最简单的方式function Myintro(props){	return (    	&amp;lt;h1&amp;gt;Hello, {props.name}&amp;lt;/h1&amp;gt;;    )}​		有效的 React函数组件 ：（本质上还是JavaScript函数）      接收唯一带有数据的 “props”    返回一个React元素  class组件​		ps基于ES6class Myintro extends React.Component{    render() {      ..."
-  },
-  
-  {
-    "title": "react 基础(三)render",
-    "url": "/posts/react-3rendering/",
-    "categories": "react, react-basic-es6",
-    "tags": "react, javascript, JSX",
-    "date": "2021-08-10 06:18:16 +0800",
-    
-
-
-
-
-
-    "snippet": "将一个元素渲染为DOM​	页面中有一个 &amp;lt;div&amp;gt; :&amp;lt;div id = &#39;root&#39;&amp;gt;&amp;lt;/div&amp;gt;​	该结点可称为“根”DOM节点，因为该节点内的所有内容都将由React DOM管理。​	将一个React元素渲染到根DOM节点中，只需把它们一起传入ReactDOM.render():/** para1:表示要展示的元素* para2:表示要渲染的位置**/const element = (	&amp;lt;h1&amp;gt;Hello, world&amp;lt;/h1&amp;gt;..."
-  },
-  
-  {
-    "title": "react 基础(二)JSX",
-    "url": "/posts/react-2jsx/",
-    "categories": "react, react-basic-es6",
-    "tags": "react, javascript, JSX",
-    "date": "2021-08-10 00:05:16 +0800",
-    
-
-
-
-
-
-    "snippet": "JSX简介​	因为考虑到如下变量申明：const element = &amp;lt;h1&amp;gt;Hello, world!&amp;lt;/h1&amp;gt;​	这种标签语法即为JSX，既不是字符串也不是HTML，是JavaScript的语法扩展，具有JavaScript的全部功能。为什么使用jsx  React 认为渲染逻辑本质上与其他UI逻辑内在耦合，比如：在 UI 中需要绑定处理事件、在某些时刻状态发生变化时需要通知到 UI ，以及需要在 UI 中展示准备好的数据。  React 并没有采用将标记与逻辑进行分离到不同文件 这种认为地分离方式，而是通过将二者共同放在称之为..."
-  },
-  
-  {
-    "title": "react 基础(一)概述及简单用法",
-    "url": "/posts/react-1basic/",
-    "categories": "react, react-basic-es6",
-    "tags": "react, javascript, JSX",
-    "date": "2021-08-09 23:04:16 +0800",
-    
-
-
-
-
-
-    "snippet": "React 概述什么是React​		React 是一个用于 构建用户界面 的 JavaScript库。​		用户界面：前端（html）​		React 主要用来写HTML界面，或 构建web应用React的特点            声明式：只需要描述 UI 看起来是什么样，就像写HTML一样      const jsx = &amp;lt;div className=&quot;app&quot;&amp;gt;      	&amp;lt;h1&amp;gt;Hello React! 动态数据:{count}&amp;lt;/h1&amp;gt;      &amp;lt;/di..."
   },
   
   {
