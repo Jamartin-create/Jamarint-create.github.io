@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Lil Martin</title>
   <subtitle>一个菜鸡全栈程序员博主。</subtitle>
-  <updated>2021-11-07T23:34:27+08:00</updated>
+  <updated>2021-11-09T00:03:06+08:00</updated>
   <author>
     <name>Martin_Du</name>
     <uri>/</uri>
@@ -52,8 +52,7 @@
 
 什么是React
 
-React 是一个用于 构建用户界面 的 JavaScript
-库。
+React 是一个用于 构建用户界面 的  JavaScript 库。
 
 React的特点
 
@@ -66,7 +65,9 @@ React基本使用
 
 安装
 
-安装命令：npm i react react-dom
+安装命令：
+
+npm i react react-dom
 
 
 
@@ -81,7 +82,7 @@ React基本使用
     引入cdn
 
     &amp;lt;script src="./node_modules/react/umd/react.deelopment.js"&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script src="./node_modules/react/umd/react-dom.development.js"&amp;gt;&amp;lt;/script&amp;gt...
+&amp;lt;script src="./node_modules/react/umd/react-dom.development.js"&amp;gt;&amp;lt;/script...
     </summary>
   
 

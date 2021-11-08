@@ -12,7 +12,7 @@
 
 
 
-    "snippet": "React 概述什么是ReactReact 是一个用于 构建用户界面 的 JavaScript库。React的特点  组件化编程：某一个页面的任何一个部分都可以是一个组件。  用法很广泛：web、VR。。。React基本使用安装安装命令：npm i react react-dom  react包提供创建元素、组件等功能。  react-dom包提供DOM相关操作。使用      引入cdn    &amp;lt;script src=&quot;./node_modules/react/umd/react.deelopment.js&quot;&amp;gt;&amp;lt;/scrip..."
+    "snippet": "React 概述什么是ReactReact 是一个用于 构建用户界面 的  JavaScript 库。React的特点  组件化编程：某一个页面的任何一个部分都可以是一个组件。  用法很广泛：web、VR。。。React基本使用安装安装命令：npm i react react-dom  react包提供创建元素、组件等功能。  react-dom包提供DOM相关操作。使用      引入cdn    &amp;lt;script src=&quot;./node_modules/react/umd/react.deelopment.js&quot;&amp;gt;&amp;lt;/scr..."
   },
   
   {

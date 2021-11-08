@@ -566,9 +566,7 @@
 
 <h2 id="什么是react">什么是React</h2>
 
-<p><b>React</b> 是一个用于 <b>构建用户界面</b> 的 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>JavaScript
-</pre></td></tr></tbody></table></code>库。</p>
+<p><b>React</b> 是一个用于 <b>构建用户界面</b> 的  JavaScript 库。</p>
 
 <h2 id="react的特点">React的特点</h2>
 
@@ -581,9 +579,11 @@
 
 <h2 id="安装">安装</h2>
 
-<p>安装命令：<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>npm i react react-dom
-</pre></td></tr></tbody></table></code></p>
+<p>安装命令：</p>
+
+<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nx">npm</span> <span class="nx">i</span> <span class="nx">react</span> <span class="nx">react</span><span class="o">-</span><span class="nx">dom</span>
+</pre></td></tr></tbody></table></code></div></div>
 
 <ul>
   <li>react包提供创建元素、组件等功能。</li>
@@ -1070,10 +1070,10 @@
 <p>该组件因为嵌套关系，难以维护，且很难服用它的各个部分，将其中嵌套的组件抽取出来会更加方便且间接。</p>
 
 <ol>
-  <li>提取用户头像</li>
-</ol>
+  <li>
+    <p>提取用户头像</p>
 
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+    <div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -1089,13 +1089,12 @@
          <span class="p">/&gt;</span>
     <span class="p">);</span>
 <span class="p">}</span>
-</pre></td></tr></tbody></table></code></div></div>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <p>提取用户信息，并在用户名旁边渲染头像</p>
 
-<ol>
-  <li>提取用户信息，并在用户名旁边渲染头像</li>
-</ol>
-
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+    <div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -1115,13 +1114,12 @@
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">);</span>
 <span class="p">}</span>
-</pre></td></tr></tbody></table></code></div></div>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <p>单独的组件不需要知道Comment组件内部是怎样渲染的</p>
 
-<ol>
-  <li>单独的组件不需要知道Comment组件内部是怎样渲染的</li>
-</ol>
-
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+    <div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -1147,7 +1145,9 @@
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">);</span>
 <span class="p">}</span>
-</pre></td></tr></tbody></table></code></div></div>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ol>
 
 
 
