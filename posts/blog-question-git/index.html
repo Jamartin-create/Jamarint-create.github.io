@@ -564,15 +564,13 @@
 
         <h3 id="ssh">ssh</h3>
 
-<blockquote>
-  <p>在配置了ssh之后，发现每次push还是需要输入账号密码</p>
+<p>在配置了ssh之后，发现每次push还是需要输入账号密码</p>
 
-  <p>git-bash执行命令 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<p>git-bash执行命令 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>git config --global credential.helper store
 </pre></td></tr></tbody></table></code></p>
 
-  <p>然后操作 <b>pull/push</b> ，第一次需要输入账号密码，下次再操作就不需要了。</p>
-</blockquote>
+<p>然后操作 <b>pull/push</b> ，第一次需要输入账号密码，下次再操作就不需要了。</p>
 
 
 
@@ -1341,6 +1339,19 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
   
 
@@ -1493,16 +1504,17 @@
 
                 关于字符编码的问题
 
-
-  在我执行了 bundle exec jekyll serve
+在我执行了 bundle exec jekyll serve
  之后曝出以下错误
 
-  Liquid Execption: Liquid error (line 13):invalid byte sequence in UTF-8 in sitemap.xml 
+Liquid Execption: Liquid error (line 13):invalid byte sequence in UTF-8 in sitemap.xml 
 
 
-  解决方法是找到 “md文件头” 中的 “tags” 中含有中文的md文件
+解决方法是找到 “md文件头” 中的 “tags” 中含有中文的md文件
 
-  将中文标签删除...
+将中文标签删除或改为英文标签
+
+...
               </p>
             </div>
           </div>
@@ -1551,38 +1563,33 @@
 
                 注册账号
 
-
-  不用多说吧
-
+不用多说吧
 
 创建仓库
 
+点击右上角➕，再点击New repository
 
-  点击右上角➕，再点击New repository
 
-  
 
-  仓库名的格式为 “用户名”.github.io（因为GitHub对于同一个账户只允许生成一个直接访问的网站）
+仓库名的格式为 “用户名”.github.io（因为GitHub对于同一个账户只允许生成一个直接访问的网站）
 
-  
 
 
 将仓库与本地连接（绑定）
 
+下载并安装git
 
-  下载并安装git
 
-  
 
-  ​	下载链接
+​	下载链接
 
-  打开git-bash
+打开git-bash
 
-  
 
-  将git与仓库绑定
 
-  git ...
+将git与仓库绑定
+
+git config --global user.name "gi...
               </p>
             </div>
           </div>
@@ -1631,26 +1638,23 @@
 
                 安装rubygems
 
-
-  在官网下载自带Devkit版本，链接
-
-  
-
-  安装时勾上Add Ruby executables to your PATH
+在官网下载自带Devkit版本，链接
 
 
-  命令行输入ruby -v
+
+安装时勾上Add Ruby executables to your PATH
+
+
+命令行输入ruby -v
  检查ruby是否安装成功
 
-  输入gem -v
+输入gem -v
  检查1是否安装成功
-
 
 用gem命令安装jekyll
 
-
-  命令行输入 gem install jekyll bundler
- //通过 Rub...
+命令行输入 gem install jekyll bundler
+ //通过 RubyGems 安装 Jekyll...
               </p>
             </div>
           </div>

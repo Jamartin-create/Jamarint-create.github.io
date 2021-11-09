@@ -548,7 +548,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="169 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="175 words">1 min</span>
 
 
           <!-- page views -->
@@ -566,19 +566,21 @@
 
 <h3 id="面板配置端口">面板配置端口</h3>
 
-<blockquote>
-  <p>打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)</p>
-</blockquote>
+<p>打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)</p>
 
 <h3 id="服务器内部打开该端口防火墙">服务器内部打开该端口防火墙</h3>
 
-<blockquote>
-  <pre><code class="language-linux">systemctl start firewalld.service 
-firewall-cmd --zone=public --add-port=5000/tcp --permanent
+<div lang="shell" class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>systemctl start firewalld.service 
+firewall-cmd <span class="nt">--zone</span><span class="o">=</span>public <span class="nt">--add-port</span><span class="o">=</span>5000/tcp <span class="nt">--permanent</span>
 systemctl restart firewalld.service
-firewall-cmd --reload
-</code></pre>
+firewall-cmd <span class="nt">--reload</span>
+</pre></td></tr></tbody></table></code></div></div>
 
+<blockquote>
   <p>这里不打开也有可能无法访问该端口</p>
 </blockquote>
 
@@ -586,40 +588,34 @@ firewall-cmd --reload
 
 <h3 id="虚拟环境">虚拟环境</h3>
 
-<blockquote>
-  <ol>
-    <li>
-      <p>用pip安装virtualenvwrapper</p>
-    </li>
-    <li>
-      <p><code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>vim ~/ .bashrc
-</pre></td></tr></tbody></table></code></p>
+<ol>
+  <li>
+    <p>用pip安装virtualenvwrapper</p>
+  </li>
+  <li>
+    <p>执行命令：vim ~/ .bashrc</p>
+  </li>
+  <li>
+    <p>在最后加上</p>
 
-      <p>在最后加上</p>
-
-      <div lang="plaintext" class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+    <div lang="bash" class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-</pre></td><td class="rouge-code"><pre>export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
-</pre></td></tr></tbody></table></code></div>      </div>
-    </li>
-    <li>
-      <p>运行 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">export </span><span class="nv">WORKON_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.virtualenvs
+<span class="nb">source</span> /usr/local/bin/virtualenvwrapper.sh
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <p>运行 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>source ~/.bashrc
 </pre></td></tr></tbody></table></code></p>
-    </li>
-    <li>
-      <p>执行 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>mkvirtualenv '虚拟环境名称'
-</pre></td></tr></tbody></table></code> python2环境</p>
-
-      <p>执行 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+  </li>
+  <li>执行 <kbd>mkvirtualenv '虚拟环境名称' python2</kbd> 环境</li>
+  <li>执行 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>mkvirtualenv -p python3 '虚拟环境名称'
-</pre></td></tr></tbody></table></code> python3环境</p>
-    </li>
-  </ol>
+</pre></td></tr></tbody></table></code> python3环境</li>
+</ol>
 
+<blockquote>
   <p>更多虚拟环境执行命令请看<a href="https://www.cnblogs.com/changdasheng/p/9955842.html">code口德</a></p>
 </blockquote>
 
@@ -1365,6 +1361,19 @@ source /usr/local/bin/virtualenvwrapper.sh
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
   
 
@@ -1560,17 +1569,15 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 外网访问服务器时无法得到响应
 
+服务器端放行端口
 
-  服务器端放行端口
 
-  
-    
-      在服务器面板找到安全组，添加一个安全组，选择端口号，协议为TCP协议。
-    
-    
-      连通ssh修改防火墙配置：
+  在服务器面板找到安全组，添加一个安全组，选择端口号，协议为TCP协议。
+  连通ssh修改防火墙配置：
 
-      systemctl start firewalld...
+
+systemctl start firewalld.service 
+firewall-cmd --zone=pub...
               </p>
             </div>
           </div>
@@ -1621,17 +1628,13 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 什么是WebHook
 
+最典型的例子：当你发送一条朋友圈，微信的服务器会把你的这条朋友圈同步到你所有好友的客户端（要是你屏蔽人了就是给服务器列出了特别名单）
 
-  最典型的例子：当你发送一条朋友圈，微信的服务器会把你的这条朋友圈同步到你所有好友的客户端（要是你屏蔽人了就是给服务器列出了特别名单）
+这还是 客户端 - 服务器 模式的逆转模式
 
-  这还是 客户端 - 服务器 模式的逆转模式
+传统方法中，一般是客户端向服务器发出 请求 ，服务器给予客户端 响应 （这叫客户机拉取请求）
 
-  
-    传统方法中，一般是客户端向服务器发出 请求 ，服务器给予客户端 响应 （这叫客户机拉取请求）
-  
-
-  
-    在 WebHook 范式下，服...
+在 WebHook 范式下，服务器更新所需提供的资源，然后自动将其作为更新...
               </p>
             </div>
           </div>
@@ -1682,29 +1685,27 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 创建虚拟环境
 
+进入工作空间 workon my_env
 
-  1
+1
 mkvirtualenv -p python3 my_env
-
-
-  进入工作空间 1
-workon my_env
-
 
 
 放置代码
 
-
-  创建一个工作空间放置代码 1
+1
+2
+3
+4
+5
+6
+7
+#创建一个工作空间放置代码 (可要可不要，看个人习惯)
 mkdir pythonWorkSpace
-(可要可不要，看个人习惯)
-
-  进入刚刚创建的工作空间 1
+#进入刚刚创建的工作空间
 cd pythonWorkSpace
-
-
-  创建一个python文件 1
-vi...
+#创建一个python文件
+vim robort...
               </p>
             </div>
           </div>

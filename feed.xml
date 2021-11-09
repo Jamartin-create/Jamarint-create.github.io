@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Lil Martin</title>
   <subtitle>一个菜鸡全栈程序员博主。</subtitle>
-  <updated>2021-11-09T00:03:06+08:00</updated>
+  <updated>2021-11-09T19:35:09+08:00</updated>
   <author>
     <name>Martin_Du</name>
     <uri>/</uri>
@@ -17,6 +17,94 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>系统分析与设计--建立需求模型</title>
+    <link href="/posts/SoftwareEngineer/" rel="alternate" type="text/html" title="系统分析与设计--建立需求模型" />
+    <published>2021-11-09T00:16:09+08:00</published>
+  
+    <updated>2021-11-09T00:16:09+08:00</updated>
+  
+    <id>/posts/SoftwareEngineer/</id>
+    <content src="/posts/SoftwareEngineer/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="software-engineer" />
+    
+    <category term="system-analysis-and-design" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      需求模型
+
+事件
+
+分类
+
+
+  外部事件
+    
+      发生在系统之外
+      由外部的代理人或参与者所启动
+    
+  
+  临时事件（定时事件）
+    
+      在到达某个时间点之后，自动发生的事件
+      根据系统的截止日期
+    
+  
+  状态事件
+    
+      系统内部发生的某件事触发处理的需要
+    
+  
+
+
+事件列表
+
+
+  
+    
+      事件
+      触发
+      来源
+      用例
+      回应
+      目的地
+    
+  
+  
+    
+      一个完整的句子
+      动词
+      名词
+      动名词短语
+      形容词加名词
+      名词
+    
+    
+      顾客想要检查商品是否能供货
+      商品查询
+      顾客
+      检查商品是是...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -311,69 +399,6 @@ view 的好处
 例1
 
 查询...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Orcale基础(六)rownum与主键设计</title>
-    <link href="/posts/Oracle-rownum-pk/" rel="alternate" type="text/html" title="Orcale基础(六)rownum与主键设计" />
-    <published>2021-10-11T11:28:00+08:00</published>
-  
-    <updated>2021-10-11T11:28:00+08:00</updated>
-  
-    <id>/posts/Oracle-rownum-pk/</id>
-    <content src="/posts/Oracle-rownum-pk/" />
-    <author>
-      <name>Martin_Du</name>
-    </author>
-
-  
-    
-    <category term="sql" />
-    
-    <category term="oracle" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      主键设计
-
-ROWNUM 和 ROWID
-
-ROWID
-
-特点：唯一，且固定，是在行数据生成时产生的id；
-
-select rowid, empno from emp;
--- 此时的查询结果中，所有行的rowid字段是唯一的
-select rowid, empno from emp where empno = 7369;
--- 该结果中
--- empno=7369的rowid 和 
--- 上一条 select 语句结果中empno=7369的rowid 相同
-
-
-
-  ROWID是永远不变的， 永远跟行记录走，不因查询条件而变化
-
-
-ROWNUM
-
-特点：一个伪列，对查询结果返回的行编号即行号，由1开始 依次递增
-
--- 返回该表全部14条数据
-select rownum, emp.* from emp; -- 结果的rownum为1-14
--- 返回部门号为30的6条数据
-sele...
     </summary>
   
 

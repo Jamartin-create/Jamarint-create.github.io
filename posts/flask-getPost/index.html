@@ -616,7 +616,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="300 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="299 words">1 min</span>
 
 
           <!-- page views -->
@@ -636,76 +636,72 @@
 
 <h3 id="外网访问服务器时无法得到响应">外网访问服务器时无法得到响应</h3>
 
-<blockquote>
-  <h4 id="服务器端放行端口">服务器端放行端口</h4>
+<h4 id="服务器端放行端口">服务器端放行端口</h4>
 
-  <ol>
-    <li>
-      <p>在服务器面板找到安全组，添加一个安全组，选择端口号，协议为TCP协议。</p>
-    </li>
-    <li>
-      <p>连通ssh修改防火墙配置：</p>
+<ol>
+  <li>在服务器面板找到安全组，添加一个安全组，选择端口号，协议为TCP协议。</li>
+  <li>连通ssh修改防火墙配置：</li>
+</ol>
 
-      <pre><code class="language-linux">systemctl start firewalld.service 
-firewall-cmd --zone=public --add-port=5000/tcp --permanent
+<div lang="shell" class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>systemctl start firewalld.service 
+firewall-cmd <span class="nt">--zone</span><span class="o">=</span>public <span class="nt">--add-port</span><span class="o">=</span>5000/tcp <span class="nt">--permanent</span>
 systemctl restart firewalld.service
-firewall-cmd --reload
-</code></pre>
-    </li>
-  </ol>
+firewall-cmd <span class="nt">--reload</span>
+</pre></td></tr></tbody></table></code></div></div>
 
+<blockquote>
   <p><b>一定要保证面板放通的端口号与ssh打开的端口号一致，我开通的是5000</b></p>
 </blockquote>
 
-<blockquote>
-  <h4 id="通过wsgi来启动flask">通过wsgi来启动flask</h4>
+<h4 id="通过wsgi来启动flask">通过wsgi来启动flask</h4>
 
-  <p>​	方法一:（我用的）</p>
+<p>方法一:（我用的）</p>
 
-  <div lang="python" class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div lang="python" class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 </pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">gevent</span> <span class="kn">import</span> <span class="n">pywsgi</span>
-		
+
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
 	<span class="n">server</span> <span class="o">=</span> <span class="n">pywsgi</span><span class="p">.</span><span class="n">WSGIServer</span><span class="p">((</span><span class="s">'0.0.0.0'</span><span class="p">,</span> <span class="mi">5000</span><span class="p">),</span> <span class="n">app</span><span class="p">)</span>
 	<span class="n">server</span><span class="p">.</span><span class="n">serve_forever</span><span class="p">()</span>
-</pre></td></tr></tbody></table></code></div>  </div>
+</pre></td></tr></tbody></table></code></div></div>
 
-  <p>方法二:</p>
+<p>方法二:</p>
 
-  <div lang="python" class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div lang="python" class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 </pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">wsgiref.simple_server</span> <span class="kn">import</span> <span class="n">make_server</span>
-		
+
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
 	<span class="n">server</span> <span class="o">=</span> <span class="n">make_server</span><span class="p">(</span><span class="s">''</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="n">app</span><span class="p">)</span>
 	<span class="n">server</span><span class="p">.</span><span class="n">serve_forever</span><span class="p">()</span>
-</pre></td></tr></tbody></table></code></div>  </div>
+</pre></td></tr></tbody></table></code></div></div>
 
-  <p>这两个方法的底层都是wsgi，只是后期封装不太一样，我也不知道怎么比较好坏</p>
-</blockquote>
+<p>这两个方法的底层都是wsgi，只是后期封装不太一样，我也不知道怎么比较好坏</p>
 
-<blockquote>
-  <h4 id="报oserrorerrno-98-address-already-in-use错">报OSError:[Errno 98] Address already in use错</h4>
+<h4 id="报oserrorerrno-98-address-already-in-use错">报OSError:[Errno 98] Address already in use错</h4>
 
-  <p>​	此错误表示端口被占用，未释放或者程序没有正常结束</p>
+<p>此错误表示端口被占用，未释放或者程序没有正常结束</p>
 
-  <p>​	通过<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<p>通过<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>ps -ef|grep python
 </pre></td></tr></tbody></table></code>找到端口号占用的对应的python进程的pid</p>
 
-  <p>​	再通过 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<p>再通过 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>kill pid
 </pre></td></tr></tbody></table></code> 杀死进程</p>
 
-  <p>​	<img data-proofer-ignore data-src="http://Jamartin-create.github.io/assets/img/post-pic/flask-getPost/P4-1.png" alt="photo" /></p>
-</blockquote>
+<p><img data-proofer-ignore data-src="http://Jamartin-create.github.io/assets/img/post-pic/flask-getPost/P4-1.png" alt="photo" /></p>
 
 
 
@@ -1475,6 +1471,19 @@ firewall-cmd --reload
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
   
 
@@ -1642,17 +1651,13 @@ firewall-cmd --reload
 
 什么是WebHook
 
+最典型的例子：当你发送一条朋友圈，微信的服务器会把你的这条朋友圈同步到你所有好友的客户端（要是你屏蔽人了就是给服务器列出了特别名单）
 
-  最典型的例子：当你发送一条朋友圈，微信的服务器会把你的这条朋友圈同步到你所有好友的客户端（要是你屏蔽人了就是给服务器列出了特别名单）
+这还是 客户端 - 服务器 模式的逆转模式
 
-  这还是 客户端 - 服务器 模式的逆转模式
+传统方法中，一般是客户端向服务器发出 请求 ，服务器给予客户端 响应 （这叫客户机拉取请求）
 
-  
-    传统方法中，一般是客户端向服务器发出 请求 ，服务器给予客户端 响应 （这叫客户机拉取请求）
-  
-
-  
-    在 WebHook 范式下，服...
+在 WebHook 范式下，服务器更新所需提供的资源，然后自动将其作为更新...
               </p>
             </div>
           </div>
@@ -1703,16 +1708,17 @@ firewall-cmd --reload
 
 面板配置端口
 
-
-  打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)
-
+打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)
 
 服务器内部打开该端口防火墙
 
-
-  systemctl start firewalld.service 
+1
+2
+3
+4
+systemctl start firewalld.service 
 firewall-cmd --zone=public --add-port=5000/tcp --permanent
-systemctl restart fir...
+systemctl restart fi...
               </p>
             </div>
           </div>
@@ -1763,29 +1769,27 @@ systemctl restart fir...
 
 创建虚拟环境
 
+进入工作空间 workon my_env
 
-  1
+1
 mkvirtualenv -p python3 my_env
-
-
-  进入工作空间 1
-workon my_env
-
 
 
 放置代码
 
-
-  创建一个工作空间放置代码 1
+1
+2
+3
+4
+5
+6
+7
+#创建一个工作空间放置代码 (可要可不要，看个人习惯)
 mkdir pythonWorkSpace
-(可要可不要，看个人习惯)
-
-  进入刚刚创建的工作空间 1
+#进入刚刚创建的工作空间
 cd pythonWorkSpace
-
-
-  创建一个python文件 1
-vi...
+#创建一个python文件
+vim robort...
               </p>
             </div>
           </div>

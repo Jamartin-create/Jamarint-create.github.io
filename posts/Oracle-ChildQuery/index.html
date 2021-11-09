@@ -1486,6 +1486,19 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
   
 
@@ -1729,70 +1742,6 @@
       
       
       <div class="card">
-        <a href="/posts/Oracle-intro/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Sep 13
-  
-
-  <i class="unloaded">2021-09-13T15:47:01+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Oracle(一)介绍</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                介绍
-
-
-  Oracle数据库：DB/DBMS
-
-  数据库使用者：DBA（DataBase Administrator）/开发人员
-
-  数据库的种类：oracle / sybase /db2(IBM)
-
-  access,postgreSQL
-
-  数据表：行和列组成
-
-  行：row / record 记录
-
-  列：column / field 字段
-
-  SQL分类：Struct...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
         <a href="/posts/Oracle-SingleTableQuery/">
           <div class="card-body">
             <!--
@@ -1838,12 +1787,9 @@ select empno, ename, deptno from emp;
 
 
 
-  ps:
+  开发中一般不使用 *
 
-  
-    开发中一般不使用 *
-    数据库中：列名大小写不敏感，内容大小写敏感
-  
+  数据库中：列名大小写不敏感，内容大小写敏感
 
 
 列别名
@@ -1855,7 +1801,8 @@ select empno, ename, deptno from emp;
   
     方法2：列名 as 别名
 
-    select empno 员工编号, ename 员工姓名 ...
+    select empno 员工编号, ename 员工姓名 from emp;
+select...
               </p>
             </div>
           </div>
@@ -1907,14 +1854,80 @@ select empno, ename, deptno from emp;
 交叉连接  cross join
 
 
-  ps: 一般不用（因为无用信息太多）
+  一般不用（因为无用信息太多）
 
 
 select * from emp cross join dept -- 依次从m行的emp中取一行emp，和n行dept中的每一行进行组合，也就是会产生一个nxm行的表格
 
 
 -- 根据以上结合的结果，如何查找到Smith的人所在的部门名称
-select emp.ename, dept.deptn...
+select emp.ename, dept.deptno, d...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/Oracle-key/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Sep 20
+  
+
+  <i class="unloaded">2021-09-20T16:30:42+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Orcale基础(四)约束</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                约束条件
+
+
+  主键：primary key（PK）—— unique + not null
+  外键：foreign key （FK）
+  唯一：unique
+  非空：not null
+  检查
+
+
+一些术语
+
+DDL操作
+
+create
+
+create table student(
+    id number primary key,
+    name varchar2(20),
+ ...
               </p>
             </div>
           </div>

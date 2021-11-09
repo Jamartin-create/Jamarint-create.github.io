@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "系统分析与设计--建立需求模型",
+    "url": "/posts/SoftwareEngineer/",
+    "categories": "software-engineer, system-analysis-and-design",
+    "tags": "",
+    "date": "2021-11-09 00:16:09 +0800",
+    
+
+
+
+
+
+    "snippet": "需求模型事件分类  外部事件          发生在系统之外      由外部的代理人或参与者所启动        临时事件（定时事件）          在到达某个时间点之后，自动发生的事件      根据系统的截止日期        状态事件          系统内部发生的某件事触发处理的需要      事件列表            事件      触发      来源      用例      回应      目的地                  一个完整的句子      动词      名词      动名词短语      形容词加名词      名词         ..."
+  },
+  
+  {
     "title": "react基本概念",
     "url": "/posts/React-Basic/",
     "categories": "react, react-basic-es6",
@@ -117,7 +132,7 @@
 
 
 
-    "snippet": "多表查交叉连接  cross join  ps: 一般不用（因为无用信息太多）select * from emp cross join dept -- 依次从m行的emp中取一行emp，和n行dept中的每一行进行组合，也就是会产生一个nxm行的表格-- 根据以上结合的结果，如何查找到Smith的人所在的部门名称select emp.ename, dept.deptno, dept.dname from emp 	cross join dept where emp.deptno = dept.deptno and emp.ename = &#39;SMITH&#39;;  缺点：    ..."
+    "snippet": "多表查交叉连接  cross join  一般不用（因为无用信息太多）select * from emp cross join dept -- 依次从m行的emp中取一行emp，和n行dept中的每一行进行组合，也就是会产生一个nxm行的表格-- 根据以上结合的结果，如何查找到Smith的人所在的部门名称select emp.ename, dept.deptno, dept.dname from emp 	cross join dept where emp.deptno = dept.deptno and emp.ename = &#39;SMITH&#39;;缺点：  直接叉乘，得到的..."
   },
   
   {
@@ -132,7 +147,7 @@
 
 
 
-    "snippet": "单表查询列的选取-投影select empno, ename, deptno from emp;  ps:      开发中一般不使用 *    数据库中：列名大小写不敏感，内容大小写敏感  列别名      方法1：列名+” “+别名        方法2：列名 as 别名    select empno 员工编号, ename 员工姓名 from emp;select empno as 员工编号, ename as 员工姓名 from emp;      列的算数表达式(+,-,*,/)-- 显示年收入select empno, ename, sal*12 年收入 from emp;..."
+    "snippet": "单表查询列的选取-投影select empno, ename, deptno from emp;  开发中一般不使用 *  数据库中：列名大小写不敏感，内容大小写敏感列别名      方法1：列名+” “+别名        方法2：列名 as 别名    select empno 员工编号, ename 员工姓名 from emp;select empno as 员工编号, ename as 员工姓名 from emp;      列的算数表达式(+,-,*,/)-- 显示年收入select empno, ename, sal*12 年收入 from emp;      处理空值得函数..."
   },
   
   {
@@ -147,7 +162,7 @@
 
 
 
-    "snippet": "介绍  Oracle数据库：DB/DBMS  数据库使用者：DBA（DataBase Administrator）/开发人员  数据库的种类：oracle / sybase /db2(IBM)  access,postgreSQL  数据表：行和列组成  行：row / record 记录  列：column / field 字段  SQL分类：Structured Query Language主要对象  表：table  视图：view  索引：index – 运维期间起作用  序列：sequence – 常用于主键  约束条件：pk/fk/unique/check/default  ..."
+    "snippet": "介绍Oracle数据库：DB/DBMS数据库使用者：DBA（DataBase Administrator）/开发人员数据库的种类：oracle / sybase /db2(IBM)access,postgreSQL数据表：行和列组成行：row / record 记录列：column / field 字段SQL分类：Structured Query Language主要对象  表：table  视图：view  索引：index – 运维期间起作用  序列：sequence – 常用于主键  约束条件：pk/fk/unique/check/default  自定义函数  存储过程"
   },
   
   {
@@ -162,7 +177,7 @@
 
 
 
-    "snippet": "编写代码创建虚拟环境  mkvirtualenv -p python3 my_env  进入工作空间 workon my_env放置代码  创建一个工作空间放置代码 mkdir pythonWorkSpace(可要可不要，看个人习惯)  进入刚刚创建的工作空间 cd pythonWorkSpace  创建一个python文件 vim robort.py  将代码粘贴到编辑器中运行代码  保存并退出编辑模式  挂载python程序 python robort.py &amp;amp;  查看进程是否正常 ps -ef|grep python  如果有之前占用此端口的程序为结束可能会报错  ..."
+    "snippet": "编写代码创建虚拟环境进入工作空间 workon my_envmkvirtualenv -p python3 my_env放置代码#创建一个工作空间放置代码 (可要可不要，看个人习惯)mkdir pythonWorkSpace#进入刚刚创建的工作空间cd pythonWorkSpace#创建一个python文件vim robort.py#将代码粘贴到编辑器中运行代码#保存并退出编辑模式#挂载python程序 python robort.py &amp;amp;  #查看进程是否正常 ps -ef|grep python#如果有之前占用此端口的程序为结束可能会报错#此时可以找到占用端口进程的..."
   },
   
   {
@@ -192,7 +207,7 @@
 
 
 
-    "snippet": "端口配置面板配置端口  打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)服务器内部打开该端口防火墙  systemctl start firewalld.service firewall-cmd --zone=public --add-port=5000/tcp --permanentsystemctl restart firewalld.servicefirewall-cmd --reload  这里不打开也有可能无法访问该端口python环境配置虚拟环境            用pip安装virtualenvwrapper           ..."
+    "snippet": "端口配置面板配置端口打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)服务器内部打开该端口防火墙systemctl start firewalld.service firewall-cmd --zone=public --add-port=5000/tcp --permanentsystemctl restart firewalld.servicefirewall-cmd --reload  这里不打开也有可能无法访问该端口python环境配置虚拟环境      用pip安装virtualenvwrapper        执行命令：vim ~/ ...."
   },
   
   {
@@ -207,7 +222,7 @@
 
 
 
-    "snippet": "WebHook什么是WebHook  最典型的例子：当你发送一条朋友圈，微信的服务器会把你的这条朋友圈同步到你所有好友的客户端（要是你屏蔽人了就是给服务器列出了特别名单）  这还是 客户端 - 服务器 模式的逆转模式      传统方法中，一般是客户端向服务器发出 请求 ，服务器给予客户端 响应 （这叫客户机拉取请求）        在 WebHook 范式下，服务器更新所需提供的资源，然后自动将其作为更新发送到客户端（服务器是在推数据），客户端不是请求者，而是被动接收方  应用场景  对于第三方平台验权、登陆等 没有前端界面做中转的场景，或者强安全要求的支付场景等，适合用 Webhoo..."
+    "snippet": "WebHook什么是WebHook最典型的例子：当你发送一条朋友圈，微信的服务器会把你的这条朋友圈同步到你所有好友的客户端（要是你屏蔽人了就是给服务器列出了特别名单）这还是 客户端 - 服务器 模式的逆转模式传统方法中，一般是客户端向服务器发出 请求 ，服务器给予客户端 响应 （这叫客户机拉取请求）在 WebHook 范式下，服务器更新所需提供的资源，然后自动将其作为更新发送到客户端（服务器是在推数据），客户端不是请求者，而是被动接收方应用场景对于第三方平台验权、登陆等 没有前端界面做中转的场景，或者强安全要求的支付场景等，适合用 Webhook 做数据主动推送，说白了就是在前端无从参与..."
   },
   
   {
@@ -222,7 +237,7 @@
 
 
 
-    "snippet": "虚拟环境​	Utunbu配置虚拟环境，virtualenv 安装时如果pip不是最新版，下载的时候会丢包外网访问服务器时无法得到响应  服务器端放行端口            在服务器面板找到安全组，添加一个安全组，选择端口号，协议为TCP协议。              连通ssh修改防火墙配置：      systemctl start firewalld.service firewall-cmd --zone=public --add-port=5000/tcp --permanentsystemctl restart firewalld.servicefirewall-cmd -..."
+    "snippet": "虚拟环境​	Utunbu配置虚拟环境，virtualenv 安装时如果pip不是最新版，下载的时候会丢包外网访问服务器时无法得到响应服务器端放行端口  在服务器面板找到安全组，添加一个安全组，选择端口号，协议为TCP协议。  连通ssh修改防火墙配置：systemctl start firewalld.service firewall-cmd --zone=public --add-port=5000/tcp --permanentsystemctl restart firewalld.servicefirewall-cmd --reload  一定要保证面板放通的端口号与ssh打开的端..."
   },
   
   {
@@ -237,7 +252,7 @@
 
 
 
-    "snippet": "ssh  在配置了ssh之后，发现每次push还是需要输入账号密码  git-bash执行命令 git config --global credential.helper store  然后操作 pull/push ，第一次需要输入账号密码，下次再操作就不需要了。"
+    "snippet": "ssh在配置了ssh之后，发现每次push还是需要输入账号密码git-bash执行命令 git config --global credential.helper store然后操作 pull/push ，第一次需要输入账号密码，下次再操作就不需要了。"
   },
   
   {
@@ -252,7 +267,7 @@
 
 
 
-    "snippet": "关于字符编码的问题  在我执行了 bundle exec jekyll serve 之后曝出以下错误  Liquid Execption: Liquid error (line 13):invalid byte sequence in UTF-8 in sitemap.xml   解决方法是找到 “md文件头” 中的 “tags” 中含有中文的md文件  将中文标签删除或改为英文标签  然后找到 _site 文件夹下的 setmap.xml 中的中文编码所在的标签  删除该标签以及其父标签  然后重新执行 bundle exec jekyll serve"
+    "snippet": "关于字符编码的问题在我执行了 bundle exec jekyll serve 之后曝出以下错误Liquid Execption: Liquid error (line 13):invalid byte sequence in UTF-8 in sitemap.xml 解决方法是找到 “md文件头” 中的 “tags” 中含有中文的md文件将中文标签删除或改为英文标签然后找到 _site 文件夹下的 setmap.xml 中的中文编码所在的标签删除该标签以及其父标签然后重新执行 bundle exec jekyll serve"
   },
   
   {
@@ -267,7 +282,7 @@
 
 
 
-    "snippet": "关于markdown  编译软件，我使用的是 Typora文章存放位置  _drafts：该文件夹下放未完成的文章（文件名没有格式要求）  _posts：该文件夹下放要发布的文章撰写文章  Front Matter  ​	这里 只介绍一点点，详细介绍请看大佬  ​	Front Matter 是Jekyll开始变得非常酷的地方  ​	Front Matter 必须是文件中的第一个事物  ​	任何包含 YAML Front Matter 的文件都将由 Jekyll 作为特殊文件进行处理  ​	格式为：  ---layout: posttitle: &quot;Hello YAML&quot;..."
+    "snippet": "关于markdown编译软件，我使用的是 Typora文章存放位置_drafts：该文件夹下放未完成的文章（文件名没有格式要求）_posts：该文件夹下放要发布的文章撰写文章Front Matter这里 只介绍一点点，详细介绍请看大佬Front Matter 是Jekyll开始变得非常酷的地方Front Matter 必须是文件中的第一个事物任何包含 YAML Front Matter 的文件都将由 Jekyll 作为特殊文件进行处理格式为：---layout: posttitle: &quot;Hello YAML&quot;date: 2021-07-22 12:05:55 0800..."
   },
   
   {
@@ -297,7 +312,7 @@
 
 
 
-    "snippet": "挑选主题  jekyll官网 /我用的主题是chirpy  挑选好后点击 Download  解压缩到任一文件夹搭建本地网站浏览模板  命令行执行 cd {你的文件夹位置}   命令行执行 bundle exec jekyll serve bundler安装教程  浏览 http://localhost:4000 即可查看这个模板克隆git仓库  打开主题所在文件夹，git-bash执行：git clone git://github.com/{git用户名}/{git仓库名称}  例如我的仓库名称是 jamartin-create.github.io 仓库创建教程  则我的git命令为：..."
+    "snippet": "挑选主题jekyll官网 /我用的主题是chirpy挑选好后点击 Download解压缩到任一文件夹搭建本地网站浏览模板命令行执行 cd {你的文件夹位置} 命令行执行 bundle exec jekyll serve bundler安装教程浏览 http://localhost:4000 即可查看这个模板克隆git仓库打开主题所在文件夹，git-bash执行：git clone git://github.com/{git用户名}/{git仓库名称}例如我的仓库名称是 jamartin-create.github.io 仓库创建教程则我的git命令为：git clone git://gi..."
   },
   
   {
@@ -312,7 +327,7 @@
 
 
 
-    "snippet": "安装rubygems  在官网下载自带Devkit版本，链接    安装时勾上Add Ruby executables to your PATH  命令行输入ruby -v 检查ruby是否安装成功  输入gem -v 检查1是否安装成功用gem命令安装jekyll  命令行输入 gem install jekyll bundler //通过 RubyGems 安装 Jekyll 和 Bundler gems创建并启动一个 jekyll站点  命令行输入 jekyll new myBlog //在./myBlog创建一个 jekyll 站点  命令行输入 cd myBlog //进入到生..."
+    "snippet": "安装rubygems在官网下载自带Devkit版本，链接安装时勾上Add Ruby executables to your PATH命令行输入ruby -v 检查ruby是否安装成功输入gem -v 检查1是否安装成功用gem命令安装jekyll命令行输入 gem install jekyll bundler //通过 RubyGems 安装 Jekyll 和 Bundler gems创建并启动一个 jekyll站点命令行输入 jekyll new myBlog //在./myBlog创建一个 jekyll 站点命令行输入 cd myBlog //进入到生成的文件夹中命令行输入 bund..."
   },
   
   {
@@ -327,7 +342,7 @@
 
 
 
-    "snippet": "注册账号  不用多说吧创建仓库  点击右上角➕，再点击New repository    仓库名的格式为 “用户名”.github.io（因为GitHub对于同一个账户只允许生成一个直接访问的网站）  将仓库与本地连接（绑定）  下载并安装git    ​	下载链接  打开git-bash    将git与仓库绑定  git config --global user.name &quot;github用户名&quot;git config --global user.email &quot;邮箱&quot;SSH设置(github根据ssh接受你从本地对于git的管理)  配置SSH  ..."
+    "snippet": "注册账号不用多说吧创建仓库点击右上角➕，再点击New repository仓库名的格式为 “用户名”.github.io（因为GitHub对于同一个账户只允许生成一个直接访问的网站）将仓库与本地连接（绑定）下载并安装git​	下载链接打开git-bash将git与仓库绑定git config --global user.name &quot;github用户名&quot;git config --global user.email &quot;邮箱&quot;SSH设置(github根据ssh接受你从本地对于git的管理)配置SSH​	打开 git-bash ，输入ssh-keygen ..."
   },
   
   {

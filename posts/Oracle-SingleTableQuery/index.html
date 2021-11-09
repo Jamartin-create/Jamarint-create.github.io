@@ -548,7 +548,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1495 words">8 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1491 words">8 min</span>
 
 
           <!-- page views -->
@@ -571,12 +571,9 @@
 </pre></td></tr></tbody></table></code></div></div>
 
 <blockquote>
-  <p>ps:</p>
+  <p>开发中一般不使用 <kbd>*</kbd></p>
 
-  <ul>
-    <li>开发中一般不使用 <kbd>*</kbd></li>
-    <li>数据库中：<strong>列名</strong>大小写不敏感，<strong>内容</strong>大小写敏感</li>
-  </ul>
+  <p>数据库中：<strong>列名</strong>大小写不敏感，<strong>内容</strong>大小写敏感</p>
 </blockquote>
 
 <h4 id="列别名">列别名</h4>
@@ -665,7 +662,7 @@
 </pre></td></tr></tbody></table></code></div>    </div>
 
     <blockquote>
-      <p><strong>ps:一般不用 * ，在开发时会将 * 改为需要的字段</strong></p>
+      <p><strong>一般不用 * ，在开发时会将 * 改为需要的字段</strong></p>
     </blockquote>
   </li>
 </ul>
@@ -690,7 +687,7 @@
 </ul>
 
 <blockquote>
-  <p><strong>PS</strong> <strong>：</strong> <strong>在SQL中对于字符串的引用只能是单引号，且大小写敏感</strong></p>
+  <p><strong>在SQL中对于字符串的引用只能是单引号，且大小写敏感</strong></p>
 </blockquote>
 
 <h4 id="distinct关键字">distinct关键字</h4>
@@ -766,7 +763,7 @@
 </ul>
 
 <blockquote>
-  <p><strong>PS：escape后定义的那个字符才是转义字符</strong></p>
+  <p><strong>escape后定义的那个字符才是转义字符</strong></p>
 </blockquote>
 
 <ul>
@@ -791,9 +788,7 @@
 
 <h4 id="逻辑运算notandorin">逻辑运算：not，and，or，in</h4>
 
-<ul>
-  <li>
-    <div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -811,7 +806,7 @@
 	<span class="k">where</span> <span class="n">deptno</span> <span class="o">=</span> <span class="mi">10</span> <span class="k">or</span> <span class="n">deptno</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
 <span class="k">select</span> <span class="n">empno</span><span class="p">,</span> <span class="n">ename</span><span class="p">,</span> <span class="n">sal</span><span class="p">,</span> <span class="n">deptno</span> <span class="k">from</span> <span class="n">emp</span>
 	<span class="k">where</span> <span class="n">deptno</span> <span class="k">in</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
-  
+
 <span class="c1">-- 不在10，20的员工</span>
 <span class="k">select</span> <span class="n">empno</span><span class="p">,</span> <span class="n">ename</span><span class="p">,</span> <span class="n">sal</span><span class="p">,</span> <span class="n">deptno</span> <span class="k">from</span> <span class="n">emp</span>
 	<span class="k">where</span> <span class="k">not</span><span class="p">(</span><span class="n">deptno</span> <span class="o">=</span> <span class="mi">10</span> <span class="mi">0</span><span class="k">or</span> <span class="n">deptno</span> <span class="o">=</span> <span class="mi">20</span><span class="p">);</span> <span class="c1">-- not表示非</span>
@@ -819,9 +814,7 @@
 	<span class="k">where</span> <span class="n">deptno</span> <span class="o">&lt;&gt;</span> <span class="mi">10</span> <span class="k">and</span> <span class="n">deptno</span> <span class="o">&lt;&gt;</span> <span class="mi">20</span><span class="p">;</span> <span class="c1">-- &lt;&gt; 表示不等于</span>
 <span class="k">select</span> <span class="n">empno</span><span class="p">,</span> <span class="n">ename</span><span class="p">,</span> <span class="n">sal</span><span class="p">,</span> <span class="n">deptno</span> <span class="k">from</span> <span class="n">emp</span>
 	<span class="k">where</span> <span class="n">deptno</span> <span class="k">not</span> <span class="k">in</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-</ul>
+</pre></td></tr></tbody></table></code></div></div>
 
 <h4 id="排序-order-by">排序 Order by</h4>
 
@@ -1672,6 +1665,19 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
   
 
@@ -1876,70 +1882,6 @@
       
       
       <div class="card">
-        <a href="/posts/Oracle-intro/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Sep 13
-  
-
-  <i class="unloaded">2021-09-13T15:47:01+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Oracle(一)介绍</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                介绍
-
-
-  Oracle数据库：DB/DBMS
-
-  数据库使用者：DBA（DataBase Administrator）/开发人员
-
-  数据库的种类：oracle / sybase /db2(IBM)
-
-  access,postgreSQL
-
-  数据表：行和列组成
-
-  行：row / record 记录
-
-  列：column / field 字段
-
-  SQL分类：Struct...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
         <a href="/posts/Oracle-UnSingleTableQuery/">
           <div class="card-body">
             <!--
@@ -1982,7 +1924,7 @@
 交叉连接  cross join
 
 
-  ps: 一般不用（因为无用信息太多）
+  一般不用（因为无用信息太多）
 
 
 1
@@ -1994,7 +1936,7 @@ select * from emp cross join dept -- 依次从m行的emp中取一行emp，和n�
 3
 4
 -- 根据以上结合的结果，如何查找到Smith的人所在的部门名称
-select emp.ename, ...
+select emp.ename, dept...
               </p>
             </div>
           </div>
@@ -2066,6 +2008,79 @@ create
 create table student(
     id number primary key,
     name var...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/Oracle-ChildQuery/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Oct  9
+  
+
+  <i class="unloaded">2021-10-09T23:00:00+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Orcale基础(五)子查询</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                子查询
+
+分为 关联子查询 和 非关联子查询
+
+特点：子查询可以单独执行，其结果作为外部查询的条件。
+
+不相关子查询
+
+概念：子查询不需要与父查询的结果进行比对
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+-- 查询各个部门薪水最高的员工信息
+select * from emp
+	where (deptno, sal) in
+	(
+    	select deptno, max(...
               </p>
             </div>
           </div>

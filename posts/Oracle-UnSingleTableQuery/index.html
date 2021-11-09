@@ -548,7 +548,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1007 words">5 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1004 words">5 min</span>
 
 
           <!-- page views -->
@@ -567,7 +567,7 @@
 <h4 id="交叉连接--cross-join">交叉连接  cross join</h4>
 
 <blockquote>
-  <p>ps: 一般不用（因为无用信息太多）</p>
+  <p>一般不用（因为无用信息太多）</p>
 </blockquote>
 
 <div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -584,19 +584,17 @@
  <span class="k">where</span> <span class="n">emp</span><span class="p">.</span><span class="n">deptno</span> <span class="o">=</span> <span class="n">dept</span><span class="p">.</span><span class="n">deptno</span> <span class="k">and</span> <span class="n">emp</span><span class="p">.</span><span class="n">ename</span> <span class="o">=</span> <span class="s1">'SMITH'</span><span class="p">;</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<blockquote>
-  <p>缺点：</p>
+<p>缺点：</p>
 
-  <ul>
-    <li>直接叉乘，得到的是全部集合（数据量太大）</li>
-    <li>然后才能where进行条件运算（性能太差）</li>
-  </ul>
-</blockquote>
+<ul>
+  <li>直接叉乘，得到的是全部集合（数据量太大）</li>
+  <li>然后才能where进行条件运算（性能太差）</li>
+</ul>
 
 <h4 id="内连接-inner-join">内连接 inner join</h4>
 
 <blockquote>
-  <p>ps: 可简写为<strong>join</strong></p>
+  <p>可简写为<strong>join</strong></p>
 </blockquote>
 
 <div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -686,7 +684,7 @@
 </pre></td></tr></tbody></table></code></div></div>
 
 <blockquote>
-  <p><strong>ps: 连接（等值连接、非等值连接、自连接）中，一张表离得记录必须得再另一张表中存在匹配的记录，否则不能出现在结果集合中</strong></p>
+  <p><strong>连接（等值连接、非等值连接、自连接）中，一张表离得记录必须得再另一张表中存在匹配的记录，否则不能出现在结果集合中</strong></p>
 </blockquote>
 
 <h4 id="外连接">外连接</h4>
@@ -1484,6 +1482,19 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
   
 
@@ -1701,70 +1712,6 @@
       
       
       <div class="card">
-        <a href="/posts/Oracle-intro/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Sep 13
-  
-
-  <i class="unloaded">2021-09-13T15:47:01+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Oracle(一)介绍</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                介绍
-
-
-  Oracle数据库：DB/DBMS
-
-  数据库使用者：DBA（DataBase Administrator）/开发人员
-
-  数据库的种类：oracle / sybase /db2(IBM)
-
-  access,postgreSQL
-
-  数据表：行和列组成
-
-  行：row / record 记录
-
-  列：column / field 字段
-
-  SQL分类：Struct...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
         <a href="/posts/Oracle-SingleTableQuery/">
           <div class="card-body">
             <!--
@@ -1810,12 +1757,9 @@ select empno, ename, deptno from emp;
 
 
 
-  ps:
+  开发中一般不使用 *
 
-  
-    开发中一般不使用 *
-    数据库中：列名大小写不敏感，内容大小写敏感
-  
+  数据库中：列名大小写不敏感，内容大小写敏感
 
 
 列别名
@@ -1827,7 +1771,8 @@ select empno, ename, deptno from emp;
   
     方法2：列名 as 别名
 
-    select empno 员工编号, ename 员工姓名 ...
+    select empno 员工编号, ename 员工姓名 from emp;
+select...
               </p>
             </div>
           </div>
@@ -1899,6 +1844,79 @@ create
 create table student(
     id number primary key,
     name var...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/Oracle-ChildQuery/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Oct  9
+  
+
+  <i class="unloaded">2021-10-09T23:00:00+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Orcale基础(五)子查询</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                子查询
+
+分为 关联子查询 和 非关联子查询
+
+特点：子查询可以单独执行，其结果作为外部查询的条件。
+
+不相关子查询
+
+概念：子查询不需要与父查询的结果进行比对
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+-- 查询各个部门薪水最高的员工信息
+select * from emp
+	where (deptno, sal) in
+	(
+    	select deptno, max(...
               </p>
             </div>
           </div>

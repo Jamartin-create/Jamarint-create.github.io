@@ -548,7 +548,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="592 words">3 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="590 words">3 min</span>
 
 
           <!-- page views -->
@@ -643,7 +643,7 @@
 </pre></td></tr></tbody></table></code></div></div>
 
 <blockquote>
-  <p>ps:删除时一定要带where，否则会删掉所有数据</p>
+  <p>删除时一定要带where，否则会删掉所有数据</p>
 </blockquote>
 
 <h4 id="update">update:</h4>
@@ -719,17 +719,15 @@
 	<span class="k">add</span> <span class="k">constraint</span> <span class="n">stuning2_id_pk</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<blockquote>
-  <p>ps: 查看主键约束条件：</p>
+<p>ps: 查看主键约束条件：</p>
 
-  <div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 </pre></td><td class="rouge-code"><pre><span class="k">select</span> <span class="k">constraint_name</span><span class="p">,</span> <span class="n">constraint_type</span>
 	<span class="k">from</span> <span class="n">user_constraints</span>
 	<span class="k">where</span> <span class="k">table_name</span><span class="o">=</span><span class="s1">'tableName'</span>
-</pre></td></tr></tbody></table></code></div>  </div>
-</blockquote>
+</pre></td></tr></tbody></table></code></div></div>
 
 <h4 id="主键的属性">主键的属性</h4>
 
@@ -792,12 +790,9 @@
 </ul>
 
 <blockquote>
-  <p>ps:</p>
+  <p>在没有约束的情况下为表增加一条数据，会变成垃圾数据</p>
 
-  <ul>
-    <li>在没有约束的情况下为表增加一条数据，会变成垃圾数据</li>
-    <li>在进行了DML操作后，需要将事务提交（ctrl+s)</li>
-  </ul>
+  <p>在进行了DML操作后，需要将事务提交（ctrl+s)</p>
 </blockquote>
 
 
@@ -1461,6 +1456,19 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
   
 
@@ -1691,70 +1699,6 @@
       
       
       <div class="card">
-        <a href="/posts/Oracle-intro/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Sep 13
-  
-
-  <i class="unloaded">2021-09-13T15:47:01+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Oracle(一)介绍</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                介绍
-
-
-  Oracle数据库：DB/DBMS
-
-  数据库使用者：DBA（DataBase Administrator）/开发人员
-
-  数据库的种类：oracle / sybase /db2(IBM)
-
-  access,postgreSQL
-
-  数据表：行和列组成
-
-  行：row / record 记录
-
-  列：column / field 字段
-
-  SQL分类：Struct...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
         <a href="/posts/Oracle-SingleTableQuery/">
           <div class="card-body">
             <!--
@@ -1800,12 +1744,9 @@ select empno, ename, deptno from emp;
 
 
 
-  ps:
+  开发中一般不使用 *
 
-  
-    开发中一般不使用 *
-    数据库中：列名大小写不敏感，内容大小写敏感
-  
+  数据库中：列名大小写不敏感，内容大小写敏感
 
 
 列别名
@@ -1817,7 +1758,8 @@ select empno, ename, deptno from emp;
   
     方法2：列名 as 别名
 
-    select empno 员工编号, ename 员工姓名 ...
+    select empno 员工编号, ename 员工姓名 from emp;
+select...
               </p>
             </div>
           </div>
@@ -1869,14 +1811,87 @@ select empno, ename, deptno from emp;
 交叉连接  cross join
 
 
-  ps: 一般不用（因为无用信息太多）
+  一般不用（因为无用信息太多）
 
 
 select * from emp cross join dept -- 依次从m行的emp中取一行emp，和n行dept中的每一行进行组合，也就是会产生一个nxm行的表格
 
 
 -- 根据以上结合的结果，如何查找到Smith的人所在的部门名称
-select emp.ename, dept.deptn...
+select emp.ename, dept.deptno, d...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/Oracle-ChildQuery/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Oct  9
+  
+
+  <i class="unloaded">2021-10-09T23:00:00+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Orcale基础(五)子查询</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                子查询
+
+分为 关联子查询 和 非关联子查询
+
+特点：子查询可以单独执行，其结果作为外部查询的条件。
+
+不相关子查询
+
+概念：子查询不需要与父查询的结果进行比对
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+-- 查询各个部门薪水最高的员工信息
+select * from emp
+	where (deptno, sal) in
+	(
+    	select deptno, max(...
               </p>
             </div>
           </div>

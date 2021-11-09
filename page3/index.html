@@ -501,6 +501,111 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/blog-git-push/">gitpage+jekyll搭建博客(三)将jekyll模板上传至github</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        挑选主题
+
+jekyll官网 /我用的主题是chirpy
+
+挑选好后点击 Download
+
+解压缩到任一文件夹
+
+搭建本地网站浏览模板
+
+命令行执行 cd {你的文件夹位置} 
+
+
+命令行执行 bundle exec jekyll serve
+ bundler安装教程
+
+浏览 http://localhost:4000
+ 即可查看这个模板
+
+克隆git仓库
+
+打开主题所在文件夹，git-b...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Wed, Jul 21, 2021,  4:20 PM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Jul 21
+  
+
+  <i class="unloaded">2021-07-21T16:20:16+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="373 words">2 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/blog-conv-jekyll/">gitpage+jekyll搭建博客(二)搭建jekyll环境</a>
     </h1>
 
@@ -514,26 +619,23 @@
 
         安装rubygems
 
-
-  在官网下载自带Devkit版本，链接
-
-  
-
-  安装时勾上Add Ruby executables to your PATH
+在官网下载自带Devkit版本，链接
 
 
-  命令行输入ruby -v
+
+安装时勾上Add Ruby executables to your PATH
+
+
+命令行输入ruby -v
  检查ruby是否安装成功
 
-  输入gem -v
+输入gem -v
  检查1是否安装成功
-
 
 用gem命令安装jekyll
 
-
-  命令行输入 gem install jekyll bundler
- //通过 Rub...
+命令行输入 gem install jekyll bundler
+ //通过 RubyGems 安装 Jekyll...
       </p>
     </div>
 
@@ -619,38 +721,33 @@
 
         注册账号
 
-
-  不用多说吧
-
+不用多说吧
 
 创建仓库
 
+点击右上角➕，再点击New repository
 
-  点击右上角➕，再点击New repository
 
-  
 
-  仓库名的格式为 “用户名”.github.io（因为GitHub对于同一个账户只允许生成一个直接访问的网站）
+仓库名的格式为 “用户名”.github.io（因为GitHub对于同一个账户只允许生成一个直接访问的网站）
 
-  
 
 
 将仓库与本地连接（绑定）
 
+下载并安装git
 
-  下载并安装git
 
-  
 
-  ​	下载链接
+​	下载链接
 
-  打开git-bash
+打开git-bash
 
-  
 
-  将git与仓库绑定
 
-  git ...
+将git与仓库绑定
+
+git config --global user.name "gi...
       </p>
     </div>
 
@@ -706,7 +803,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="270 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="272 words">1 min</span>
 
 
         <!-- page views -->

@@ -566,46 +566,35 @@
 
 <h3 id="什么是webhook">什么是WebHook</h3>
 
-<blockquote>
-  <p>最典型的例子：当你发送一条朋友圈，微信的服务器会把你的这条朋友圈同步到你所有好友的客户端（要是你屏蔽人了就是给服务器列出了特别名单）</p>
+<p>最典型的例子：当你发送一条朋友圈，微信的服务器会把你的这条朋友圈同步到你所有好友的客户端（要是你屏蔽人了就是给服务器列出了特别名单）</p>
 
-  <p>这还是 <kbd>客户端</kbd> - <kbd>服务器</kbd> 模式的逆转模式</p>
+<p>这还是 <kbd>客户端</kbd> - <kbd>服务器</kbd> 模式的逆转模式</p>
 
-  <blockquote>
-    <p>传统方法中，一般是客户端向服务器发出 <b>请求</b> ，服务器给予客户端 <b>响应</b> （这叫客户机拉取请求）</p>
-  </blockquote>
+<p>传统方法中，一般是客户端向服务器发出 <b>请求</b> ，服务器给予客户端 <b>响应</b> （这叫客户机拉取请求）</p>
 
-  <blockquote>
-    <p>在 <b>WebHook</b> 范式下，服务器更新所需提供的资源，然后自动将其作为更新发送到客户端（服务器是在推数据），客户端不是请求者，而是被动接收方</p>
-  </blockquote>
-</blockquote>
+<p>在 <b>WebHook</b> 范式下，服务器更新所需提供的资源，然后自动将其作为更新发送到客户端（服务器是在推数据），客户端不是请求者，而是被动接收方</p>
 
 <h3 id="应用场景">应用场景</h3>
 
-<blockquote>
-  <p>对于第三方平台验权、登陆等 没有前端界面做中转的场景，或者强安全要求的支付场景等，适合用 Webhook 做数据主动推送，说白了就是在前端无从参与，或者因为前端安全问题不适合参与时，就是 <b>Webhook</b> 的场景；很显然 Webhook 也不是 Http 的替代品，不过的确是一种新的 <b>前后端交互方式</b>。</p>
-</blockquote>
+<p>对于第三方平台验权、登陆等 没有前端界面做中转的场景，或者强安全要求的支付场景等，适合用 Webhook 做数据主动推送，说白了就是在前端无从参与，或者因为前端安全问题不适合参与时，就是 <b>Webhook</b> 的场景；很显然 Webhook 也不是 Http 的替代品，不过的确是一种新的 <b>前后端交互方式</b>。</p>
 
 <h2 id="企业微信机器人">企业微信机器人</h2>
 
 <h3 id="工作原理">工作原理</h3>
 
+<p>机器人就相当于一个webhook，创建者可在机器人的详情页查看机器人特有的WebHookURL，向这个链接发送一个 <b>http post</b> 请求，即可实现给该群组发送消息。</p>
+
+<h5 id="要特别注意">要特别注意</h5>
+
 <blockquote>
-  <p>机器人就相当于一个webhook，创建者可在机器人的详情页查看机器人特有的WebHookURL，向这个链接发送一个 <b>http post</b> 请求，即可实现给该群组发送消息。</p>
-
-  <h5 id="要特别注意">要特别注意</h5>
-
-  <blockquote>
-    <p>机器人的 <b>webhookurl</b> 要保护好，不要分享到那些公开可查阅的地方，否则可能会有人控制机器人发送垃圾信息了。</p>
-  </blockquote>
+  <p>机器人的 <b>webhookurl</b> 要保护好，不要分享到那些公开可查阅的地方，否则可能会有人控制机器人发送垃圾信息了。</p>
 </blockquote>
 
 <h3 id="发送信息的格式">发送信息的格式</h3>
 
-<blockquote>
-  <h4 id="text类型">text类型</h4>
+<h4 id="text类型">text类型</h4>
 
-  <div lang="json" class="language-json highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div lang="json" class="language-json highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -614,18 +603,18 @@
 7
 8
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-    </span><span class="nl">"msgtype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hello EveryOne"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"mentioned_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"要艾特的人"</span><span class="p">],</span><span class="w">
-        </span><span class="nl">"mentioned_mobile_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"要艾特的人的电话号"</span><span class="p">]</span><span class="w"> 
-    </span><span class="p">}</span><span class="w">
+ </span><span class="nl">"msgtype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+ </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hello EveryOne"</span><span class="p">,</span><span class="w">
+     </span><span class="nl">"mentioned_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"要艾特的人"</span><span class="p">],</span><span class="w">
+     </span><span class="nl">"mentioned_mobile_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"要艾特的人的电话号"</span><span class="p">]</span><span class="w"> 
+ </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></div>  </div>
+</span></pre></td></tr></tbody></table></code></div></div>
 
-  <h4 id="markdown类型">markdown类型</h4>
+<h4 id="markdown类型">markdown类型</h4>
 
-  <div lang="json" class="language-json highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div lang="json" class="language-json highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -635,25 +624,25 @@
 8
 9
 </pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-    </span><span class="nl">"msgtype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"markdown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"markdon"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"## 仓库提交记录 </span><span class="se">\n</span><span class="s2">
+ </span><span class="nl">"msgtype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"markdown"</span><span class="p">,</span><span class="w">
+ </span><span class="nl">"markdon"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"## 仓库提交记录 </span><span class="se">\n</span><span class="s2">
         			&gt; 提交人：XXX </span><span class="se">\n</span><span class="s2">
         			&gt; 提交人邮箱：XXX </span><span class="se">\n</span><span class="s2">
         			..."</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></div>  </div>
+</span></pre></td></tr></tbody></table></code></div></div>
 
+<blockquote>
   <p>常见的是这两种，还有文件类型和图片类型</p>
 </blockquote>
 
 <h3 id="python请求发送的格式">python请求发送的格式</h3>
 
-<blockquote>
-  <p>代码举例</p>
+<p>代码举例</p>
 
-  <div lang="python" class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div lang="python" class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -681,12 +670,12 @@
 </pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">requests</span> <span class="c1">#requests 包主要就是负责发送get或者post请求
 </span>
 <span class="k">def</span> <span class="nf">wechat_roboot</span><span class="p">(</span><span class="n">message_data</span><span class="p">):</span>
-    <span class="n">post_headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
-    <span class="n">post_url</span> <span class="o">=</span> <span class="s">"{企业微信机器人的WebHookUrl}"</span>
-    <span class="n">post_data</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s">"msgtype"</span><span class="p">:</span> <span class="s">"markdown"</span><span class="p">,</span>
-        <span class="s">"markdown"</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s">"content"</span><span class="p">:</span> <span class="s">"## 仓库提交记录"</span> <span class="o">+</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span>
+ <span class="n">post_headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
+ <span class="n">post_url</span> <span class="o">=</span> <span class="s">"{企业微信机器人的WebHookUrl}"</span>
+ <span class="n">post_data</span> <span class="o">=</span> <span class="p">{</span>
+     <span class="s">"msgtype"</span><span class="p">:</span> <span class="s">"markdown"</span><span class="p">,</span>
+     <span class="s">"markdown"</span><span class="p">:</span> <span class="p">{</span>
+         <span class="s">"content"</span><span class="p">:</span> <span class="s">"## 仓库提交记录"</span> <span class="o">+</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span>
                        <span class="o">+</span> <span class="s">"&lt;font color=</span><span class="se">\"</span><span class="s">comment</span><span class="se">\"</span><span class="s">&gt;仓库名称&lt;/font&gt;："</span> <span class="o">+</span> <span class="n">repo_name</span> <span class="o">+</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span>
                        <span class="o">+</span> <span class="s">"&lt;font color=</span><span class="se">\"</span><span class="s">comment</span><span class="se">\"</span><span class="s">&gt;描述&lt;/font&gt;："</span> <span class="o">+</span> <span class="n">repo_description</span> <span class="o">+</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span>
                        <span class="o">+</span> <span class="s">"&gt; 提交人："</span> <span class="o">+</span> <span class="n">committer_name</span> <span class="o">+</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span>
@@ -703,8 +692,9 @@
     <span class="p">)</span>
     <span class="c1">#可讲响应结果打印
 </span>    <span class="k">print</span><span class="p">(</span><span class="n">ret</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
-</pre></td></tr></tbody></table></code></div>  </div>
+</pre></td></tr></tbody></table></code></div></div>
 
+<blockquote>
   <p><b>http</b> 请求头 “Content-Type” 常见的媒体格式类型请看<a href="https://www.runoob.com/http/http-content-type.html">菜鸟教程</a></p>
 </blockquote>
 
@@ -712,15 +702,11 @@
 
 <h3 id="工作原理-1">工作原理</h3>
 
-<blockquote>
-  <p>当仓库有push、pull等操作后，会向定义的webhookUrl发送post请求</p>
-</blockquote>
+<p>当仓库有push、pull等操作后，会向定义的webhookUrl发送post请求</p>
 
 <h2 id="参考文章">参考文章</h2>
 
-<blockquote>
-  <p><a href="https://www.jianshu.com/p/9829986b4363">MayerBin</a></p>
-</blockquote>
+<p><a href="https://www.jianshu.com/p/9829986b4363">MayerBin</a></p>
 
 
       </div>
@@ -1476,6 +1462,19 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
   
 
@@ -1658,17 +1657,15 @@
 
 外网访问服务器时无法得到响应
 
+服务器端放行端口
 
-  服务器端放行端口
 
-  
-    
-      在服务器面板找到安全组，添加一个安全组，选择端口号，协议为TCP协议。
-    
-    
-      连通ssh修改防火墙配置：
+  在服务器面板找到安全组，添加一个安全组，选择端口号，协议为TCP协议。
+  连通ssh修改防火墙配置：
 
-      systemctl start firewalld...
+
+systemctl start firewalld.service 
+firewall-cmd --zone=pub...
               </p>
             </div>
           </div>
@@ -1719,16 +1716,17 @@
 
 面板配置端口
 
-
-  打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)
-
+打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)
 
 服务器内部打开该端口防火墙
 
-
-  systemctl start firewalld.service 
+1
+2
+3
+4
+systemctl start firewalld.service 
 firewall-cmd --zone=public --add-port=5000/tcp --permanent
-systemctl restart fir...
+systemctl restart fi...
               </p>
             </div>
           </div>
@@ -1779,29 +1777,27 @@ systemctl restart fir...
 
 创建虚拟环境
 
+进入工作空间 workon my_env
 
-  1
+1
 mkvirtualenv -p python3 my_env
-
-
-  进入工作空间 1
-workon my_env
-
 
 
 放置代码
 
-
-  创建一个工作空间放置代码 1
+1
+2
+3
+4
+5
+6
+7
+#创建一个工作空间放置代码 (可要可不要，看个人习惯)
 mkdir pythonWorkSpace
-(可要可不要，看个人习惯)
-
-  进入刚刚创建的工作空间 1
+#进入刚刚创建的工作空间
 cd pythonWorkSpace
-
-
-  创建一个python文件 1
-vi...
+#创建一个python文件
+vim robort...
               </p>
             </div>
           </div>

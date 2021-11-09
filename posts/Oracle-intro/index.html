@@ -564,23 +564,21 @@
 
         <h2 id="介绍">介绍</h2>
 
-<blockquote>
-  <p>Oracle数据库：DB/DBMS</p>
+<p>Oracle数据库：DB/DBMS</p>
 
-  <p>数据库使用者：DBA（DataBase Administrator）/开发人员</p>
+<p>数据库使用者：DBA（DataBase Administrator）/开发人员</p>
 
-  <p>数据库的种类：oracle / sybase /db2(IBM)</p>
+<p>数据库的种类：oracle / sybase /db2(IBM)</p>
 
-  <p>access,postgreSQL</p>
+<p>access,postgreSQL</p>
 
-  <p>数据表：行和列组成</p>
+<p>数据表：行和列组成</p>
 
-  <p>行：row / record 记录</p>
+<p>行：row / record 记录</p>
 
-  <p>列：column / field 字段</p>
+<p>列：column / field 字段</p>
 
-  <p>SQL分类：Structured Query Language</p>
-</blockquote>
+<p>SQL分类：Structured Query Language</p>
 
 <h2 id="主要对象">主要对象</h2>
 
@@ -1293,6 +1291,19 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
   
 
@@ -1530,12 +1541,9 @@ select empno, ename, deptno from emp;
 
 
 
-  ps:
+  开发中一般不使用 *
 
-  
-    开发中一般不使用 *
-    数据库中：列名大小写不敏感，内容大小写敏感
-  
+  数据库中：列名大小写不敏感，内容大小写敏感
 
 
 列别名
@@ -1549,7 +1557,8 @@ select empno, ename, deptno from emp;
 
     1
 2
-select empno 员工编号, ename...
+select empno 员工编号, ename 员工姓名 from emp;
+...
               </p>
             </div>
           </div>
@@ -1601,7 +1610,7 @@ select empno 员工编号, ename...
 交叉连接  cross join
 
 
-  ps: 一般不用（因为无用信息太多）
+  一般不用（因为无用信息太多）
 
 
 1
@@ -1613,7 +1622,7 @@ select * from emp cross join dept -- 依次从m行的emp中取一行emp，和n�
 3
 4
 -- 根据以上结合的结果，如何查找到Smith的人所在的部门名称
-select emp.ename, ...
+select emp.ename, dept...
               </p>
             </div>
           </div>
