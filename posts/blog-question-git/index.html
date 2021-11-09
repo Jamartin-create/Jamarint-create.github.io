@@ -566,9 +566,11 @@
 
 <p>在配置了ssh之后，发现每次push还是需要输入账号密码</p>
 
-<p>git-bash执行命令 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>git config --global credential.helper store
-</pre></td></tr></tbody></table></code></p>
+<p>git-bash执行命令</p>
+
+<div lang="bash" class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git config <span class="nt">--global</span> credential.helper store
+</pre></td></tr></tbody></table></code></div></div>
 
 <p>然后操作 <b>pull/push</b> ，第一次需要输入账号密码，下次再操作就不需要了。</p>
 
@@ -1504,8 +1506,7 @@
 
                 关于字符编码的问题
 
-在我执行了 bundle exec jekyll serve
- 之后曝出以下错误
+在我执行了 bundle exec jekyll serve 之后曝出以下错误
 
 Liquid Execption: Liquid error (line 13):invalid byte sequence in UTF-8 in sitemap.xml 
 
@@ -1514,7 +1515,7 @@ Liquid Execption: Liquid error (line 13):invalid byte sequence in UTF-8 in sitem
 
 将中文标签删除或改为英文标签
 
-...
+然...
               </p>
             </div>
           </div>
@@ -1644,17 +1645,13 @@ git config --global user.name "gi...
 
 安装时勾上Add Ruby executables to your PATH
 
+命令行输入ruby -v 检查ruby是否安装成功
 
-命令行输入ruby -v
- 检查ruby是否安装成功
-
-输入gem -v
- 检查1是否安装成功
+输入gem -v检查1是否安装成功
 
 用gem命令安装jekyll
 
-命令行输入 gem install jekyll bundler
- //通过 RubyGems 安装 Jekyll...
+命令行输入 gem install jekyll bundler  //通过 RubyGems 安装 Jekyll 和 B...
               </p>
             </div>
           </div>

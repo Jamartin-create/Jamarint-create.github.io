@@ -616,7 +616,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="299 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="301 words">1 min</span>
 
 
           <!-- page views -->
@@ -693,13 +693,17 @@ firewall-cmd <span class="nt">--reload</span>
 
 <p>此错误表示端口被占用，未释放或者程序没有正常结束</p>
 
-<p>通过<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>ps -ef|grep python
-</pre></td></tr></tbody></table></code>找到端口号占用的对应的python进程的pid</p>
+<p>通过</p>
 
-<p>再通过 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>kill pid
-</pre></td></tr></tbody></table></code> 杀死进程</p>
+<div lang="shell" class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>ps <span class="nt">-ef</span>|grep python <span class="c"># 找到端口号占用的对应的python进程的pid</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>再通过</p>
+
+<div lang="shell" class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">kill </span>pid <span class="c">#  杀死进程</span>
+</pre></td></tr></tbody></table></code></div></div>
 
 <p><img data-proofer-ignore data-src="http://Jamartin-create.github.io/assets/img/post-pic/flask-getPost/P4-1.png" alt="photo" /></p>
 

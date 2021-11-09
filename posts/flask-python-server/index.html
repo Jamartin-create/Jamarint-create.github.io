@@ -548,7 +548,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="175 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="179 words">1 min</span>
 
 
           <!-- page views -->
@@ -593,7 +593,11 @@ firewall-cmd <span class="nt">--reload</span>
     <p>用pip安装virtualenvwrapper</p>
   </li>
   <li>
-    <p>执行命令：vim ~/ .bashrc</p>
+    <p>执行命令</p>
+
+    <div lang="shell" class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>vim ~/ .bashrc
+</pre></td></tr></tbody></table></code></div>    </div>
   </li>
   <li>
     <p>在最后加上</p>
@@ -605,14 +609,26 @@ firewall-cmd <span class="nt">--reload</span>
 </pre></td></tr></tbody></table></code></div>    </div>
   </li>
   <li>
-    <p>运行 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>source ~/.bashrc
-</pre></td></tr></tbody></table></code></p>
+    <p>运行</p>
+
+    <div lang="shell" class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">source</span> ~/.bashrc
+</pre></td></tr></tbody></table></code></div>    </div>
   </li>
-  <li>执行 <kbd>mkvirtualenv '虚拟环境名称' python2</kbd> 环境</li>
-  <li>执行 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>mkvirtualenv -p python3 '虚拟环境名称'
-</pre></td></tr></tbody></table></code> python3环境</li>
+  <li>
+    <p>执行</p>
+
+    <div lang="shell" class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>mkvirtualenv <span class="s1">'虚拟环境名称'</span> <span class="c"># python2 环境</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <p>执行</p>
+
+    <div lang="shell" class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>mkvirtualenv <span class="nt">-p</span> python3 <span class="s1">'虚拟环境名称'</span> <span class="c"># python3环境</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
 </ol>
 
 <blockquote>

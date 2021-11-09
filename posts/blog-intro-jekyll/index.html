@@ -548,7 +548,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="208 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="219 words">1 min</span>
 
 
           <!-- page views -->
@@ -564,8 +564,18 @@
 
         <h3 id="jekyll模板结构树介绍">Jekyll模板结构树介绍</h3>
 
-<blockquote>
-  <pre><code class="language-filetree">.
+<div lang="plaintext" class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre>.
 ├── _config.yml
 ├── _data
 ├── _drafts
@@ -576,52 +586,50 @@
 ├── _site
 ├── .jekyll-metadata
 └── index.html
-</code></pre>
+</pre></td></tr></tbody></table></code></div></div>
 
-  <div class="table-wrapper"><table>
-    <thead>
-      <tr>
-        <th>文件夹/文件</th>
-        <th>说明</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>_config.yml</td>
-        <td>存储配置数据，个人信息以及网站的组件信息在这里可以修改。</td>
-      </tr>
-      <tr>
-        <td>_drafts</td>
-        <td>该文件夹下的文件为草稿。</td>
-      </tr>
-      <tr>
-        <td>_includes</td>
-        <td>你可以加载这些包含部分到你的布局或者文章中以方便重用。</td>
-      </tr>
-      <tr>
-        <td>_layouts</td>
-        <td>layouts（布局）是包裹在文章外部的模板。</td>
-      </tr>
-      <tr>
-        <td>_posts</td>
-        <td>放置自己的文章，文件名称格式：YEAR-MONTH-DAY-title.md</td>
-      </tr>
-      <tr>
-        <td>_data</td>
-        <td>格式化好的网站数据应放在这里。</td>
-      </tr>
-      <tr>
-        <td>_site</td>
-        <td>一旦jekyll转换完成，就会将产生的静态页面数据放在这里。</td>
-      </tr>
-      <tr>
-        <td>.jekyll-metadata</td>
-        <td>跟踪上次建立站点的文件同时与现在相比哪些没有修改。</td>
-      </tr>
-    </tbody>
-  </table></div>
-</blockquote>
-
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>文件夹/文件</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>_config.yml</td>
+      <td>存储配置数据，个人信息以及网站的组件信息在这里可以修改。</td>
+    </tr>
+    <tr>
+      <td>_drafts</td>
+      <td>该文件夹下的文件为草稿。</td>
+    </tr>
+    <tr>
+      <td>_includes</td>
+      <td>你可以加载这些包含部分到你的布局或者文章中以方便重用。</td>
+    </tr>
+    <tr>
+      <td>_layouts</td>
+      <td>layouts（布局）是包裹在文章外部的模板。</td>
+    </tr>
+    <tr>
+      <td>_posts</td>
+      <td>放置自己的文章，文件名称格式：YEAR-MONTH-DAY-title.md</td>
+    </tr>
+    <tr>
+      <td>_data</td>
+      <td>格式化好的网站数据应放在这里。</td>
+    </tr>
+    <tr>
+      <td>_site</td>
+      <td>一旦jekyll转换完成，就会将产生的静态页面数据放在这里。</td>
+    </tr>
+    <tr>
+      <td>.jekyll-metadata</td>
+      <td>跟踪上次建立站点的文件同时与现在相比哪些没有修改。</td>
+    </tr>
+  </tbody>
+</table></div>
 
 
       </div>
@@ -1635,17 +1643,13 @@ git config --global user.name "gi...
 
 安装时勾上Add Ruby executables to your PATH
 
+命令行输入ruby -v 检查ruby是否安装成功
 
-命令行输入ruby -v
- 检查ruby是否安装成功
-
-输入gem -v
- 检查1是否安装成功
+输入gem -v检查1是否安装成功
 
 用gem命令安装jekyll
 
-命令行输入 gem install jekyll bundler
- //通过 RubyGems 安装 Jekyll...
+命令行输入 gem install jekyll bundler  //通过 RubyGems 安装 Jekyll 和 B...
               </p>
             </div>
           </div>
@@ -1702,18 +1706,19 @@ jekyll官网 /我用的主题是chirpy
 
 搭建本地网站浏览模板
 
-命令行执行 cd {你的文件夹位置} 
+# 命令行执行
+cd {你的文件夹位置} 
+bundle exec jekyll serve 
+#浏览 http://localhost:4000 即可查看这个模板
 
 
-命令行执行 bundle exec jekyll serve
- bundler安装教程
 
-浏览 http://localhost:4000
- 即可查看这个模板
+  bundler安装教程
+
 
 克隆git仓库
 
-打开主题所在文件夹，git-b...
+#打开主题所在文件夹，git-b...
               </p>
             </div>
           </div>

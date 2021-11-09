@@ -616,7 +616,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="197 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="186 words">1 min</span>
 
 
           <!-- page views -->
@@ -636,41 +636,29 @@
 
 <p><img data-proofer-ignore data-src="http://Jamartin-create.github.io/assets/img/post-pic/jekyllInstall/P2-1.png" alt="photo" /></p>
 
-<p>安装时勾上<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>Add Ruby executables to your PATH
-</pre></td></tr></tbody></table></code></p>
+<p>安装时勾上<kbd>Add Ruby executables to your PATH</kbd></p>
 
-<p>命令行输入<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>ruby -v
-</pre></td></tr></tbody></table></code> 检查ruby是否安装成功</p>
+<p>命令行输入<strong>ruby -v</strong> 检查ruby是否安装成功</p>
 
-<p>输入<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>gem -v
-</pre></td></tr></tbody></table></code> 检查<sup id="fnref:gem" role="doc-noteref"><a href="#fn:gem" class="footnote" rel="footnote">1</a></sup>是否安装成功</p>
+<p>输入<strong>gem -v</strong>检查<sup id="fnref:gem" role="doc-noteref"><a href="#fn:gem" class="footnote" rel="footnote">1</a></sup>是否安装成功</p>
 
 <h3 id="用gem命令安装jekyll">用gem命令安装jekyll</h3>
 
-<p>命令行输入 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>gem install jekyll bundler
-</pre></td></tr></tbody></table></code> //通过 <b>RubyGems</b> 安装 <b>Jekyll</b> 和 <b>Bundler gems</b></p>
+<p>命令行输入 <strong>gem install jekyll bundler</strong>  //通过 <b>RubyGems</b> 安装 <b>Jekyll</b> 和 <b>Bundler gems</b></p>
 
 <h3 id="创建并启动一个-jekyll站点">创建并启动一个 jekyll站点</h3>
 
-<p>命令行输入 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>jekyll new myBlog
-</pre></td></tr></tbody></table></code> //在./myBlog创建一个 <b>jekyll</b> 站点</p>
-
-<p>命令行输入 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>cd myBlog
-</pre></td></tr></tbody></table></code> //进入到生成的文件夹中</p>
-
-<p>命令行输入 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>bundle exec jekyll serve
-</pre></td></tr></tbody></table></code> //在本地预览服务中编译站点</p>
-
-<p>浏览器打开 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>http://localhost:4000
-</pre></td></tr></tbody></table></code></p>
+<div lang="shell" class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="c">#命令行输入</span>
+jekyll new myBlog <span class="c"># 在./myBlog创建一个 jekyll 站点</span>
+<span class="nb">cd </span>myBlog <span class="c"># 进入到生成的文件夹中</span>
+bundle <span class="nb">exec </span>jekyll serve <span class="c"># 在本地预览服务中编译站点</span>
+<span class="c">#浏览器打开 `http://localhost:4000`</span>
+</pre></td></tr></tbody></table></code></div></div>
 
 <p>​</p>
 <div class="footnotes" role="doc-endnotes">
@@ -1695,21 +1683,27 @@ jekyll官网 /我用的主题是chirpy
 
 搭建本地网站浏览模板
 
-命令行执行 1
+1
+2
+3
+4
+# 命令行执行
 cd {你的文件夹位置} 
+bundle exec jekyll serve 
+#浏览 http://localhost:4000 即可查看这个模板
 
 
-命令行执行 1
-bundle exec jekyll serve
- bundler安装教程
 
-浏览 1
-http://localhost:4000
- 即可查看这个模板
+  bundler安装教程
+
 
 克隆git仓库
 
-打开主题所在文件夹...
+1
+2
+3
+4
+...
               </p>
             </div>
           </div>
@@ -1758,8 +1752,18 @@ http://localhost:4000
 
                 Jekyll模板结构树介绍
 
-
-  .
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+.
 ├── _config.yml
 ├── _data
 ├── _drafts
@@ -1772,12 +1776,11 @@ http://localhost:4000
 └── index.html
 
 
+
   
     
-      
-        文件夹/文件
-        说明
-  ...
+      文件夹/文件
+...
               </p>
             </div>
           </div>

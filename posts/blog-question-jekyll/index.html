@@ -548,7 +548,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="122 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="120 words">1 min</span>
 
 
           <!-- page views -->
@@ -564,9 +564,7 @@
 
         <h2 id="关于字符编码的问题">关于字符编码的问题</h2>
 
-<p>在我执行了 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>bundle exec jekyll serve
-</pre></td></tr></tbody></table></code> 之后曝出以下错误</p>
+<p>在我执行了 <strong>bundle exec jekyll serve</strong> 之后曝出以下错误</p>
 
 <div lang="shell" class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>Liquid Execption: Liquid error <span class="o">(</span>line 13<span class="o">)</span>:invalid byte sequence <span class="k">in </span>UTF-8 <span class="k">in </span>sitemap.xml 
@@ -580,9 +578,7 @@
 
 <p>删除该标签以及其父标签</p>
 
-<p>然后重新执行 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>bundle exec jekyll serve
-</pre></td></tr></tbody></table></code></p>
+<p>然后重新执行 <strong>bundle exec jekyll serve</strong></p>
 
 
 
@@ -1518,7 +1514,9 @@
 
 在配置了ssh之后，发现每次push还是需要输入账号密码
 
-git-bash执行命令 1
+git-bash执行命令
+
+1
 git config --global credential.helper store
 
 
@@ -1654,17 +1652,13 @@ git config --global user.name "gi...
 
 安装时勾上Add Ruby executables to your PATH
 
+命令行输入ruby -v 检查ruby是否安装成功
 
-命令行输入ruby -v
- 检查ruby是否安装成功
-
-输入gem -v
- 检查1是否安装成功
+输入gem -v检查1是否安装成功
 
 用gem命令安装jekyll
 
-命令行输入 gem install jekyll bundler
- //通过 RubyGems 安装 Jekyll...
+命令行输入 gem install jekyll bundler  //通过 RubyGems 安装 Jekyll 和 B...
               </p>
             </div>
           </div>

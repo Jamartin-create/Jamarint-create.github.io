@@ -548,7 +548,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="373 words">2 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="367 words">2 min</span>
 
 
           <!-- page views -->
@@ -572,31 +572,35 @@
 
 <h3 id="搭建本地网站浏览模板">搭建本地网站浏览模板</h3>
 
-<p>命令行执行 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>cd {你的文件夹位置} 
-</pre></td></tr></tbody></table></code></p>
+<div lang="shell" class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="c"># 命令行执行</span>
+<span class="nb">cd</span> <span class="o">{</span>你的文件夹位置<span class="o">}</span> 
+bundle <span class="nb">exec </span>jekyll serve 
+<span class="c">#浏览 http://localhost:4000 即可查看这个模板</span>
+</pre></td></tr></tbody></table></code></div></div>
 
-<p>命令行执行 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>bundle exec jekyll serve
-</pre></td></tr></tbody></table></code> <a href="https://jamartin-create.github.io/posts/blog-conv-jekyll/">bundler安装教程</a></p>
-
-<p>浏览 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>http://localhost:4000
-</pre></td></tr></tbody></table></code> 即可查看这个模板</p>
+<blockquote>
+  <p><a href="https://jamartin-create.github.io/posts/blog-conv-jekyll/">bundler安装教程</a></p>
+</blockquote>
 
 <h3 id="克隆git仓库">克隆git仓库</h3>
 
-<p>打开主题所在文件夹，git-bash执行：<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>git clone git://github.com/{git用户名}/{git仓库名称}
-</pre></td></tr></tbody></table></code></p>
+<div lang="bash" class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="c">#打开主题所在文件夹，git-bash执行：</span>
+git clone git://github.com/<span class="o">{</span>git用户名<span class="o">}</span>/<span class="o">{</span>git仓库名称<span class="o">}</span>
+<span class="c">#例如我的仓库名称是 `jamartin-create.github.io` </span>
+<span class="c">#则我的git命令为：</span>
+git clone git://github.com/Jamartin-create/Jamartin-create.github.io
+</pre></td></tr></tbody></table></code></div></div>
 
-<p>例如我的仓库名称是 <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>jamartin-create.github.io
-</pre></td></tr></tbody></table></code> <a href="https://jamartin-create.github.io/posts/blog-git-bind/">仓库创建教程</a></p>
-
-<p>则我的git命令为：<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>git clone git://github.com/Jamartin-create/Jamartin-create.github.io
-</pre></td></tr></tbody></table></code></p>
+<p><a href="https://jamartin-create.github.io/posts/blog-git-bind/">仓库创建教程</a></p>
 
 <h3 id="将该模板push到仓库中">将该模板push到仓库中</h3>
 
@@ -608,25 +612,21 @@
 
 <p>复制到 <b>根目录下</b> {仓库名} 的文件夹</p>
 
-<p>在 <b>根目录下</b> {仓库名} 中执行git-bash命令：<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>git add .
-</pre></td></tr></tbody></table></code> //表示将当前文件夹下所有文件添加到暂存区</p>
-
-<p>继续执行git-bash命令：<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>git commit -m "备注"
-</pre></td></tr></tbody></table></code> //commit 表示将暂存区提交到本地仓库中</p>
-
-<p>最后执行git-bash命令：<code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>git push origin master
-</pre></td></tr></tbody></table></code> //将本地的master分支推送到远程仓库中（origin主机的master分支）</p>
+<div lang="bash" class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="c"># 在 根目录下 {仓库名} 中执行git-bash命令：</span>
+git add <span class="nb">.</span> <span class="c"># 表示将当前文件夹下所有文件添加到暂存区</span>
+git commit <span class="nt">-m</span> <span class="s2">"备注"</span> <span class="c"># commit 表示将暂存区提交到本地仓库中</span>
+git push origin master <span class="c"># 将本地的master分支推送到远程仓库中（origin主机的master分支）</span>
+</pre></td></tr></tbody></table></code></div></div>
 
 <h3 id="浏览gitpage页面">浏览gitpage页面</h3>
 
 <p>在网址中输入{仓库名}</p>
 
-<p>例如我这里就是: <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>Jamartin-create.github.io
-</pre></td></tr></tbody></table></code></p>
+<p>例如我这里就是: <a href="https:Jamartin-create.github.io">lilmartin</a></p>
 
 
       </div>
@@ -1640,17 +1640,13 @@ git config --global user.name "gi...
 
 安装时勾上Add Ruby executables to your PATH
 
+命令行输入ruby -v 检查ruby是否安装成功
 
-命令行输入ruby -v
- 检查ruby是否安装成功
-
-输入gem -v
- 检查1是否安装成功
+输入gem -v检查1是否安装成功
 
 用gem命令安装jekyll
 
-命令行输入 gem install jekyll bundler
- //通过 RubyGems 安装 Jekyll...
+命令行输入 gem install jekyll bundler  //通过 RubyGems 安装 Jekyll 和 B...
               </p>
             </div>
           </div>
@@ -1699,8 +1695,18 @@ git config --global user.name "gi...
 
                 Jekyll模板结构树介绍
 
-
-  .
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+.
 ├── _config.yml
 ├── _data
 ├── _drafts
@@ -1713,12 +1719,11 @@ git config --global user.name "gi...
 └── index.html
 
 
+
   
     
-      
-        文件夹/文件
-        说明
-  ...
+      文件夹/文件
+...
               </p>
             </div>
           </div>
