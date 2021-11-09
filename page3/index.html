@@ -26,18 +26,18 @@
 <meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Lil Martin" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="一个菜鸡全栈程序员博主。" />
-<meta property="og:description" content="一个菜鸡全栈程序员博主。" />
+<meta name="description" content="一个菜鸡前端程序员博主。" />
+<meta property="og:description" content="一个菜鸡前端程序员博主。" />
 <link rel="canonical" href="/page3/" />
 <meta property="og:url" content="/page3/" />
 <meta property="og:site_name" content="Lil Martin" />
 <link rel="prev" href="/page2" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Lil Martin" />
-<meta name="twitter:site" content="@" />
+<meta name="twitter:site" content="@LilMart39538257" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"WebPage","headline":"Lil Martin","url":"/page3/","description":"一个菜鸡全栈程序员博主。","@context":"https://schema.org"}</script>
+{"@type":"WebPage","headline":"Lil Martin","url":"/page3/","description":"一个菜鸡前端程序员博主。","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -180,7 +180,7 @@
       
 
       
-      <a href="https://twitter.com/" aria-label="twitter"
+      <a href="https://twitter.com/LilMart39538257" aria-label="twitter"
         class="order-4"
         target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
@@ -496,6 +496,407 @@
 
 
 <div id="post-list">
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/blog-question-git/">githubpage+jekyll搭建blog遇到的问题(二)git</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        ssh
+
+在配置了ssh之后，发现每次push还是需要输入账号密码
+
+git-bash执行命令
+
+git config --global credential.helper store
+
+
+然后操作 pull/push ，第一次需要输入账号密码，下次再操作就不需要了。
+
+
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Wed, Aug 11, 2021,  2:25 PM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Aug 11
+  
+
+  <i class="unloaded">2021-08-11T14:25:34+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="64 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/blog-question-jekyll/">githubpage+jekyll搭建blog遇到的问题(一)jekyll</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        关于字符编码的问题
+
+在我执行了 bundle exec jekyll serve 之后曝出以下错误
+
+Liquid Execption: Liquid error (line 13):invalid byte sequence in UTF-8 in sitemap.xml 
+
+
+解决方法是找到 “md文件头” 中的 “tags” 中含有中文的md文件
+
+将中文标签删除或改为英文标签
+
+然...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Wed, Aug 11, 2021, 11:23 AM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Aug 11
+  
+
+  <i class="unloaded">2021-08-11T11:23:15+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="120 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/blog-publish-blog/">gitpage+jekyll搭建博客(五)发布文章</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        关于markdown
+
+编译软件，我使用的是 Typora
+
+文章存放位置
+
+_drafts：该文件夹下放未完成的文章（文件名没有格式要求）
+
+_posts：该文件夹下放要发布的文章
+
+撰写文章
+
+Front Matter
+
+这里 只介绍一点点，详细介绍请看大佬
+
+Front Matter 是Jekyll开始变得非常酷的地方
+
+Front Matter 必须是文件中的第一个事物
+
+任何包含 ...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Thu, Jul 22, 2021, 12:05 PM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Jul 22
+  
+
+  <i class="unloaded">2021-07-22T12:05:55+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="187 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/blog-intro-jekyll/">gitpage+jekyll搭建博客(四)主题目录结构介绍</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        Jekyll模板结构树介绍
+
+.
+├── _config.yml
+├── _data
+├── _drafts
+├── _includes
+├── _layouts
+├── _posts
+├── _sass
+├── _site
+├── .jekyll-metadata
+└── index.html
+
+
+
+  
+    
+      文件夹/文件
+      说明
+    
+  
+  
+    ...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Wed, Jul 21, 2021,  8:17 PM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Jul 21
+  
+
+  <i class="unloaded">2021-07-21T20:17:20+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="219 words">1 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
 
 
 

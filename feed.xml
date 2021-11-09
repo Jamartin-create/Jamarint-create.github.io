@@ -3,8 +3,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>/</id>
   <title>Lil Martin</title>
-  <subtitle>一个菜鸡全栈程序员博主。</subtitle>
-  <updated>2021-11-09T20:12:36+08:00</updated>
+  <subtitle>一个菜鸡前端程序员博主。</subtitle>
+  <updated>2021-11-09T20:25:01+08:00</updated>
   <author>
     <name>Martin_Du</name>
     <uri>/</uri>
