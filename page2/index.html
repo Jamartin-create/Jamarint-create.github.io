@@ -502,6 +502,109 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/Oracle-key/">Orcale基础(四)约束</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        约束条件
+
+
+  主键：primary key（PK）—— unique + not null
+  外键：foreign key （FK）
+  唯一：unique
+  非空：not null
+  检查
+
+
+一些术语
+
+DDL操作
+
+create
+
+create table student(
+    id number primary key,
+    name varchar2(20),
+ ...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, Sep 20, 2021,  4:30 PM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Sep 20
+  
+
+  <i class="unloaded">2021-09-20T16:30:42+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="590 words">3 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/Oracle-UnSingleTableQuery/">Oracle(三)多表查询</a>
     </h1>
 
@@ -1186,104 +1289,6 @@ systemctl restart firewalld....
 
 
 
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/flask-getPost/">通过flask在后端部署时遇到的问题</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        虚拟环境
-
-​	Utunbu配置虚拟环境，virtualenv 安装时如果pip不是最新版，下载的时候会丢包
-
-外网访问服务器时无法得到响应
-
-服务器端放行端口
-
-
-  在服务器面板找到安全组，添加一个安全组，选择端口号，协议为TCP协议。
-  连通ssh修改防火墙配置：
-
-
-systemctl start firewalld.service 
-firewall-cmd --zone=pub...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Sun, Aug 15, 2021,  2:08 AM +0800"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Aug 15
-  
-
-  <i class="unloaded">2021-08-15T02:08:46+08:00</i>
-
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="301 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
 </div> <!-- #post-list -->
 
 
@@ -1358,10 +1363,27 @@ firewall-cmd --zone=pub...
 
   
 
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- show number -->
+      <li class="page-item ">
+        <a class="page-link btn-box-shadow" href="/page4/">4</a>
+      </li>
+    
+
+  
+
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>2</span>
-    <span class="text-muted">/ 3</span>
+    <span class="text-muted">/ 4</span>
   </li>
 
   <!-- right arrow -->
@@ -1701,6 +1723,30 @@ firewall-cmd --zone=pub...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -1749,36 +1795,6 @@ firewall-cmd --zone=pub...
     
     
     
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1816,13 +1832,13 @@ firewall-cmd --zone=pub...
         <a class="post-tag" href="/tags/react/">react</a>
       
         
+        <a class="post-tag" href="/tags/javascript/">javascript</a>
+      
+        
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>
       
         
         <a class="post-tag" href="/tags/java/">java</a>
-      
-        
-        <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
         <a class="post-tag" href="/tags/jsx/">JSX</a>
@@ -2165,6 +2181,30 @@ firewall-cmd --zone=pub...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2213,36 +2253,6 @@ firewall-cmd --zone=pub...
     
     
     
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2275,13 +2285,13 @@ firewall-cmd --zone=pub...
         <a class="post-tag" href="/tags/react/">react</a>
       
         
+        <a class="post-tag" href="/tags/javascript/">javascript</a>
+      
+        
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>
       
         
         <a class="post-tag" href="/tags/java/">java</a>
-      
-        
-        <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
         <a class="post-tag" href="/tags/jsx/">JSX</a>

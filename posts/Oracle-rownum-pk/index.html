@@ -1186,6 +1186,30 @@ select rownum, emp.* from emp where rownum &lt; 5;
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -1234,36 +1258,6 @@ select rownum, emp.* from emp where rownum &lt; 5;
     
     
     
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1301,13 +1295,13 @@ select rownum, emp.* from emp where rownum &lt; 5;
         <a class="post-tag" href="/tags/react/">react</a>
       
         
+        <a class="post-tag" href="/tags/javascript/">javascript</a>
+      
+        
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>
       
         
         <a class="post-tag" href="/tags/java/">java</a>
-      
-        
-        <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
         <a class="post-tag" href="/tags/jsx/">JSX</a>
@@ -1354,6 +1348,19 @@ select rownum, emp.* from emp where rownum &lt; 5;
 
 
 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
   
@@ -1680,76 +1687,6 @@ select rownum, emp.* from emp where rownum &lt; 5;
       
       
       <div class="card">
-        <a href="/posts/Oracle-SingleTableQuery/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Sep 13
-  
-
-  <i class="unloaded">2021-09-13T18:30:20+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Oracle(二)单表查询</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                单表查询
-
-列的选取-投影
-
-select empno, ename, deptno from emp;
-
-
-
-  开发中一般不使用 *
-
-  数据库中：列名大小写不敏感，内容大小写敏感
-
-
-列别名
-
-
-  
-    方法1：列名+” “+别名
-  
-  
-    方法2：列名 as 别名
-
-    select empno 员工编号, ename 员工姓名 from emp;
-select...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
         <a href="/posts/Oracle-UnSingleTableQuery/">
           <div class="card-body">
             <!--
@@ -1866,6 +1803,67 @@ create table student(
     id number primary key,
     name varchar2(20),
  ...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/Oracle-ChildQuery/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Oct  9
+  
+
+  <i class="unloaded">2021-10-09T23:00:00+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Orcale基础(五)子查询</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                子查询
+
+分为 关联子查询 和 非关联子查询
+
+特点：子查询可以单独执行，其结果作为外部查询的条件。
+
+不相关子查询
+
+概念：子查询不需要与父查询的结果进行比对
+
+-- 查询各个部门薪水最高的员工信息
+select * from emp
+	where (deptno, sal) in
+	(
+    	select deptno, max(sal) from emp group by dept...
               </p>
             </div>
           </div>
@@ -2257,6 +2255,30 @@ create table student(
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2305,36 +2327,6 @@ create table student(
     
     
     
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2367,13 +2359,13 @@ create table student(
         <a class="post-tag" href="/tags/react/">react</a>
       
         
+        <a class="post-tag" href="/tags/javascript/">javascript</a>
+      
+        
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>
       
         
         <a class="post-tag" href="/tags/java/">java</a>
-      
-        
-        <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
         <a class="post-tag" href="/tags/jsx/">JSX</a>

@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Lil Martin</title>
   <subtitle>一个菜鸡前端程序员博主。</subtitle>
-  <updated>2021-11-09T20:25:01+08:00</updated>
+  <updated>2021-11-20T17:38:10+08:00</updated>
   <author>
     <name>Martin_Du</name>
     <uri>/</uri>
@@ -17,6 +17,60 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>vue2.x基本概念</title>
+    <link href="/posts/Vue-Basic/" rel="alternate" type="text/html" title="vue2.x基本概念" />
+    <published>2021-11-20T16:25:20+08:00</published>
+  
+    <updated>2021-11-20T16:25:20+08:00</updated>
+  
+    <id>/posts/Vue-Basic/</id>
+    <content src="/posts/Vue-Basic/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="vue" />
+    
+    <category term="vue-2x-basic" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      简介
+
+官网介绍Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。
+
+
+  个人观点：（刚刚从React过来）
+
+  区别：
+
+  
+    
+      react在每更新一个组件之后，都会以这个组件为根，向上或向下将整个组件树都更新一遍。如果不需要，则需要手动配置shouldComponentUpadate。
+
+      而vue非常明确的更新你需要更新的那个组件。
+    
+    
+      react使用的渲染语法为JSX，偏向逻辑。
+
+      Vue使用的渲染语法为模板字符串，偏向最原始的htm...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -320,85 +374,6 @@ Link | NavLink
 
     
  ...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Orcale基础(七)视图、索引、事务</title>
-    <link href="/posts/Oracle-view/" rel="alternate" type="text/html" title="Orcale基础(七)视图、索引、事务" />
-    <published>2021-10-11T16:33:00+08:00</published>
-  
-    <updated>2021-10-11T16:33:00+08:00</updated>
-  
-    <id>/posts/Oracle-view/</id>
-    <content src="/posts/Oracle-view/" />
-    <author>
-      <name>Martin_Du</name>
-    </author>
-
-  
-    
-    <category term="sql" />
-    
-    <category term="oracle" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      视图(view)
-
-
-
-作用
-
-
-  控制数据访问
-  简化查询
-  数据独立性
-  避免重复访问相同的数据
-
-
-视图的创建
-
-注意
-
-在运维数据库，对一些数据进行操作时，最好先将要操作的数据备份，然后再操作数据或者直接操作备份后的数据。
-
--- 快速复制表结构，如果复制的表有数据，则顺势复制表中的所有数据。
-create table emp_bank
-	as 
-	select * from emp
-
-
-创建方法
-
--- `create or replace` 表示如果创建的视图已存在则替换
-create or replace view v_emp_bank
-	as select ename, sal 
-		from emp_bank
-
-
-创建之后可以直接通过 select 查询该视图的结果
-
-
-  该结果与 as 后的 select 结果相同。
-
-
-view 的好处
-
-例1
-
-查询...
     </summary>
   
 

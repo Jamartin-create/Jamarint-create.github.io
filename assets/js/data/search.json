@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "vue2.x基本概念",
+    "url": "/posts/Vue-Basic/",
+    "categories": "vue, vue-2x-basic",
+    "tags": "vue, javascript",
+    "date": "2021-11-20 16:25:20 +0800",
+    
+
+
+
+
+
+    "snippet": "简介官网介绍Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。  个人观点：（刚刚从React过来）  区别：            react在每更新一个组件之后，都会以这个组件为根，向上或向下将整个组件树都更新一遍。如果不需要，则需要手动配置shouldComponentUpadate。      而vue非常明确..."
+  },
+  
+  {
     "title": "系统分析与设计--建立需求模型",
     "url": "/posts/SoftwareEngineer/",
     "categories": "software-engineer, system-analysis-and-design",

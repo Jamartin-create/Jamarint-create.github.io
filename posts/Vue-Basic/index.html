@@ -24,25 +24,25 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="React Router(路由)" />
+<meta property="og:title" content="vue2.x基本概念" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="简介" />
 <meta property="og:description" content="简介" />
-<link rel="canonical" href="/posts/React-Router/" />
-<meta property="og:url" content="/posts/React-Router/" />
+<link rel="canonical" href="/posts/Vue-Basic/" />
+<meta property="og:url" content="/posts/Vue-Basic/" />
 <meta property="og:site_name" content="Lil Martin" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-10-12T23:28:00+08:00" />
+<meta property="article:published_time" content="2021-11-20T16:25:20+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="React Router(路由)" />
+<meta property="twitter:title" content="vue2.x基本概念" />
 <meta name="twitter:site" content="@LilMart39538257" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","headline":"React Router(路由)","dateModified":"2021-10-12T23:28:00+08:00","datePublished":"2021-10-12T23:28:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/React-Router/"},"url":"/posts/React-Router/","description":"简介","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"vue2.x基本概念","dateModified":"2021-11-20T16:25:20+08:00","datePublished":"2021-11-20T16:25:20+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Vue-Basic/"},"url":"/posts/Vue-Basic/","description":"简介","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>React Router(路由) | Lil Martin
+  <title>vue2.x基本概念 | Lil Martin
   </title>
 
   <!--
@@ -414,7 +414,7 @@
       
 
         
-          <span>React Router(路由)</span>
+          <span>vue2.x基本概念</span>
 
         
 
@@ -476,6 +476,74 @@
 
 
 
+  <!-- add CDN prefix if it exists -->
+
+  
+
+  
+
+  <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+  
+
+  <!-- add image placehoder to prevent layout reflow -->
+
+  
+
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+
+      
+
+    
+      
+      
+
+      
+
+      
+
+    
+      
+      
+
+      
+
+      
+
+    
+      
+      
+
+      
+
+      
+
+    
+
+    
+
+  
+
+  
+
+
+
 <!-- Add lang-badge for code snippets -->
 
 
@@ -489,7 +557,7 @@
 
     <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-      <h1 data-toc-skip>React Router(路由)</h1>
+      <h1 data-toc-skip>vue2.x基本概念</h1>
 
       <div class="post-meta text-muted d-flex flex-column">
         <!-- Published date and author -->
@@ -510,7 +578,7 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Tue, Oct 12, 2021, 11:28 PM +0800"
+    title="Sat, Nov 20, 2021,  4:25 PM +0800"
   
 
   
@@ -520,10 +588,10 @@
   
 
   
-    Oct 12
+    Nov 20
   
 
-  <i class="unloaded">2021-10-12T23:28:00+08:00</i>
+  <i class="unloaded">2021-11-20T16:25:20+08:00</i>
 
 </span>
 
@@ -548,7 +616,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="986 words">5 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1041 words">5 min</span>
 
 
           <!-- page views -->
@@ -562,295 +630,318 @@
 
         
 
-        <h2 id="简介">简介</h2>
+        <h1 id="简介">简介</h1>
 
-<hr />
-
-<h3 id="官方简介">官方简介</h3>
-
-<ul>
-  <li>React Router 是一个基于 <a href="http://facebook.github.io/react/">React</a> 之上的强大路由库，它可以让你向应用中快速地添加视图和数据流，同时保持页面与 URL 间的同步。</li>
-</ul>
-
-<h3 id="个人理解">个人理解</h3>
-<ul>
-  <li>也就是将这个”网页”/”网站”，变得更加组件化，使元素树结构更加直观。</li>
-</ul>
-
-<h3 id="安装">安装</h3>
-<ul>
-  <li>
-    <p>以下二选一</p>
-
-    <div lang="shell" class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre><span class="nv">$ </span>npm <span class="nb">install</span> <span class="nt">--save</span> react-router-dom
-<span class="nv">$ </span>yarn add react-router-dom
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-</ul>
-
-<h2 id="内置包">内置包</h2>
-
-<hr />
-
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="p">{</span> <span class="nx">Link</span><span class="p">,</span> <span class="nx">NavLink</span><span class="p">,</span> <span class="nx">Switch</span><span class="p">,</span> <span class="nx">Route</span><span class="p">,</span> <span class="nx">BrowserRouter</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="link--navlink">Link | NavLink</h3>
-<ul>
-  <li>
-    <p>作用与 <strong>a</strong> 标签类似:</p>
-
-    <p>将网页地址渲染为 “目标地址”(最终会被渲染为a元素)</p>
-
-    <blockquote>
-      <p>可以理解为一个索引，仅仅是一个索引，如果 <strong>route</strong> 中没有对应的path，该标签无效。</p>
-
-      <p>NavLink是在Link的基础上增加了一些样式属性。</p>
-    </blockquote>
-
-    <div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="rouge-code"><pre><span class="cm">/*
-* to属性：在根目录的基础上将 value 添加到尾部并渲染地址栏。
-* activeClassName属性：动态的 class ，NavLink 特有，根据点击的位置将该属性放在对应的标签上。
-*/</span>
-<span class="p">&lt;</span><span class="nc">NavLink</span> <span class="na">to</span><span class="p">=</span><span class="s">"/home"</span> <span class="na">activeClassName</span><span class="p">=</span><span class="s">"active"</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nc">NavLink</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nc">NavLink</span> <span class="na">to</span><span class="p">=</span><span class="s">"/article"</span><span class="p">&gt;</span>Article<span class="p">&lt;/</span><span class="nc">NavLink</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nc">NavLink</span> <span class="na">to</span><span class="p">=</span><span class="s">"/about"</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="nc">NavLink</span><span class="p">&gt;</span>
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-</ul>
-
-<h3 id="route">Route</h3>
-<ul>
-  <li>
-    <p>根据路由中地址的变化，将与当前路由地址对应的组件渲染到APP中。</p>
-
-    <div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="rouge-code"><pre><span class="cm">/*
-* path: 与 link/NavLink 的地址相对应。
-* compoent: 写好的页面组件，放在这个位置，在路由地址变为path中的地址后即可直接渲染出对应组件的页面。
-*/</span>
-<span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path</span><span class="p">=</span><span class="s">"/home"</span> <span class="na">component</span><span class="p">=</span><span class="si">{</span><span class="nx">Home</span><span class="si">}</span> <span class="p">/&gt;</span>
-<span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path</span><span class="p">=</span><span class="s">"/article"</span> <span class="na">component</span><span class="p">=</span><span class="si">{</span><span class="nx">Article</span><span class="si">}</span> <span class="p">/&gt;</span>
-<span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path</span><span class="p">=</span><span class="s">"/about"</span> <span class="na">component</span><span class="p">=</span><span class="si">{</span><span class="nx">About</span><span class="si">}</span> <span class="p">/&gt;</span>
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-</ul>
-
-<h3 id="redirect">Redirect</h3>
-<ul>
-  <li>
-    <p>重定向，跳向这个标签中的 to 属性中的地址。</p>
-
-    <div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre><span class="cm">/*当用户，账户密码输入正确后，重定向到登陆成功界面*/</span>
-<span class="p">&lt;</span><span class="nc">Redirect</span> <span class="na">to</span><span class="p">=</span><span class="s">"/login"</span> <span class="p">/&gt;</span>
-<span class="cm">/*当用户输入了不属于路由中定义过的地址时，重定向到404或者默认地址*/</span>
-<span class="p">&lt;</span><span class="nc">Redirect</span> <span class="na">to</span><span class="p">=</span><span class="s">"/home"</span> <span class="p">/&gt;</span>
-<span class="p">&lt;</span><span class="nc">Redirect</span> <span class="na">to</span><span class="p">=</span><span class="s">"/notfound"</span> <span class="p">/&gt;</span>
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-</ul>
-
-<h3 id="switch">Switch</h3>
-<ul>
-  <li>
-    <p>根据这个组件的名字的意思可以知道，就是选择。</p>
-  </li>
-  <li>
-    <p>“地址相同的链接该如何判断”，Switch 会进行判断。</p>
-  </li>
-  <li>
-    <p>Switch 渲染第一个被 location 匹配到的并且作为子元素的 <kbd><Route>&lt;/kbd&gt; 或者 <kbd><Redirect>&lt;/kbd&gt;</Redirect></kbd></Route></kbd></p>
-
-    <blockquote>
-      <p>一般动态路由经常会出现这种问题。</p>
-    </blockquote>
-
-    <div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-</pre></td><td class="rouge-code"><pre><span class="p">&lt;</span><span class="nc">Switch</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path</span><span class="p">=</span><span class="s">'/home'</span> <span class="na">component</span><span class="p">=</span><span class="si">{</span><span class="nx">Home</span><span class="si">}</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path</span><span class="p">=</span><span class="s">'/about'</span> <span class="na">component</span><span class="p">=</span><span class="si">{</span><span class="nx">About</span><span class="si">}</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path</span><span class="p">=</span><span class="s">'/article'</span> <span class="na">component</span><span class="p">=</span><span class="si">{</span><span class="nx">Article</span><span class="si">}</span> <span class="p">/&gt;</span>
-    <span class="p">&lt;</span><span class="nc">Redirect</span> <span class="na">to</span><span class="p">=</span><span class="s">'/home'</span> <span class="p">/&gt;</span>
-<span class="p">&lt;/</span><span class="nc">Switch</span><span class="p">&gt;</span>
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-</ul>
-
-<h3 id="router">Router</h3>
-<ul>
-  <li>React-Router时在history基础上实现了URL的UI同步，其URL对应的是location，UI对应的是React component。</li>
-</ul>
+<p><kbd>官网介绍</kbd>Vue (读音 /vjuː/，类似于 <strong>view</strong>) 是一套用于构建用户界面的<strong>渐进式框架</strong>。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与<a href="https://cn.vuejs.org/v2/guide/single-file-components.html">现代化的工具链</a>以及各种<a href="https://github.com/vuejs/awesome-vue#libraries--plugins">支持类库</a>结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。</p>
 
 <blockquote>
-  <p>通俗的说也就是，当页面地址栏中的地址在 <strong>经过不同的API转换后</strong> 与路由中的地址相同时，渲染出路由中所传入的组件。</p>
+  <p>个人观点：（刚刚从React过来）</p>
 
-  <p>并且：router一般要将所有router其他组件包起来。</p>
+  <p>区别：</p>
+
+  <ol>
+    <li>
+      <p>react在每更新一个组件之后，都会以这个组件为根，向上或向下将整个组件树都更新一遍。如果不需要，则需要手动配置shouldComponentUpadate。</p>
+
+      <p>而vue非常明确的更新你需要更新的那个组件。</p>
+    </li>
+    <li>
+      <p>react使用的渲染语法为JSX，偏向逻辑。</p>
+
+      <p>Vue使用的渲染语法为模板字符串，偏向最原始的html。</p>
+    </li>
+    <li>
+      <p>向上向下扩展做的规模很大。</p>
+    </li>
+    <li>
+      <p>学了一周Vue，在学的很浅的时候，感觉还是React爽，希望一个月后我会对Vue有不同的感受。</p>
+    </li>
+  </ol>
 </blockquote>
 
-<h4 id="browserrouter">BrowserRouter</h4>
+<h2 id="声明式渲染">声明式渲染</h2>
 
-<ul>
-  <li>
-    <p>通过 <strong>通过HTML5的history API</strong>，让页面的 UI 与 URL 同步，最终地址呈现结果与路由中的地址是一样的。</p>
+<p>允许采用模板语法：</p>
 
-    <div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div lang="html" class="language-html highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre></td><td class="rouge-code"><pre><span class="p">&lt;</span><span class="nc">BrowserRouter</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nc">App</span> <span class="p">/&gt;</span>
-<span class="p">&lt;/</span><span class="nc">BrowserRouter</span><span class="p">&gt;</span>
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-</ul>
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;</span>
+    
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></div></div>
 
-<h4 id="hashrouter一般不用">HashRouter(一般不用)</h4>
-
-<ul>
-  <li>
-    <p>HashRouter使用的是URL的hash部分（即window.location.hash），来保持页面的UI与URL的同步。</p>
-
-    <div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
-</pre></td><td class="rouge-code"><pre><span class="p">&lt;</span><span class="nc">HashRouter</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nc">APP</span> <span class="p">/&gt;</span>
-<span class="p">&lt;/</span><span class="nc">HashRouter</span><span class="p">&gt;</span>
-<span class="c1">// 最终地址栏会有一个# localhost:3000/#/</span>
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-</ul>
-
-<h2 id="传值方法">传值方法</h2>
-
-<hr />
-
-<h3 id="params传值">params传值</h3>
-
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre><span class="p">&lt;</span><span class="nc">Link</span> <span class="na">to</span><span class="p">=</span><span class="si">{</span><span class="s2">`/api1/</span><span class="p">${</span><span class="nx">data</span><span class="p">}</span><span class="s2">`</span><span class="si">}</span> <span class="na">className</span><span class="p">=</span><span class="s">""</span> <span class="p">&gt;&lt;/</span><span class="nc">Link</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path</span><span class="p">=</span><span class="s">'/api/:data'</span> <span class="na">component</span><span class="p">=</span><span class="si">{}</span> <span class="p">&gt;&lt;/</span><span class="nc">Route</span><span class="p">&gt;</span>
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+    <span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#app</span><span class="dl">'</span><span class="p">,</span> <span class="c1">//el相当于一个选择器，里面放置#+id</span>
+    <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">hello Vue</span><span class="dl">'</span>
+    <span class="p">}</span>
+<span class="p">})</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h4 id="取值">取值</h4>
+<blockquote>
+  <p>同时可以在页面通过 .来更改其值。</p>
+</blockquote>
 
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span><span class="nx">data</span><span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">match</span><span class="p">.</span><span class="nx">params</span><span class="p">;</span>
-</pre></td></tr></tbody></table></code></div></div>
+<p>除了模板语法插入文本，还可以通过vue特有的标签<kbd>v-bind</kbd>来绑定元素。</p>
 
-<h3 id="search传值">search传值</h3>
-
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre><span class="p">&lt;</span><span class="nc">Link</span> <span class="na">to</span><span class="p">=</span><span class="si">{</span><span class="s2">`/api1/?data=</span><span class="p">${</span><span class="nx">data</span><span class="p">}</span><span class="s2">`</span><span class="si">}</span> <span class="na">className</span><span class="p">=</span><span class="s">""</span> <span class="p">&gt;&lt;/</span><span class="nc">Link</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path</span><span class="p">=</span><span class="s">'/api'</span> <span class="na">component</span><span class="p">=</span><span class="si">{}</span> <span class="p">&gt;&lt;/</span><span class="nc">Route</span><span class="p">&gt;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h4 id="取值-1">取值</h4>
-
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="c1">//.search的值中带有"?"，需要去掉并转换为字符串(querystring)</span>
-<span class="k">import</span> <span class="nx">qs</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">querystring</span><span class="dl">'</span>
-<span class="kd">const</span> <span class="p">{</span><span class="nx">data</span><span class="p">}</span> <span class="o">=</span> <span class="nx">qs</span><span class="p">.</span><span class="nx">parse</span><span class="p">((</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">search</span><span class="p">).</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="state传值">state传值</h3>
-
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div lang="html" class="language-html highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
-</pre></td><td class="rouge-code"><pre><span class="p">&lt;</span><span class="nc">Link</span> <span class="na">to</span><span class="p">=</span><span class="si">{</span> <span class="p">{</span> <span class="na">pathname</span><span class="p">:</span> <span class="dl">'</span><span class="s1">api后缀</span><span class="dl">'</span><span class="p">,</span> <span class="na">state</span><span class="p">:</span> <span class="p">{</span> <span class="na">data</span><span class="p">:</span> <span class="nx">data</span> <span class="p">}</span> <span class="p">}</span> <span class="si">}</span> <span class="na">className</span><span class="p">=</span><span class="s">""</span><span class="p">&gt;</span>
-	链接名
-<span class="p">&lt;/</span><span class="nc">Link</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nc">Route</span> <span class="na">path</span><span class="p">=</span><span class="s">'/api1'</span> <span class="na">component</span><span class="p">=</span><span class="si">{}</span> <span class="p">/&gt;</span>
+5
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app-2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">v-bind:title=</span><span class="s">"message"</span><span class="nt">&gt;</span>
+    	鼠标悬停以查看时间信息
+    <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h4 id="取值-2">取值</h4>
-
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span><span class="nx">data</span><span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">state</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="路由跳转">路由跳转</h3>
-
-<p>通过按钮的点击事件来举例</p>
-
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre><span class="c1">//button</span>
-<span class="p">&lt;</span><span class="nt">button</span> <span class="na">onClick</span><span class="p">=</span><span class="si">{</span><span class="p">()</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">seeMore</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="si">}</span><span class="p">&gt;</span>more<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h4 id="historypush">history.push</h4>
-
-<h5 id="传入matchparams">传入match.params</h5>
-
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre></td><td class="rouge-code"><pre><span class="nx">seeMore</span> <span class="o">=</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">history</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">`/api1/</span><span class="p">${</span><span class="nx">data</span><span class="p">}</span><span class="s2">`</span><span class="p">)</span>
-<span class="p">}</span>
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">app2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+    <span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#app-2</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">message</span><span class="p">:</span><span class="dl">'</span><span class="s1">页面加载于</span><span class="dl">'</span><span class="o">+</span><span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">toLocaleString</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">})</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h5 id="传入locationsearch">传入location.search</h5>
+<p>类似于<kbd>v-bind</kbd> Attribute 被称为 <strong>指令</strong>。指令带有前缀 <kbd>v-</kbd> ，以表示他们式Vue提供的特殊标签：会在渲染DOM时使用<strong>特殊的响应式行为</strong>。</p>
 
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<h2 id="条件与循环">条件与循环</h2>
+
+<h3 id="条件v-if">条件v-if</h3>
+
+<div lang="html" class="language-html highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre></td><td class="rouge-code"><pre><span class="nx">seeMore</span> <span class="o">=</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">history</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">`/api1/?data=</span><span class="p">${</span><span class="nx">data</span><span class="p">}</span><span class="s2">`</span><span class="p">)</span>
-<span class="p">}</span>
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">'app-3'</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">v-if=</span><span class="s">'seen'</span><span class="nt">&gt;</span>
+        现在你看到我了
+    <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h5 id="传入locationstate">传入location.state</h5>
-
-<div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre></td><td class="rouge-code"><pre><span class="nx">seeMore</span> <span class="o">=</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">history</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="dl">'</span><span class="s1">/api1</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="nx">data</span> <span class="p">}</span> <span class="p">)</span>
-<span class="p">}</span>
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">app3</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+    <span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#app-3</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">seen</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">}</span>
+<span class="p">})</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h2 id="参考文章">参考文章</h2>
+<blockquote>
+  <p>在控制台输入： app3.seen = false，可以发现文字消失了。</p>
+</blockquote>
 
-<ul>
-  <li><a href="http://react-guide.github.io/react-router-cn/">React-Router官方文档</a></li>
-  <li><a href="https://www.jianshu.com/p/11c750ee3880">简书-肾仔博</a></li>
-  <li><a href="https://www.jianshu.com/p/f6962b30f5e4">简书-BlueSkyBlue</a></li>
-  <li><a href="https://www.cnblogs.com/lyt0207/p/12732421.html">博客园-leahtao</a></li>
-</ul>
+<h3 id="循环v-for">循环v-for</h3>
+
+<div lang="html" class="language-html highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">'app-4'</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ol&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">v-for=</span><span class="s">'todo in todos'</span><span class="nt">&gt;</span>
+        	
+        <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ol&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">app4</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+    <span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#app-4</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">todos</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span><span class="na">text</span><span class="p">:</span> <span class="dl">'</span><span class="s1">text1</span><span class="dl">'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span><span class="dl">'</span><span class="s1">;lskajf</span><span class="dl">'</span><span class="p">},</span>
+            <span class="p">{</span><span class="na">text</span><span class="p">:</span> <span class="dl">'</span><span class="s1">text2</span><span class="dl">'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span><span class="dl">'</span><span class="s1">;lsdskajf</span><span class="dl">'</span><span class="p">},</span>
+            <span class="p">{</span><span class="na">text</span><span class="p">:</span> <span class="dl">'</span><span class="s1">text3</span><span class="dl">'</span><span class="p">,</span> <span class="na">id</span><span class="p">:</span><span class="dl">'</span><span class="s1">;lsdfskajf</span><span class="dl">'</span><span class="p">},</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<blockquote>
+  <p>同样的：在控制台中输入 app4.todos.push({text: ‘新项目’,id:’sdlkfja;})，可以发现列表中会增加一行。</p>
+</blockquote>
+
+<h2 id="用户输入处理">用户输入处理</h2>
+
+<h3 id="按钮交互v-on">按钮交互v-on</h3>
+
+<div lang="html" class="language-html highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">'app-5'</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+        
+    <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">v-on:click=</span><span class="s">'myOnClick'</span><span class="nt">&gt;</span>
+        反转消息
+    <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">app5</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+    <span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#app-5</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">hello Vue.js</span><span class="dl">'</span>
+    <span class="p">},</span>
+    <span class="na">methods</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">myOnClick</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">message</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">message</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">''</span><span class="p">).</span><span class="nx">reverse</span><span class="p">().</span><span class="nx">join</span><span class="p">(</span><span class="dl">''</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<blockquote>
+  <p>和react不同的是，虽然更新了状态，但是我们没有触碰到DOM——所有的DOM都有Vue来处理，我们只需要关注逻辑层。</p>
+</blockquote>
+
+<h3 id="表单与应用状态间的双向绑定v-model">表单与应用状态间的双向绑定v-model</h3>
+
+<div lang="html" class="language-html highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">'app-6'</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+        
+    <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">v-model=</span><span class="s">"message"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">app6</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+    <span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#app-6</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Hello Vue</span><span class="dl">'</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h2 id="组件化应用构建">组件化应用构建</h2>
+
+<p>和React一样了，组件系统也是Vue的另一个重要概念，组件是一种抽象，允许我们使用小型、独立和通常可以复用的组件构建大型应用。</p>
+
+<p><img data-proofer-ignore data-src="https://cn.vuejs.org/images/components.png" alt="photo" /></p>
+
+<p>一个组件本质上是有一个拥有预定义选项的一个Vue实例。</p>
+
+<div lang="html" class="language-html highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">'app-7'</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ol&gt;</span>
+        <span class="nt">&lt;todo-item</span>
+                   <span class="na">v-for=</span><span class="s">'item in groceryList'</span>
+                   <span class="na">v-bind:todo=</span><span class="s">'item'</span>
+                   <span class="na">v-bind:key=</span><span class="s">'item.id'</span>
+    <span class="err">&lt;/</span><span class="na">ol</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre><span class="nx">Vue</span><span class="p">.</span><span class="nx">component</span><span class="p">(</span><span class="dl">'</span><span class="s1">todo-item</span><span class="dl">'</span><span class="p">,{</span>
+    <span class="c1">//todo-item 组件现在接收一个prop，类似于一个自定义Attribute</span>
+    <span class="c1">//所要接收的prop名填在后面的数组中。</span>
+    <span class="na">props</span><span class="p">:[</span><span class="dl">'</span><span class="s1">todo</span><span class="dl">'</span><span class="p">],</span>
+    <span class="na">template</span><span class="p">:</span> <span class="s2">`
+    	&lt;li&gt;&lt;/li&gt;
+    `</span>
+<span class="p">})</span>
+
+<span class="kd">var</span> <span class="nx">app7</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+    <span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#app-7</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">groceryList</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span><span class="na">id</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="na">text</span><span class="p">:</span> <span class="dl">'</span><span class="s1">蔬菜</span><span class="dl">'</span><span class="p">},</span>
+      		<span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">text</span><span class="p">:</span> <span class="dl">'</span><span class="s1">奶酪</span><span class="dl">'</span> <span class="p">},</span>
+     		<span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="na">text</span><span class="p">:</span> <span class="dl">'</span><span class="s1">随便其它什么人吃的东西</span><span class="dl">'</span> <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+</pre></td></tr></tbody></table></code></div></div>
 
 
 
@@ -863,8 +954,8 @@
         <div class="post-meta mb-3">
           <i class="far fa-folder-open fa-fw mr-1"></i>
           
-            <a href='/categories/react/'>react</a>,
-            <a href='/categories/react-advanced-component/'>react-Advanced-Component</a>
+            <a href='/categories/vue/'>vue</a>,
+            <a href='/categories/vue-2x-basic/'>vue-2x-basic</a>
         </div>
         
 
@@ -873,11 +964,11 @@
         <div class="post-tags">
           <i class="fa fa-tags fa-fw mr-1"></i>
           
-          <a href="/tags/react/"
-            class="post-tag no-text-decoration" >react</a>
+          <a href="/tags/vue/"
+            class="post-tag no-text-decoration" >vue</a>
           
-          <a href="/tags/react-router/"
-            class="post-tag no-text-decoration" >react-router</a>
+          <a href="/tags/javascript/"
+            class="post-tag no-text-decoration" >javascript</a>
           
           </div>
         
@@ -904,19 +995,19 @@
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=React Router(路由) - Lil Martin&url=/posts/React-Router/" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=vue2.x基本概念 - Lil Martin&url=/posts/Vue-Basic/" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=React Router(路由) - Lil Martin&u=/posts/React-Router/" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=vue2.x基本概念 - Lil Martin&u=/posts/Vue-Basic/" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://telegram.me/share?text=React Router(路由) - Lil Martin&url=/posts/React-Router/" data-toggle="tooltip" data-placement="top"
+        <a href="https://telegram.me/share?text=vue2.x基本概念 - Lil Martin&url=/posts/Vue-Basic/" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -1429,59 +1520,59 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
   
 
   
@@ -1756,6 +1847,25 @@
   
     
     
+  
+    
+    
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
       
       
         
@@ -1771,88 +1881,6 @@
     <h3 class="pt-2 mt-1 mb-4 ml-1"
       data-toc-skip>Further Reading</h3>
     <div class="card-deck mb-4">
-    
-      
-      
-      <div class="card">
-        <a href="/posts/React-Axios/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Oct 15
-  
-
-  <i class="unloaded">2021-10-15T10:22:00+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>React Axios(请求)</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                React-Axios基本使用
-
-
-
-Axios 安装
-
-  
-    进入之前创建的脚手架app中执行以下两个命令中的其中一个
-
-    1
-2
-$ npm install react-axios
-$ yarn add axios
-    
-  
-
-
-Axios Get请求
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-//为给定 ID 的 User 创建请求
-...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
     
       
       
@@ -1913,13 +1941,12 @@ React基本使用
 
 安装命令：
 
-1
 npm i react react-dom
 
 
 
   react包提供创建元素、组件等功能。
-  react-...
+  react-do...
               </p>
             </div>
           </div>
@@ -1929,7 +1956,7 @@ npm i react react-dom
       
       
       <div class="card">
-        <a href="/posts/Vue-Basic/">
+        <a href="/posts/SoftwareEngineer/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1950,14 +1977,14 @@ npm i react react-dom
   
 
   
-    Nov 20
+    Nov  9
   
 
-  <i class="unloaded">2021-11-20T16:25:20+08:00</i>
+  <i class="unloaded">2021-11-09T00:16:09+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>vue2.x基本概念</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>系统分析与设计--建立需求模型</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1966,14 +1993,105 @@ npm i react react-dom
 
 
 
-                简介
+                需求模型
 
-官网介绍Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。
+事件
+
+分类
 
 
-  个人观点：（刚刚从React过来）
+  外部事件
+    
+      发生在系统之外
+      由外部的代理人或参与者所启动
+    
+  
+  临时事件（定时事件）
+    
+      在到达某个时间点之后，自动发生的事件
+      根据系统的截止日期
+    
+  
+  状态事件
+    
+      系统内部发生的某件事触发处理的需要
+    
+  
 
-  区...
+
+事件列表
+
+
+  
+    ...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/React-Axios/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Oct 15
+  
+
+  <i class="unloaded">2021-10-15T10:22:00+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>React Axios(请求)</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                React-Axios基本使用
+
+
+
+Axios 安装
+
+  
+    进入之前创建的脚手架app中执行以下两个命令中的其中一个
+
+    $ npm install react-axios
+$ yarn add axios
+    
+  
+
+
+Axios Get请求
+
+//为给定 ID 的 User 创建请求
+axios.get(
+	'url',
+    paras:{
+    	para...
               </p>
             </div>
           </div>
@@ -1991,17 +2109,17 @@ npm i react react-dom
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <a href="/posts/Oracle-view/" class="btn btn-outline-primary"
+  <a href="/posts/SoftwareEngineer/" class="btn btn-outline-primary"
     prompt="Older">
-    <p>Orcale基础(七)视图、索引、事务</p>
+    <p>系统分析与设计--建立需求模型</p>
   </a>
   
 
   
-  <a href="/posts/React-Axios/" class="btn btn-outline-primary"
+  <span class="btn btn-outline-primary disabled"
     prompt="Newer">
-    <p>React Axios(请求)</p>
-  </a>
+    <p>-</p>
+  </span>
   
 
 </div>
@@ -2025,9 +2143,9 @@ npm i react react-dom
     scriptUrl: '//.disqus.com/embed.js',
 
     disqusConfig: function() {
-      this.page.title = 'React Router(路由)';
-      this.page.url = '/posts/React-Router/';
-      this.page.identifier = '/posts/React-Router/';
+      this.page.title = 'vue2.x基本概念';
+      this.page.url = '/posts/Vue-Basic/';
+      this.page.identifier = '/posts/Vue-Basic/';
     }
   };
 
