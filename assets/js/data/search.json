@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "@vue/cli4.x脚手架使用",
+    "url": "/posts/Vue-Cli-Review/",
+    "categories": "vue, vue-cli",
+    "tags": "vue, javascript",
+    "date": "2021-12-20 09:25:20 +0800",
+    
+
+
+
+
+
+    "snippet": "脚手架基础知识安装及创建项目vue cli官方文档 讲的很清楚项目结构目录结构├── public│   └── index.html├── src|   ├── main.js				# 项目的初始化|   ├── App.vue				# 项目的入口组件|	├── assest			 	# 项目中展示的图片或者全局样式|	│   ├── css|	│   ├── img|	│   └── ...|	├── api|	│   └── ... 			# 抽取出API请求|	├── components|	│   └── ...				# 项目中可复用的组件|	├── view				# ..."
+  },
+  
+  {
     "title": "vue2.x基本概念",
     "url": "/posts/Vue-Basic/",
     "categories": "vue, vue-2x-basic",
@@ -31,7 +46,7 @@
   },
   
   {
-    "title": "react基本概念",
+    "title": "React基本概念",
     "url": "/posts/React-Basic/",
     "categories": "react, react-basic-es6",
     "tags": "react, javascript, JSX",
@@ -252,7 +267,7 @@
 
 
 
-    "snippet": "虚拟环境​	Utunbu配置虚拟环境，virtualenv 安装时如果pip不是最新版，下载的时候会丢包外网访问服务器时无法得到响应服务器端放行端口  在服务器面板找到安全组，添加一个安全组，选择端口号，协议为TCP协议。  连通ssh修改防火墙配置：systemctl start firewalld.service firewall-cmd --zone=public --add-port=5000/tcp --permanentsystemctl restart firewalld.servicefirewall-cmd --reload  一定要保证面板放通的端口号与ssh打开的端..."
+    "snippet": "虚拟环境​    Utunbu配置虚拟环境，virtualenv 安装时如果pip不是最新版，下载的时候会丢包外网访问服务器时无法得到响应服务器端放行端口  在服务器面板找到安全组，添加一个安全组，选择端口号，协议为TCP协议。  连通ssh修改防火墙配置：systemctl start firewalld.service firewall-cmd --zone=public --add-port=5000/tcp --permanentsystemctl restart firewalld.servicefirewall-cmd --reload  一定要保证面板放通的端口号与ssh打..."
   },
   
   {
@@ -357,7 +372,7 @@
 
 
 
-    "snippet": "注册账号不用多说吧创建仓库点击右上角➕，再点击New repository仓库名的格式为 “用户名”.github.io（因为GitHub对于同一个账户只允许生成一个直接访问的网站）将仓库与本地连接（绑定）下载并安装git​	下载链接打开git-bash将git与仓库绑定git config --global user.name &quot;github用户名&quot;git config --global user.email &quot;邮箱&quot;SSH设置(github根据ssh接受你从本地对于git的管理)配置SSH打开 git-bash ，输入ssh-keygen -t..."
+    "snippet": "注册账号不用多说吧创建仓库点击右上角➕，再点击New repository仓库名的格式为 “用户名”.github.io（因为GitHub对于同一个账户只允许生成一个直接访问的网站）将仓库与本地连接（绑定）下载并安装git​    下载链接打开git-bash将git与仓库绑定git config --global user.name &quot;github用户名&quot;git config --global user.email &quot;邮箱&quot;SSH设置(github根据ssh接受你从本地对于git的管理)配置SSH打开 git-bash ，输入ssh-keygen..."
   },
   
   {

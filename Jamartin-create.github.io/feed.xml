@@ -1,0 +1,384 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>/</id>
+  <title>Lil Martin</title>
+  <subtitle>一个菜鸡前端程序员博主。</subtitle>
+  <updated>2021-11-20T17:38:10+08:00</updated>
+  <author>
+    <name>Martin_Du</name>
+    <uri>/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en-US"
+    href="/"/>
+  <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator>
+  <rights> © 2021 Martin_Du </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>vue2.x基本概念</title>
+    <link href="/posts/Vue-Basic/" rel="alternate" type="text/html" title="vue2.x基本概念" />
+    <published>2021-11-20T16:25:20+08:00</published>
+  
+    <updated>2021-11-20T16:25:20+08:00</updated>
+  
+    <id>/posts/Vue-Basic/</id>
+    <content src="/posts/Vue-Basic/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="vue" />
+    
+    <category term="vue-2x-basic" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      简介
+
+官网介绍Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。
+
+
+  个人观点：（刚刚从React过来）
+
+  区别：
+
+  
+    
+      react在每更新一个组件之后，都会以这个组件为根，向上或向下将整个组件树都更新一遍。如果不需要，则需要手动配置shouldComponentUpadate。
+
+      而vue非常明确的更新你需要更新的那个组件。
+    
+    
+      react使用的渲染语法为JSX，偏向逻辑。
+
+      Vue使用的渲染语法为模板字符串，偏向最原始的htm...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>系统分析与设计--建立需求模型</title>
+    <link href="/posts/SoftwareEngineer/" rel="alternate" type="text/html" title="系统分析与设计--建立需求模型" />
+    <published>2021-11-09T00:16:09+08:00</published>
+  
+    <updated>2021-11-09T00:16:09+08:00</updated>
+  
+    <id>/posts/SoftwareEngineer/</id>
+    <content src="/posts/SoftwareEngineer/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="software-engineer" />
+    
+    <category term="system-analysis-and-design" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      需求模型
+
+事件
+
+分类
+
+
+  外部事件
+    
+      发生在系统之外
+      由外部的代理人或参与者所启动
+    
+  
+  临时事件（定时事件）
+    
+      在到达某个时间点之后，自动发生的事件
+      根据系统的截止日期
+    
+  
+  状态事件
+    
+      系统内部发生的某件事触发处理的需要
+    
+  
+
+
+事件列表
+
+
+  
+    
+      事件
+      触发
+      来源
+      用例
+      回应
+      目的地
+    
+  
+  
+    
+      一个完整的句子
+      动词
+      名词
+      动名词短语
+      形容词加名词
+      名词
+    
+    
+      顾客想要检查商品是否能供货
+      商品查询
+      顾客
+      检查商品是是...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>react基本概念</title>
+    <link href="/posts/React-Basic/" rel="alternate" type="text/html" title="react基本概念" />
+    <published>2021-11-07T22:54:16+08:00</published>
+  
+    <updated>2021-11-07T22:54:16+08:00</updated>
+  
+    <id>/posts/React-Basic/</id>
+    <content src="/posts/React-Basic/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="react" />
+    
+    <category term="react-basic-es6" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      React 概述
+
+什么是React
+
+React 是一个用于 构建用户界面 的  JavaScript 库。
+
+React的特点
+
+
+  组件化编程：某一个页面的任何一个部分都可以是一个组件。
+  用法很广泛：web、VR。。。
+
+
+React基本使用
+
+安装
+
+安装命令：
+
+npm i react react-dom
+
+
+
+  react包提供创建元素、组件等功能。
+  react-dom包提供DOM相关操作。
+
+
+使用
+
+
+  
+    引入cdn
+
+    &amp;lt;script src="./node_modules/react/umd/react.deelopment.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src="./node_modules/react/umd/react-dom.development.js"&amp;gt;&amp;lt;/script...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>React Axios(请求)</title>
+    <link href="/posts/React-Axios/" rel="alternate" type="text/html" title="React Axios(请求)" />
+    <published>2021-10-15T10:22:00+08:00</published>
+  
+    <updated>2021-10-15T10:22:00+08:00</updated>
+  
+    <id>/posts/React-Axios/</id>
+    <content src="/posts/React-Axios/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="react" />
+    
+    <category term="react-Advanced-Component" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      React-Axios基本使用
+
+
+
+Axios 安装
+
+  
+    进入之前创建的脚手架app中执行以下两个命令中的其中一个
+
+    $ npm install react-axios
+$ yarn add axios
+    
+  
+
+
+Axios Get请求
+
+//为给定 ID 的 User 创建请求
+axios.get(
+	'url',
+    paras:{
+    	para1: value1,
+    	...
+    }
+).then((res) =&amp;gt; {
+    //成功后执行此处代码块
+  	console.log(res);
+}).catch((err) =&amp;gt; {
+    //失败则执行此处代码块
+    console.log(err);
+});
+//也可以直接用?para1=value将其接在url后面
+
+
+Axios Post请求
+
+axi...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>React Router(路由)</title>
+    <link href="/posts/React-Router/" rel="alternate" type="text/html" title="React Router(路由)" />
+    <published>2021-10-12T23:28:00+08:00</published>
+  
+    <updated>2021-10-12T23:28:00+08:00</updated>
+  
+    <id>/posts/React-Router/</id>
+    <content src="/posts/React-Router/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="react" />
+    
+    <category term="react-Advanced-Component" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      简介
+
+
+
+官方简介
+
+
+  React Router 是一个基于 React 之上的强大路由库，它可以让你向应用中快速地添加视图和数据流，同时保持页面与 URL 间的同步。
+
+
+个人理解
+
+  也就是将这个”网页”/”网站”，变得更加组件化，使元素树结构更加直观。
+
+
+安装
+
+  
+    以下二选一
+
+    $ npm install --save react-router-dom
+$ yarn add react-router-dom
+    
+  
+
+
+内置包
+
+
+
+import { Link, NavLink, Switch, Route, BrowserRouter } from 'react-router-dom'
+
+
+Link | NavLink
+
+  
+    作用与 a 标签类似:
+
+    将网页地址渲染为 “目标地址”(最终会被渲染为a元素)
+
+    
+ ...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+

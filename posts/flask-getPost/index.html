@@ -632,7 +632,7 @@
 
         <h3 id="虚拟环境">虚拟环境</h3>
 
-<p>​	Utunbu配置虚拟环境，virtualenv 安装时如果pip不是最新版，下载的时候会丢包</p>
+<p>​    Utunbu配置虚拟环境，virtualenv 安装时如果pip不是最新版，下载的时候会丢包</p>
 
 <h3 id="外网访问服务器时无法得到响应">外网访问服务器时无法得到响应</h3>
 
@@ -669,8 +669,8 @@ firewall-cmd <span class="nt">--reload</span>
 </pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">gevent</span> <span class="kn">import</span> <span class="n">pywsgi</span>
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
-	<span class="n">server</span> <span class="o">=</span> <span class="n">pywsgi</span><span class="p">.</span><span class="n">WSGIServer</span><span class="p">((</span><span class="s">'0.0.0.0'</span><span class="p">,</span> <span class="mi">5000</span><span class="p">),</span> <span class="n">app</span><span class="p">)</span>
-	<span class="n">server</span><span class="p">.</span><span class="n">serve_forever</span><span class="p">()</span>
+    <span class="n">server</span> <span class="o">=</span> <span class="n">pywsgi</span><span class="p">.</span><span class="n">WSGIServer</span><span class="p">((</span><span class="s">'0.0.0.0'</span><span class="p">,</span> <span class="mi">5000</span><span class="p">),</span> <span class="n">app</span><span class="p">)</span>
+    <span class="n">server</span><span class="p">.</span><span class="n">serve_forever</span><span class="p">()</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>方法二:</p>
@@ -683,8 +683,8 @@ firewall-cmd <span class="nt">--reload</span>
 </pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">wsgiref.simple_server</span> <span class="kn">import</span> <span class="n">make_server</span>
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
-	<span class="n">server</span> <span class="o">=</span> <span class="n">make_server</span><span class="p">(</span><span class="s">''</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="n">app</span><span class="p">)</span>
-	<span class="n">server</span><span class="p">.</span><span class="n">serve_forever</span><span class="p">()</span>
+    <span class="n">server</span> <span class="o">=</span> <span class="n">make_server</span><span class="p">(</span><span class="s">''</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="n">app</span><span class="p">)</span>
+    <span class="n">server</span><span class="p">.</span><span class="n">serve_forever</span><span class="p">()</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>这两个方法的底层都是wsgi，只是后期封装不太一样，我也不知道怎么比较好坏</p>
@@ -706,7 +706,6 @@ firewall-cmd <span class="nt">--reload</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p><img data-proofer-ignore data-src="http://Jamartin-create.github.io/assets/img/post-pic/flask-getPost/P4-1.png" alt="photo" /></p>
-
 
 
       </div>
@@ -1071,6 +1070,32 @@ firewall-cmd <span class="nt">--reload</span>
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -1130,6 +1155,51 @@ firewall-cmd <span class="nt">--reload</span>
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -1159,39 +1229,6 @@ firewall-cmd <span class="nt">--reload</span>
     
     
       
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -1226,19 +1263,19 @@ firewall-cmd <span class="nt">--reload</span>
         <a class="post-tag" href="/tags/linux/">linux</a>
       
         
+        <a class="post-tag" href="/tags/javascript/">javascript</a>
+      
+        
         <a class="post-tag" href="/tags/react/">react</a>
       
         
-        <a class="post-tag" href="/tags/javascript/">javascript</a>
+        <a class="post-tag" href="/tags/vue/">vue</a>
       
         
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>
       
         
         <a class="post-tag" href="/tags/java/">java</a>
-      
-        
-        <a class="post-tag" href="/tags/jsx/">JSX</a>
       
 
       </div>
@@ -1282,6 +1319,19 @@ firewall-cmd <span class="nt">--reload</span>
 
 
 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
   
@@ -2143,6 +2193,32 @@ vim robort...
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -2202,6 +2278,51 @@ vim robort...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2231,39 +2352,6 @@ vim robort...
     
     
       
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -2293,19 +2381,19 @@ vim robort...
         <a class="post-tag" href="/tags/linux/">linux</a>
       
         
+        <a class="post-tag" href="/tags/javascript/">javascript</a>
+      
+        
         <a class="post-tag" href="/tags/react/">react</a>
       
         
-        <a class="post-tag" href="/tags/javascript/">javascript</a>
+        <a class="post-tag" href="/tags/vue/">vue</a>
       
         
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>
       
         
         <a class="post-tag" href="/tags/java/">java</a>
-      
-        
-        <a class="post-tag" href="/tags/jsx/">JSX</a>
       
 
     </div>

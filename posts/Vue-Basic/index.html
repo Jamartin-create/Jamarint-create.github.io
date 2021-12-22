@@ -616,7 +616,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1041 words">5 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1053 words">5 min</span>
 
 
           <!-- page views -->
@@ -657,6 +657,10 @@
       <p>学了一周Vue，在学的很浅的时候，感觉还是React爽，希望一个月后我会对Vue有不同的感受。</p>
     </li>
   </ol>
+
+  <blockquote>
+    <p>来自一个月后的我：vue真香了</p>
+  </blockquote>
 </blockquote>
 
 <h2 id="声明式渲染">声明式渲染</h2>
@@ -1304,6 +1308,32 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -1363,6 +1393,51 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -1392,39 +1467,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -1459,19 +1501,19 @@
         <a class="post-tag" href="/tags/linux/">linux</a>
       
         
+        <a class="post-tag" href="/tags/javascript/">javascript</a>
+      
+        
         <a class="post-tag" href="/tags/react/">react</a>
       
         
-        <a class="post-tag" href="/tags/javascript/">javascript</a>
+        <a class="post-tag" href="/tags/vue/">vue</a>
       
         
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>
       
         
         <a class="post-tag" href="/tags/java/">java</a>
-      
-        
-        <a class="post-tag" href="/tags/jsx/">JSX</a>
       
 
       </div>
@@ -1515,6 +1557,19 @@
 
 
 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
   
@@ -1847,21 +1902,11 @@
   
     
     
-  
-    
-    
       
-      
-        
-        
-        
       
     
   
     
-    
-      
-      
     
   
     
@@ -1881,6 +1926,93 @@
     <h3 class="pt-2 mt-1 mb-4 ml-1"
       data-toc-skip>Further Reading</h3>
     <div class="card-deck mb-4">
+    
+      
+      
+      <div class="card">
+        <a href="/posts/Vue-Cli-Review/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Dec 20
+  
+
+  <i class="unloaded">2021-12-20T09:25:20+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>@vue/cli4.x脚手架使用</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                脚手架基础知识
+
+安装及创建项目
+
+vue cli官方文档 讲的很清楚
+
+项目结构
+
+目录结构
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+├── public
+│   └── index.html
+├── src
+|   ├── main.js				# 项目的初始化
+|   ├── App.v...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
     
       
       
@@ -1913,7 +2045,7 @@
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>react基本概念</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>React基本概念</h3>
             <div class="text-muted small">
               <p>
                 
@@ -2030,74 +2162,6 @@ npm i react react-dom
         </a>
       </div>
     
-      
-      
-      <div class="card">
-        <a href="/posts/React-Axios/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Oct 15
-  
-
-  <i class="unloaded">2021-10-15T10:22:00+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>React Axios(请求)</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                React-Axios基本使用
-
-
-
-Axios 安装
-
-  
-    进入之前创建的脚手架app中执行以下两个命令中的其中一个
-
-    $ npm install react-axios
-$ yarn add axios
-    
-  
-
-
-Axios Get请求
-
-//为给定 ID 的 User 创建请求
-axios.get(
-	'url',
-    paras:{
-    	para...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
     </div> <!-- .card-deck -->
   </div> <!-- #related-posts -->
 
@@ -2116,10 +2180,10 @@ axios.get(
   
 
   
-  <span class="btn btn-outline-primary disabled"
+  <a href="/posts/Vue-Cli-Review/" class="btn btn-outline-primary"
     prompt="Newer">
-    <p>-</p>
-  </span>
+    <p>@vue/cli4.x脚手架使用</p>
+  </a>
   
 
 </div>
@@ -2434,6 +2498,32 @@ axios.get(
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -2493,6 +2583,51 @@ axios.get(
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2522,39 +2657,6 @@ axios.get(
     
     
       
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -2584,19 +2686,19 @@ axios.get(
         <a class="post-tag" href="/tags/linux/">linux</a>
       
         
+        <a class="post-tag" href="/tags/javascript/">javascript</a>
+      
+        
         <a class="post-tag" href="/tags/react/">react</a>
       
         
-        <a class="post-tag" href="/tags/javascript/">javascript</a>
+        <a class="post-tag" href="/tags/vue/">vue</a>
       
         
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>
       
         
         <a class="post-tag" href="/tags/java/">java</a>
-      
-        
-        <a class="post-tag" href="/tags/jsx/">JSX</a>
       
 
     </div>
