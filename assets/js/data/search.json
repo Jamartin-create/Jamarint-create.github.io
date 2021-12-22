@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "@vueRouter3.x Basic",
+    "url": "/posts/Vue-Router/",
+    "categories": "vue, vue-router",
+    "tags": "vue, javascript",
+    "date": "2021-12-22 09:43:20 +0800",
+    
+
+
+
+
+
+    "snippet": "基础安装请看官方文档router-vue基础路由匹配html&amp;lt;script src=&quot;https://unpkg.com/vue/dist/vue.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script src=&quot;https://unpkg.com/vue-router/dist/vue-router.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;div id=&quot;app&quot;&amp;gt;  &amp;lt;h1&amp;gt;Hello..."
+  },
+  
+  {
     "title": "@vue/cli4.x脚手架使用",
     "url": "/posts/Vue-Cli-Review/",
     "categories": "vue, vue-cli",

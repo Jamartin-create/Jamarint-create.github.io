@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Lil Martin</title>
   <subtitle>一个菜鸡前端程序员博主。</subtitle>
-  <updated>2021-12-22T10:24:24+08:00</updated>
+  <updated>2021-12-22T15:07:29+08:00</updated>
   <author>
     <name>Martin_Du</name>
     <uri>/</uri>
@@ -17,6 +17,58 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>@vueRouter3.x Basic</title>
+    <link href="/posts/Vue-Router/" rel="alternate" type="text/html" title="@vueRouter3.x Basic" />
+    <published>2021-12-22T09:43:20+08:00</published>
+  
+    <updated>2021-12-22T09:43:20+08:00</updated>
+  
+    <id>/posts/Vue-Router/</id>
+    <content src="/posts/Vue-Router/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="vue" />
+    
+    <category term="vue-router" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      基础
+
+安装请看官方文档router-vue
+
+基础路由匹配
+
+html
+
+&amp;lt;script src="https://unpkg.com/vue/dist/vue.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src="https://unpkg.com/vue-router/dist/vue-router.js"&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;div id="app"&amp;gt;
+  &amp;lt;h1&amp;gt;Hello App!&amp;lt;/h1&amp;gt;
+  &amp;lt;p&amp;gt;
+    &amp;lt;!-- 使用 router-link 组件来导航. --&amp;gt;
+    &amp;lt;!-- 通过传入 `to` 属性指定链接. --&amp;gt;
+    &amp;lt;!-- &amp;lt;router-link&amp;gt; 默认会被渲染成一个 `&amp;lt;a&amp;gt;` 标签 --...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -287,78 +339,6 @@ npm i react react-dom
 
     &amp;lt;script src="./node_modules/react/umd/react.deelopment.js"&amp;gt;&amp;lt;/script&amp;gt;
 &amp;lt;script src="./node_modules/react/umd/react-dom.development.js"&amp;gt;&amp;lt;/script...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>React Axios(请求)</title>
-    <link href="/posts/React-Axios/" rel="alternate" type="text/html" title="React Axios(请求)" />
-    <published>2021-10-15T10:22:00+08:00</published>
-  
-    <updated>2021-10-15T10:22:00+08:00</updated>
-  
-    <id>/posts/React-Axios/</id>
-    <content src="/posts/React-Axios/" />
-    <author>
-      <name>Martin_Du</name>
-    </author>
-
-  
-    
-    <category term="react" />
-    
-    <category term="react-Advanced-Component" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      React-Axios基本使用
-
-
-
-Axios 安装
-
-  
-    进入之前创建的脚手架app中执行以下两个命令中的其中一个
-
-    $ npm install react-axios
-$ yarn add axios
-    
-  
-
-
-Axios Get请求
-
-//为给定 ID 的 User 创建请求
-axios.get(
-	'url',
-    paras:{
-    	para1: value1,
-    	...
-    }
-).then((res) =&amp;gt; {
-    //成功后执行此处代码块
-  	console.log(res);
-}).catch((err) =&amp;gt; {
-    //失败则执行此处代码块
-    console.log(err);
-});
-//也可以直接用?para1=value将其接在url后面
-
-
-Axios Post请求
-
-axi...
     </summary>
   
 

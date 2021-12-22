@@ -502,6 +502,103 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/Oracle-rownum-pk/">Orcale基础(六)rownum与主键设计</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        主键设计
+
+ROWNUM 和 ROWID
+
+ROWID
+
+特点：唯一，且固定，是在行数据生成时产生的id；
+
+select rowid, empno from emp;
+-- 此时的查询结果中，所有行的rowid字段是唯一的
+select rowid, empno from emp where empno = 7369;
+-- 该结果中
+-- empno=7369的rowid 和 
+-- 上...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, Oct 11, 2021, 11:28 AM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Oct 11
+  
+
+  <i class="unloaded">2021-10-11T11:28:00+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="968 words">5 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/Oracle-ChildQuery/">Orcale基础(五)子查询</a>
     </h1>
 
@@ -1199,100 +1296,6 @@ from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
 
 
 
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/flask-python-server/">github-webhook与企业WeChat-webhook中间件开发(二)服务器配置</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        端口配置
-
-面板配置端口
-
-打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)
-
-服务器内部打开该端口防火墙
-
-systemctl start firewalld.service 
-firewall-cmd --zone=public --add-port=5000/tcp --permanent
-systemctl restart firewalld....
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Mon, Aug 16, 2021,  8:25 PM +0800"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Aug 16
-  
-
-  <i class="unloaded">2021-08-16T20:25:17+08:00</i>
-
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="179 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
 </div> <!-- #post-list -->
 
 
@@ -1644,16 +1647,6 @@ systemctl restart firewalld....
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -1679,55 +1672,6 @@ systemctl restart firewalld....
     
     
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1797,6 +1741,67 @@ systemctl restart firewalld....
     
     
     
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -1868,10 +1873,10 @@ systemctl restart firewalld....
         <a class="post-tag" href="/tags/python/">python</a>
       
         
-        <a class="post-tag" href="/tags/linux/">linux</a>
+        <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
-        <a class="post-tag" href="/tags/javascript/">javascript</a>
+        <a class="post-tag" href="/tags/linux/">linux</a>
       
         
         <a class="post-tag" href="/tags/react/">react</a>
@@ -2140,16 +2145,6 @@ systemctl restart firewalld....
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -2175,55 +2170,6 @@ systemctl restart firewalld....
     
     
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2293,6 +2239,67 @@ systemctl restart firewalld....
     
     
     
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -2359,10 +2366,10 @@ systemctl restart firewalld....
         <a class="post-tag" href="/tags/python/">python</a>
       
         
-        <a class="post-tag" href="/tags/linux/">linux</a>
+        <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
-        <a class="post-tag" href="/tags/javascript/">javascript</a>
+        <a class="post-tag" href="/tags/linux/">linux</a>
       
         
         <a class="post-tag" href="/tags/react/">react</a>
