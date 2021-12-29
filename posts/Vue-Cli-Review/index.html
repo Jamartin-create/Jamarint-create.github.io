@@ -548,7 +548,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="698 words">3 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1307 words">7 min</span>
 
 
           <!-- page views -->
@@ -598,6 +598,7 @@
 24
 25
 26
+27
 </pre></td><td class="rouge-code"><pre>├── public
 │   └── index.html
 ├── src
@@ -616,7 +617,8 @@
 |	├── store
 |	|	├── index.js        <span class="c"># 我们组装模块并导出 store 的地方</span>
 |	|	├── actions.js      <span class="c"># 根级别的 action</span>
-|	|	└── mutations.js    <span class="c"># 根级别的 mutation</span>
+|	|	├── mutations.js    <span class="c"># 根级别的 mutation</span>
+|	|	└── ...
 |	├── router
 |	|	└── index.js		<span class="c"># 项目的路由</span>
 |	└── modules
@@ -702,6 +704,296 @@
 <span class="c">/*样式*/</span>
 <span class="nt">&lt;/</span><span class="k">style</span><span class="nt">&gt;</span>
 </pre></td></tr></tbody></table></code></div></div>
+
+<h2 id="路由">路由</h2>
+
+<p>移步<a href="https://jamartin-create.github.io/posts/Vue-Router/">我的vue-router学习记录</a></p>
+
+<h2 id="vuex">Vuex</h2>
+
+<p>移步<a href="https://vuex.vuejs.org/zh/guide/">官方vuex文档</a></p>
+
+<h1 id="起步">起步</h1>
+
+<h2 id="项目目录详细介绍">项目目录详细介绍</h2>
+
+<h3 id="mainjs">main.js</h3>
+
+<p>放置公共组件：样式库、Vue、Router、Store等。</p>
+
+<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="nx">Vue</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span>
+<span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./App.vue</span><span class="dl">'</span>
+<span class="k">import</span> <span class="nx">store</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./store</span><span class="dl">'</span>
+<span class="k">import</span> <span class="nx">router</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./router</span><span class="dl">'</span>
+
+<span class="k">import</span> <span class="nx">ElementUI</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">element-ui</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">element-ui/lib/theme-chalk/index.css</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">@/assets/css/layout.css</span><span class="dl">'</span>
+
+
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">productionTip</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">ElementUI</span><span class="p">);</span>
+
+<span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+  <span class="na">render</span><span class="p">:</span> <span class="nx">h</span> <span class="o">=&gt;</span> <span class="nx">h</span><span class="p">(</span><span class="nx">App</span><span class="p">),</span>
+  <span class="nx">store</span><span class="p">,</span>
+  <span class="nx">router</span>
+<span class="p">}).</span><span class="nx">$mount</span><span class="p">(</span><span class="dl">'</span><span class="s1">#app</span><span class="dl">'</span><span class="p">)</span>
+
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="appvue">App.vue</h3>
+
+<p>根组件，main.js加载完毕后渲染的第一个组件，一般在这个组件渲染完毕后会通过路由跳转至其他页面组件。</p>
+
+<div lang="vue" class="language-vue highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;</span><span class="k">template</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span> <span class="na">style=</span><span class="s">"height:100%;background:#EEF2F5;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;router-view&gt;&lt;/router-view&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/</span><span class="k">template</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;</span><span class="k">script</span><span class="nt">&gt;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">App</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">components</span><span class="p">:</span> <span class="p">{</span>
+    <span class="p">...</span>
+  <span class="p">},</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+<span class="nt">&lt;/</span><span class="k">script</span><span class="nt">&gt;</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="router">router</h3>
+
+<blockquote>
+  <p>页面跳转的逻辑都是以这个文件为标准进行的</p>
+</blockquote>
+
+<p>router/index.js</p>
+
+<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="nx">Vue</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span>
+<span class="k">import</span> <span class="nx">VueRouter</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue-router</span><span class="dl">'</span>
+
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">VueRouter</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">VueRouter</span><span class="p">({</span>
+    <span class="na">routes</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">home</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">component</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="k">import</span><span class="p">(</span><span class="dl">'</span><span class="s1">../view/Home</span><span class="dl">'</span><span class="p">),</span>
+            <span class="na">redirect</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/page1</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">children</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/page1</span><span class="dl">'</span><span class="p">,</span>
+                    <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">page1</span><span class="dl">'</span><span class="p">,</span>
+                    <span class="na">component</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="k">import</span><span class="p">(</span><span class="dl">'</span><span class="s1">../view/page1</span><span class="dl">'</span><span class="p">)</span>
+                <span class="p">},</span>
+                <span class="p">...</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/login</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">login</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">component</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="k">import</span><span class="p">(</span><span class="dl">'</span><span class="s1">@/view/Login</span><span class="dl">'</span><span class="p">)</span>
+        <span class="p">},</span>
+        <span class="p">...</span>
+    <span class="p">],</span>
+    <span class="na">mode</span><span class="p">:</span> <span class="dl">'</span><span class="s1">history</span><span class="dl">'</span>
+<span class="p">})</span>
+
+<span class="nx">router</span><span class="p">.</span><span class="nx">beforeEach</span><span class="p">((</span><span class="nx">to</span><span class="p">,</span> <span class="k">from</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="p">...</span>
+<span class="p">})</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">router</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="store">store</h3>
+
+<blockquote>
+  <p>store一般存的是用户登录的状态及一些缓存的数据，不是一味的将所有组件的状态都塞进去。</p>
+
+  <p>ps：一般大型的项目会将vuex的State、Mutations、Actions、Getters、Modules单独放置文件夹，这里就不介绍那么多。</p>
+</blockquote>
+
+<p>store/index.js</p>
+
+<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="nx">Vuex</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vuex</span><span class="dl">'</span>
+<span class="k">import</span> <span class="nx">Vue</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span>
+
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Vuex</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">param1</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+    <span class="na">param2</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">getters</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">AddParam12</span><span class="p">:</span> <span class="p">(</span><span class="nx">state</span><span class="p">,)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">param1</span><span class="o">+</span><span class="dl">'</span><span class="s1"> </span><span class="dl">'</span><span class="o">+</span><span class="nx">state</span><span class="p">.</span><span class="nx">param2</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">mutations</span> <span class="o">=</span>  <span class="p">{</span>
+    <span class="nx">changeParam1</span><span class="p">(</span><span class="nx">state</span><span class="p">){</span>
+        <span class="nx">state</span><span class="p">.</span><span class="nx">params</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">},</span>
+    <span class="nx">changeParam2</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">changeValue</span><span class="p">){</span>
+    	<span class="nx">state</span><span class="p">.</span><span class="nx">params</span> <span class="o">=</span> <span class="nx">cahngeValue</span><span class="p">;</span>  
+    <span class="p">},</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">actions</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">changeParam1</span><span class="p">({</span><span class="nx">commit</span><span class="p">}){</span>
+        <span class="nx">setTimeout</span><span class="p">(()</span><span class="o">=&gt;</span><span class="p">{</span>
+            <span class="nx">commit</span><span class="p">(</span><span class="dl">'</span><span class="s1">changeParam1</span><span class="dl">'</span><span class="p">)</span>
+        <span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">state</span><span class="p">,</span>
+    <span class="nx">getters</span><span class="p">,</span>
+    <span class="nx">mutations</span><span class="p">,</span>
+    <span class="nx">actions</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vuex</span><span class="p">.</span><span class="nx">Store</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">store</span><span class="p">;</span>
+
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="view和component">view和component</h3>
+
+<p>按我的理解：</p>
+
+<p><strong>view</strong> 文件夹下放置所有的界面层组件（就是通过路由跳转的组件）</p>
+
+<p><strong>component</strong> 文件夹下放置一些可复用的组件</p>
+
+<h3 id="其他文件夹">其他文件夹</h3>
+
+<p>一般还有：</p>
+
+<p>api，里面有二次封装的axios/request/ajax接口请求。</p>
+
+<p>assets，里面是一些全局的css文件、图片等。</p>
+
+<p>还有根据项目需求而创建的文件夹….</p>
 
 
 
