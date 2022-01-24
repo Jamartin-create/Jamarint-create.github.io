@@ -502,6 +502,99 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/flask-python-code/">github-webhook与企业WeChat-webhook中间件开发(三)编写代码</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        导入需要的包
+
+import json #用于处理后期传入的json数据
+import time #获取当前时间等等
+import requests #发送get/post请求 
+from flask import Flask, request, jsonify #flask是主要的包
+from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
+
+
+...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, Aug 16, 2021, 11:16 PM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Aug 16, 2021
+  
+
+  <i class="unloaded">2021-08-16T23:16:08+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="468 words">2 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/flask-python-server/">github-webhook与企业WeChat-webhook中间件开发(二)服务器配置</a>
     </h1>
 
@@ -555,7 +648,7 @@ systemctl restart firewalld....
   
 
   
-    Aug 16
+    Aug 16, 2021
   
 
   <i class="unloaded">2021-08-16T20:25:17+08:00</i>
@@ -649,7 +742,7 @@ systemctl restart firewalld....
   
 
   
-    Aug 16
+    Aug 16, 2021
   
 
   <i class="unloaded">2021-08-16T11:20:23+08:00</i>
@@ -747,7 +840,7 @@ firewall-cmd --zone=...
   
 
   
-    Aug 15
+    Aug 15, 2021
   
 
   <i class="unloaded">2021-08-15T02:08:46+08:00</i>
@@ -842,7 +935,7 @@ git config --global credential.helper store
   
 
   
-    Aug 11
+    Aug 11, 2021
   
 
   <i class="unloaded">2021-08-11T14:25:34+08:00</i>
@@ -937,7 +1030,7 @@ Liquid Execption: Liquid error (line 13):invalid byte sequence in UTF-8 in sitem
   
 
   
-    Aug 11
+    Aug 11, 2021
   
 
   <i class="unloaded">2021-08-11T11:23:15+08:00</i>
@@ -1041,7 +1134,7 @@ Front Matter 必须是文件中的第一个事物
   
 
   
-    Jul 22
+    Jul 22, 2021
   
 
   <i class="unloaded">2021-07-22T12:05:55+08:00</i>
@@ -1148,7 +1241,7 @@ Front Matter 必须是文件中的第一个事物
   
 
   
-    Jul 21
+    Jul 21, 2021
   
 
   <i class="unloaded">2021-07-21T20:17:20+08:00</i>
@@ -1173,112 +1266,6 @@ Front Matter 必须是文件中的第一个事物
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="219 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/blog-git-push/">gitpage+jekyll搭建博客(三)将jekyll模板上传至github</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        挑选主题
-
-jekyll官网 /我用的主题是chirpy
-
-挑选好后点击 Download
-
-解压缩到任一文件夹
-
-搭建本地网站浏览模板
-
-# 命令行执行
-cd {你的文件夹位置} 
-bundle exec jekyll serve 
-#浏览 http://localhost:4000 即可查看这个模板
-
-
-
-  bundler安装教程
-
-
-克隆git仓库
-
-#打开主题所在文件夹，git-b...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Wed, Jul 21, 2021,  4:20 PM +0800"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Jul 21
-  
-
-  <i class="unloaded">2021-07-21T16:20:16+08:00</i>
-
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="367 words">2 min</span>
 
 
         <!-- page views -->
@@ -1442,6 +1429,26 @@ bundle exec jekyll serve
         
         <li><a href="/posts/java-hashmap/">HashMap(一)用法</a></li>
       
+        
+        
+        
+        <li><a href="/posts/blog-git-bind/">gitpage+jekyll搭建博客(一)代码托管</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/blog-conv-jekyll/">gitpage+jekyll搭建博客(二)搭建jekyll环境</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/blog-git-push/">gitpage+jekyll搭建博客(三)将jekyll模板上传至github</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/blog-intro-jekyll/">gitpage+jekyll搭建博客(四)主题目录结构介绍</a></li>
+      
 
       </ul>
     </div> <!-- #access-lastmod -->
@@ -1499,67 +1506,6 @@ bundle exec jekyll serve
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1574,26 +1520,42 @@ bundle exec jekyll serve
     
     
     
-      
-        
-        
-
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1634,16 +1596,6 @@ bundle exec jekyll serve
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -1658,51 +1610,7 @@ bundle exec jekyll serve
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1768,11 +1676,10 @@ bundle exec jekyll serve
     
     
     
-  
-    
-    
-    
-    
+      
+        
+        
+
   
     
     
@@ -1824,6 +1731,56 @@ bundle exec jekyll serve
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -1838,7 +1795,92 @@ bundle exec jekyll serve
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -1882,10 +1924,10 @@ bundle exec jekyll serve
         <a class="post-tag" href="/tags/vue/">vue</a>
       
         
-        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
+        <a class="post-tag" href="/tags/algorithm/">Algorithm</a>
       
         
-        <a class="post-tag" href="/tags/java/">java</a>
+        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
       
 
       </div>
@@ -1912,7 +1954,7 @@ bundle exec jekyll serve
   <div class="d-flex justify-content-between align-items-center">
     <div class="footer-left">
       <p class="mb-0">
-        © 2021
+        © 2022
         <a href="https://github.com/Jamartin-create">Martin_Du</a>.
         
         <span data-toggle="tooltip" data-placement="top"
@@ -1997,67 +2039,6 @@ bundle exec jekyll serve
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2072,26 +2053,42 @@ bundle exec jekyll serve
     
     
     
-      
-        
-        
-
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2132,16 +2129,6 @@ bundle exec jekyll serve
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -2156,51 +2143,7 @@ bundle exec jekyll serve
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2266,11 +2209,10 @@ bundle exec jekyll serve
     
     
     
-  
-    
-    
-    
-    
+      
+        
+        
+
   
     
     
@@ -2322,6 +2264,56 @@ bundle exec jekyll serve
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2336,7 +2328,92 @@ bundle exec jekyll serve
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -2375,10 +2452,10 @@ bundle exec jekyll serve
         <a class="post-tag" href="/tags/vue/">vue</a>
       
         
-        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
+        <a class="post-tag" href="/tags/algorithm/">Algorithm</a>
       
         
-        <a class="post-tag" href="/tags/java/">java</a>
+        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
       
 
     </div>

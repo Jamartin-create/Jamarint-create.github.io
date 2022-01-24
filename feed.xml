@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Lil Martin</title>
   <subtitle>一个菜鸡前端程序员博主。</subtitle>
-  <updated>2021-12-29T19:37:50+08:00</updated>
+  <updated>2022-01-25T00:21:03+08:00</updated>
   <author>
     <name>Martin_Du</name>
     <uri>/</uri>
@@ -13,10 +13,80 @@
   <link rel="alternate" type="text/html" hreflang="en-US"
     href="/"/>
   <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator>
-  <rights> © 2021 Martin_Du </rights>
+  <rights> © 2022 Martin_Du </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>算法篇：全排列(eg:蓝桥杯 ALGO-1005 数字游戏)</title>
+    <link href="/posts/AL-Search/" rel="alternate" type="text/html" title="算法篇：全排列(eg:蓝桥杯 ALGO-1005 数字游戏)" />
+    <published>2022-01-24T10:00:00+08:00</published>
+  
+    <updated>2022-01-24T10:00:00+08:00</updated>
+  
+    <id>/posts/AL-Search/</id>
+    <content src="/posts/AL-Search/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="Algorithm" />
+    
+    <category term="Lanqiao" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      全排列
+
+顾名思义：就是将所有元素按照一定顺序排列一遍。
+
+
+  例如：现在有一组数组[1,2,3]
+
+  这个数组全排列的结果就是 { [1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], [3,2,1] }
+
+  这么说就懂了吧！
+
+
+那么如何用 编程 解决呢？
+
+说到排列，那么最常用的自然是递归！
+
+那么问题又来了，怎么 “递”？
+
+咱先来个思维导图（以下图中的数组为例）
+
+
+
+一般对某一个数组进行排列的顺序是从后往前，将前面的部分固定，对后面的序列子集进行排列。
+
+
+
+此时就需要划分 一条 分割线，说是一条，实际上每个元素的左侧都有一条分割线，但这条“分割线”只能向右移动，移动到最右侧后失效。
+
+最外层分割线的划分是从右往左的，当划分了最外层分割先后，右侧的分割线均视为子集分割线。
+
+如下图：
+
+
+
+第一次排列：即按字典序（由小到大）排列。...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -269,76 +339,6 @@ vue cli官方文档 讲的很清楚
       商品查询
       顾客
       检查商品是是...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>React基本概念</title>
-    <link href="/posts/React-Basic/" rel="alternate" type="text/html" title="React基本概念" />
-    <published>2021-11-07T22:54:16+08:00</published>
-  
-    <updated>2021-11-07T22:54:16+08:00</updated>
-  
-    <id>/posts/React-Basic/</id>
-    <content src="/posts/React-Basic/" />
-    <author>
-      <name>Martin_Du</name>
-    </author>
-
-  
-    
-    <category term="react" />
-    
-    <category term="react-basic-es6" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      React 概述
-
-什么是React
-
-React 是一个用于 构建用户界面 的  JavaScript 库。
-
-React的特点
-
-
-  组件化编程：某一个页面的任何一个部分都可以是一个组件。
-  用法很广泛：web、VR。。。
-
-
-React基本使用
-
-安装
-
-安装命令：
-
-npm i react react-dom
-
-
-
-  react包提供创建元素、组件等功能。
-  react-dom包提供DOM相关操作。
-
-
-使用
-
-
-  
-    引入cdn
-
-    &amp;lt;script src="./node_modules/react/umd/react.deelopment.js"&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script src="./node_modules/react/umd/react-dom.development.js"&amp;gt;&amp;lt;/script...
     </summary>
   
 

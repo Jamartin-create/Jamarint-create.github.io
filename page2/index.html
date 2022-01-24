@@ -502,6 +502,112 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/Oracle-view/">Orcale基础(七)视图、索引、事务</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        视图(view)
+
+
+
+作用
+
+
+  控制数据访问
+  简化查询
+  数据独立性
+  避免重复访问相同的数据
+
+
+视图的创建
+
+注意
+
+在运维数据库，对一些数据进行操作时，最好先将要操作的数据备份，然后再操作数据或者直接操作备份后的数据。
+
+-- 快速复制表结构，如果复制的表有数据，则顺势复制表中的所有数据。
+create table emp_bank
+	as 
+	select * from...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, Oct 11, 2021,  4:33 PM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Oct 11, 2021
+  
+
+  <i class="unloaded">2021-10-11T16:33:00+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1330 words">7 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/Oracle-rownum-pk/">Orcale基础(六)rownum与主键设计</a>
     </h1>
 
@@ -558,7 +664,7 @@ select rowid, empno from emp where empno = 7369;
   
 
   
-    Oct 11
+    Oct 11, 2021
   
 
   <i class="unloaded">2021-10-11T11:28:00+08:00</i>
@@ -656,7 +762,7 @@ select * from emp
   
 
   
-    Oct  9
+    Oct  9, 2021
   
 
   <i class="unloaded">2021-10-09T23:00:00+08:00</i>
@@ -759,7 +865,7 @@ create table student(
   
 
   
-    Sep 20
+    Sep 20, 2021
   
 
   <i class="unloaded">2021-09-20T16:30:42+08:00</i>
@@ -855,7 +961,7 @@ select emp.ename, dept.deptno, d...
   
 
   
-    Sep 13
+    Sep 13, 2021
   
 
   <i class="unloaded">2021-09-13T21:43:00+08:00</i>
@@ -962,7 +1068,7 @@ select...
   
 
   
-    Sep 13
+    Sep 13, 2021
   
 
   <i class="unloaded">2021-09-13T18:30:20+08:00</i>
@@ -1062,7 +1168,7 @@ SQL分类：Structured Query Langua...
   
 
   
-    Sep 13
+    Sep 13, 2021
   
 
   <i class="unloaded">2021-09-13T15:47:01+08:00</i>
@@ -1164,7 +1270,7 @@ vim robort.py
   
 
   
-    Aug 17
+    Aug 17, 2021
   
 
   <i class="unloaded">2021-08-17T08:16:18+08:00</i>
@@ -1189,99 +1295,6 @@ vim robort.py
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="206 words">1 min</span>
-
-
-        <!-- page views -->
-        
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/flask-python-code/">github-webhook与企业WeChat-webhook中间件开发(三)编写代码</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        导入需要的包
-
-import json #用于处理后期传入的json数据
-import time #获取当前时间等等
-import requests #发送get/post请求 
-from flask import Flask, request, jsonify #flask是主要的包
-from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
-
-
-...
-      </p>
-    </div>
-
-    <div class="post-meta text-muted d-flex justify-content-between">
-
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Mon, Aug 16, 2021, 11:16 PM +0800"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Aug 16
-  
-
-  <i class="unloaded">2021-08-16T23:16:08+08:00</i>
-
-</span>
-
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-<!-- words per minute  -->
-
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="468 words">2 min</span>
 
 
         <!-- page views -->
@@ -1445,6 +1458,26 @@ from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
         
         <li><a href="/posts/java-hashmap/">HashMap(一)用法</a></li>
       
+        
+        
+        
+        <li><a href="/posts/blog-git-bind/">gitpage+jekyll搭建博客(一)代码托管</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/blog-conv-jekyll/">gitpage+jekyll搭建博客(二)搭建jekyll环境</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/blog-git-push/">gitpage+jekyll搭建博客(三)将jekyll模板上传至github</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/blog-intro-jekyll/">gitpage+jekyll搭建博客(四)主题目录结构介绍</a></li>
+      
 
       </ul>
     </div> <!-- #access-lastmod -->
@@ -1502,67 +1535,6 @@ from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1577,26 +1549,42 @@ from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
     
     
     
-      
-        
-        
-
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1637,16 +1625,6 @@ from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -1661,51 +1639,7 @@ from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1771,11 +1705,10 @@ from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
     
     
     
-  
-    
-    
-    
-    
+      
+        
+        
+
   
     
     
@@ -1827,6 +1760,56 @@ from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -1841,7 +1824,92 @@ from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -1885,10 +1953,10 @@ from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
         <a class="post-tag" href="/tags/vue/">vue</a>
       
         
-        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
+        <a class="post-tag" href="/tags/algorithm/">Algorithm</a>
       
         
-        <a class="post-tag" href="/tags/java/">java</a>
+        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
       
 
       </div>
@@ -1915,7 +1983,7 @@ from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
   <div class="d-flex justify-content-between align-items-center">
     <div class="footer-left">
       <p class="mb-0">
-        © 2021
+        © 2022
         <a href="https://github.com/Jamartin-create">Martin_Du</a>.
         
         <span data-toggle="tooltip" data-placement="top"
@@ -2000,67 +2068,6 @@ from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2075,26 +2082,42 @@ from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
     
     
     
-      
-        
-        
-
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2135,16 +2158,6 @@ from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -2159,51 +2172,7 @@ from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2269,11 +2238,10 @@ from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
     
     
     
-  
-    
-    
-    
-    
+      
+        
+        
+
   
     
     
@@ -2325,6 +2293,56 @@ from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2339,7 +2357,92 @@ from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -2378,10 +2481,10 @@ from gevent import pywsgi #必须通过wsgi启动webapp，外网才能访问
         <a class="post-tag" href="/tags/vue/">vue</a>
       
         
-        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
+        <a class="post-tag" href="/tags/algorithm/">Algorithm</a>
       
         
-        <a class="post-tag" href="/tags/java/">java</a>
+        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
       
 
     </div>
