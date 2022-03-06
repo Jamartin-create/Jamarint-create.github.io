@@ -24,25 +24,25 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="github-webhook与企业WeChat-webhook中间件开发(一)webhook" />
+<meta property="og:title" content="JavaWeb基础——servlet" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="WebHook" />
-<meta property="og:description" content="WebHook" />
-<link rel="canonical" href="/posts/flask-python-webhock/" />
-<meta property="og:url" content="/posts/flask-python-webhock/" />
+<meta name="description" content="概述" />
+<meta property="og:description" content="概述" />
+<link rel="canonical" href="/posts/Servlet/" />
+<meta property="og:url" content="/posts/Servlet/" />
 <meta property="og:site_name" content="Lil Martin" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-08-16T11:20:23+08:00" />
+<meta property="article:published_time" content="2022-03-06T22:22:22+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="github-webhook与企业WeChat-webhook中间件开发(一)webhook" />
+<meta property="twitter:title" content="JavaWeb基础——servlet" />
 <meta name="twitter:site" content="@LilMart39538257" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","headline":"github-webhook与企业WeChat-webhook中间件开发(一)webhook","dateModified":"2022-01-24T22:32:34+08:00","datePublished":"2021-08-16T11:20:23+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/flask-python-webhock/"},"url":"/posts/flask-python-webhock/","description":"WebHook","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"JavaWeb基础——servlet","dateModified":"2022-03-06T22:22:22+08:00","datePublished":"2022-03-06T22:22:22+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Servlet/"},"url":"/posts/Servlet/","description":"概述","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>github-webhook与企业WeChat-webhook中间件开发(一)webhook | Lil Martin
+  <title>JavaWeb基础——servlet | Lil Martin
   </title>
 
   <!--
@@ -414,7 +414,7 @@
       
 
         
-          <span>github-webhook与企业WeChat-webhook中间件开发(一)webhook</span>
+          <span>JavaWeb基础——servlet</span>
 
         
 
@@ -476,6 +476,74 @@
 
 
 
+  <!-- add CDN prefix if it exists -->
+
+  
+
+  
+
+  <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+  
+
+  <!-- add image placehoder to prevent layout reflow -->
+
+  
+
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+
+      
+
+    
+      
+      
+
+      
+
+      
+
+    
+      
+      
+
+      
+
+      
+
+    
+      
+      
+
+      
+
+      
+
+    
+
+    
+
+  
+
+  
+
+
+
 <!-- Add lang-badge for code snippets -->
 
 
@@ -489,7 +557,7 @@
 
     <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-      <h1 data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(一)webhook</h1>
+      <h1 data-toc-skip>JavaWeb基础——servlet</h1>
 
       <div class="post-meta text-muted d-flex flex-column">
         <!-- Published date and author -->
@@ -510,7 +578,7 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, Aug 16, 2021, 11:20 AM +0800"
+    title="Sun, Mar  6, 2022, 10:22 PM +0800"
   
 
   
@@ -520,10 +588,10 @@
   
 
   
-    Aug 16, 2021
+    Mar  6
   
 
-  <i class="unloaded">2021-08-16T11:20:23+08:00</i>
+  <i class="unloaded">2022-03-06T22:22:22+08:00</i>
 
 </span>
 
@@ -531,39 +599,6 @@
 
         <div>
           <!-- lastmod -->
-          
-          <span>
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago lastmod"
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Mon, Jan 24, 2022, 10:32 PM +0800"
-  
-
-  prefix="Updated "
-   >
-
-  
-  
-
-  
-    Jan 24
-  
-
-  <i class="unloaded">2022-01-24T22:32:34+08:00</i>
-
-</span>
-
-          </span>
           
 
           <!-- read time -->
@@ -581,7 +616,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="795 words">4 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1102 words">6 min</span>
 
 
           <!-- page views -->
@@ -595,59 +630,17 @@
 
         
 
-        <h2 id="webhook">WebHook</h2>
+        <h3 id="概述">概述</h3>
 
-<h3 id="什么是webhook">什么是WebHook</h3>
+<p>简单点说，关于JavaWeb基础，也就是Servlet、JSP 以及 MVC 模式编程。</p>
 
-<p>最典型的例子：当你发送一条朋友圈，微信的服务器会把你的这条朋友圈同步到你所有好友的客户端（要是你屏蔽人了就是给服务器列出了特别名单）</p>
+<h3 id="servlet">Servlet</h3>
 
-<p>这还是 <kbd>客户端</kbd> - <kbd>服务器</kbd> 模式的逆转模式</p>
+<p>一个继承了HttpServlet 的 Java 类，可用于接收网络中的请求并做一些处理。</p>
 
-<p>传统方法中，一般是客户端向服务器发出 <b>请求</b> ，服务器给予客户端 <b>响应</b> （这叫客户机拉取请求）</p>
+<p>目前常用的类长这样：</p>
 
-<p>在 <b>WebHook</b> 范式下，服务器更新所需提供的资源，然后自动将其作为更新发送到客户端（服务器是在推数据），客户端不是请求者，而是被动接收方</p>
-
-<h3 id="应用场景">应用场景</h3>
-
-<p>对于第三方平台验权、登陆等 没有前端界面做中转的场景，或者强安全要求的支付场景等，适合用 Webhook 做数据主动推送，说白了就是在前端无从参与，或者因为前端安全问题不适合参与时，就是 <b>Webhook</b> 的场景；很显然 Webhook 也不是 Http 的替代品，不过的确是一种新的 <b>前后端交互方式</b>。</p>
-
-<h2 id="企业微信机器人">企业微信机器人</h2>
-
-<h3 id="工作原理">工作原理</h3>
-
-<p>机器人就相当于一个webhook，创建者可在机器人的详情页查看机器人特有的WebHookURL，向这个链接发送一个 <b>http post</b> 请求，即可实现给该群组发送消息。</p>
-
-<h5 id="要特别注意">要特别注意</h5>
-
-<blockquote>
-  <p>机器人的 <b>webhookurl</b> 要保护好，不要分享到那些公开可查阅的地方，否则可能会有人控制机器人发送垃圾信息了。</p>
-</blockquote>
-
-<h3 id="发送信息的格式">发送信息的格式</h3>
-
-<h4 id="text类型">text类型</h4>
-
-<div lang="json" class="language-json highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
- </span><span class="nl">"msgtype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
- </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-     </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hello EveryOne"</span><span class="p">,</span><span class="w">
-     </span><span class="nl">"mentioned_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"要艾特的人"</span><span class="p">],</span><span class="w">
-     </span><span class="nl">"mentioned_mobile_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"要艾特的人的电话号"</span><span class="p">]</span><span class="w"> 
- </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></div></div>
-
-<h4 id="markdown类型">markdown类型</h4>
-
-<div lang="json" class="language-json highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div lang="java" class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -656,26 +649,229 @@
 7
 8
 9
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
- </span><span class="nl">"msgtype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"markdown"</span><span class="p">,</span><span class="w">
- </span><span class="nl">"markdon"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-     </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"## 仓库提交记录 </span><span class="se">\n</span><span class="s2">
-        			&gt; 提交人：XXX </span><span class="se">\n</span><span class="s2">
-        			&gt; 提交人邮箱：XXX </span><span class="se">\n</span><span class="s2">
-        			..."</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></div></div>
+</pre></td><td class="rouge-code"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Servlet</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">doPost</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span><span class="o">{</span>
+        <span class="n">doGet</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">response</span><span class="o">);</span>
+    <span class="o">}</span>
+    
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">doGet</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span><span class="o">{</span>
+        <span class="c1">//对传过来的请求做的一些处理</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></div></div>
 
-<blockquote>
-  <p>常见的是这两种，还有文件类型和图片类型</p>
-</blockquote>
+<h4 id="关于路径的配置">关于路径的配置</h4>
 
-<h3 id="python请求发送的格式">python请求发送的格式</h3>
+<h5 id="在webxml中配置">在web.xml中配置</h5>
 
-<p>代码举例</p>
+<div lang="xml" class="language-xml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;servlet&gt;</span>
+    <span class="nt">&lt;servlet-name&gt;</span>ServletTest<span class="nt">&lt;/servlet-name&gt;</span>
+    <span class="nt">&lt;servlet-class&gt;</span>Servlet文件的地址<span class="nt">&lt;/servlet-class&gt;</span>
+<span class="nt">&lt;/servlet&gt;</span>
+<span class="nt">&lt;servlet-mapping&gt;</span>
+    <span class="nt">&lt;servlet-name&gt;</span>ServletTest<span class="nt">&lt;/servlet-name&gt;</span>
+    <span class="nt">&lt;url-pattern&gt;</span>/在服务器中映射的地址<span class="nt">&lt;/url-pattern&gt;</span><span class="c">&lt;!--基于WebApp地址来映射--&gt;</span>
+<span class="nt">&lt;/servlet-mapping&gt;</span>
+</pre></td></tr></tbody></table></code></div></div>
 
-<div lang="python" class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<ol>
+  <li>
+    <p>&lt;servlet-name&gt;、&lt;servlet-class&gt;和&lt;jsp-file&gt;元素</p>
+
+    <p>&lt;servlet&gt; 必须含有 &lt;servlet-name&gt;和&lt;servlet-class&gt;，或者&lt;servlet-name&gt;和&lt;jsp-file&gt;。</p>
+
+    <ul>
+      <li>&lt;servlet-name&gt;用来定义servlet的名称，该名称在整个应用中必须是惟一的</li>
+      <li>&lt;servlet-class&gt;用来指定servlet的完全限定的名称。</li>
+    </ul>
+  </li>
+  <li>
+    <p>&lt;servlet-mapping&gt;</p>
+
+    <p>&lt;servlet-mapping&gt;含有 &lt;servlet-name&gt; 和 &lt;url-pattern&gt;</p>
+
+    <ul>
+      <li>&lt;servlet-name&gt;：Servlet 的名字，唯一性和一致性，与&lt;servlet&gt; 元素中声明的名字一致。</li>
+      <li>&lt;url-pattern&gt;：指定相对于 Servlet 的 URL 的路径。该路径相对于 web 应用程序上下文的根路径。&lt;servlet-mapping&gt;将 URL 模式映射到某个 Servlet ，即该 Servlet 处理的 URL。</li>
+    </ul>
+  </li>
+</ol>
+
+<h5 id="通过注解配置">通过注解配置</h5>
+
+<p>@WebServlet注解的相关属性</p>
+
+<ol>
+  <li>asyncSupported：声明servlet是否支持异步操作模式</li>
+  <li>description:servlet的描述信息</li>
+  <li>displayName:servlet的显示名称</li>
+  <li>initParams:servlet的初始化参数</li>
+  <li>name:servlet的名称</li>
+  <li>urlPatterns:servlet的访问URL(指定了该servlet在浏览器上的访问url)</li>
+  <li>value:servlet的访问URL</li>
+  <li>loadOnStartup：指定servlet是否应用启动时加载（必须保证，value或urlPatterns有值，否则，就需要采用传统servlet配置方式进行配置，即在web.xml中配置）</li>
+</ol>
+
+<div lang="java" class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="nd">@WebServlet</span><span class="o">(</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s">"UserServlet"</span><span class="o">,</span>
+    <span class="n">urlPatterns</span> <span class="o">=</span> <span class="o">{</span><span class="s">"/userlogin"</span><span class="o">},</span>
+    <span class="n">loadOnStartup</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1">//1的优先级最高</span>
+<span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserServlet</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">doPost</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span> <span class="o">{</span>
+        <span class="n">doGet</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">response</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">doGet</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span> <span class="o">{</span>
+        <span class="c1">//一些处理</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h4 id="requestresponse参数介绍">request、response参数介绍</h4>
+
+<h5 id="request">request</h5>
+
+<div lang="java" class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserServlet</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">doPost</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span> <span class="o">{</span>
+        <span class="n">doGet</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">response</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">doGet</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span> <span class="o">{</span>
+        <span class="n">request</span><span class="o">.</span><span class="na">setCharacterEncoding</span><span class="o">(</span><span class="s">"utf-8"</span><span class="o">);</span><span class="c1">//对request传来的数据进行转码。</span>
+        <span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"username"</span><span class="o">);</span><span class="c1">//从请求中获取username这个key所对应的value，返回的一般是字符串。</span>
+        <span class="n">request</span><span class="o">.</span><span class="na">getParameterValues</span><span class="o">(</span><span class="s">"username"</span><span class="o">);</span><span class="c1">//如果请求中有多个相同的key传的不同的值，通过这个方法得到一个String[]。</span>
+        <span class="n">request</span><span class="o">.</span><span class="na">getAttribute</span><span class="o">(</span><span class="s">"username"</span><span class="o">);</span><span class="c1">//得到请求中之前通过setAttribute传入的Attribute，可以是任何类型的数据。</span>
+        <span class="nc">HttpSession</span> <span class="n">session</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getSession</span><span class="o">();</span><span class="c1">//从请求中获取一个HttpSession对象，可以通过session.setAttribute("user",User)在浏览器中添加Session。</span>
+        <span class="nc">RequestDispatcher</span> <span class="n">disp</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getRequestDispatcher</span><span class="o">(</span><span class="s">"要跳转的地址//相对地址"</span><span class="o">);</span><span class="c1">//请求调度器，disp可以将request和response两个对象的所有信息一起转发给目的地址。</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h5 id="response">response</h5>
+
+<div lang="java" class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserServlet</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">doPost</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span> <span class="o">{</span>
+        <span class="n">doGet</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">response</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">doGet</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">response</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span> <span class="o">{</span>
+    	<span class="n">reponse</span><span class="o">.</span><span class="na">setContentType</span><span class="o">(</span><span class="s">"text/html;charset=utf-8"</span><span class="o">);</span>
+        <span class="n">response</span><span class="o">.</span><span class="na">sendRedirect</span><span class="o">(</span><span class="s">"跳转的地址，这里需要的是绝对地址，所以要在前面加上request.getContextPath()"</span><span class="o">);</span>
+        <span class="nc">PrintWriter</span> <span class="n">out</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="na">getWriter</span><span class="o">();</span><span class="c1">//然后通过 out.println("xxx");就可以直接向浏览器输出内容。</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="jsp">JSP</h3>
+
+<h4 id="概述-1">概述</h4>
+
+<p>呃，简单点说，JSP就是一个可以嵌入Java语句的 html 页面。</p>
+
+<h4 id="基本语法">基本语法</h4>
+
+<h5 id="指令">指令</h5>
+
+<p>JSP指令用来设置与整个JSP页面相关的属性，JSP指令语法格式：</p>
+
+<div lang="jsp" class="language-jsp highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;%</span><span class="err">@</span> <span class="n">directive</span> <span class="n">attribute</span><span class="o">=</span><span class="s">"value"</span> <span class="nt">%&gt;</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>这里有三种指令标签：</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th style="text-align: left"><strong>指令</strong></th>
+      <th style="text-align: left"><strong>描述</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">&lt;%@ page … %&gt;</td>
+      <td style="text-align: left">定义页面的依赖属性，比如脚本语言、error页面、缓存需求等等</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">&lt;%@ include … %&gt;</td>
+      <td style="text-align: left">包含其他文件</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">&lt;%@ taglib … %&gt;</td>
+      <td style="text-align: left">引入标签库的定义，可以是自定义标签</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<h5 id="表达式">表达式</h5>
+
+<div lang="jsp" class="language-jsp highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;%=</span><span class="o">(</span><span class="k">new</span> <span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">Date</span><span class="o">()).</span><span class="na">toLocaleString</span><span class="o">()</span><span class="nt">%&gt;</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h5 id="流程控制">流程控制</h5>
+
+<p>这里举for循环的例子，if、switch、while 同理。</p>
+
+<div lang="jsp" class="language-jsp highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;%</span> <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">prolist</span><span class="o">.</span><span class="na">size</span><span class="o">();</span><span class="n">i</span><span class="o">++){</span> <span class="nt">%&gt;</span>
+    <span class="c">&lt;!--一些html标签--&gt;</span>
+<span class="nt">&lt;%</span> <span class="o">}</span> <span class="nt">%&gt;</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h5 id="一个简单的完整的例子">一个简单的完整的例子</h5>
+
+<div lang="jsp" class="language-jsp highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -700,46 +896,38 @@
 23
 24
 25
-</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">requests</span> <span class="c1">#requests 包主要就是负责发送get或者post请求
-</span>
-<span class="k">def</span> <span class="nf">wechat_roboot</span><span class="p">(</span><span class="n">message_data</span><span class="p">):</span>
- <span class="n">post_headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">}</span>
- <span class="n">post_url</span> <span class="o">=</span> <span class="s">"{企业微信机器人的WebHookUrl}"</span>
- <span class="n">post_data</span> <span class="o">=</span> <span class="p">{</span>
-     <span class="s">"msgtype"</span><span class="p">:</span> <span class="s">"markdown"</span><span class="p">,</span>
-     <span class="s">"markdown"</span><span class="p">:</span> <span class="p">{</span>
-         <span class="s">"content"</span><span class="p">:</span> <span class="s">"## 仓库提交记录"</span> <span class="o">+</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span>
-                       <span class="o">+</span> <span class="s">"&lt;font color=</span><span class="se">\"</span><span class="s">comment</span><span class="se">\"</span><span class="s">&gt;仓库名称&lt;/font&gt;："</span> <span class="o">+</span> <span class="n">repo_name</span> <span class="o">+</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span>
-                       <span class="o">+</span> <span class="s">"&lt;font color=</span><span class="se">\"</span><span class="s">comment</span><span class="se">\"</span><span class="s">&gt;描述&lt;/font&gt;："</span> <span class="o">+</span> <span class="n">repo_description</span> <span class="o">+</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span>
-                       <span class="o">+</span> <span class="s">"&gt; 提交人："</span> <span class="o">+</span> <span class="n">committer_name</span> <span class="o">+</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span>
-                       <span class="o">+</span> <span class="s">"&gt; 提交人邮箱："</span> <span class="o">+</span> <span class="n">committer_email</span> <span class="o">+</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span>
-                       <span class="o">+</span> <span class="s">"&gt; 提交简介："</span> <span class="o">+</span> <span class="n">msg</span> <span class="o">+</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span>
-                       <span class="o">+</span> <span class="s">"&gt; 提交时间："</span> <span class="o">+</span> <span class="n">time</span> <span class="o">+</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span>
-                       <span class="o">+</span> <span class="s">"[更新位置仓库链接]("</span> <span class="o">+</span> <span class="n">url</span> <span class="o">+</span> <span class="s">")"</span> <span class="o">+</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="n">ret</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">post</span><span class="p">(</span>
-    	<span class="n">url</span> <span class="o">=</span> <span class="n">post_url</span><span class="p">,</span>
-        <span class="n">headers</span> <span class="o">=</span> <span class="n">post_headers</span><span class="p">,</span>
-        <span class="n">json</span> <span class="o">=</span> <span class="n">post_data</span>
-    <span class="p">)</span>
-    <span class="c1">#可讲响应结果打印
-</span>    <span class="k">print</span><span class="p">(</span><span class="n">ret</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
+26
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;%@ page </span><span class="na">contentType=</span><span class="s">"text/html;charset=UTF-8"</span><span class="na"> language=</span><span class="s">"java"</span> <span class="nt">%&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>hello<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">width=</span><span class="s">"300"</span> <span class="na">border=</span><span class="s">"1"</span> <span class="na">cellspacing=</span><span class="s">"1"</span> <span class="na">cellpadding=</span><span class="s">"1"</span> <span class="na">style=</span><span class="s">"text-align: center"</span><span class="err">;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;thead&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;th&gt;</span> 序号 <span class="nt">&lt;/th&gt;</span>
+                <span class="nt">&lt;th&gt;</span> 内容 <span class="nt">&lt;/th&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;/thead&gt;</span>
+        <span class="nt">&lt;%</span> 
+        	<span class="nc">String</span><span class="o">[]</span> <span class="n">arr</span><span class="o">={</span><span class="s">"1001"</span><span class="o">,</span> <span class="s">"1002"</span><span class="o">,</span> <span class="s">"1003"</span><span class="o">,</span> <span class="s">"1004"</span><span class="o">,</span> <span class="s">"1005"</span> <span class="o">};</span>
+            <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">arr</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
+        <span class="nt">%&gt;</span>
+                <span class="nt">&lt;tr&gt;</span>
+                    <span class="nt">&lt;td&gt;</span> <span class="nt">&lt;%</span> <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">);</span> <span class="nt">%&gt;</span> <span class="nt">&lt;/td&gt;</span>
+                    <span class="nt">&lt;td&gt;</span> <span class="nt">&lt;%</span> <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span> <span class="nt">%&gt;</span> <span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;%</span> <span class="o">}</span> <span class="nt">%&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+
 </pre></td></tr></tbody></table></code></div></div>
 
-<blockquote>
-  <p><b>http</b> 请求头 “Content-Type” 常见的媒体格式类型请看<a href="https://www.runoob.com/http/http-content-type.html">菜鸟教程</a></p>
-</blockquote>
+<h3 id="mvc模式编程">MVC模式编程</h3>
 
-<h2 id="github-webhook">GitHub WebHook</h2>
-
-<h3 id="工作原理-1">工作原理</h3>
-
-<p>当仓库有push、pull等操作后，会向定义的webhookUrl发送post请求</p>
-
-<h2 id="参考文章">参考文章</h2>
-
-<p><a href="https://www.jianshu.com/p/9829986b4363">MayerBin</a></p>
+<p><img data-proofer-ignore data-src="http://Jamartin-create.github.io/assets/img/post-pic/java/Servlet_P1.png" alt="photo" /></p>
 
 
       </div>
@@ -751,8 +939,8 @@
         <div class="post-meta mb-3">
           <i class="far fa-folder-open fa-fw mr-1"></i>
           
-            <a href='/categories/python/'>python</a>,
-            <a href='/categories/flask/'>flask</a>
+            <a href='/categories/java/'>java</a>,
+            <a href='/categories/javaweb/'>javaweb</a>
         </div>
         
 
@@ -761,14 +949,11 @@
         <div class="post-tags">
           <i class="fa fa-tags fa-fw mr-1"></i>
           
-          <a href="/tags/python/"
-            class="post-tag no-text-decoration" >python</a>
+          <a href="/tags/java/"
+            class="post-tag no-text-decoration" >java</a>
           
-          <a href="/tags/flask/"
-            class="post-tag no-text-decoration" >flask</a>
-          
-          <a href="/tags/linux/"
-            class="post-tag no-text-decoration" >linux</a>
+          <a href="/tags/servlet/"
+            class="post-tag no-text-decoration" >servlet</a>
           
           </div>
         
@@ -795,19 +980,19 @@
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=github-webhook与企业WeChat-webhook中间件开发(一)webhook - Lil Martin&url=/posts/flask-python-webhock/" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=JavaWeb基础——servlet - Lil Martin&url=/posts/Servlet/" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=github-webhook与企业WeChat-webhook中间件开发(一)webhook - Lil Martin&u=/posts/flask-python-webhock/" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=JavaWeb基础——servlet - Lil Martin&u=/posts/Servlet/" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://telegram.me/share?text=github-webhook与企业WeChat-webhook中间件开发(一)webhook - Lil Martin&url=/posts/flask-python-webhock/" data-toggle="tooltip" data-placement="top"
+        <a href="https://telegram.me/share?text=JavaWeb基础——servlet - Lil Martin&url=/posts/Servlet/" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -1457,254 +1642,254 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
   
 
   
@@ -1833,6 +2018,27 @@
 
 
 
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+      
+      
+        
+        
+        
+          
+
+
+
 
 
   <div id="related-posts" class="mt-5 mb-2 mb-sm-4">
@@ -1843,7 +2049,7 @@
       
       
       <div class="card">
-        <a href="/posts/flask-getPost/">
+        <a href="/posts/java-hashmap/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1864,14 +2070,14 @@
   
 
   
-    Aug 15, 2021
+    Jul 17, 2021
   
 
-  <i class="unloaded">2021-08-15T02:08:46+08:00</i>
+  <i class="unloaded">2021-07-17T16:16:01+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>通过flask在后端部署时遇到的问题</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>HashMap(一)用法</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1880,21 +2086,28 @@
 
 
 
-                虚拟环境
+                Java-HashMap
 
-​    Utunbu配置虚拟环境，virtualenv 安装时如果pip不是最新版，下载的时候会丢包
-
-外网访问服务器时无法得到响应
-
-服务器端放行端口
+HashMap（哈希表）的理解
 
 
-  在服务器面板找到安全组，添加一个安全组，选择端口号，协议为TCP协议。
-  连通ssh修改防火墙配置：
+  
+    其增删改查 在不考虑“哈希冲突时的时间复杂度仅有O(1)
+  
+  
+    主干是 数组 ，也就是通过某个”下标”即索引从而实现一次定位
+  
+  
+    哈希冲突 是指：虽然两个元素的 key 不同，但是他们的实际地址 却相同，即冲突
+  
 
 
-systemctl start firewalld.service 
-firewall-cmd --zone=...
+HashMap的使用
+
+
+  
+    创建一个HashMap
+...
               </p>
             </div>
           </div>
@@ -1904,7 +2117,7 @@ firewall-cmd --zone=...
       
       
       <div class="card">
-        <a href="/posts/flask-python-server/">
+        <a href="/posts/AL-Search/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1925,14 +2138,14 @@ firewall-cmd --zone=...
   
 
   
-    Aug 16, 2021
+    Jan 24
   
 
-  <i class="unloaded">2021-08-16T20:25:17+08:00</i>
+  <i class="unloaded">2022-01-24T10:00:00+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(二)服务器配置</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>算法篇：全排列(eg:蓝桥杯 ALGO-1005 数字游戏)</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1941,21 +2154,25 @@ firewall-cmd --zone=...
 
 
 
-                端口配置
+                全排列
 
-面板配置端口
+顾名思义：就是将所有元素按照一定顺序排列一遍。
 
-打开云服务器，找到安全组，放行5000端口(5555端口等预定义的远程调试端口不能用哦)
 
-服务器内部打开该端口防火墙
+  例如：现在有一组数组[1,2,3]
 
-1
-2
-3
-4
-systemctl start firewalld.service 
-firewall-cmd --zone=public --add-port=5000/tcp --permanent
-systemctl restart fi...
+  这个数组全排列的结果就是 { [1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], [3,2,1] }
+
+  这么说就懂了吧！
+
+
+那么如何用 编程 解决呢？
+
+说到排列，那么最常用的自然是递归！
+
+那么问题又来了，怎么 “递”？
+
+咱先来个思维导图...
               </p>
             </div>
           </div>
@@ -1965,7 +2182,7 @@ systemctl restart fi...
       
       
       <div class="card">
-        <a href="/posts/flask-python-deployment/">
+        <a href="/posts/Vue-Router/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1986,14 +2203,14 @@ systemctl restart fi...
   
 
   
-    Aug 17, 2021
+    Dec 22, 2021
   
 
-  <i class="unloaded">2021-08-17T08:16:18+08:00</i>
+  <i class="unloaded">2021-12-22T09:43:20+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>github-webhook与企业WeChat-webhook中间件开发(四)代码部署到服务器</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>@vueRouter3.x Basic</h3>
             <div class="text-muted small">
               <p>
                 
@@ -2002,31 +2219,18 @@ systemctl restart fi...
 
 
 
-                编写代码
+                基础
 
-创建虚拟环境
+安装请看官方文档router-vue
 
-进入工作空间 workon my_env
+基础路由匹配
 
-1
-mkvirtualenv -p python3 my_env
+html
 
+&lt;script src="https://unpkg.com/vue/dist/vue.js"&gt;&lt;/script&gt;
+&lt;script src="https://unpkg.com/vue-router/dist/vue-router.js"&gt;&lt;/script&gt;
 
-放置代码
-
-1
-2
-3
-4
-5
-6
-7
-#创建一个工作空间放置代码 (可要可不要，看个人习惯)
-mkdir pythonWorkSpace
-#进入刚刚创建的工作空间
-cd pythonWorkSpace
-#创建一个python文件
-vim robort...
+&lt;...
               </p>
             </div>
           </div>
@@ -2044,17 +2248,17 @@ vim robort...
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <a href="/posts/flask-getPost/" class="btn btn-outline-primary"
+  <a href="/posts/AL-Search/" class="btn btn-outline-primary"
     prompt="Older">
-    <p>通过flask在后端部署时遇到的问题</p>
+    <p>算法篇：全排列(eg:蓝桥杯 ALGO-1005 数字游戏)</p>
   </a>
   
 
   
-  <a href="/posts/flask-python-server/" class="btn btn-outline-primary"
+  <span class="btn btn-outline-primary disabled"
     prompt="Newer">
-    <p>github-webhook与企业WeChat-webhook中间件开发(二)服务器配置</p>
-  </a>
+    <p>-</p>
+  </span>
   
 
 </div>
@@ -2078,9 +2282,9 @@ vim robort...
     scriptUrl: '//.disqus.com/embed.js',
 
     disqusConfig: function() {
-      this.page.title = 'github-webhook与企业WeChat-webhook中间件开发(一)webhook';
-      this.page.url = '/posts/flask-python-webhock/';
-      this.page.identifier = '/posts/flask-python-webhock/';
+      this.page.title = 'JavaWeb基础——servlet';
+      this.page.url = '/posts/Servlet/';
+      this.page.identifier = '/posts/Servlet/';
     }
   };
 

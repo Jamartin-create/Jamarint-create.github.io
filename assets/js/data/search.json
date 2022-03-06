@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "JavaWeb基础——servlet",
+    "url": "/posts/Servlet/",
+    "categories": "java, javaweb",
+    "tags": "java, servlet",
+    "date": "2022-03-06 22:22:22 +0800",
+    
+
+
+
+
+
+    "snippet": "概述简单点说，关于JavaWeb基础，也就是Servlet、JSP 以及 MVC 模式编程。Servlet一个继承了HttpServlet 的 Java 类，可用于接收网络中的请求并做一些处理。目前常用的类长这样：public class Servlet extends HttpServlet {    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{        doGet(request, resp..."
+  },
+  
+  {
     "title": "算法篇：全排列(eg:蓝桥杯 ALGO-1005 数字游戏)",
     "url": "/posts/AL-Search/",
     "categories": "java, Algorithm",
