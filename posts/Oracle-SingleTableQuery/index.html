@@ -1907,6 +1907,19 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
   
 
@@ -2111,79 +2124,6 @@
       
       
       <div class="card">
-        <a href="/posts/Oracle-view/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Oct 11, 2021
-  
-
-  <i class="unloaded">2021-10-11T16:33:00+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Orcale基础(七)视图、索引、事务</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                视图(view)
-
-
-
-作用
-
-
-  控制数据访问
-  简化查询
-  数据独立性
-  避免重复访问相同的数据
-
-
-视图的创建
-
-注意
-
-在运维数据库，对一些数据进行操作时，最好先将要操作的数据备份，然后再操作数据或者直接操作备份后的数据。
-
-1
-2
-3
-4
--- 快速复制表结构，如果复制的表有数据，则顺势复制表中的所有数据。
-create table emp_bank
-	as 
-	selec...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
         <a href="/posts/Oracle-intro/">
           <div class="card-body">
             <!--
@@ -2302,6 +2242,77 @@ select * from emp cross join dept -- 依次从m行的emp中取一行emp，和n�
 4
 -- 根据以上结合的结果，如何查找到Smith的人所在的部门名称
 select emp.ename, dept...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/Oracle-key/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Sep 20, 2021
+  
+
+  <i class="unloaded">2021-09-20T16:30:42+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Orcale基础(四)约束</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                约束条件
+
+
+  主键：primary key（PK）—— unique + not null
+  外键：foreign key （FK）
+  唯一：unique
+  非空：not null
+  检查
+
+
+一些术语
+
+DDL操作
+
+create
+
+1
+2
+3
+4
+5
+6
+create table student(
+    id number primary key,
+    name var...
               </p>
             </div>
           </div>

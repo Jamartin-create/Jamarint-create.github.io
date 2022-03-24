@@ -1698,6 +1698,19 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
   
 
@@ -1928,79 +1941,6 @@
       
       
       <div class="card">
-        <a href="/posts/Oracle-view/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Oct 11, 2021
-  
-
-  <i class="unloaded">2021-10-11T16:33:00+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Orcale基础(七)视图、索引、事务</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                视图(view)
-
-
-
-作用
-
-
-  控制数据访问
-  简化查询
-  数据独立性
-  避免重复访问相同的数据
-
-
-视图的创建
-
-注意
-
-在运维数据库，对一些数据进行操作时，最好先将要操作的数据备份，然后再操作数据或者直接操作备份后的数据。
-
-1
-2
-3
-4
--- 快速复制表结构，如果复制的表有数据，则顺势复制表中的所有数据。
-create table emp_bank
-	as 
-	selec...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
         <a href="/posts/Oracle-intro/">
           <div class="card-body">
             <!--
@@ -2125,6 +2065,65 @@ select empno, ename, deptno from emp;
 
     select empno 员工编号, ename 员工姓名 from emp;
 select...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/Oracle-UnSingleTableQuery/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Sep 13, 2021
+  
+
+  <i class="unloaded">2021-09-13T21:43:00+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Oracle(三)多表查询</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                多表查
+
+交叉连接  cross join
+
+
+  一般不用（因为无用信息太多）
+
+
+select * from emp cross join dept -- 依次从m行的emp中取一行emp，和n行dept中的每一行进行组合，也就是会产生一个nxm行的表格
+
+
+-- 根据以上结合的结果，如何查找到Smith的人所在的部门名称
+select emp.ename, dept.deptno, d...
               </p>
             </div>
           </div>

@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "Hibernate",
+    "url": "/posts/Hibernate/",
+    "categories": "",
+    "tags": "",
+    "date": "2022-03-24 00:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "HibernateHibernate简介ORM(Object Relation Mapping)  译为：对象关系映射，解决了对象和关系型数据库之间得数据交互问题。ORM技术可以根据提前配置好得对象和数据库之间的映射关系生成对应的SQL语句，整个过程不需要人工干预。            数据库      类/对象                  表（table）      类（class）              表中的记录（record，也称行）      对象（Object）              表中的字段（field，也称列）      对象中的属性（attribute..."
+  },
+  
+  {
     "title": "JavaWeb基础——servlet",
     "url": "/posts/Servlet/",
     "categories": "java, javaweb",
