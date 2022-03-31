@@ -26,8 +26,8 @@
 <meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Lil Martin" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="一个菜鸡前端程序员博主。" />
-<meta property="og:description" content="一个菜鸡前端程序员博主。" />
+<meta name="description" content="一个爱学习的菜鸟程序员。" />
+<meta property="og:description" content="一个爱学习的菜鸟程序员。" />
 <link rel="canonical" href="/page2/" />
 <meta property="og:url" content="/page2/" />
 <meta property="og:site_name" content="Lil Martin" />
@@ -38,7 +38,7 @@
 <meta name="twitter:site" content="@LilMart39538257" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"WebPage","headline":"Lil Martin","url":"/page2/","description":"一个菜鸡前端程序员博主。","@context":"https://schema.org"}</script>
+{"@type":"WebPage","headline":"Lil Martin","url":"/page2/","description":"一个爱学习的菜鸟程序员。","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -111,7 +111,7 @@
     <div id="avatar">
       <a href="/" alt="avatar" class="mx-auto">
         
-        <img src="https://Jamartin-create.github.io/assets/img/favicons/mstile-150x150.png" alt="avatar" onerror="this.style.display='none'">
+        <img src="http://cdn.jamartin.top/uploads/big/cbce862f0fcd8405ecf285e16674c8e6.png" alt="avatar" onerror="this.style.display='none'">
       </a>
     </div>
 
@@ -712,7 +712,7 @@ $...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/Oracle-view/">Orcale基础(七)视图、索引、事务</a>
+      <a href="/posts/SQL-view/">SQL基础——视图、索引、事务</a>
     </h1>
 
     <div class="post-content">
@@ -818,7 +818,7 @@ create table emp_bank
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/Oracle-rownum-pk/">Orcale基础(六)rownum与主键设计</a>
+      <a href="/posts/SQL-rownum-pk/">SQL基础——主键设计</a>
     </h1>
 
     <div class="post-content">
@@ -831,7 +831,7 @@ create table emp_bank
 
         主键设计
 
-ROWNUM 和 ROWID
+ROWNUM 和 ROWID（Oracle特有）
 
 ROWID
 
@@ -841,8 +841,7 @@ select rowid, empno from emp;
 -- 此时的查询结果中，所有行的rowid字段是唯一的
 select rowid, empno from emp where empno = 7369;
 -- 该结果中
--- empno=7369的rowid 和 
--- 上...
+-- empno=7369的row...
       </p>
     </div>
 
@@ -898,7 +897,7 @@ select rowid, empno from emp where empno = 7369;
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="968 words">5 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="971 words">5 min</span>
 
 
         <!-- page views -->
@@ -915,7 +914,7 @@ select rowid, empno from emp where empno = 7369;
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/Oracle-ChildQuery/">Orcale基础(五)子查询</a>
+      <a href="/posts/SQL-ChildQuery/">SQL练习——子查询</a>
     </h1>
 
     <div class="post-content">
@@ -1013,7 +1012,7 @@ select * from emp
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/Oracle-key/">Orcale基础(四)约束</a>
+      <a href="/posts/SQL-key/">SQL基础——约束</a>
     </h1>
 
     <div class="post-content">
@@ -1024,14 +1023,14 @@ select * from emp
 
 
 
-        约束条件
-
-
-  主键：primary key（PK）—— unique + not null
-  外键：foreign key （FK）
-  唯一：unique
-  非空：not null
-  检查
+        
+  
+    主键：primary key（PK）—— unique + not null
+    外键：foreign key （FK）
+    唯一：unique
+    非空：not null
+    检查：check
+  
 
 
 一些术语
@@ -1042,8 +1041,7 @@ create
 
 create table student(
     id number primary key,
-    name varchar2(20),
- ...
+    name...
       </p>
     </div>
 
@@ -1099,7 +1097,7 @@ create table student(
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="590 words">3 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="587 words">3 min</span>
 
 
         <!-- page views -->
@@ -1116,7 +1114,7 @@ create table student(
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/Oracle-UnSingleTableQuery/">Oracle(三)多表查询</a>
+      <a href="/posts/SQL-UnSingleTableQuery/">SQL练习——多表查询</a>
     </h1>
 
     <div class="post-content">
@@ -1212,7 +1210,7 @@ select emp.ename, dept.deptno, d...
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/Oracle-SingleTableQuery/">Oracle(二)单表查询</a>
+      <a href="/posts/SQL-SingleTableQuery/">SQL练习——单表查询</a>
     </h1>
 
     <div class="post-content">
@@ -1391,27 +1389,10 @@ select...
 
   
 
-    
-    
-    
-    
-    
-
-    
-
-    
-      <!-- show number -->
-      <li class="page-item ">
-        <a class="page-link btn-box-shadow" href="/page4/">4</a>
-      </li>
-    
-
-  
-
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>2</span>
-    <span class="text-muted">/ 4</span>
+    <span class="text-muted">/ 3</span>
   </li>
 
   <!-- right arrow -->
@@ -1474,17 +1455,7 @@ select...
         
         
         
-        <li><a href="/posts/blog-git-bind/">gitpage+jekyll搭建博客(一)代码托管</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/blog-conv-jekyll/">gitpage+jekyll搭建博客(二)搭建jekyll环境</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/blog-git-push/">gitpage+jekyll搭建博客(三)将jekyll模板上传至github</a></li>
+        <li><a href="/posts/flask-python-webhock/">github-webhook与企业WeChat-webhook中间件开发(一)webhook</a></li>
       
 
       </ul>
@@ -1553,132 +1524,6 @@ select...
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1757,23 +1602,6 @@ select...
     
     
     
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -1799,35 +1627,6 @@ select...
     
     
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -1935,6 +1734,89 @@ select...
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -1961,6 +1843,44 @@ select...
         
         
 
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -1979,22 +1899,10 @@ select...
 
       
         
-        <a class="post-tag" href="/tags/oracle/">oracle</a>
-      
-        
         <a class="post-tag" href="/tags/sql/">sql</a>
       
         
-        <a class="post-tag" href="/tags/flask/">flask</a>
-      
-        
-        <a class="post-tag" href="/tags/python/">python</a>
-      
-        
         <a class="post-tag" href="/tags/javascript/">javascript</a>
-      
-        
-        <a class="post-tag" href="/tags/linux/">linux</a>
       
         
         <a class="post-tag" href="/tags/java/">java</a>
@@ -2007,6 +1915,18 @@ select...
       
         
         <a class="post-tag" href="/tags/algorithm/">algorithm</a>
+      
+        
+        <a class="post-tag" href="/tags/flask/">flask</a>
+      
+        
+        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
+      
+        
+        <a class="post-tag" href="/tags/jsx/">JSX</a>
+      
+        
+        <a class="post-tag" href="/tags/linux/">linux</a>
       
 
       </div>
@@ -2128,132 +2048,6 @@ select...
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2332,23 +2126,6 @@ select...
     
     
     
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -2374,35 +2151,6 @@ select...
     
     
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -2510,6 +2258,89 @@ select...
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -2542,29 +2373,55 @@ select...
     
     
       
-        
-        
-
-
-
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
       
         
-        <a class="post-tag" href="/tags/oracle/">oracle</a>
+        
+
+
+
       
         
         <a class="post-tag" href="/tags/sql/">sql</a>
       
         
-        <a class="post-tag" href="/tags/flask/">flask</a>
-      
-        
-        <a class="post-tag" href="/tags/python/">python</a>
-      
-        
         <a class="post-tag" href="/tags/javascript/">javascript</a>
-      
-        
-        <a class="post-tag" href="/tags/linux/">linux</a>
       
         
         <a class="post-tag" href="/tags/java/">java</a>
@@ -2577,6 +2434,18 @@ select...
       
         
         <a class="post-tag" href="/tags/algorithm/">algorithm</a>
+      
+        
+        <a class="post-tag" href="/tags/flask/">flask</a>
+      
+        
+        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
+      
+        
+        <a class="post-tag" href="/tags/jsx/">JSX</a>
+      
+        
+        <a class="post-tag" href="/tags/linux/">linux</a>
       
 
     </div>

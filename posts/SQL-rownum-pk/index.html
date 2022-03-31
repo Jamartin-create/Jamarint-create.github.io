@@ -24,25 +24,25 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="@vue/cli4.x脚手架使用" />
+<meta property="og:title" content="SQL基础——主键设计" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="脚手架基础知识" />
-<meta property="og:description" content="脚手架基础知识" />
-<link rel="canonical" href="/posts/Vue-Cli-Review/" />
-<meta property="og:url" content="/posts/Vue-Cli-Review/" />
+<meta name="description" content="主键设计" />
+<meta property="og:description" content="主键设计" />
+<link rel="canonical" href="/posts/SQL-rownum-pk/" />
+<meta property="og:url" content="/posts/SQL-rownum-pk/" />
 <meta property="og:site_name" content="Lil Martin" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-12-20T09:25:20+08:00" />
+<meta property="article:published_time" content="2021-10-11T11:28:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="@vue/cli4.x脚手架使用" />
+<meta property="twitter:title" content="SQL基础——主键设计" />
 <meta name="twitter:site" content="@LilMart39538257" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","headline":"@vue/cli4.x脚手架使用","dateModified":"2021-12-20T09:25:20+08:00","datePublished":"2021-12-20T09:25:20+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Vue-Cli-Review/"},"url":"/posts/Vue-Cli-Review/","description":"脚手架基础知识","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"SQL基础——主键设计","dateModified":"2021-10-11T11:28:00+08:00","datePublished":"2021-10-11T11:28:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/SQL-rownum-pk/"},"url":"/posts/SQL-rownum-pk/","description":"主键设计","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>@vue/cli4.x脚手架使用 | Lil Martin
+  <title>SQL基础——主键设计 | Lil Martin
   </title>
 
   <!--
@@ -414,7 +414,7 @@
       
 
         
-          <span>@vue/cli4.x脚手架使用</span>
+          <span>SQL基础——主键设计</span>
 
         
 
@@ -489,7 +489,7 @@
 
     <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-      <h1 data-toc-skip>@vue/cli4.x脚手架使用</h1>
+      <h1 data-toc-skip>SQL基础——主键设计</h1>
 
       <div class="post-meta text-muted d-flex flex-column">
         <!-- Published date and author -->
@@ -510,7 +510,7 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, Dec 20, 2021,  9:25 AM +0800"
+    title="Mon, Oct 11, 2021, 11:28 AM +0800"
   
 
   
@@ -520,10 +520,10 @@
   
 
   
-    Dec 20, 2021
+    Oct 11, 2021
   
 
-  <i class="unloaded">2021-12-20T09:25:20+08:00</i>
+  <i class="unloaded">2021-10-11T11:28:00+08:00</i>
 
 </span>
 
@@ -548,7 +548,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1307 words">7 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="971 words">5 min</span>
 
 
           <!-- page views -->
@@ -562,332 +562,176 @@
 
         
 
-        <h1 id="脚手架基础知识">脚手架基础知识</h1>
+        <h2 id="主键设计">主键设计</h2>
 
-<h2 id="安装及创建项目">安装及创建项目</h2>
+<h3 id="rownum-和-rowidoracle特有">ROWNUM 和 ROWID（Oracle特有）</h3>
 
-<p><a href="https://cli.vuejs.org/zh/guide/installation.html">vue cli官方文档</a> 讲的很清楚</p>
+<h4 id="rowid">ROWID</h4>
 
-<h2 id="项目结构">项目结构</h2>
+<p><strong>特点</strong>：唯一，且固定，是在行数据生成时产生的id；</p>
 
-<h3 id="目录结构">目录结构</h3>
-
-<div lang="shell" class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-</pre></td><td class="rouge-code"><pre>├── public
-│   └── index.html
-├── src
-|   ├── main.js				<span class="c"># 项目的初始化</span>
-|   ├── App.vue				<span class="c"># 项目的入口组件</span>
-|	├── assest			 	<span class="c"># 项目中展示的图片或者全局样式</span>
-|	│   ├── css
-|	│   ├── img
-|	│   └── ...
-|	├── api
-|	│   └── ... 			<span class="c"># 抽取出API请求</span>
-|	├── components
-|	│   └── ...				<span class="c"># 项目中可复用的组件</span>
-|	├── view				<span class="c"># 视图界面组件（我理解的是路由对应的组件</span>
-|	│   └── ...				
-|	├── store
-|	|	├── index.js        <span class="c"># 我们组装模块并导出 store 的地方</span>
-|	|	├── actions.js      <span class="c"># 根级别的 action</span>
-|	|	├── mutations.js    <span class="c"># 根级别的 mutation</span>
-|	|	└── ...
-|	├── router
-|	|	└── index.js		<span class="c"># 项目的路由</span>
-|	└── modules
-|       ├── xxx.js       	<span class="c"># 某一个模块</span>
-|       └── ...
-├── .gitignore				<span class="c"># 存放提交git时需要忽略的文件</span>
-├── ...						<span class="c"># 配置文件</span>
+</pre></td><td class="rouge-code"><pre><span class="k">select</span> <span class="n">rowid</span><span class="p">,</span> <span class="n">empno</span> <span class="k">from</span> <span class="n">emp</span><span class="p">;</span>
+<span class="c1">-- 此时的查询结果中，所有行的rowid字段是唯一的</span>
+<span class="k">select</span> <span class="n">rowid</span><span class="p">,</span> <span class="n">empno</span> <span class="k">from</span> <span class="n">emp</span> <span class="k">where</span> <span class="n">empno</span> <span class="o">=</span> <span class="mi">7369</span><span class="p">;</span>
+<span class="c1">-- 该结果中</span>
+<span class="c1">-- empno=7369的rowid 和 </span>
+<span class="c1">-- 上一条 select 语句结果中empno=7369的rowid 相同</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h3 id="vue单文件组件结构">Vue单文件组件结构</h3>
+<blockquote>
+  <p><strong>ROWID是永远不变的，</strong> 永远跟行记录走，不因查询条件而变化</p>
+</blockquote>
+
+<h4 id="rownum">ROWNUM</h4>
+
+<p><strong>特点</strong>：一个伪列，对查询结果返回的行编号即行号，<strong>由1开始</strong> 依次递增</p>
+
+<pre><code class="language-SQL">-- 返回该表全部14条数据
+select rownum, emp.* from emp; -- 结果的rownum为1-14
+-- 返回部门号为30的6条数据
+select rownum, emp.* from emp where deptno = 30; -- 结果的rownum为1-6
+-- 选取rownum的前五条数据
+select rownum, emp.* from emp where rownum &lt; 5;
+</code></pre>
 
 <blockquote>
-  <p><strong>官方介绍</strong></p>
+  <p><strong>ROWNUM数值是在获取每行之后才赋予的。</strong></p>
 
-  <p>在很多 Vue 项目中，我们使用 <kbd>Vue.component</kbd> 来定义全局组件，紧接着用 <kbd>new Vue({ el: '#container '})</kbd> 在每个页面内指定一个容器元素。</p>
+  <p>且：在 order by 之前赋予</p>
+</blockquote>
 
-  <p>这种方式在很多中小规模的项目中运作的很好，在这些项目里 JavaScript 只被用来加强特定的视图。但当在更复杂的项目中，或者你的前端完全由 JavaScript 驱动的时候，下面这些缺点将变得非常明显：</p>
+<p>要想在 <strong>order by</strong> 之后进行 rownum 的赋值，则只能：</p>
+
+<div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="k">select</span> <span class="n">rownum</span><span class="p">,</span> <span class="n">T</span><span class="p">.</span><span class="o">*</span> <span class="k">from</span> 
+	<span class="p">(</span>
+    	<span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">emp</span> <span class="k">order</span> <span class="k">by</span> <span class="n">sal</span>
+    <span class="p">)</span> <span class="n">T</span>
+    <span class="k">where</span> <span class="n">rownum</span> <span class="o">&lt;</span> <span class="mi">5</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h5 id="分页问题">分页问题</h5>
+
+<div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="k">select</span> <span class="n">rownum</span><span class="p">,</span> <span class="n">T</span><span class="p">.</span><span class="o">*</span> <span class="k">from</span>
+	<span class="p">(</span>
+    	<span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">emp</span> <span class="k">order</span> <span class="k">by</span> <span class="s1">'一些条件'</span>
+    <span class="p">)</span>
+    <span class="k">between</span> <span class="s1">'page1'</span> <span class="k">and</span> <span class="s1">'page2'</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="squence序列-自增">SQUENCE序列 (自增)</h3>
+
+<p>首先要有 <strong>Create sequence</strong> 或者 <strong>create any sequence</strong> 权限</p>
+
+<h4 id="创建sequence对象">创建sequence对象</h4>
+
+<div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="k">create</span> <span class="n">sequence</span> <span class="n">emp_sequence</span> <span class="c1">-- 'sequence名称（自拟）'</span>
+<span class="k">increment</span> <span class="k">by</span> <span class="mi">1</span> <span class="c1">-- '每次增加的数量'</span>
+<span class="k">start</span> <span class="k">with</span> <span class="mi">1</span> <span class="c1">-- '从几开始'</span>
+<span class="n">nomaxvalue</span> <span class="c1">-- '一直累加，不循环'</span>
+<span class="k">cache</span> <span class="mi">10</span> <span class="c1">-- '缓存大小'</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h4 id="sequence对象的查询使用">sequence对象的查询使用</h4>
+
+<div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="c1">-- 自增查询：查一次当前这个sequence的数值就增一次</span>
+<span class="c1">-- 增多少取决于创建时，用increment给其定义的大小</span>
+<span class="k">select</span> <span class="n">emp_sequence</span><span class="p">.</span><span class="n">nextVal</span> <span class="k">from</span> <span class="n">dual</span><span class="p">;</span>
+<span class="c1">-- 当前查询：无论查多少次都是和第一次查询一样的值</span>
+<span class="k">select</span> <span class="n">emp_sequence</span><span class="p">.</span><span class="n">currval</span> <span class="k">from</span> <span class="n">dual</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h4 id="sequence对象的插入使用">sequence对象的插入使用</h4>
+
+<div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="c1">-- 一半都是使用nextval插入，保证使用该序列的表不会拥有相同的一个id值</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">dept</span><span class="p">(</span><span class="n">deptno</span><span class="p">,</span> <span class="n">dname</span><span class="p">,</span> <span class="n">loc</span><span class="p">)</span>
+	<span class="k">values</span> <span class="p">(</span><span class="n">emp_sequence</span><span class="p">.</span><span class="n">nextval</span><span class="p">,</span> <span class="s1">'PROGRSAMER'</span><span class="p">,</span> <span class="s1">'BEIJING'</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<blockquote>
+  <p>使用sequence序列号时需注意：</p>
 
   <ul>
-    <li><strong>全局定义 (Global definitions)</strong> 强制要求每个 component 中的命名不得重复</li>
-    <li><strong>字符串模板 (String templates)</strong> 缺乏语法高亮，在 HTML 有多行的时候，需要用到丑陋的 <kbd>\\</kbd></li>
-    <li><strong>不支持 CSS (No CSS support)</strong> 意味着当 HTML 和 JavaScript 组件化时，CSS 明显被遗漏</li>
-    <li><strong>没有构建步骤 (No build step)</strong> 限制只能使用 HTML 和 ES5 JavaScript，而不能使用预处理器，如 Pug (formerly Jade) 和 Babel</li>
+    <li>
+      <p>序列号只是用于保证某一列为唯一整数的方法。</p>
+    </li>
+    <li>
+      <p>不要试图赋予它更多的意义。如：</p>
+
+      <ul>
+        <li>
+          <p>试图保证其连续性</p>
+
+          <p>如下情况会导致序列号的值不连续。</p>
+
+          <ol>
+            <li>回滚</li>
+            <li>系统错误，导致数据添加失败</li>
+            <li>同一个sequence序列对象用于多张表</li>
+          </ol>
+        </li>
+      </ul>
+    </li>
   </ul>
-
-  <p>文件扩展名为 <kbd>.vue</kbd> 的 <strong>single-file components (单文件组件)</strong> 为以上所有问题提供了解决方法，并且还可以使用 webpack 或 Browserify 等构建工具。</p>
 </blockquote>
-
-<p>个人认为这也是一种组件化编程，每一个模块只负责那个模块的部分，关注点分离，编程效率更高，代码可读性更强。</p>
-
-<div lang="vue" class="language-vue highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-</pre></td><td class="rouge-code"><pre><span class="nt">&lt;</span><span class="k">template</span><span class="nt">&gt;</span>
-  <span class="c">&lt;!-- 要渲染的标签 --&gt;</span>
-<span class="nt">&lt;/</span><span class="k">template</span><span class="nt">&gt;</span>
-
-<span class="nt">&lt;</span><span class="k">script</span><span class="nt">&gt;</span>
-<span class="cm">/*引入需要用的包*/</span>
-<span class="k">import</span> <span class="nx">xxx</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@/api/...</span><span class="dl">'</span>
-    
-<span class="cm">/*抛出组件*/</span>
-<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-	<span class="nx">data</span><span class="p">(){</span>
-        <span class="k">return</span> <span class="p">{</span>
-            <span class="na">xxx</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="na">computed</span><span class="p">:{</span>
-        <span class="nx">xxx</span><span class="p">(){</span>
-            <span class="k">return</span> <span class="nx">xxx</span><span class="p">;</span>
-        <span class="p">},</span>
-    <span class="p">},</span>
-    <span class="p">...</span>
-<span class="p">}</span>
-<span class="nt">&lt;/</span><span class="k">script</span><span class="nt">&gt;</span>
-
-<span class="nt">&lt;</span><span class="k">style</span><span class="nt">&gt;</span>
-<span class="c">/*样式*/</span>
-<span class="nt">&lt;/</span><span class="k">style</span><span class="nt">&gt;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h2 id="路由">路由</h2>
-
-<p>移步<a href="https://jamartin-create.github.io/posts/Vue-Router/">我的vue-router学习记录</a></p>
-
-<h2 id="vuex">Vuex</h2>
-
-<p>移步<a href="https://vuex.vuejs.org/zh/guide/">官方vuex文档</a></p>
-
-<h1 id="起步">起步</h1>
-
-<h2 id="项目目录详细介绍">项目目录详细介绍</h2>
-
-<h3 id="mainjs">main.js</h3>
-
-<p>放置公共组件：样式库、Vue、Router、Store等。</p>
-
-<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="nx">Vue</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span>
-<span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./App.vue</span><span class="dl">'</span>
-<span class="k">import</span> <span class="nx">store</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./store</span><span class="dl">'</span>
-<span class="k">import</span> <span class="nx">router</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./router</span><span class="dl">'</span>
-
-<span class="k">import</span> <span class="nx">ElementUI</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">element-ui</span><span class="dl">'</span><span class="p">;</span>
-<span class="k">import</span> <span class="dl">'</span><span class="s1">element-ui/lib/theme-chalk/index.css</span><span class="dl">'</span><span class="p">;</span>
-<span class="k">import</span> <span class="dl">'</span><span class="s1">@/assets/css/layout.css</span><span class="dl">'</span>
-
-
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">productionTip</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">ElementUI</span><span class="p">);</span>
-
-<span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
-  <span class="na">render</span><span class="p">:</span> <span class="nx">h</span> <span class="o">=&gt;</span> <span class="nx">h</span><span class="p">(</span><span class="nx">App</span><span class="p">),</span>
-  <span class="nx">store</span><span class="p">,</span>
-  <span class="nx">router</span>
-<span class="p">}).</span><span class="nx">$mount</span><span class="p">(</span><span class="dl">'</span><span class="s1">#app</span><span class="dl">'</span><span class="p">)</span>
-
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="appvue">App.vue</h3>
-
-<p>根组件，main.js加载完毕后渲染的第一个组件，一般在这个组件渲染完毕后会通过路由跳转至其他页面组件。</p>
-
-<div lang="vue" class="language-vue highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-</pre></td><td class="rouge-code"><pre><span class="nt">&lt;</span><span class="k">template</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span> <span class="na">style=</span><span class="s">"height:100%;background:#EEF2F5;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;router-view&gt;&lt;/router-view&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/</span><span class="k">template</span><span class="nt">&gt;</span>
-
-<span class="nt">&lt;</span><span class="k">script</span><span class="nt">&gt;</span>
-
-<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">App</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">components</span><span class="p">:</span> <span class="p">{</span>
-    <span class="p">...</span>
-  <span class="p">},</span>
-  <span class="p">...</span>
-<span class="p">}</span>
-<span class="nt">&lt;/</span><span class="k">script</span><span class="nt">&gt;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="router">router</h3>
 
 <blockquote>
-  <p>页面跳转的逻辑都是以这个文件为标准进行的</p>
+  <p>一般sequence都是以主键的形式使用，一张表一个sequence对象</p>
 </blockquote>
 
-<p>router/index.js</p>
+<h3 id="主键生成方式">主键生成方式</h3>
 
-<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="nx">Vue</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span>
-<span class="k">import</span> <span class="nx">VueRouter</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue-router</span><span class="dl">'</span>
+<h4 id="sequence">sequence</h4>
 
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">VueRouter</span><span class="p">);</span>
-
-<span class="kd">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">VueRouter</span><span class="p">({</span>
-    <span class="na">routes</span><span class="p">:</span> <span class="p">[{</span>
-            <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">,</span>
-            <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">home</span><span class="dl">'</span><span class="p">,</span>
-            <span class="na">component</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="k">import</span><span class="p">(</span><span class="dl">'</span><span class="s1">../view/Home</span><span class="dl">'</span><span class="p">),</span>
-            <span class="na">redirect</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/page1</span><span class="dl">'</span><span class="p">,</span>
-            <span class="na">children</span><span class="p">:</span> <span class="p">[{</span>
-                    <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/page1</span><span class="dl">'</span><span class="p">,</span>
-                    <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">page1</span><span class="dl">'</span><span class="p">,</span>
-                    <span class="na">component</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="k">import</span><span class="p">(</span><span class="dl">'</span><span class="s1">../view/page1</span><span class="dl">'</span><span class="p">)</span>
-                <span class="p">},</span>
-                <span class="p">...</span>
-            <span class="p">]</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/login</span><span class="dl">'</span><span class="p">,</span>
-            <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">login</span><span class="dl">'</span><span class="p">,</span>
-            <span class="na">component</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="k">import</span><span class="p">(</span><span class="dl">'</span><span class="s1">@/view/Login</span><span class="dl">'</span><span class="p">)</span>
-        <span class="p">},</span>
-        <span class="p">...</span>
-    <span class="p">],</span>
-    <span class="na">mode</span><span class="p">:</span> <span class="dl">'</span><span class="s1">history</span><span class="dl">'</span>
-<span class="p">})</span>
-
-<span class="nx">router</span><span class="p">.</span><span class="nx">beforeEach</span><span class="p">((</span><span class="nx">to</span><span class="p">,</span> <span class="k">from</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="p">...</span>
-<span class="p">})</span>
-
-<span class="k">export</span> <span class="k">default</span> <span class="nx">router</span><span class="p">;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="store">store</h3>
+<p>​	由Sequence对象生成一个不重复的整数。</p>
 
 <blockquote>
-  <p>store一般存的是用户登录的状态及一些缓存的数据，不是一味的将所有组件的状态都塞进去。</p>
-
-  <p>ps：一般大型的项目会将vuex的State、Mutations、Actions、Getters、Modules单独放置文件夹，这里就不介绍那么多。</p>
+  <p>其他数据库如：sqlserve、mysql 有一个identity类型的自增字段。</p>
 </blockquote>
 
-<p>store/index.js</p>
+<h4 id="uuid">UUID</h4>
 
-<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<h5 id="uuid简介">UUID简介</h5>
+
+<p>由四个连字号（-）将32个字节长的字符串分割后生成的字符串，一共36个字节。</p>
+
+<blockquote>
+  <p>比如：550e8400-e29b-41d4-a716-446644330000</p>
+</blockquote>
+
+<h5 id="uuid实现方式guid">UUID实现方式GUID</h5>
+
+<p>Oracle中生成UUID的函数为：<kbd>sys_guid()</kbd></p>
+
+<div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -897,104 +741,41 @@
 8
 9
 10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="nx">Vuex</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vuex</span><span class="dl">'</span>
-<span class="k">import</span> <span class="nx">Vue</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span>
+</pre></td><td class="rouge-code"><pre><span class="c1">-- PL/SQL 编辑器的话，生成的就是一个正常的uuid</span>
+<span class="k">select</span> <span class="n">sys_guid</span><span class="p">()</span> <span class="k">from</span> <span class="n">dual</span><span class="p">;</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">emp</span><span class="p">(...)</span>
+	<span class="k">values</span><span class="p">(</span><span class="n">sys_guid</span><span class="p">()...)</span>
+<span class="c1">-- 但如果用的其他客户端的话，生成的可能时乱码</span>
+<span class="c1">-- 这是需要加上：rawtohex()</span>
+<span class="k">select</span> <span class="n">rawtohex</span><span class="p">(</span><span class="n">sys_guid</span><span class="p">())</span> <span class="k">from</span> <span class="n">dual</span><span class="p">;</span>
 
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Vuex</span><span class="p">);</span>
-
-<span class="kd">const</span> <span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="na">param1</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
-    <span class="na">param2</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
-<span class="p">}</span>
-
-<span class="kd">const</span> <span class="nx">getters</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="na">AddParam12</span><span class="p">:</span> <span class="p">(</span><span class="nx">state</span><span class="p">,)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">param1</span><span class="o">+</span><span class="dl">'</span><span class="s1"> </span><span class="dl">'</span><span class="o">+</span><span class="nx">state</span><span class="p">.</span><span class="nx">param2</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">const</span> <span class="nx">mutations</span> <span class="o">=</span>  <span class="p">{</span>
-    <span class="nx">changeParam1</span><span class="p">(</span><span class="nx">state</span><span class="p">){</span>
-        <span class="nx">state</span><span class="p">.</span><span class="nx">params</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">},</span>
-    <span class="nx">changeParam2</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">changeValue</span><span class="p">){</span>
-    	<span class="nx">state</span><span class="p">.</span><span class="nx">params</span> <span class="o">=</span> <span class="nx">cahngeValue</span><span class="p">;</span>  
-    <span class="p">},</span>
-<span class="p">}</span>
-
-<span class="kd">const</span> <span class="nx">actions</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">changeParam1</span><span class="p">({</span><span class="nx">commit</span><span class="p">}){</span>
-        <span class="nx">setTimeout</span><span class="p">(()</span><span class="o">=&gt;</span><span class="p">{</span>
-            <span class="nx">commit</span><span class="p">(</span><span class="dl">'</span><span class="s1">changeParam1</span><span class="dl">'</span><span class="p">)</span>
-        <span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">state</span><span class="p">,</span>
-    <span class="nx">getters</span><span class="p">,</span>
-    <span class="nx">mutations</span><span class="p">,</span>
-    <span class="nx">actions</span><span class="p">,</span>
-<span class="p">}</span>
-
-<span class="kd">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vuex</span><span class="p">.</span><span class="nx">Store</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span>
-
-<span class="k">export</span> <span class="k">default</span> <span class="nx">store</span><span class="p">;</span>
-
+<span class="k">insert</span> <span class="k">into</span> <span class="n">emp</span><span class="p">(...)</span>
+	<span class="k">values</span><span class="p">(</span><span class="n">rawtohex</span><span class="p">(</span><span class="n">sys_guid</span><span class="p">())...)</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h3 id="view和component">view和component</h3>
+<p>Java 中使用uuid</p>
 
-<p>按我的理解：</p>
+<div lang="java" class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">java.util.UUID</span><span class="o">;</span>
 
-<p><strong>view</strong> 文件夹下放置所有的界面层组件（就是通过路由跳转的组件）</p>
+<span class="nc">String</span> <span class="n">uuid</span> <span class="o">=</span> <span class="no">UUID</span><span class="o">.</span><span class="na">randomUUID</span><span class="o">();</span>
+<span class="n">uuid</span> <span class="o">=</span> <span class="n">uuid</span><span class="o">.</span><span class="na">replaceALL</span><span class="o">(</span><span class="s">"-"</span><span class="o">,</span> <span class="s">""</span><span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">uuid</span><span class="o">)</span><span class="err">；</span>
+</pre></td></tr></tbody></table></code></div></div>
 
-<p><strong>component</strong> 文件夹下放置一些可复用的组件</p>
+<blockquote>
+  <p>UUID 只起到维护表之间关联关系的作用。</p>
+</blockquote>
 
-<h3 id="其他文件夹">其他文件夹</h3>
+<h4 id="为什么不使用业务字段作为主键">为什么不使用业务字段作为主键</h4>
 
-<p>一般还有：</p>
+<p>如：学号、产品号、工号。。。</p>
 
-<p>api，里面有二次封装的axios/request/ajax接口请求。</p>
-
-<p>assets，里面是一些全局的css文件、图片等。</p>
-
-<p>还有根据项目需求而创建的文件夹….</p>
-
+<p>因为：业务上的标识是有可能会更改的，而主键大部分情况可能会作为其他表的外键，如果用业务字段作为主键，当这些业务字段更改时，<strong>会很麻烦</strong>。</p>
 
 
       </div>
@@ -1006,8 +787,8 @@
         <div class="post-meta mb-3">
           <i class="far fa-folder-open fa-fw mr-1"></i>
           
-            <a href='/categories/vue/'>vue</a>,
-            <a href='/categories/vue-cli/'>vue-cli</a>
+            <a href='/categories/sql/'>sql</a>,
+            <a href='/categories/sql-statement/'>sql-statement</a>
         </div>
         
 
@@ -1016,11 +797,8 @@
         <div class="post-tags">
           <i class="fa fa-tags fa-fw mr-1"></i>
           
-          <a href="/tags/vue/"
-            class="post-tag no-text-decoration" >vue</a>
-          
-          <a href="/tags/javascript/"
-            class="post-tag no-text-decoration" >javascript</a>
+          <a href="/tags/sql/"
+            class="post-tag no-text-decoration" >sql</a>
           
           </div>
         
@@ -1047,19 +825,19 @@
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=@vue/cli4.x脚手架使用 - Lil Martin&url=/posts/Vue-Cli-Review/" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=SQL基础——主键设计 - Lil Martin&url=/posts/SQL-rownum-pk/" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=@vue/cli4.x脚手架使用 - Lil Martin&u=/posts/Vue-Cli-Review/" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=SQL基础——主键设计 - Lil Martin&u=/posts/SQL-rownum-pk/" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://telegram.me/share?text=@vue/cli4.x脚手架使用 - Lil Martin&url=/posts/Vue-Cli-Review/" data-toggle="tooltip" data-placement="top"
+        <a href="https://telegram.me/share?text=SQL基础——主键设计 - Lil Martin&url=/posts/SQL-rownum-pk/" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -1700,98 +1478,98 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
   
 
   
@@ -1904,7 +1682,7 @@
       
       
       <div class="card">
-        <a href="/posts/Vue-Basic/">
+        <a href="/posts/SQL-SingleTableQuery/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1925,14 +1703,14 @@
   
 
   
-    Nov 20, 2021
+    Sep 13, 2021
   
 
-  <i class="unloaded">2021-11-20T16:25:20+08:00</i>
+  <i class="unloaded">2021-09-13T18:30:20+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>vue2.x基本概念</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>SQL练习——单表查询</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1941,14 +1719,30 @@
 
 
 
-                简介
+                单表查询
 
-官网介绍Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。
+列的选取-投影
+
+select empno, ename, deptno from emp;
 
 
-  个人观点：（刚刚从React过来）
 
-  区...
+  开发中一般不使用 *
+
+  数据库中：列名大小写不敏感，内容大小写敏感
+
+
+列别名
+
+
+  
+    方法1：列名+” “+别名
+  
+  
+    方法2：列名 as 别名
+
+    select empno 员工编号, ename 员工姓名 from emp;
+select...
               </p>
             </div>
           </div>
@@ -1958,7 +1752,7 @@
       
       
       <div class="card">
-        <a href="/posts/Vue-Router/">
+        <a href="/posts/SQL-UnSingleTableQuery/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1979,14 +1773,14 @@
   
 
   
-    Dec 22, 2021
+    Sep 13, 2021
   
 
-  <i class="unloaded">2021-12-22T09:43:20+08:00</i>
+  <i class="unloaded">2021-09-13T21:43:00+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>@vueRouter3.x Basic</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>SQL练习——多表查询</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1995,32 +1789,19 @@
 
 
 
-                基础
+                多表查
 
-安装请看官方文档router-vue
+交叉连接  cross join
 
-基础路由匹配
 
-html
+  一般不用（因为无用信息太多）
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-&lt;script src="https://unpkg.com/vue/dist/vue.js"&gt;&lt;/script&gt;
-&lt;script src="https://unpkg.com/vue-router/dist/...
+
+select * from emp cross join dept -- 依次从m行的emp中取一行emp，和n行dept中的每一行进行组合，也就是会产生一个nxm行的表格
+
+
+-- 根据以上结合的结果，如何查找到Smith的人所在的部门名称
+select emp.ename, dept.deptno, d...
               </p>
             </div>
           </div>
@@ -2030,7 +1811,7 @@ html
       
       
       <div class="card">
-        <a href="/posts/React-Basic/">
+        <a href="/posts/SQL-key/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -2051,14 +1832,14 @@ html
   
 
   
-    Nov  7, 2021
+    Sep 20, 2021
   
 
-  <i class="unloaded">2021-11-07T22:54:16+08:00</i>
+  <i class="unloaded">2021-09-20T16:30:42+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>React基本概念</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>SQL基础——约束</h3>
             <div class="text-muted small">
               <p>
                 
@@ -2067,31 +1848,25 @@ html
 
 
 
-                React 概述
-
-什么是React
-
-React 是一个用于 构建用户界面 的  JavaScript 库。
-
-React的特点
-
-
-  组件化编程：某一个页面的任何一个部分都可以是一个组件。
-  用法很广泛：web、VR。。。
+                
+  
+    主键：primary key（PK）—— unique + not null
+    外键：foreign key （FK）
+    唯一：unique
+    非空：not null
+    检查：check
+  
 
 
-React基本使用
+一些术语
 
-安装
+DDL操作
 
-安装命令：
+create
 
-npm i react react-dom
-
-
-
-  react包提供创建元素、组件等功能。
-  react-do...
+create table student(
+    id number primary key,
+    name...
               </p>
             </div>
           </div>
@@ -2109,16 +1884,16 @@ npm i react react-dom
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <a href="/posts/Vue-Basic/" class="btn btn-outline-primary"
+  <a href="/posts/SQL-ChildQuery/" class="btn btn-outline-primary"
     prompt="Older">
-    <p>vue2.x基本概念</p>
+    <p>SQL练习——子查询</p>
   </a>
   
 
   
-  <a href="/posts/Vue-Router/" class="btn btn-outline-primary"
+  <a href="/posts/SQL-view/" class="btn btn-outline-primary"
     prompt="Newer">
-    <p>@vueRouter3.x Basic</p>
+    <p>SQL基础——视图、索引、事务</p>
   </a>
   
 
@@ -2143,9 +1918,9 @@ npm i react react-dom
     scriptUrl: '//.disqus.com/embed.js',
 
     disqusConfig: function() {
-      this.page.title = '@vue/cli4.x脚手架使用';
-      this.page.url = '/posts/Vue-Cli-Review/';
-      this.page.identifier = '/posts/Vue-Cli-Review/';
+      this.page.title = 'SQL基础——主键设计';
+      this.page.url = '/posts/SQL-rownum-pk/';
+      this.page.identifier = '/posts/SQL-rownum-pk/';
     }
   };
 

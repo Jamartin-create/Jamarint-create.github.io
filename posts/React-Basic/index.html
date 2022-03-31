@@ -117,7 +117,7 @@
     <div id="avatar">
       <a href="/" alt="avatar" class="mx-auto">
         
-        <img src="https://Jamartin-create.github.io/assets/img/favicons/mstile-150x150.png" alt="avatar" onerror="this.style.display='none'">
+        <img src="http://cdn.jamartin.top/uploads/big/cbce862f0fcd8405ecf285e16674c8e6.png" alt="avatar" onerror="this.style.display='none'">
       </a>
     </div>
 
@@ -562,22 +562,22 @@
 
         
 
-        <h1 id="react-概述">React 概述</h1>
+        <h2 id="react-概述">React 概述</h2>
 
-<h2 id="什么是react">什么是React</h2>
+<h3 id="什么是react">什么是React</h3>
 
 <p><b>React</b> 是一个用于 <b>构建用户界面</b> 的  JavaScript 库。</p>
 
-<h2 id="react的特点">React的特点</h2>
+<h3 id="react的特点">React的特点</h3>
 
 <ol>
   <li>组件化编程：某一个页面的任何一个部分都可以是一个组件。</li>
   <li>用法很广泛：web、VR。。。</li>
 </ol>
 
-<h1 id="react基本使用">React基本使用</h1>
+<h2 id="react基本使用">React基本使用</h2>
 
-<h2 id="安装">安装</h2>
+<h3 id="安装">安装</h3>
 
 <p>安装命令：</p>
 
@@ -635,9 +635,9 @@
   </li>
 </ol>
 
-<h1 id="jsx概述">JSX概述</h1>
+<h2 id="jsx概述">JSX概述</h2>
 
-<h2 id="简介">简介</h2>
+<h3 id="简介">简介</h3>
 
 <blockquote>
   <p>考虑到如下变量声明：</p>
@@ -651,9 +651,9 @@
 
 <p>因为它方便啊！</p>
 
-<h2 id="使用">使用</h2>
+<h3 id="使用">使用</h3>
 
-<h3 id="嵌入表达式">嵌入表达式</h3>
+<h4 id="嵌入表达式">嵌入表达式</h4>
 
 <div lang="jsx" class="language-jsx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -667,7 +667,7 @@
   <p>为了便于阅读，会将JSX拆分为多行。同时，我们建议将内容包裹在括号早中，虽然不是强制要求，但是这样可以避免遇到 <kbd>自动插入分号</kbd> 的陷阱。</p>
 </blockquote>
 
-<h3 id="代替表达式">代替表达式</h3>
+<h4 id="代替表达式">代替表达式</h4>
 
 <p>在编译之后，JSX表达式会呗转为普通js函数调用，并对其取值后可以得到JSX对象。(即可以在if和for的代码块钟使用JSX，将JSX赋值给变量)</p>
 
@@ -730,7 +730,7 @@
   </ol>
 </blockquote>
 
-<h3 id="使用jsx指定子元素">使用JSX指定子元素</h3>
+<h4 id="使用jsx指定子元素">使用JSX指定子元素</h4>
 
 <p>​	加入一个标签里面没有内容，你可以使用 <kbd>/&gt;</kbd> 闭合标签，类似于XML语法。</p>
 
@@ -754,7 +754,7 @@
 <span class="p">);</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h3 id="jsx防止注入攻击">JSX防止注入攻击</h3>
+<h4 id="jsx防止注入攻击">JSX防止注入攻击</h4>
 
 <div lang="jsx" class="language-jsx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -768,7 +768,7 @@
   <p>ReactDOM 在渲染所有输入内容之前，默认会进行 <strong>转义</strong> 。可以确保应用中不会注入那些并非自己明确写的内容。所有的内容在渲染之前都被转换成了字符串。有效防止 <strong>XSS</strong> 攻击。</p>
 </blockquote>
 
-<h3 id="jsx表示对象">JSX表示对象</h3>
+<h4 id="jsx表示对象">JSX表示对象</h4>
 
 <p>Babel 会把JSX转译层一个名为 <strong>React.createElement()</strong> 函数调用。</p>
 
@@ -798,9 +798,9 @@
 <span class="p">)</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h1 id="渲染render">渲染（render）</h1>
+<h2 id="渲染render">渲染（render）</h2>
 
-<h2 id="初次渲染">初次渲染</h2>
+<h3 id="初次渲染">初次渲染</h3>
 
 <p>一般index.html里都会有一个根节点，该节点的id为root，称为“根”dom节点</p>
 
@@ -828,7 +828,7 @@
 <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">deocument</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">));</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h2 id="更新已渲染的元素脚手架有新方法">更新已渲染的元素（脚手架有新方法）</h2>
+<h3 id="更新已渲染的元素脚手架有新方法">更新已渲染的元素（脚手架有新方法）</h3>
 
 <p>React 元素是 <strong>不可变对象</strong>，一旦被创建，就无法更改其子元素和属性，因为它代表了某个特定时刻的UI。</p>
 
@@ -862,11 +862,11 @@
 <span class="nx">setInterval</span><span class="p">(</span><span class="nx">tick</span><span class="p">,</span> <span class="mi">1000</span><span class="p">);</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h1 id="组件">组件</h1>
+<h2 id="组件">组件</h2>
 
-<h2 id="分类">分类</h2>
+<h3 id="分类">分类</h3>
 
-<h3 id="函数组件">函数组件</h3>
+<h4 id="函数组件">函数组件</h4>
 
 <p>编写Js函数是定义组件最简单的方式</p>
 
@@ -891,7 +891,7 @@
   </ol>
 </blockquote>
 
-<h3 id="类组件">类组件</h3>
+<h4 id="类组件">类组件</h4>
 
 <div lang="react" class="language-react highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -924,7 +924,7 @@
   <p>React会将以小写字母开头的组件视为原生DOM标签</p>
 </blockquote>
 
-<h2 id="传值props">传值（props）</h2>
+<h3 id="传值props">传值（props）</h3>
 
 <p>用户自定义的组件中，JSX所接收的属性(name=”LilMartin”)以及子组件转换为一个对象传递给组件，这个对象就称之为”props”</p>
 
@@ -977,7 +977,7 @@
   </ol>
 </blockquote>
 
-<h2 id="组合组件">组合组件</h2>
+<h3 id="组合组件">组合组件</h3>
 
 <p>一个组件可以在其中加入其他组件，在输出时引用</p>
 
@@ -1017,7 +1017,7 @@
   <p>ps:通常来说，一个React应用程序的顶层组件都是APP组件</p>
 </blockquote>
 
-<h2 id="拆分组件">拆分组件</h2>
+<h3 id="拆分组件">拆分组件</h3>
 
 <p>假如有一个含有一个人全部信息的组件</p>
 
@@ -1285,17 +1285,7 @@
         
         
         
-        <li><a href="/posts/blog-git-bind/">gitpage+jekyll搭建博客(一)代码托管</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/blog-conv-jekyll/">gitpage+jekyll搭建博客(二)搭建jekyll环境</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/blog-git-push/">gitpage+jekyll搭建博客(三)将jekyll模板上传至github</a></li>
+        <li><a href="/posts/flask-python-webhock/">github-webhook与企业WeChat-webhook中间件开发(一)webhook</a></li>
       
 
       </ul>
@@ -1364,132 +1354,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1568,23 +1432,6 @@
     
     
     
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -1610,35 +1457,6 @@
     
     
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -1746,6 +1564,89 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -1772,6 +1673,44 @@
         
         
 
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -1790,22 +1729,10 @@
 
       
         
-        <a class="post-tag" href="/tags/oracle/">oracle</a>
-      
-        
         <a class="post-tag" href="/tags/sql/">sql</a>
       
         
-        <a class="post-tag" href="/tags/flask/">flask</a>
-      
-        
-        <a class="post-tag" href="/tags/python/">python</a>
-      
-        
         <a class="post-tag" href="/tags/javascript/">javascript</a>
-      
-        
-        <a class="post-tag" href="/tags/linux/">linux</a>
       
         
         <a class="post-tag" href="/tags/java/">java</a>
@@ -1818,6 +1745,18 @@
       
         
         <a class="post-tag" href="/tags/algorithm/">algorithm</a>
+      
+        
+        <a class="post-tag" href="/tags/flask/">flask</a>
+      
+        
+        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
+      
+        
+        <a class="post-tag" href="/tags/jsx/">JSX</a>
+      
+        
+        <a class="post-tag" href="/tags/linux/">linux</a>
       
 
       </div>
@@ -1958,149 +1897,6 @@
 
   
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
   
 
   
@@ -2643,132 +2439,6 @@ html
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2847,23 +2517,6 @@ html
     
     
     
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -2889,35 +2542,6 @@ html
     
     
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
     
   
     
@@ -3025,6 +2649,89 @@ html
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -3057,29 +2764,55 @@ html
     
     
       
-        
-        
-
-
-
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
       
         
-        <a class="post-tag" href="/tags/oracle/">oracle</a>
+        
+
+
+
       
         
         <a class="post-tag" href="/tags/sql/">sql</a>
       
         
-        <a class="post-tag" href="/tags/flask/">flask</a>
-      
-        
-        <a class="post-tag" href="/tags/python/">python</a>
-      
-        
         <a class="post-tag" href="/tags/javascript/">javascript</a>
-      
-        
-        <a class="post-tag" href="/tags/linux/">linux</a>
       
         
         <a class="post-tag" href="/tags/java/">java</a>
@@ -3092,6 +2825,18 @@ html
       
         
         <a class="post-tag" href="/tags/algorithm/">algorithm</a>
+      
+        
+        <a class="post-tag" href="/tags/flask/">flask</a>
+      
+        
+        <a class="post-tag" href="/tags/hashmap/">hashmap</a>
+      
+        
+        <a class="post-tag" href="/tags/jsx/">JSX</a>
+      
+        
+        <a class="post-tag" href="/tags/linux/">linux</a>
       
 
     </div>

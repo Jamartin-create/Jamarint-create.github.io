@@ -24,25 +24,25 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="@vue/cli4.x脚手架使用" />
+<meta property="og:title" content="SQL基础——约束" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="脚手架基础知识" />
-<meta property="og:description" content="脚手架基础知识" />
-<link rel="canonical" href="/posts/Vue-Cli-Review/" />
-<meta property="og:url" content="/posts/Vue-Cli-Review/" />
+<meta name="description" content="主键：primary key（PK）—— unique + not null 外键：foreign key （FK） 唯一：unique 非空：not null 检查：check" />
+<meta property="og:description" content="主键：primary key（PK）—— unique + not null 外键：foreign key （FK） 唯一：unique 非空：not null 检查：check" />
+<link rel="canonical" href="/posts/SQL-key/" />
+<meta property="og:url" content="/posts/SQL-key/" />
 <meta property="og:site_name" content="Lil Martin" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-12-20T09:25:20+08:00" />
+<meta property="article:published_time" content="2021-09-20T16:30:42+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="@vue/cli4.x脚手架使用" />
+<meta property="twitter:title" content="SQL基础——约束" />
 <meta name="twitter:site" content="@LilMart39538257" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","headline":"@vue/cli4.x脚手架使用","dateModified":"2021-12-20T09:25:20+08:00","datePublished":"2021-12-20T09:25:20+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Vue-Cli-Review/"},"url":"/posts/Vue-Cli-Review/","description":"脚手架基础知识","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"SQL基础——约束","dateModified":"2021-09-20T16:30:42+08:00","datePublished":"2021-09-20T16:30:42+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/SQL-key/"},"url":"/posts/SQL-key/","description":"主键：primary key（PK）—— unique + not null 外键：foreign key （FK） 唯一：unique 非空：not null 检查：check","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>@vue/cli4.x脚手架使用 | Lil Martin
+  <title>SQL基础——约束 | Lil Martin
   </title>
 
   <!--
@@ -414,7 +414,7 @@
       
 
         
-          <span>@vue/cli4.x脚手架使用</span>
+          <span>SQL基础——约束</span>
 
         
 
@@ -489,7 +489,7 @@
 
     <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-      <h1 data-toc-skip>@vue/cli4.x脚手架使用</h1>
+      <h1 data-toc-skip>SQL基础——约束</h1>
 
       <div class="post-meta text-muted d-flex flex-column">
         <!-- Published date and author -->
@@ -510,7 +510,7 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, Dec 20, 2021,  9:25 AM +0800"
+    title="Mon, Sep 20, 2021,  4:30 PM +0800"
   
 
   
@@ -520,10 +520,10 @@
   
 
   
-    Dec 20, 2021
+    Sep 20, 2021
   
 
-  <i class="unloaded">2021-12-20T09:25:20+08:00</i>
+  <i class="unloaded">2021-09-20T16:30:42+08:00</i>
 
 </span>
 
@@ -548,7 +548,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1307 words">7 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="587 words">3 min</span>
 
 
           <!-- page views -->
@@ -562,252 +562,210 @@
 
         
 
-        <h1 id="脚手架基础知识">脚手架基础知识</h1>
-
-<h2 id="安装及创建项目">安装及创建项目</h2>
-
-<p><a href="https://cli.vuejs.org/zh/guide/installation.html">vue cli官方文档</a> 讲的很清楚</p>
-
-<h2 id="项目结构">项目结构</h2>
-
-<h3 id="目录结构">目录结构</h3>
-
-<div lang="shell" class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-</pre></td><td class="rouge-code"><pre>├── public
-│   └── index.html
-├── src
-|   ├── main.js				<span class="c"># 项目的初始化</span>
-|   ├── App.vue				<span class="c"># 项目的入口组件</span>
-|	├── assest			 	<span class="c"># 项目中展示的图片或者全局样式</span>
-|	│   ├── css
-|	│   ├── img
-|	│   └── ...
-|	├── api
-|	│   └── ... 			<span class="c"># 抽取出API请求</span>
-|	├── components
-|	│   └── ...				<span class="c"># 项目中可复用的组件</span>
-|	├── view				<span class="c"># 视图界面组件（我理解的是路由对应的组件</span>
-|	│   └── ...				
-|	├── store
-|	|	├── index.js        <span class="c"># 我们组装模块并导出 store 的地方</span>
-|	|	├── actions.js      <span class="c"># 根级别的 action</span>
-|	|	├── mutations.js    <span class="c"># 根级别的 mutation</span>
-|	|	└── ...
-|	├── router
-|	|	└── index.js		<span class="c"># 项目的路由</span>
-|	└── modules
-|       ├── xxx.js       	<span class="c"># 某一个模块</span>
-|       └── ...
-├── .gitignore				<span class="c"># 存放提交git时需要忽略的文件</span>
-├── ...						<span class="c"># 配置文件</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="vue单文件组件结构">Vue单文件组件结构</h3>
-
-<blockquote>
-  <p><strong>官方介绍</strong></p>
-
-  <p>在很多 Vue 项目中，我们使用 <kbd>Vue.component</kbd> 来定义全局组件，紧接着用 <kbd>new Vue({ el: '#container '})</kbd> 在每个页面内指定一个容器元素。</p>
-
-  <p>这种方式在很多中小规模的项目中运作的很好，在这些项目里 JavaScript 只被用来加强特定的视图。但当在更复杂的项目中，或者你的前端完全由 JavaScript 驱动的时候，下面这些缺点将变得非常明显：</p>
-
-  <ul>
-    <li><strong>全局定义 (Global definitions)</strong> 强制要求每个 component 中的命名不得重复</li>
-    <li><strong>字符串模板 (String templates)</strong> 缺乏语法高亮，在 HTML 有多行的时候，需要用到丑陋的 <kbd>\\</kbd></li>
-    <li><strong>不支持 CSS (No CSS support)</strong> 意味着当 HTML 和 JavaScript 组件化时，CSS 明显被遗漏</li>
-    <li><strong>没有构建步骤 (No build step)</strong> 限制只能使用 HTML 和 ES5 JavaScript，而不能使用预处理器，如 Pug (formerly Jade) 和 Babel</li>
-  </ul>
-
-  <p>文件扩展名为 <kbd>.vue</kbd> 的 <strong>single-file components (单文件组件)</strong> 为以上所有问题提供了解决方法，并且还可以使用 webpack 或 Browserify 等构建工具。</p>
+        <blockquote>
+  <ol>
+    <li>主键：primary key（PK）—— <strong>unique</strong> + <strong>not</strong> <strong>null</strong></li>
+    <li>外键：foreign key （FK）</li>
+    <li>唯一：unique</li>
+    <li>非空：not null</li>
+    <li>检查：check</li>
+  </ol>
 </blockquote>
 
-<p>个人认为这也是一种组件化编程，每一个模块只负责那个模块的部分，关注点分离，编程效率更高，代码可读性更强。</p>
+<h2 id="一些术语">一些术语</h2>
 
-<div lang="vue" class="language-vue highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<h3 id="ddl操作">DDL操作</h3>
+
+<h4 id="create">create</h4>
+
+<div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-</pre></td><td class="rouge-code"><pre><span class="nt">&lt;</span><span class="k">template</span><span class="nt">&gt;</span>
-  <span class="c">&lt;!-- 要渲染的标签 --&gt;</span>
-<span class="nt">&lt;/</span><span class="k">template</span><span class="nt">&gt;</span>
-
-<span class="nt">&lt;</span><span class="k">script</span><span class="nt">&gt;</span>
-<span class="cm">/*引入需要用的包*/</span>
-<span class="k">import</span> <span class="nx">xxx</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@/api/...</span><span class="dl">'</span>
-    
-<span class="cm">/*抛出组件*/</span>
-<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-	<span class="nx">data</span><span class="p">(){</span>
-        <span class="k">return</span> <span class="p">{</span>
-            <span class="na">xxx</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="na">computed</span><span class="p">:{</span>
-        <span class="nx">xxx</span><span class="p">(){</span>
-            <span class="k">return</span> <span class="nx">xxx</span><span class="p">;</span>
-        <span class="p">},</span>
-    <span class="p">},</span>
-    <span class="p">...</span>
-<span class="p">}</span>
-<span class="nt">&lt;/</span><span class="k">script</span><span class="nt">&gt;</span>
-
-<span class="nt">&lt;</span><span class="k">style</span><span class="nt">&gt;</span>
-<span class="c">/*样式*/</span>
-<span class="nt">&lt;/</span><span class="k">style</span><span class="nt">&gt;</span>
+</pre></td><td class="rouge-code"><pre><span class="k">create</span> <span class="k">table</span> <span class="n">student</span><span class="p">(</span>
+    <span class="n">id</span> <span class="n">number</span> <span class="k">primary</span> <span class="k">key</span><span class="p">,</span>
+    <span class="n">name</span> <span class="n">varchar2</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+    <span class="n">email</span> <span class="nb">char</span><span class="p">(</span><span class="mi">40</span><span class="p">),</span>
+    <span class="n">registtime</span> <span class="nb">date</span> <span class="k">default</span> <span class="n">sysdate</span>
+<span class="p">);</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h2 id="路由">路由</h2>
+<h3 id="dml操作">DML操作</h3>
 
-<p>移步<a href="https://jamartin-create.github.io/posts/Vue-Router/">我的vue-router学习记录</a></p>
+<h4 id="insert">insert:</h4>
 
-<h2 id="vuex">Vuex</h2>
+<ul>
+  <li>
+    <p>普通插入</p>
 
-<p>移步<a href="https://vuex.vuejs.org/zh/guide/">官方vuex文档</a></p>
-
-<h1 id="起步">起步</h1>
-
-<h2 id="项目目录详细介绍">项目目录详细介绍</h2>
-
-<h3 id="mainjs">main.js</h3>
-
-<p>放置公共组件：样式库、Vue、Router、Store等。</p>
-
-<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+    <div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="nx">Vue</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span>
-<span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./App.vue</span><span class="dl">'</span>
-<span class="k">import</span> <span class="nx">store</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./store</span><span class="dl">'</span>
-<span class="k">import</span> <span class="nx">router</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./router</span><span class="dl">'</span>
+</pre></td><td class="rouge-code"><pre><span class="k">insert</span> <span class="k">into</span> <span class="n">student</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span>
+	<span class="k">values</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">'lilmartin'</span><span class="p">,</span> <span class="s1">'lilmartin@qq.com'</span><span class="p">)</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">studetn</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">registtime</span><span class="p">)</span>
+	<span class="k">values</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'jacky'</span><span class="p">,</span> <span class="s1">'jacky@qq.com'</span><span class="p">,</span> <span class="n">sysdate</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div>    </div>
 
-<span class="k">import</span> <span class="nx">ElementUI</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">element-ui</span><span class="dl">'</span><span class="p">;</span>
-<span class="k">import</span> <span class="dl">'</span><span class="s1">element-ui/lib/theme-chalk/index.css</span><span class="dl">'</span><span class="p">;</span>
-<span class="k">import</span> <span class="dl">'</span><span class="s1">@/assets/css/layout.css</span><span class="dl">'</span>
+    <blockquote>
+      <p>ps:如果新增全部字段，可以省略字段名称(但不推荐)</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>同时建议写出完整字段，时间字符串可由 <kbd>to_date()</kbd> 函数进行格式化</p>
 
+    <div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">insert</span> <span class="k">into</span> <span class="n">student</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">registtime</span><span class="p">)</span>
+	<span class="k">values</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">'jamartin'</span><span class="p">,</span> <span class="s1">'jamartin@qq.com'</span><span class="p">,</span> <span class="n">to_date</span><span class="p">(</span><span class="s1">'2021-09-27'</span><span class="p">,</span><span class="s1">'yyyy-mm-dd'</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <p>一次增加多条记录（将另一个表中的数据填入此表）</p>
 
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">productionTip</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">ElementUI</span><span class="p">);</span>
-
-<span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
-  <span class="na">render</span><span class="p">:</span> <span class="nx">h</span> <span class="o">=&gt;</span> <span class="nx">h</span><span class="p">(</span><span class="nx">App</span><span class="p">),</span>
-  <span class="nx">store</span><span class="p">,</span>
-  <span class="nx">router</span>
-<span class="p">}).</span><span class="nx">$mount</span><span class="p">(</span><span class="dl">'</span><span class="s1">#app</span><span class="dl">'</span><span class="p">)</span>
-
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="appvue">App.vue</h3>
-
-<p>根组件，main.js加载完毕后渲染的第一个组件，一般在这个组件渲染完毕后会通过路由跳转至其他页面组件。</p>
-
-<div lang="vue" class="language-vue highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+    <div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-</pre></td><td class="rouge-code"><pre><span class="nt">&lt;</span><span class="k">template</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span> <span class="na">style=</span><span class="s">"height:100%;background:#EEF2F5;"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;router-view&gt;&lt;/router-view&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/</span><span class="k">template</span><span class="nt">&gt;</span>
+</pre></td><td class="rouge-code"><pre><span class="c1">-- 用子查询代替values</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">student</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+	<span class="k">select</span> <span class="n">empno</span><span class="p">,</span> <span class="n">ename</span> <span class="k">from</span> <span class="n">emp</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ul>
 
-<span class="nt">&lt;</span><span class="k">script</span><span class="nt">&gt;</span>
+<h4 id="delete">delete:</h4>
 
-<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">App</span><span class="dl">'</span><span class="p">,</span>
-  <span class="na">components</span><span class="p">:</span> <span class="p">{</span>
-    <span class="p">...</span>
-  <span class="p">},</span>
-  <span class="p">...</span>
-<span class="p">}</span>
-<span class="nt">&lt;/</span><span class="k">script</span><span class="nt">&gt;</span>
+<div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="k">delete</span> <span class="n">student</span> <span class="k">where</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1234</span>
 </pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="router">router</h3>
 
 <blockquote>
-  <p>页面跳转的逻辑都是以这个文件为标准进行的</p>
+  <p>删除时一定要带where，否则会删掉所有数据</p>
 </blockquote>
 
-<p>router/index.js</p>
+<h4 id="update">update:</h4>
 
-<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<ul>
+  <li>
+    <p>修改一个同学的信息</p>
+
+    <div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="k">update</span> <span class="n">student</span> <span class="k">set</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">'jacky1'</span> <span class="k">where</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <p>批量修改同学信息</p>
+
+    <div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="c1">-- 修改 id 不为1的同学的信息</span>
+<span class="k">update</span> <span class="n">student</span> <span class="k">set</span> <span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">||</span><span class="n">id</span> <span class="k">where</span> <span class="n">id</span> <span class="o">&lt;&gt;</span> <span class="mi">1</span>
+<span class="c1">-- 修改所有同学的 email 为 name+'@qq.com'</span>
+<span class="k">update</span> <span class="n">student</span> <span class="k">set</span> <span class="n">email</span> <span class="o">=</span> <span class="n">name</span><span class="o">||</span><span class="s1">'@qq.com'</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ul>
+
+<h2 id="约束总结">约束总结</h2>
+
+<h3 id="创建主键约束">创建主键约束</h3>
+
+<h4 id="直接创建在列级由系统命名">直接创建在列级，由系统命名</h4>
+
+<div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="k">create</span> <span class="k">table</span> <span class="n">student1</span><span class="p">(</span>
+    <span class="n">id</span> <span class="n">number</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">name</span> <span class="n">varchar2</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h4 id="创建在表级自己命名">创建在表级，自己命名</h4>
+
+<div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="k">create</span> <span class="k">table</span> <span class="n">student1</span><span class="p">(</span>
+    <span class="n">id</span> <span class="n">number</span> <span class="p">,</span>
+    <span class="n">name</span> <span class="n">varchar2</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="p">,</span>
+    <span class="k">CONSTRAINT</span> <span class="n">stuning1_id_pk</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h4 id="建表后创建主键约束">建表后创建主键约束</h4>
+
+<div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="k">create</span> <span class="k">table</span> <span class="n">student1</span><span class="p">(</span>
+    <span class="n">id</span> <span class="n">number</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">name</span> <span class="n">varchar2</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="p">);</span>
+<span class="c1">-- 约束名称：自定义（最好有意义）</span>
+<span class="k">alter</span> <span class="k">table</span> <span class="n">student2</span>
+	<span class="k">add</span> <span class="k">constraint</span> <span class="n">stuning2_id_pk</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>ps: 查看主键约束条件：</p>
+
+<div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">select</span> <span class="k">constraint_name</span><span class="p">,</span> <span class="n">constraint_type</span>
+	<span class="k">from</span> <span class="n">user_constraints</span>
+	<span class="k">where</span> <span class="k">table_name</span><span class="o">=</span><span class="s1">'tableName'</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h4 id="主键的属性">主键的属性</h4>
+
+<ul>
+  <li>唯一性</li>
+  <li>不为空</li>
+</ul>
+
+<h3 id="非空约束和唯一约束">非空约束和唯一约束</h3>
+
+<p>两个约束都只能建立在列级！</p>
+
+<h3 id="外键约束-fk">外键约束 （FK）</h3>
+
+<ul>
+  <li>
+    <p>父表：</p>
+
+    <div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="k">create</span> <span class="k">table</span> <span class="n">major</span> <span class="p">(</span>
+    <span class="n">mid</span> <span class="n">number</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="k">primary</span> <span class="k">key</span><span class="p">,</span>
+    <span class="n">mname</span> <span class="n">varchar2</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">major</span> <span class="k">values</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'computer'</span><span class="p">)</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">major</span> <span class="k">values</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">'music'</span><span class="p">)</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">major</span> <span class="k">values</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">'movie'</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <p>从表（子表）</p>
+
+    <div lang="sql" class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -817,183 +775,25 @@
 8
 9
 10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="nx">Vue</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span>
-<span class="k">import</span> <span class="nx">VueRouter</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue-router</span><span class="dl">'</span>
-
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">VueRouter</span><span class="p">);</span>
-
-<span class="kd">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">VueRouter</span><span class="p">({</span>
-    <span class="na">routes</span><span class="p">:</span> <span class="p">[{</span>
-            <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">,</span>
-            <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">home</span><span class="dl">'</span><span class="p">,</span>
-            <span class="na">component</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="k">import</span><span class="p">(</span><span class="dl">'</span><span class="s1">../view/Home</span><span class="dl">'</span><span class="p">),</span>
-            <span class="na">redirect</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/page1</span><span class="dl">'</span><span class="p">,</span>
-            <span class="na">children</span><span class="p">:</span> <span class="p">[{</span>
-                    <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/page1</span><span class="dl">'</span><span class="p">,</span>
-                    <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">page1</span><span class="dl">'</span><span class="p">,</span>
-                    <span class="na">component</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="k">import</span><span class="p">(</span><span class="dl">'</span><span class="s1">../view/page1</span><span class="dl">'</span><span class="p">)</span>
-                <span class="p">},</span>
-                <span class="p">...</span>
-            <span class="p">]</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/login</span><span class="dl">'</span><span class="p">,</span>
-            <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">login</span><span class="dl">'</span><span class="p">,</span>
-            <span class="na">component</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="k">import</span><span class="p">(</span><span class="dl">'</span><span class="s1">@/view/Login</span><span class="dl">'</span><span class="p">)</span>
-        <span class="p">},</span>
-        <span class="p">...</span>
-    <span class="p">],</span>
-    <span class="na">mode</span><span class="p">:</span> <span class="dl">'</span><span class="s1">history</span><span class="dl">'</span>
-<span class="p">})</span>
-
-<span class="nx">router</span><span class="p">.</span><span class="nx">beforeEach</span><span class="p">((</span><span class="nx">to</span><span class="p">,</span> <span class="k">from</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="p">...</span>
-<span class="p">})</span>
-
-<span class="k">export</span> <span class="k">default</span> <span class="nx">router</span><span class="p">;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="store">store</h3>
+</pre></td><td class="rouge-code"><pre><span class="k">create</span> <span class="k">table</span> <span class="n">student</span><span class="p">(</span>
+	<span class="n">id</span> <span class="n">number</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="k">primary</span> <span class="k">key</span>
+	<span class="n">name</span> <span class="n">varchar2</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+	<span class="n">mid</span> <span class="n">number</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+	<span class="k">constraint</span> <span class="n">stuning_mid_fk</span> 
+    	<span class="k">foreign</span> <span class="k">key</span><span class="p">(</span><span class="n">mid</span><span class="p">)</span> <span class="k">references</span> <span class="n">major</span><span class="p">(</span><span class="n">mid</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">student</span> <span class="k">values</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="s1">'peter'</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">student</span> <span class="k">values</span><span class="p">(</span><span class="mi">102</span><span class="p">,</span> <span class="s1">'chris'</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">student</span> <span class="k">values</span><span class="p">(</span><span class="mi">103</span><span class="p">,</span> <span class="s1">'king'</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ul>
 
 <blockquote>
-  <p>store一般存的是用户登录的状态及一些缓存的数据，不是一味的将所有组件的状态都塞进去。</p>
+  <p>在没有约束的情况下为表增加一条数据，会变成垃圾数据</p>
 
-  <p>ps：一般大型的项目会将vuex的State、Mutations、Actions、Getters、Modules单独放置文件夹，这里就不介绍那么多。</p>
+  <p>在进行了DML操作后，需要将事务提交（ctrl+s)</p>
 </blockquote>
-
-<p>store/index.js</p>
-
-<div lang="js" class="language-js highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="nx">Vuex</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vuex</span><span class="dl">'</span>
-<span class="k">import</span> <span class="nx">Vue</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span>
-
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Vuex</span><span class="p">);</span>
-
-<span class="kd">const</span> <span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="na">param1</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
-    <span class="na">param2</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
-<span class="p">}</span>
-
-<span class="kd">const</span> <span class="nx">getters</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="na">AddParam12</span><span class="p">:</span> <span class="p">(</span><span class="nx">state</span><span class="p">,)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nx">param1</span><span class="o">+</span><span class="dl">'</span><span class="s1"> </span><span class="dl">'</span><span class="o">+</span><span class="nx">state</span><span class="p">.</span><span class="nx">param2</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">const</span> <span class="nx">mutations</span> <span class="o">=</span>  <span class="p">{</span>
-    <span class="nx">changeParam1</span><span class="p">(</span><span class="nx">state</span><span class="p">){</span>
-        <span class="nx">state</span><span class="p">.</span><span class="nx">params</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="p">},</span>
-    <span class="nx">changeParam2</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">changeValue</span><span class="p">){</span>
-    	<span class="nx">state</span><span class="p">.</span><span class="nx">params</span> <span class="o">=</span> <span class="nx">cahngeValue</span><span class="p">;</span>  
-    <span class="p">},</span>
-<span class="p">}</span>
-
-<span class="kd">const</span> <span class="nx">actions</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">changeParam1</span><span class="p">({</span><span class="nx">commit</span><span class="p">}){</span>
-        <span class="nx">setTimeout</span><span class="p">(()</span><span class="o">=&gt;</span><span class="p">{</span>
-            <span class="nx">commit</span><span class="p">(</span><span class="dl">'</span><span class="s1">changeParam1</span><span class="dl">'</span><span class="p">)</span>
-        <span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">state</span><span class="p">,</span>
-    <span class="nx">getters</span><span class="p">,</span>
-    <span class="nx">mutations</span><span class="p">,</span>
-    <span class="nx">actions</span><span class="p">,</span>
-<span class="p">}</span>
-
-<span class="kd">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vuex</span><span class="p">.</span><span class="nx">Store</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span>
-
-<span class="k">export</span> <span class="k">default</span> <span class="nx">store</span><span class="p">;</span>
-
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="view和component">view和component</h3>
-
-<p>按我的理解：</p>
-
-<p><strong>view</strong> 文件夹下放置所有的界面层组件（就是通过路由跳转的组件）</p>
-
-<p><strong>component</strong> 文件夹下放置一些可复用的组件</p>
-
-<h3 id="其他文件夹">其他文件夹</h3>
-
-<p>一般还有：</p>
-
-<p>api，里面有二次封装的axios/request/ajax接口请求。</p>
-
-<p>assets，里面是一些全局的css文件、图片等。</p>
-
-<p>还有根据项目需求而创建的文件夹….</p>
 
 
 
@@ -1006,8 +806,8 @@
         <div class="post-meta mb-3">
           <i class="far fa-folder-open fa-fw mr-1"></i>
           
-            <a href='/categories/vue/'>vue</a>,
-            <a href='/categories/vue-cli/'>vue-cli</a>
+            <a href='/categories/sql/'>sql</a>,
+            <a href='/categories/sql-statement/'>sql-statement</a>
         </div>
         
 
@@ -1016,11 +816,8 @@
         <div class="post-tags">
           <i class="fa fa-tags fa-fw mr-1"></i>
           
-          <a href="/tags/vue/"
-            class="post-tag no-text-decoration" >vue</a>
-          
-          <a href="/tags/javascript/"
-            class="post-tag no-text-decoration" >javascript</a>
+          <a href="/tags/sql/"
+            class="post-tag no-text-decoration" >sql</a>
           
           </div>
         
@@ -1047,19 +844,19 @@
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=@vue/cli4.x脚手架使用 - Lil Martin&url=/posts/Vue-Cli-Review/" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=SQL基础——约束 - Lil Martin&url=/posts/SQL-key/" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=@vue/cli4.x脚手架使用 - Lil Martin&u=/posts/Vue-Cli-Review/" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=SQL基础——约束 - Lil Martin&u=/posts/SQL-key/" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://telegram.me/share?text=@vue/cli4.x脚手架使用 - Lil Martin&url=/posts/Vue-Cli-Review/" data-toggle="tooltip" data-placement="top"
+        <a href="https://telegram.me/share?text=SQL基础——约束 - Lil Martin&url=/posts/SQL-key/" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -1700,124 +1497,124 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
   
 
   
@@ -1904,7 +1701,7 @@
       
       
       <div class="card">
-        <a href="/posts/Vue-Basic/">
+        <a href="/posts/SQL-SingleTableQuery/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1925,14 +1722,14 @@
   
 
   
-    Nov 20, 2021
+    Sep 13, 2021
   
 
-  <i class="unloaded">2021-11-20T16:25:20+08:00</i>
+  <i class="unloaded">2021-09-13T18:30:20+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>vue2.x基本概念</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>SQL练习——单表查询</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1941,14 +1738,30 @@
 
 
 
-                简介
+                单表查询
 
-官网介绍Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。
+列的选取-投影
+
+select empno, ename, deptno from emp;
 
 
-  个人观点：（刚刚从React过来）
 
-  区...
+  开发中一般不使用 *
+
+  数据库中：列名大小写不敏感，内容大小写敏感
+
+
+列别名
+
+
+  
+    方法1：列名+” “+别名
+  
+  
+    方法2：列名 as 别名
+
+    select empno 员工编号, ename 员工姓名 from emp;
+select...
               </p>
             </div>
           </div>
@@ -1958,7 +1771,7 @@
       
       
       <div class="card">
-        <a href="/posts/Vue-Router/">
+        <a href="/posts/SQL-UnSingleTableQuery/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1979,14 +1792,14 @@
   
 
   
-    Dec 22, 2021
+    Sep 13, 2021
   
 
-  <i class="unloaded">2021-12-22T09:43:20+08:00</i>
+  <i class="unloaded">2021-09-13T21:43:00+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>@vueRouter3.x Basic</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>SQL练习——多表查询</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1995,13 +1808,74 @@
 
 
 
-                基础
+                多表查
 
-安装请看官方文档router-vue
+交叉连接  cross join
 
-基础路由匹配
 
-html
+  一般不用（因为无用信息太多）
+
+
+select * from emp cross join dept -- 依次从m行的emp中取一行emp，和n行dept中的每一行进行组合，也就是会产生一个nxm行的表格
+
+
+-- 根据以上结合的结果，如何查找到Smith的人所在的部门名称
+select emp.ename, dept.deptno, d...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/SQL-ChildQuery/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago small"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Oct  9, 2021
+  
+
+  <i class="unloaded">2021-10-09T23:00:00+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>SQL练习——子查询</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                子查询
+
+分为 关联子查询 和 非关联子查询
+
+特点：子查询可以单独执行，其结果作为外部查询的条件。
+
+不相关子查询
+
+概念：子查询不需要与父查询的结果进行比对
 
 1
 2
@@ -2015,83 +1889,11 @@ html
 10
 11
 12
-13
-14
-15
-16
-&lt;script src="https://unpkg.com/vue/dist/vue.js"&gt;&lt;/script&gt;
-&lt;script src="https://unpkg.com/vue-router/dist/...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
-        <a href="/posts/React-Basic/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: /assets/js/_utils/timeage.js
--->
-
-
-
-
-
-<span class="timeago small"
-  
-
-  
-   >
-
-  
-  
-
-  
-    Nov  7, 2021
-  
-
-  <i class="unloaded">2021-11-07T22:54:16+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>React基本概念</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                React 概述
-
-什么是React
-
-React 是一个用于 构建用户界面 的  JavaScript 库。
-
-React的特点
-
-
-  组件化编程：某一个页面的任何一个部分都可以是一个组件。
-  用法很广泛：web、VR。。。
-
-
-React基本使用
-
-安装
-
-安装命令：
-
-npm i react react-dom
-
-
-
-  react包提供创建元素、组件等功能。
-  react-do...
+-- 查询各个部门薪水最高的员工信息
+select * from emp
+	where (deptno, sal) in
+	(
+    	select deptno, max(...
               </p>
             </div>
           </div>
@@ -2109,16 +1911,16 @@ npm i react react-dom
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <a href="/posts/Vue-Basic/" class="btn btn-outline-primary"
+  <a href="/posts/SQL-UnSingleTableQuery/" class="btn btn-outline-primary"
     prompt="Older">
-    <p>vue2.x基本概念</p>
+    <p>SQL练习——多表查询</p>
   </a>
   
 
   
-  <a href="/posts/Vue-Router/" class="btn btn-outline-primary"
+  <a href="/posts/SQL-ChildQuery/" class="btn btn-outline-primary"
     prompt="Newer">
-    <p>@vueRouter3.x Basic</p>
+    <p>SQL练习——子查询</p>
   </a>
   
 
@@ -2143,9 +1945,9 @@ npm i react react-dom
     scriptUrl: '//.disqus.com/embed.js',
 
     disqusConfig: function() {
-      this.page.title = '@vue/cli4.x脚手架使用';
-      this.page.url = '/posts/Vue-Cli-Review/';
-      this.page.identifier = '/posts/Vue-Cli-Review/';
+      this.page.title = 'SQL基础——约束';
+      this.page.url = '/posts/SQL-key/';
+      this.page.identifier = '/posts/SQL-key/';
     }
   };
 
