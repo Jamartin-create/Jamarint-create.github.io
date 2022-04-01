@@ -1079,25 +1079,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1132,42 +1113,15 @@
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1222,6 +1176,120 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -1244,27 +1312,34 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1346,63 +1421,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1432,16 +1450,19 @@
         <a class="post-tag" href="/tags/sql/">sql</a>
       
         
-        <a class="post-tag" href="/tags/javascript/">javascript</a>
+        <a class="post-tag" href="/tags/java/">java</a>
       
         
-        <a class="post-tag" href="/tags/java/">java</a>
+        <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
         <a class="post-tag" href="/tags/react/">react</a>
       
         
         <a class="post-tag" href="/tags/vue/">vue</a>
+      
+        
+        <a class="post-tag" href="/tags/linux/">linux</a>
       
         
         <a class="post-tag" href="/tags/algorithm/">algorithm</a>
@@ -1453,10 +1474,7 @@
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>
       
         
-        <a class="post-tag" href="/tags/jsx/">JSX</a>
-      
-        
-        <a class="post-tag" href="/tags/linux/">linux</a>
+        <a class="post-tag" href="/tags/hibernate/">hibernate</a>
       
 
       </div>
@@ -1500,6 +1518,32 @@
 
 
 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
   
@@ -1927,7 +1971,7 @@ npm i react react-dom
       
       
       <div class="card">
-        <a href="/posts/Hibernate/">
+        <a href="/posts/Lychee-CDN/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1948,14 +1992,14 @@ npm i react react-dom
   
 
   
-    Mar 24
+    Apr  1
   
 
-  <i class="unloaded">2022-03-24T00:00:00+08:00</i>
+  <i class="unloaded">2022-04-01T16:04:00+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Hibernate</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>宝塔+Lychee部署自己的图床</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1964,28 +2008,38 @@ npm i react react-dom
 
 
 
-                Hibernate
+                宝塔+Lychee部署一个自己的图床
 
-Hibernate简介
+准备工作
 
-ORM(Object Relation Mapping)
+一台服务器
 
-
-  译为：对象关系映射，解决了对象和关系型数据库之间得数据交互问题。
-
-
-ORM技术可以根据提前配置好得对象和数据库之间的映射关系生成对应的SQL语句，整个过程不需要人工干预。
+环境：
 
 
-  
-    
-      数据库
-      类/对象
-    
-  
-  
-    
-      ...
+  Linux（Ubuntu、CentOS都可）
+  PHP 7.x以上版本 *
+  MySQL 5.x以上版本
+  Nginx 1.x以上版本
+
+
+软件：Lychee+宝塔
+
+步骤
+
+安装宝塔面板
+
+安装方法网上很多。
+
+创建新的站点
+
+
+
+记得添加数据库，记住账号密码（记不住也没事，可以改）
+
+
+
+下载Lych...
               </p>
             </div>
           </div>
@@ -2184,25 +2238,6 @@ ORM技术可以根据提前配置好得对象和数据库之间的映射关系�
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2237,42 +2272,15 @@ ORM技术可以根据提前配置好得对象和数据库之间的映射关系�
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2327,6 +2335,120 @@ ORM技术可以根据提前配置好得对象和数据库之间的映射关系�
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -2349,27 +2471,34 @@ ORM技术可以根据提前配置好得对象和数据库之间的映射关系�
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2451,63 +2580,6 @@ ORM技术可以根据提前配置好得对象和数据库之间的映射关系�
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2532,16 +2604,19 @@ ORM技术可以根据提前配置好得对象和数据库之间的映射关系�
         <a class="post-tag" href="/tags/sql/">sql</a>
       
         
-        <a class="post-tag" href="/tags/javascript/">javascript</a>
+        <a class="post-tag" href="/tags/java/">java</a>
       
         
-        <a class="post-tag" href="/tags/java/">java</a>
+        <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
         <a class="post-tag" href="/tags/react/">react</a>
       
         
         <a class="post-tag" href="/tags/vue/">vue</a>
+      
+        
+        <a class="post-tag" href="/tags/linux/">linux</a>
       
         
         <a class="post-tag" href="/tags/algorithm/">algorithm</a>
@@ -2553,10 +2628,7 @@ ORM技术可以根据提前配置好得对象和数据库之间的映射关系�
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>
       
         
-        <a class="post-tag" href="/tags/jsx/">JSX</a>
-      
-        
-        <a class="post-tag" href="/tags/linux/">linux</a>
+        <a class="post-tag" href="/tags/hibernate/">hibernate</a>
       
 
     </div>

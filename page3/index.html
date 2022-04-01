@@ -501,6 +501,209 @@
 
   <div class="post-preview">
     <h1>
+      <a href="/posts/SQL-UnSingleTableQuery/">SQL练习——多表查询</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        多表查
+
+交叉连接  cross join
+
+
+  一般不用（因为无用信息太多）
+
+
+select * from emp cross join dept -- 依次从m行的emp中取一行emp，和n行dept中的每一行进行组合，也就是会产生一个nxm行的表格
+
+
+-- 根据以上结合的结果，如何查找到Smith的人所在的部门名称
+select emp.ename, dept.deptno, d...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, Sep 13, 2021,  9:43 PM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Sep 13, 2021
+  
+
+  <i class="unloaded">2021-09-13T21:43:00+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1004 words">5 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/SQL-SingleTableQuery/">SQL练习——单表查询</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        单表查询
+
+列的选取-投影
+
+select empno, ename, deptno from emp;
+
+
+
+  开发中一般不使用 *
+
+  数据库中：列名大小写不敏感，内容大小写敏感
+
+
+列别名
+
+
+  
+    方法1：列名+” “+别名
+  
+  
+    方法2：列名 as 别名
+
+    select empno 员工编号, ename 员工姓名 from emp;
+select...
+      </p>
+    </div>
+
+    <div class="post-meta text-muted d-flex justify-content-between">
+
+      <div>
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: /assets/js/_utils/timeage.js
+-->
+
+
+
+
+
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, Sep 13, 2021,  6:30 PM +0800"
+  
+
+  
+   >
+
+  
+  
+
+  
+    Sep 13, 2021
+  
+
+  <i class="unloaded">2021-09-13T18:30:20+08:00</i>
+
+</span>
+
+
+        <!-- time to read -->
+        <i class="far fa-clock fa-fw"></i>
+        <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1491 words">8 min</span>
+
+
+        <!-- page views -->
+        
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
       <a href="/posts/flask-python-webhock/">github-webhook与企业WeChat-webhook中间件开发(一)webhook</a>
     </h1>
 
@@ -1050,25 +1253,6 @@ HashMap的使用
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1103,42 +1287,15 @@ HashMap的使用
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1193,6 +1350,120 @@ HashMap的使用
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -1215,27 +1486,34 @@ HashMap的使用
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1317,63 +1595,6 @@ HashMap的使用
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1403,16 +1624,19 @@ HashMap的使用
         <a class="post-tag" href="/tags/sql/">sql</a>
       
         
-        <a class="post-tag" href="/tags/javascript/">javascript</a>
+        <a class="post-tag" href="/tags/java/">java</a>
       
         
-        <a class="post-tag" href="/tags/java/">java</a>
+        <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
         <a class="post-tag" href="/tags/react/">react</a>
       
         
         <a class="post-tag" href="/tags/vue/">vue</a>
+      
+        
+        <a class="post-tag" href="/tags/linux/">linux</a>
       
         
         <a class="post-tag" href="/tags/algorithm/">algorithm</a>
@@ -1424,10 +1648,7 @@ HashMap的使用
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>
       
         
-        <a class="post-tag" href="/tags/jsx/">JSX</a>
-      
-        
-        <a class="post-tag" href="/tags/linux/">linux</a>
+        <a class="post-tag" href="/tags/hibernate/">hibernate</a>
       
 
       </div>
@@ -1574,25 +1795,6 @@ HashMap的使用
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1627,42 +1829,15 @@ HashMap的使用
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1717,6 +1892,120 @@ HashMap的使用
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -1739,27 +2028,34 @@ HashMap的使用
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1841,63 +2137,6 @@ HashMap的使用
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -1922,16 +2161,19 @@ HashMap的使用
         <a class="post-tag" href="/tags/sql/">sql</a>
       
         
-        <a class="post-tag" href="/tags/javascript/">javascript</a>
+        <a class="post-tag" href="/tags/java/">java</a>
       
         
-        <a class="post-tag" href="/tags/java/">java</a>
+        <a class="post-tag" href="/tags/javascript/">javascript</a>
       
         
         <a class="post-tag" href="/tags/react/">react</a>
       
         
         <a class="post-tag" href="/tags/vue/">vue</a>
+      
+        
+        <a class="post-tag" href="/tags/linux/">linux</a>
       
         
         <a class="post-tag" href="/tags/algorithm/">algorithm</a>
@@ -1943,10 +2185,7 @@ HashMap的使用
         <a class="post-tag" href="/tags/hashmap/">hashmap</a>
       
         
-        <a class="post-tag" href="/tags/jsx/">JSX</a>
-      
-        
-        <a class="post-tag" href="/tags/linux/">linux</a>
+        <a class="post-tag" href="/tags/hibernate/">hibernate</a>
       
 
     </div>

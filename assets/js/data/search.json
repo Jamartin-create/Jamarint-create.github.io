@@ -1,11 +1,41 @@
 [
   
   {
-    "title": "Hibernate",
+    "title": "宝塔+Lychee部署自己的图床",
+    "url": "/posts/Lychee-CDN/",
+    "categories": "linux",
+    "tags": "linux",
+    "date": "2022-04-01 16:04:00 +0800",
+    
+
+
+
+
+
+    "snippet": "宝塔+Lychee部署一个自己的图床准备工作一台服务器环境：  Linux（Ubuntu、CentOS都可）  PHP 7.x以上版本 *  MySQL 5.x以上版本  Nginx 1.x以上版本软件：Lychee+宝塔步骤安装宝塔面板安装方法网上很多。创建新的站点记得添加数据库，记住账号密码（记不住也没事，可以改）下载Lychee源码  到GitHub官网下载源码压缩包（也可以通过SSH进到目录下通过git clone 克隆源码）Lychee github地址将源码部署到服务器  找到刚刚添加站点时创建的目录，上传并解压压缩包，将文件夹中的所有文件剪切到网站根目录，然后删掉压缩包和源..."
+  },
+  
+  {
+    "title": "Spring——基础(持续更新中)",
+    "url": "/posts/Spring/",
+    "categories": "java, spring",
+    "tags": "java, Spring",
+    "date": "2022-03-06 22:22:22 +0800",
+    
+
+
+
+
+
+    "snippet": "Spring概述  最受欢迎的企业级 Java 应用程序开发框架  一个开源的 Java 平台  轻量级的框架，基础版本只有2M左右  框架的核心特性是可以用于开发任何 Java 应用程序三层架构  表现层：Web层 MVC是表现层的一个设计模型  业务层：Service层  持久层：dao层特性非侵入式、控制反转（IOC）、依赖注入、面向切面（AOP）、容器、组件化、一站式。。。参考文章：W3Cschool体系结构核心容器  Spring-core：提供了框架的基本组成部分，包括IoC和依赖注入功能。  Spring-beans：模块提供 BeanFactory，应用工厂模式。  co..."
+  },
+  
+  {
+    "title": "持久层框架——Hibernate",
     "url": "/posts/Hibernate/",
-    "categories": "",
-    "tags": "",
-    "date": "2022-03-24 00:00:00 +0800",
+    "categories": "java, hibernate",
+    "tags": "java, hibernate",
+    "date": "2022-03-06 22:22:22 +0800",
     
 
 

@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Lil Martin</title>
   <subtitle>一个爱学习的菜鸟程序员。</subtitle>
-  <updated>2022-03-31T15:53:04+08:00</updated>
+  <updated>2022-04-01T19:56:37+08:00</updated>
   <author>
     <name>Martin_Du</name>
     <uri>/</uri>
@@ -20,11 +20,165 @@
 
   
   <entry>
-    <title>Hibernate</title>
-    <link href="/posts/Hibernate/" rel="alternate" type="text/html" title="Hibernate" />
-    <published>2022-03-24T00:00:00+08:00</published>
+    <title>宝塔+Lychee部署自己的图床</title>
+    <link href="/posts/Lychee-CDN/" rel="alternate" type="text/html" title="宝塔+Lychee部署自己的图床" />
+    <published>2022-04-01T16:04:00+08:00</published>
   
-    <updated>2022-03-24T00:00:00+08:00</updated>
+    <updated>2022-04-01T16:04:00+08:00</updated>
+  
+    <id>/posts/Lychee-CDN/</id>
+    <content src="/posts/Lychee-CDN/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="linux" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      宝塔+Lychee部署一个自己的图床
+
+准备工作
+
+一台服务器
+
+环境：
+
+
+  Linux（Ubuntu、CentOS都可）
+  PHP 7.x以上版本 *
+  MySQL 5.x以上版本
+  Nginx 1.x以上版本
+
+
+软件：Lychee+宝塔
+
+步骤
+
+安装宝塔面板
+
+安装方法网上很多。
+
+创建新的站点
+
+
+
+记得添加数据库，记住账号密码（记不住也没事，可以改）
+
+
+
+下载Lychee源码
+
+
+  到GitHub官网下载源码压缩包（也可以通过SSH进到目录下通过git clone 克隆源码）Lychee github地址
+
+
+将源码部署到服务器
+
+
+  找到刚刚添加站点时创建的目录，上传并解压压缩包，将文件夹中的所有文件剪切到网站根目录，然后删掉压缩包和源文件夹，最终目录情况如下：
+
+
+
+
+给予SSH权限
+
+
+  SSH登入服务器，进入网站根目录，输入以下命令，给予权限。
+...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Spring——基础(持续更新中)</title>
+    <link href="/posts/Spring/" rel="alternate" type="text/html" title="Spring——基础(持续更新中)" />
+    <published>2022-03-06T22:22:22+08:00</published>
+  
+    <updated>2022-03-06T22:22:22+08:00</updated>
+  
+    <id>/posts/Spring/</id>
+    <content src="/posts/Spring/" />
+    <author>
+      <name>Martin_Du</name>
+    </author>
+
+  
+    
+    <category term="java" />
+    
+    <category term="spring" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Spring
+
+概述
+
+
+  最受欢迎的企业级 Java 应用程序开发框架
+  一个开源的 Java 平台
+  轻量级的框架，基础版本只有2M左右
+  框架的核心特性是可以用于开发任何 Java 应用程序
+
+
+三层架构
+
+
+  表现层：Web层 MVC是表现层的一个设计模型
+  业务层：Service层
+  持久层：dao层
+
+
+特性
+
+非侵入式、控制反转（IOC）、依赖注入、面向切面（AOP）、容器、组件化、一站式。。。
+
+参考文章：W3Cschool
+
+体系结构
+
+
+
+核心容器
+
+
+  Spring-core：提供了框架的基本组成部分，包括IoC和依赖注入功能。
+  Spring-beans：模块提供 BeanFactory，应用工厂模式。
+  context：基于core和beans模块。
+  Spring-expression：提供了强大的表达式语言，用于在运行时查询和操作对...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>持久层框架——Hibernate</title>
+    <link href="/posts/Hibernate/" rel="alternate" type="text/html" title="持久层框架——Hibernate" />
+    <published>2022-03-06T22:22:22+08:00</published>
+  
+    <updated>2022-03-06T22:22:22+08:00</updated>
   
     <id>/posts/Hibernate/</id>
     <content src="/posts/Hibernate/" />
@@ -33,6 +187,10 @@
     </author>
 
   
+    
+    <category term="java" />
+    
+    <category term="hibernate" />
     
   
 
@@ -206,120 +364,6 @@ public class Servlet extends HttpServlet {
 
 
 第一次排列：即按字典序（由小到大）排列。...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>@vueRouter3.x Basic</title>
-    <link href="/posts/Vue-Router/" rel="alternate" type="text/html" title="@vueRouter3.x Basic" />
-    <published>2021-12-22T09:43:20+08:00</published>
-  
-    <updated>2021-12-22T09:43:20+08:00</updated>
-  
-    <id>/posts/Vue-Router/</id>
-    <content src="/posts/Vue-Router/" />
-    <author>
-      <name>Martin_Du</name>
-    </author>
-
-  
-    
-    <category term="vue" />
-    
-    <category term="vue-router" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      基础
-
-安装请看官方文档router-vue
-
-基础路由匹配
-
-html
-
-&amp;lt;script src="https://unpkg.com/vue/dist/vue.js"&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script src="https://unpkg.com/vue-router/dist/vue-router.js"&amp;gt;&amp;lt;/script&amp;gt;
-
-&amp;lt;div id="app"&amp;gt;
-  &amp;lt;h1&amp;gt;Hello App!&amp;lt;/h1&amp;gt;
-  &amp;lt;p&amp;gt;
-    &amp;lt;!-- 使用 router-link 组件来导航. --&amp;gt;
-    &amp;lt;!-- 通过传入 `to` 属性指定链接. --&amp;gt;
-    &amp;lt;!-- &amp;lt;router-link&amp;gt; 默认会被渲染成一个 `&amp;lt;a&amp;gt;` 标签 --...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>@vue/cli4.x脚手架使用</title>
-    <link href="/posts/Vue-Cli-Review/" rel="alternate" type="text/html" title="@vue/cli4.x脚手架使用" />
-    <published>2021-12-20T09:25:20+08:00</published>
-  
-    <updated>2021-12-20T09:25:20+08:00</updated>
-  
-    <id>/posts/Vue-Cli-Review/</id>
-    <content src="/posts/Vue-Cli-Review/" />
-    <author>
-      <name>Martin_Du</name>
-    </author>
-
-  
-    
-    <category term="vue" />
-    
-    <category term="vue-cli" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      脚手架基础知识
-
-安装及创建项目
-
-vue cli官方文档 讲的很清楚
-
-项目结构
-
-目录结构
-
-├── public
-│   └── index.html
-├── src
-|   ├── main.js				# 项目的初始化
-|   ├── App.vue				# 项目的入口组件
-|	├── assest			 	# 项目中展示的图片或者全局样式
-|	│   ├── css
-|	│   ├── img
-|	│   └── ...
-|	├── api
-|	│   └── ... 			# 抽取出API请求
-|	├── components
-|	│   └── ...				# 项目中可复用的组件
-|	├── view				# 视图界面组件（我理解的是路由对应的组件
-|	│   └── ...				
-|	├── store
-|	|	├── index.js        # 我...
     </summary>
   
 
