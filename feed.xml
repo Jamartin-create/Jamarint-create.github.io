@@ -4,7 +4,7 @@
   <id>/</id>
   <title>Lil Martin</title>
   <subtitle>一个爱学习的菜鸟程序员。</subtitle>
-  <updated>2022-04-01T19:56:37+08:00</updated>
+  <updated>2022-04-02T20:11:25+08:00</updated>
   <author>
     <name>Martin_Du</name>
     <uri>/</uri>
@@ -305,7 +305,7 @@ public class Servlet extends HttpServlet {
     <link href="/posts/AL-Search/" rel="alternate" type="text/html" title="算法篇：全排列(eg:蓝桥杯 ALGO-1005 数字游戏)" />
     <published>2022-01-24T10:00:00+08:00</published>
   
-    <updated>2022-01-25T00:22:14+08:00</updated>
+    <updated>2022-04-01T20:04:24+08:00</updated>
   
     <id>/posts/AL-Search/</id>
     <content src="/posts/AL-Search/" />
