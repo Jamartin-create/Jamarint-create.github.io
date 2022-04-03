@@ -711,6 +711,135 @@
     
 
   
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+
+      
+
+    
+      
+      
+
+      
+
+      
+
+    
+      
+      
+
+      
+
+      
+
+    
+      
+      
+
+      
+
+      
+
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+
+      
+
+    
+      
+      
+
+      
+
+      
+
+    
+      
+      
+
+      
+
+      
+
+    
+      
+      
+
+      
+
+      
+
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+
+      
+
+    
+      
+      
+
+      
+
+      
+
+    
+      
+      
+
+      
+
+      
+
+    
+      
+      
+
+      
+
+      
+
+    
+
+    
+
+  
 
   
 
@@ -788,7 +917,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1675 words">9 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="2890 words">16 min</span>
 
 
           <!-- page views -->
@@ -888,28 +1017,12 @@
 5
 6
 7
-8
-9
-10
-11
-12
-13
-14
-15
 </pre></td><td class="rouge-code"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PC</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
-    <span class="kd">public</span> <span class="nf">PC</span><span class="o">(){</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"PC实例化"</span><span class="o">);</span>
-    <span class="o">}</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">startUp</span><span class="o">(){</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">+</span><span class="s">"正在启动"</span><span class="o">);</span>
-    <span class="o">}</span>
-    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
-    <span class="o">}</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
-    <span class="o">}</span>
+    <span class="kd">public</span> <span class="nf">PC</span><span class="o">(){</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"PC实例化"</span><span class="o">);</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">startUp</span><span class="o">(){</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">+</span><span class="s">"正在启动"</span><span class="o">);</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">name</span><span class="o">;</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span> <span class="o">}</span>
 <span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -1133,6 +1246,446 @@
 <span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
+<h2 id="依赖注入">依赖注入</h2>
+
+<p>Spring 框架的核心功能之一就是通过依赖注入的方式来管理Bean之间的依赖关系。</p>
+
+<h3 id="基于构造函数的依赖注入">基于构造函数的依赖注入</h3>
+
+<p>还是通过PC来举例子：</p>
+
+<p>一个PC（电脑）一般需要配一些硬件设备才能使用，例如：鼠标键盘、硬盘等。</p>
+
+<p>先给PC加一个HardWare(硬盘)</p>
+
+<div lang="java" class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HardWare</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">read</span><span class="o">(){</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"读取数据"</span><span class="o">);</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">write</span><span class="o">(){</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"写数据"</span><span class="o">);</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="nf">HardWare</span><span class="o">()</span> <span class="o">{</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"HardWare has constructor"</span><span class="o">);</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">name</span><span class="o">;</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span> <span class="o">}</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>然后在PC中引入HardWare</p>
+
+<div lang="java" class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PC</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="c1">//引入硬盘</span>
+    <span class="kd">private</span> <span class="nc">HardWare</span> <span class="n">hd</span><span class="o">;</span>
+   	<span class="kd">public</span> <span class="nf">PC</span><span class="o">(</span><span class="nc">HardWare</span> <span class="n">hd</span><span class="o">){</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Inside HardWare contructor"</span><span class="o">);</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">hd</span> <span class="o">=</span> <span class="n">hd</span><span class="o">;</span>
+    <span class="o">}</span>
+    
+    <span class="kd">public</span> <span class="nf">PC</span><span class="o">(){</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"PC实例化"</span><span class="o">);</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">startUp</span><span class="o">(){</span> 
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">+</span><span class="s">"正在启动"</span><span class="o">);</span> 
+        <span class="n">hd</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">name</span><span class="o">;</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span> <span class="o">}</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>编辑测试类：</p>
+
+<div lang="java" class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="kd">public</span> <span class="kt">void</span> <span class="nf">TestConstruct</span><span class="o">(){</span>
+    <span class="nc">ApplicationContext</span> <span class="n">factory</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassPathXmlApplicationContext</span><span class="o">(</span><span class="s">"applicationContext.xml"</span><span class="o">);</span>
+    <span class="no">PC</span> <span class="n">pc</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="na">getBean</span><span class="o">(</span><span class="no">PC</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+    <span class="n">pc</span><span class="o">.</span><span class="na">startUp</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>运行测试类:</p>
+
+<p><img data-proofer-ignore data-src="http://cdn.jamartin.top/uploads/big/45e41a2f30fe4b7270a3a3622fbf6892.png" alt="photo" /></p>
+
+<blockquote>
+  <p>可以看到，硬盘实例化后，被注入到了PC中，这就叫做依赖注入。</p>
+</blockquote>
+
+<h3 id="基于设值函数的依赖注入">基于设值函数的依赖注入</h3>
+
+<p>以刚刚的例子，硬盘类不变，PC类更为如下：</p>
+
+<div lang="java" class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre></td><td class="rouge-code"><pre><span class="c1">//PC类</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PC</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="c1">//引入硬盘</span>
+    <span class="kd">private</span> <span class="nc">HardWare</span> <span class="n">hd</span><span class="o">;</span>
+    
+    <span class="kd">public</span> <span class="nc">HardWare</span> <span class="nf">getHd</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">hd</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setHd</span><span class="o">(</span><span class="nc">HardWare</span> <span class="n">hd</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">hd</span> <span class="o">=</span> <span class="n">hd</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Setter HardWare"</span><span class="o">)</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="nf">PC</span><span class="o">(){</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"PC实例化"</span><span class="o">);</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">startUp</span><span class="o">(){</span> 
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">+</span><span class="s">"正在启动"</span><span class="o">);</span> 
+        <span class="n">hd</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">name</span><span class="o">;</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span> <span class="o">}</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>运行测试类：</p>
+
+<p><img data-proofer-ignore data-src="http://cdn.jamartin.top/uploads/big/541e019c012a3c97a46710697ccde41f.png" alt="photo" /></p>
+
+<h3 id="注入集合">注入集合</h3>
+
+<p>在上面的例子中介绍了如何注入 Beans，但是如果想要传递多个值，例如List</p>
+
+<p>、Set、Map等，该怎么做呢？（Spring 提供了四种类型的集合的配置元素）</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th style="text-align: left">元素</th>
+      <th style="text-align: left">描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">&lt;list&gt;</td>
+      <td style="text-align: left">它有助于连线，如注入一列值，允许重复。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">&lt;set&gt;</td>
+      <td style="text-align: left">它有助于连线一组值，但不能重复。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">&lt;map&gt;</td>
+      <td style="text-align: left">它可以用来注入名称-值对的集合，其中名称和值可以是任何类型。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">&lt;props&gt;</td>
+      <td style="text-align: left">它可以用来注入名称-值对的集合，其中名称和值都是字符串类型。</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>例如：</p>
+
+<div lang="java" class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="rouge-code"><pre><span class="kn">package</span> <span class="nn">com.tutorialspoint</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">JavaCollection</span> <span class="o">{</span>
+   <span class="kd">private</span> <span class="nc">List</span> <span class="n">addressList</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="nc">Set</span> <span class="n">addressSet</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="nc">Map</span> <span class="n">addressMap</span><span class="o">;</span>
+    
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAddressList</span><span class="o">(</span><span class="nc">List</span> <span class="n">addressList</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">addressList</span> <span class="o">=</span> <span class="n">addressList</span><span class="o">;</span>
+   <span class="o">}</span>
+   <span class="kd">public</span> <span class="nc">List</span> <span class="nf">getAddressList</span><span class="o">()</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"List Elements :"</span>  <span class="o">+</span> <span class="n">addressList</span><span class="o">);</span>
+      <span class="k">return</span> <span class="n">addressList</span><span class="o">;</span>
+   <span class="o">}</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAddressSet</span><span class="o">(</span><span class="nc">Set</span> <span class="n">addressSet</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">addressSet</span> <span class="o">=</span> <span class="n">addressSet</span><span class="o">;</span>
+   <span class="o">}</span>
+   <span class="kd">public</span> <span class="nc">Set</span> <span class="nf">getAddressSet</span><span class="o">()</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Set Elements :"</span>  <span class="o">+</span> <span class="n">addressSet</span><span class="o">);</span>
+      <span class="k">return</span> <span class="n">addressSet</span><span class="o">;</span>
+   <span class="o">}</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAddressMap</span><span class="o">(</span><span class="nc">Map</span> <span class="n">addressMap</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">addressMap</span> <span class="o">=</span> <span class="n">addressMap</span><span class="o">;</span>
+   <span class="o">}</span>
+   <span class="kd">public</span> <span class="nc">Map</span> <span class="nf">getAddressMap</span><span class="o">()</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Map Elements :"</span>  <span class="o">+</span> <span class="n">addressMap</span><span class="o">);</span>
+      <span class="k">return</span> <span class="n">addressMap</span><span class="o">;</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>配置文件applicationContext.xml：</p>
+
+<div lang="xml" class="language-xml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"js"</span> <span class="na">class=</span><span class="s">"top.jamartin.JavaSet"</span><span class="nt">&gt;</span>
+	<span class="c">&lt;!-- results in a setAddressList(java.util.List) call --&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"addressList"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;list&gt;</span>
+        <span class="nt">&lt;value&gt;</span>INDIA<span class="nt">&lt;/value&gt;</span>
+        <span class="nt">&lt;value&gt;</span>Pakistan<span class="nt">&lt;/value&gt;</span>
+        <span class="nt">&lt;value&gt;</span>USA<span class="nt">&lt;/value&gt;</span>
+        <span class="nt">&lt;value&gt;</span>USA<span class="nt">&lt;/value&gt;</span>
+    <span class="nt">&lt;/list&gt;</span>
+    <span class="nt">&lt;/property&gt;</span>
+	<span class="c">&lt;!-- results in a setAddressSet(java.util.Set) call --&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"addressSet"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;set&gt;</span>
+            <span class="nt">&lt;value&gt;</span>INDIA<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;value&gt;</span>Pakistan<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;value&gt;</span>USA<span class="nt">&lt;/value&gt;</span>
+            <span class="nt">&lt;value&gt;</span>USA<span class="nt">&lt;/value&gt;</span>
+        <span class="nt">&lt;/set&gt;</span>
+    <span class="nt">&lt;/property&gt;</span>
+    <span class="c">&lt;!-- results in a setAddressMap(java.util.Map) call --&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"addressMap"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;map&gt;</span>
+            <span class="nt">&lt;entry</span> <span class="na">key=</span><span class="s">"1"</span> <span class="na">value=</span><span class="s">"INDIA"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;entry</span> <span class="na">key=</span><span class="s">"2"</span> <span class="na">value=</span><span class="s">"Pakistan"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;entry</span> <span class="na">key=</span><span class="s">"3"</span> <span class="na">value=</span><span class="s">"USA"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;entry</span> <span class="na">key=</span><span class="s">"4"</span> <span class="na">value=</span><span class="s">"USA"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/map&gt;</span>
+    <span class="nt">&lt;/property&gt;</span>
+<span class="nt">&lt;/bean&gt;</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>编写测试类：</p>
+
+<div lang="java" class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="nd">@Test</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">TestCollection</span><span class="o">(){</span>
+    <span class="nc">ApplicationContext</span> <span class="n">factory</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassPathXmlApplicationContext</span><span class="o">(</span><span class="s">"applicationContext.xml"</span><span class="o">);</span>
+    <span class="nc">JavaSet</span> <span class="n">js</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="na">getBean</span><span class="o">(</span><span class="nc">JavaSet</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">js</span><span class="o">.</span><span class="na">getAddressList</span><span class="o">());</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">js</span><span class="o">.</span><span class="na">getAddressMap</span><span class="o">());</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">js</span><span class="o">.</span><span class="na">getAddressSet</span><span class="o">());</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>执行测试类：</p>
+
+<p><img data-proofer-ignore data-src="http://cdn.jamartin.top/uploads/big/569764abd7dcf73dceac68e3a5073349.png" alt="photo" /></p>
+
+<h2 id="spring-beans-自动装配">Spring Beans 自动装配</h2>
+
+<h3 id="自动装配byname">自动装配ByName</h3>
+
+<p>还是PC机的例子：</p>
+
+<div lang="java" class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre></td><td class="rouge-code"><pre><span class="c1">//PC类</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PC</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+    <span class="c1">//引入硬盘</span>
+    <span class="kd">private</span> <span class="nc">HardWare</span> <span class="n">hd</span><span class="o">;</span>
+    
+    <span class="kd">public</span> <span class="nc">HardWare</span> <span class="nf">getHd</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">hd</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setHd</span><span class="o">(</span><span class="nc">HardWare</span> <span class="n">hd</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">hd</span> <span class="o">=</span> <span class="n">hd</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Setter HardWare"</span><span class="o">)</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="nf">PC</span><span class="o">(){</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"PC实例化"</span><span class="o">);</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">startUp</span><span class="o">(){</span> 
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">+</span><span class="s">"正在启动"</span><span class="o">);</span> 
+        <span class="n">hd</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">name</span><span class="o">;</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span> <span class="o">}</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>如果需要通过ByName自动装配，则配置文件中pc 就需要添加一个autowire属性：</p>
+
+<pre><code class="language-XML">&lt;beans&gt;
+    &lt;bean id="pc" class="top.jamartin.PC" autowire="byName"&gt;
+        &lt;property name="name" value="我的电脑" /&gt;
+    &lt;/bean&gt;
+    &lt;bean id="hardware" class="top.jamartin.HardWare" /&gt;
+&lt;/beans&gt;
+</code></pre>
+
+<blockquote>
+  <p><strong>ByName : 会自动在 beans.xml（容器）的上下文中查找 和自己对象中 set方法 set后面的值对应的 bean 的 id或name。</strong></p>
+
+  <p>需要确保配置文件下有一个bean中的id/name与调用Bean的属性相同。</p>
+</blockquote>
+
+<h3 id="自动装配bytype">自动装配ByType</h3>
+
+<pre><code class="language-XML">&lt;beans&gt;
+    &lt;bean id="pc" class="top.jamartin.PC" autowire="byType"&gt;
+        &lt;property name="name" value="我的电脑" /&gt;
+    &lt;/bean&gt;
+    &lt;bean id="HardWare" class="top.jamartin.HardWare" /&gt;
+&lt;/beans&gt;
+</code></pre>
+
+<blockquote>
+  <p><strong>byType:会自动在beans.xml（容器）上下文中查找，和自己 对象的属性类型 相同的 bean。</strong></p>
+</blockquote>
+
+<h3 id="由构造函数自动装配">由构造函数自动装配</h3>
+
+<p>在PC机中加入带有硬盘参数的构造函数：</p>
+
+<div lang="java" class="language-java highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="c1">//PC类</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">PC</span> <span class="o">{</span>
+    <span class="o">...</span>
+    <span class="kd">private</span> <span class="nc">HardWare</span> <span class="n">hd</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nf">PC</span><span class="o">(</span><span class="nc">HardWare</span> <span class="n">hd</span><span class="o">){</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">hd</span> <span class="o">=</span> <span class="n">hd</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="o">...</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>如果需要通过Constructor自动装配，则配置文件中pc 就需要添加一个autowire属性：</p>
+
+<pre><code class="language-XML">&lt;beans&gt;
+    &lt;bean id="pc" class="top.jamartin.PC" autowire="constructor"&gt;
+        &lt;constructor-arg value="Generic Text Editor"/&gt;
+    &lt;/bean&gt;
+    &lt;bean id="HardWare" class="top.jamartin.HardWare" /&gt;
+&lt;/beans&gt;
+</code></pre>
 
 
       </div>
